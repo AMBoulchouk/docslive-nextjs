@@ -1,0 +1,3650 @@
+[
+  {
+    "path": "docs/01-app/01-getting-started/01-installation.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "e078332b06fe40a51d20f60c3b96641f6ab3238c",
+    "size": 16041,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/e078332b06fe40a51d20f60c3b96641f6ab3238c"
+  },
+  {
+    "path": "docs/01-app/01-getting-started/02-project-structure.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "58adac71c849d38766943a4b1cfe1a1d95da8929",
+    "size": 27126,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/58adac71c849d38766943a4b1cfe1a1d95da8929"
+  },
+  {
+    "path": "docs/01-app/01-getting-started/03-layouts-and-pages.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "b7db5ad45b29f8b71070b3c6a03e7af5cd02baca",
+    "size": 12408,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/b7db5ad45b29f8b71070b3c6a03e7af5cd02baca"
+  },
+  {
+    "path": "docs/01-app/01-getting-started/04-linking-and-navigating.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "08a04ec6245466e33cb6a027607590f9f66bb2e4",
+    "size": 17438,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/08a04ec6245466e33cb6a027607590f9f66bb2e4"
+  },
+  {
+    "path": "docs/01-app/01-getting-started/05-server-and-client-components.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "6796a74758d1e6d98f6b2764c095e5b5b53e7d83",
+    "size": 19653,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/6796a74758d1e6d98f6b2764c095e5b5b53e7d83"
+  },
+  {
+    "path": "docs/01-app/01-getting-started/06-fetching-data.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "e4687c488b1bcefc4b98077052ac005ebde2d91d",
+    "size": 23611,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/e4687c488b1bcefc4b98077052ac005ebde2d91d"
+  },
+  {
+    "path": "docs/01-app/01-getting-started/07-mutating-data.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "b38390b8065116c2dd8f02022c8300cb6822ffdc",
+    "size": 17745,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/b38390b8065116c2dd8f02022c8300cb6822ffdc"
+  },
+  {
+    "path": "docs/01-app/01-getting-started/08-caching.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "ce477b63ae92f007f11654eb57332be13c041417",
+    "size": 30905,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/ce477b63ae92f007f11654eb57332be13c041417"
+  },
+  {
+    "path": "docs/01-app/01-getting-started/09-revalidating.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "5fa464683e12c5c9a669df48fbf6b381667e4bc7",
+    "size": 8667,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/5fa464683e12c5c9a669df48fbf6b381667e4bc7"
+  },
+  {
+    "path": "docs/01-app/01-getting-started/10-error-handling.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "364690ae1fa1f1160e1b95d2bc554429e987b888",
+    "size": 12072,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/364690ae1fa1f1160e1b95d2bc554429e987b888"
+  },
+  {
+    "path": "docs/01-app/01-getting-started/11-css.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "1a8ad48d3153c63577db71298b1ba012a9cd7228",
+    "size": 12368,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/1a8ad48d3153c63577db71298b1ba012a9cd7228"
+  },
+  {
+    "path": "docs/01-app/01-getting-started/12-images.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "764c22241ac85005c8c28b7950b065956202e7d4",
+    "size": 7245,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/764c22241ac85005c8c28b7950b065956202e7d4"
+  },
+  {
+    "path": "docs/01-app/01-getting-started/13-fonts.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "cdb4a65280fdfaa69d38a8560cedeca3c6b00100",
+    "size": 8705,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/cdb4a65280fdfaa69d38a8560cedeca3c6b00100"
+  },
+  {
+    "path": "docs/01-app/01-getting-started/14-metadata-and-og-images.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "75ce962a3e6e57bcc8ee0b8a66ee7b774cebb243",
+    "size": 12247,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/75ce962a3e6e57bcc8ee0b8a66ee7b774cebb243"
+  },
+  {
+    "path": "docs/01-app/01-getting-started/15-route-handlers.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "73765874ce0a112f182f72642609e4bec8e0aa05",
+    "size": 8268,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/73765874ce0a112f182f72642609e4bec8e0aa05"
+  },
+  {
+    "path": "docs/01-app/01-getting-started/16-proxy.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "bb2cc167960ce0646d6d7c6e38d6b1e4f0549041",
+    "size": 3590,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/bb2cc167960ce0646d6d7c6e38d6b1e4f0549041"
+  },
+  {
+    "path": "docs/01-app/01-getting-started/17-deploying.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "eb6f4f58cadb7a3b9a66a8695b9ca96d3fb34616",
+    "size": 6594,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/eb6f4f58cadb7a3b9a66a8695b9ca96d3fb34616"
+  },
+  {
+    "path": "docs/01-app/01-getting-started/18-upgrading.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "c0c64aef6b7e1986bde789f034001e32c7d7be70",
+    "size": 2145,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/c0c64aef6b7e1986bde789f034001e32c7d7be70"
+  },
+  {
+    "path": "docs/01-app/01-getting-started/index.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "88a90081900c81a4ab1f6de792d5c12350ad8201",
+    "size": 742,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/88a90081900c81a4ab1f6de792d5c12350ad8201"
+  },
+  {
+    "path": "docs/01-app/02-guides/adopting-partial-prefetching.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "2de25df65d278384106158c0dd1cccd9deb1d923",
+    "size": 24378,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/2de25df65d278384106158c0dd1cccd9deb1d923"
+  },
+  {
+    "path": "docs/01-app/02-guides/ai-agents.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "d2e32031ef96bd3408f26b477da013fcbdbedaa6",
+    "size": 14099,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/d2e32031ef96bd3408f26b477da013fcbdbedaa6"
+  },
+  {
+    "path": "docs/01-app/02-guides/analytics.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "72717de9365bc781dbce699d4aa3861d8cfd5c0f",
+    "size": 7004,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/72717de9365bc781dbce699d4aa3861d8cfd5c0f"
+  },
+  {
+    "path": "docs/01-app/02-guides/authentication-with-cache-components.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "6f162136c649dd291aef48d59e8f2f72d8138366",
+    "size": 16785,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/6f162136c649dd291aef48d59e8f2f72d8138366"
+  },
+  {
+    "path": "docs/01-app/02-guides/authentication.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "4c808308a2f82d2d17fd837e00f775c675ee958e",
+    "size": 55785,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/4c808308a2f82d2d17fd837e00f775c675ee958e"
+  },
+  {
+    "path": "docs/01-app/02-guides/backend-for-frontend.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "9c5155e2121bd5e5457fe64f27791400892c2d15",
+    "size": 29656,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/9c5155e2121bd5e5457fe64f27791400892c2d15"
+  },
+  {
+    "path": "docs/01-app/02-guides/building.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "3c7971977db7d95181698ee7a96fa7d4ef08f3fb",
+    "size": 20449,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/3c7971977db7d95181698ee7a96fa7d4ef08f3fb"
+  },
+  {
+    "path": "docs/01-app/02-guides/caching-without-cache-components.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "af27fcd8c5b412321ae0995be8a74cbaefe7a150",
+    "size": 16126,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/af27fcd8c5b412321ae0995be8a74cbaefe7a150"
+  },
+  {
+    "path": "docs/01-app/02-guides/cdn-caching.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "02a63fc603fe7e188bc76c08e06ea098eb8dd64c",
+    "size": 9797,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/02a63fc603fe7e188bc76c08e06ea098eb8dd64c"
+  },
+  {
+    "path": "docs/01-app/02-guides/ci-build-caching.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "9f20b58178793cd0d8787e95cb90ff583f5132ec",
+    "size": 4956,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/9f20b58178793cd0d8787e95cb90ff583f5132ec"
+  },
+  {
+    "path": "docs/01-app/02-guides/client-side-data-fetching/index.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "c3daa19ac1524003cd9ca28fdea8b9eaa267ec2e",
+    "size": 6768,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/c3daa19ac1524003cd9ca28fdea8b9eaa267ec2e"
+  },
+  {
+    "path": "docs/01-app/02-guides/client-side-data-fetching/swr.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "431ddbae88134863eececd68004b5fb0d99b732b",
+    "size": 15986,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/431ddbae88134863eececd68004b5fb0d99b732b"
+  },
+  {
+    "path": "docs/01-app/02-guides/client-side-data-fetching/tanstack-query.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "f357a42180e28598483a738294e0d8563d1d2f4f",
+    "size": 23603,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/f357a42180e28598483a738294e0d8563d1d2f4f"
+  },
+  {
+    "path": "docs/01-app/02-guides/content-security-policy.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "1763b0c5d57becea7c6e6092c38d06bed3b10696",
+    "size": 21130,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/1763b0c5d57becea7c6e6092c38d06bed3b10696"
+  },
+  {
+    "path": "docs/01-app/02-guides/css-in-js.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "9911d63e5cf2dee321534e469d2e85cbe3521380",
+    "size": 10881,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/9911d63e5cf2dee321534e469d2e85cbe3521380"
+  },
+  {
+    "path": "docs/01-app/02-guides/custom-server.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "7adacaa3b6eff3259ce1eddfe1d89f30a117f4bd",
+    "size": 6208,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/7adacaa3b6eff3259ce1eddfe1d89f30a117f4bd"
+  },
+  {
+    "path": "docs/01-app/02-guides/data-security.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "d23df00fa21a5e1914939090c7809bb6db30af6e",
+    "size": 23848,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/d23df00fa21a5e1914939090c7809bb6db30af6e"
+  },
+  {
+    "path": "docs/01-app/02-guides/debugging.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "afb272eb0379de9f1fcf7b52962c2299e98dac6b",
+    "size": 8406,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/afb272eb0379de9f1fcf7b52962c2299e98dac6b"
+  },
+  {
+    "path": "docs/01-app/02-guides/deploying-to-platforms.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "9b646e995b9b9eb19d6ce11a93bf549a25085bfb",
+    "size": 9766,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/9b646e995b9b9eb19d6ce11a93bf549a25085bfb"
+  },
+  {
+    "path": "docs/01-app/02-guides/draft-mode.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "faf6ff4bec504d063dcd3759ec5099f90b4a5d80",
+    "size": 13082,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/faf6ff4bec504d063dcd3759ec5099f90b4a5d80"
+  },
+  {
+    "path": "docs/01-app/02-guides/environment-variables.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "be2d60fa29d717727a4b02e660620fb441db670c",
+    "size": 11492,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/be2d60fa29d717727a4b02e660620fb441db670c"
+  },
+  {
+    "path": "docs/01-app/02-guides/forms.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "3a2598cb85c2663055b244f4655ae542b3e09d15",
+    "size": 14961,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/3a2598cb85c2663055b244f4655ae542b3e09d15"
+  },
+  {
+    "path": "docs/01-app/02-guides/how-revalidation-works.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "76fc9c9da68746fcbdb29e0c35b495c09949e442",
+    "size": 9263,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/76fc9c9da68746fcbdb29e0c35b495c09949e442"
+  },
+  {
+    "path": "docs/01-app/02-guides/incremental-static-regeneration-cache-components.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "a11bae8555ae2aaa2f6a6fc77ef2512ff9274eb9",
+    "size": 11761,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/a11bae8555ae2aaa2f6a6fc77ef2512ff9274eb9"
+  },
+  {
+    "path": "docs/01-app/02-guides/incremental-static-regeneration.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "af4abc2fb3b7de7eed7507a2184d84a95840d5b7",
+    "size": 21558,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/af4abc2fb3b7de7eed7507a2184d84a95840d5b7"
+  },
+  {
+    "path": "docs/01-app/02-guides/index.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "4f606ae4940d8cd401cae77894ec3b42f4c987aa",
+    "size": 113,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/4f606ae4940d8cd401cae77894ec3b42f4c987aa"
+  },
+  {
+    "path": "docs/01-app/02-guides/instant-navigation.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "b81a187c98c7ba88bdf873fb788f1b57544b3b10",
+    "size": 30941,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/b81a187c98c7ba88bdf873fb788f1b57544b3b10"
+  },
+  {
+    "path": "docs/01-app/02-guides/instrumentation.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "07b5d7982c0b080c81ec386a7074000b84fbcd18",
+    "size": 4183,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/07b5d7982c0b080c81ec386a7074000b84fbcd18"
+  },
+  {
+    "path": "docs/01-app/02-guides/interactive-apps.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "a2adde9e106910c38ddbb464dd47023ddcd23c88",
+    "size": 37303,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/a2adde9e106910c38ddbb464dd47023ddcd23c88"
+  },
+  {
+    "path": "docs/01-app/02-guides/internationalization.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "36f348a7f9788208bfde33b1c552bd197155484e",
+    "size": 11287,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/36f348a7f9788208bfde33b1c552bd197155484e"
+  },
+  {
+    "path": "docs/01-app/02-guides/json-ld.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "efb2a09a5cb934d79e8a9730f2471fee12cf0b39",
+    "size": 3262,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/efb2a09a5cb934d79e8a9730f2471fee12cf0b39"
+  },
+  {
+    "path": "docs/01-app/02-guides/lazy-loading.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "ffa0ffedfceaf592979de372a0631f9842a7743f",
+    "size": 10617,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/ffa0ffedfceaf592979de372a0631f9842a7743f"
+  },
+  {
+    "path": "docs/01-app/02-guides/local-development.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "ef6d7e7fd920513852ab07bed73d8a9145910190",
+    "size": 13126,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/ef6d7e7fd920513852ab07bed73d8a9145910190"
+  },
+  {
+    "path": "docs/01-app/02-guides/mcp.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "364ce3c903fffdfd20a976b2224028295548f7ca",
+    "size": 7724,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/364ce3c903fffdfd20a976b2224028295548f7ca"
+  },
+  {
+    "path": "docs/01-app/02-guides/mdx.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "f3d28bce6bcce26897b3373d2050c9114028bcb6",
+    "size": 23641,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/f3d28bce6bcce26897b3373d2050c9114028bcb6"
+  },
+  {
+    "path": "docs/01-app/02-guides/memory-usage.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "6e9628b2ca33b561103ba9b57d43471be8896a4c",
+    "size": 7841,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/6e9628b2ca33b561103ba9b57d43471be8896a4c"
+  },
+  {
+    "path": "docs/01-app/02-guides/migrating-to-cache-components.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "ab0a20d8f4cbcc19bf6b9b1365b2ca7a85498d17",
+    "size": 39376,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/ab0a20d8f4cbcc19bf6b9b1365b2ca7a85498d17"
+  },
+  {
+    "path": "docs/01-app/02-guides/migrating/app-router-migration.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "5cdcb9a332005c7a71f1d30d159b655f0bc4de4a",
+    "size": 38242,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/5cdcb9a332005c7a71f1d30d159b655f0bc4de4a"
+  },
+  {
+    "path": "docs/01-app/02-guides/migrating/from-create-react-app.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "d17441dae02c3338694b314d903195d3f12c6563",
+    "size": 22188,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/d17441dae02c3338694b314d903195d3f12c6563"
+  },
+  {
+    "path": "docs/01-app/02-guides/migrating/from-vite.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "5599d2f941d0e49daecce6e7ba138b459b3528e9",
+    "size": 22650,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/5599d2f941d0e49daecce6e7ba138b459b3528e9"
+  },
+  {
+    "path": "docs/01-app/02-guides/migrating/index.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "6d7047ebc0f523e89a024e1bee989a1710d1c530",
+    "size": 94,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/6d7047ebc0f523e89a024e1bee989a1710d1c530"
+  },
+  {
+    "path": "docs/01-app/02-guides/multi-tenant.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "e87d5f1e25b879e0067582b8f02eef872203e58f",
+    "size": 365,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/e87d5f1e25b879e0067582b8f02eef872203e58f"
+  },
+  {
+    "path": "docs/01-app/02-guides/multi-zones.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "8117232112c26da15c6c3da7427b315c4574f932",
+    "size": 7201,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/8117232112c26da15c6c3da7427b315c4574f932"
+  },
+  {
+    "path": "docs/01-app/02-guides/offline-support.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "81b72cf7594ab616dadfe426aca140f909fd76f2",
+    "size": 15390,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/81b72cf7594ab616dadfe426aca140f909fd76f2"
+  },
+  {
+    "path": "docs/01-app/02-guides/open-telemetry.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "e458a0822088c8aebfa3132fb16b6a28efa906b6",
+    "size": 15161,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/e458a0822088c8aebfa3132fb16b6a28efa906b6"
+  },
+  {
+    "path": "docs/01-app/02-guides/optimizing-prefetching.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "eebdadc1d3698651af302109e82e994be1c72ee6",
+    "size": 13047,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/eebdadc1d3698651af302109e82e994be1c72ee6"
+  },
+  {
+    "path": "docs/01-app/02-guides/package-bundling.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "9a5cbd18c94a2e314fea64883820c34ed136e10b",
+    "size": 10907,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/9a5cbd18c94a2e314fea64883820c34ed136e10b"
+  },
+  {
+    "path": "docs/01-app/02-guides/ppr-platform-guide.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "8bd084ba0dc7926105bec3a10af7fabe2830840f",
+    "size": 7322,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/8bd084ba0dc7926105bec3a10af7fabe2830840f"
+  },
+  {
+    "path": "docs/01-app/02-guides/prefetching.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "122261b57df057d3e2d95fdefc214cc19b12cf71",
+    "size": 14322,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/122261b57df057d3e2d95fdefc214cc19b12cf71"
+  },
+  {
+    "path": "docs/01-app/02-guides/preserving-ui-state.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "a5d50239f0755717d2a6e90533ec2d482f92ba2a",
+    "size": 20685,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/a5d50239f0755717d2a6e90533ec2d482f92ba2a"
+  },
+  {
+    "path": "docs/01-app/02-guides/preventing-flash-before-hydration.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "a71ed37b5daf4539925ee2da11b138787be28151",
+    "size": 21807,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/a71ed37b5daf4539925ee2da11b138787be28151"
+  },
+  {
+    "path": "docs/01-app/02-guides/production-checklist.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "e9731be720c3b7b92f5c64dbb8cbb45a19a93503",
+    "size": 13392,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/e9731be720c3b7b92f5c64dbb8cbb45a19a93503"
+  },
+  {
+    "path": "docs/01-app/02-guides/progressive-web-apps.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "158872abd738804852e00d696245a5c5b2abdcbe",
+    "size": 21935,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/158872abd738804852e00d696245a5c5b2abdcbe"
+  },
+  {
+    "path": "docs/01-app/02-guides/public-static-pages.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "246c903df8977ea01953dbf5d36aeefeb5785e7d",
+    "size": 9348,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/246c903df8977ea01953dbf5d36aeefeb5785e7d"
+  },
+  {
+    "path": "docs/01-app/02-guides/redirecting.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "cf7bda8b9e13e5c0aeaef3d2d6665b180b171765",
+    "size": 22070,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/cf7bda8b9e13e5c0aeaef3d2d6665b180b171765"
+  },
+  {
+    "path": "docs/01-app/02-guides/rendering-philosophy.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "0ef4069ca7250db946c21afef83d7a0d942dda79",
+    "size": 7897,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/0ef4069ca7250db946c21afef83d7a0d942dda79"
+  },
+  {
+    "path": "docs/01-app/02-guides/sass.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "010cae823d8ee5cbf3cd91d5cf94f7d8ae09a4b0",
+    "size": 3289,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/010cae823d8ee5cbf3cd91d5cf94f7d8ae09a4b0"
+  },
+  {
+    "path": "docs/01-app/02-guides/scripts.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "fc706a0c602cad78a81fbe5ad34ed2de990f04ac",
+    "size": 12137,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/fc706a0c602cad78a81fbe5ad34ed2de990f04ac"
+  },
+  {
+    "path": "docs/01-app/02-guides/self-hosting.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "72e3db25a0efddedc3e8a4f607f522ce26113785",
+    "size": 19903,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/72e3db25a0efddedc3e8a4f607f522ce26113785"
+  },
+  {
+    "path": "docs/01-app/02-guides/server-actions.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "5199685593c5dfde459b26d9ed678d8270d6245e",
+    "size": 12720,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/5199685593c5dfde459b26d9ed678d8270d6245e"
+  },
+  {
+    "path": "docs/01-app/02-guides/server-and-client-boundary.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "97acf2e4c402f74dae6f163de3df619b134a03a0",
+    "size": 14764,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/97acf2e4c402f74dae6f163de3df619b134a03a0"
+  },
+  {
+    "path": "docs/01-app/02-guides/single-page-applications.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "6d1564c636aea6dc12fc501146f03516028ea4bd",
+    "size": 21035,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/6d1564c636aea6dc12fc501146f03516028ea4bd"
+  },
+  {
+    "path": "docs/01-app/02-guides/static-exports.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "c5fa38612c66070efe46dd1aa3aae4d7b426d18f",
+    "size": 12923,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/c5fa38612c66070efe46dd1aa3aae4d7b426d18f"
+  },
+  {
+    "path": "docs/01-app/02-guides/streaming.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "4f65f0a32b0ed31667252b0fcadafc635710e0ec",
+    "size": 37836,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/4f65f0a32b0ed31667252b0fcadafc635710e0ec"
+  },
+  {
+    "path": "docs/01-app/02-guides/tailwind-v3-css.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "69e20cb6ddb9dcaa737227cd05b7d601bdd2ecbc",
+    "size": 3992,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/69e20cb6ddb9dcaa737227cd05b7d601bdd2ecbc"
+  },
+  {
+    "path": "docs/01-app/02-guides/testing/cypress.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "edbbb4b1b973c5fdd98acb2e70d7cc2120a19122",
+    "size": 8740,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/edbbb4b1b973c5fdd98acb2e70d7cc2120a19122"
+  },
+  {
+    "path": "docs/01-app/02-guides/testing/index.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "d0fe6f77dbb786ba497b1b8cbd02e8d1f04868e4",
+    "size": 1804,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/d0fe6f77dbb786ba497b1b8cbd02e8d1f04868e4"
+  },
+  {
+    "path": "docs/01-app/02-guides/testing/jest.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "019f144995da86ea6470ecc32a947d028b095cd4",
+    "size": 13613,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/019f144995da86ea6470ecc32a947d028b095cd4"
+  },
+  {
+    "path": "docs/01-app/02-guides/testing/playwright.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "e523973f24cb2406f84662ac36289afd0222eff3",
+    "size": 4765,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/e523973f24cb2406f84662ac36289afd0222eff3"
+  },
+  {
+    "path": "docs/01-app/02-guides/testing/vitest.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "ccd02ef1ea87f062faaae8eb515d971f764b2ac3",
+    "size": 6285,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/ccd02ef1ea87f062faaae8eb515d971f764b2ac3"
+  },
+  {
+    "path": "docs/01-app/02-guides/third-party-libraries.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "92c93b0029e35e88872331f4f74f14049b376fea",
+    "size": 17094,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/92c93b0029e35e88872331f4f74f14049b376fea"
+  },
+  {
+    "path": "docs/01-app/02-guides/upgrading/codemods.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "7bfb3ffcdbaf4b5e04390afe0dca8168c4c6e2da",
+    "size": 19954,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/7bfb3ffcdbaf4b5e04390afe0dca8168c4c6e2da"
+  },
+  {
+    "path": "docs/01-app/02-guides/upgrading/index.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "54ba206504bbb41400c50455ec66caad322ae2d0",
+    "size": 216,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/54ba206504bbb41400c50455ec66caad322ae2d0"
+  },
+  {
+    "path": "docs/01-app/02-guides/upgrading/version-14.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "c6304e0aaaef6a752276335e12e545d9634f013d",
+    "size": 1877,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/c6304e0aaaef6a752276335e12e545d9634f013d"
+  },
+  {
+    "path": "docs/01-app/02-guides/upgrading/version-15.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "9a6636487ca8e26b1e919893b24fd23b548db586",
+    "size": 17104,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/9a6636487ca8e26b1e919893b24fd23b548db586"
+  },
+  {
+    "path": "docs/01-app/02-guides/upgrading/version-16.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "0bd34e3d029891a770476e07936c0c9ef5c3caec",
+    "size": 43177,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/0bd34e3d029891a770476e07936c0c9ef5c3caec"
+  },
+  {
+    "path": "docs/01-app/02-guides/videos.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "90fb15c5225027647e9b9328f59786f0832a8444",
+    "size": 17585,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/90fb15c5225027647e9b9328f59786f0832a8444"
+  },
+  {
+    "path": "docs/01-app/02-guides/view-transitions.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "1b4773c0b57c0ea58aaccf527bebc74bd7162076",
+    "size": 19403,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/1b4773c0b57c0ea58aaccf527bebc74bd7162076"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/01-directives/index.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "d0bea6a75b1c376a5dc6efa4dfd43ec5086a2a1e",
+    "size": 5299,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/d0bea6a75b1c376a5dc6efa4dfd43ec5086a2a1e"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/01-directives/use-cache-private.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "807dd8a3cf04e9adf568d9618e9c0addeb781b08",
+    "size": 7120,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/807dd8a3cf04e9adf568d9618e9c0addeb781b08"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/01-directives/use-cache-remote.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "640bf39bc00c434eb73dbe727a1453bb252380f4",
+    "size": 23584,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/640bf39bc00c434eb73dbe727a1453bb252380f4"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/01-directives/use-cache.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "60dcc73f310a1d37f397f78c4e3559fd13f81a1e",
+    "size": 30435,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/60dcc73f310a1d37f397f78c4e3559fd13f81a1e"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/01-directives/use-client.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "02d66972fdc698f2b11441882392d1c909879261",
+    "size": 3802,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/02d66972fdc698f2b11441882392d1c909879261"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/01-directives/use-server.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "88b73f74a1b2a64155fb3b4874f696cddbec3e01",
+    "size": 6631,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/88b73f74a1b2a64155fb3b4874f696cddbec3e01"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/02-components/font.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "09d7c9a816a50ac06027c28fa88edf4ec5ff652c",
+    "size": 31161,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/09d7c9a816a50ac06027c28fa88edf4ec5ff652c"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/02-components/form.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "ed7a76e48c6c67d43ff5351f68202f91aa78fce6",
+    "size": 14350,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/ed7a76e48c6c67d43ff5351f68202f91aa78fce6"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/02-components/image.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "03680ec359be66d32982ee28825a56bb8292a374",
+    "size": 61104,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/03680ec359be66d32982ee28825a56bb8292a374"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/02-components/index.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "ebbdf4bd444a858e71f84f71507f0d51f8af823e",
+    "size": 332,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/ebbdf4bd444a858e71f84f71507f0d51f8af823e"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/02-components/link.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "cf5213b29d00af41d36bb595e61ecd118d53cb35",
+    "size": 37423,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/cf5213b29d00af41d36bb595e61ecd118d53cb35"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/02-components/script.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "226031960eced4276cd04d2d1939851a3cf2263e",
+    "size": 13661,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/226031960eced4276cd04d2d1939851a3cf2263e"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/03-file-conventions/01-metadata/app-icons.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "250f6913019542580c9fe70e75ffe180982bf2f3",
+    "size": 9430,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/250f6913019542580c9fe70e75ffe180982bf2f3"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/03-file-conventions/01-metadata/index.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "e955c448ddadedc2ac9a7dd1f0ce41024489c0ea",
+    "size": 1283,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/e955c448ddadedc2ac9a7dd1f0ce41024489c0ea"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/03-file-conventions/01-metadata/manifest.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "bcda8e0c815e4e90285efb15329c0ecd4b3bcf21",
+    "size": 2216,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/bcda8e0c815e4e90285efb15329c0ecd4b3bcf21"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/03-file-conventions/01-metadata/opengraph-image.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "ceafa7c4740587663f033e4957ba2e40ae94f96b",
+    "size": 16658,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/ceafa7c4740587663f033e4957ba2e40ae94f96b"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/03-file-conventions/01-metadata/robots.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "fd211fec274618501ab55ce1b09efca49db79552",
+    "size": 4780,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/fd211fec274618501ab55ce1b09efca49db79552"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/03-file-conventions/01-metadata/sitemap.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "f195d6beea9a2313b2e843afb2d883ea855b1e6d",
+    "size": 11672,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/f195d6beea9a2313b2e843afb2d883ea855b1e6d"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/03-file-conventions/02-route-segment-config/dynamicParams.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "4fc959699e8aaf28be6e48eac589e659ce6ad9f4",
+    "size": 1021,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/4fc959699e8aaf28be6e48eac589e659ce6ad9f4"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/03-file-conventions/02-route-segment-config/index.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "b537ed830866d63b316c7ea59dcb86ae495268e6",
+    "size": 3169,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/b537ed830866d63b316c7ea59dcb86ae495268e6"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/03-file-conventions/02-route-segment-config/instant.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "58f9b94f7e52aac6bb1bdb08d55f775c4d09b8d6",
+    "size": 8668,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/58f9b94f7e52aac6bb1bdb08d55f775c4d09b8d6"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/03-file-conventions/02-route-segment-config/maxDuration.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "b0ee647368028c8091cf8457e7bedd3773541bbf",
+    "size": 869,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/b0ee647368028c8091cf8457e7bedd3773541bbf"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/03-file-conventions/02-route-segment-config/preferredRegion.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "6998aba9a77a31df8ac7cfe09765db240a85a911",
+    "size": 1967,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/6998aba9a77a31df8ac7cfe09765db240a85a911"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/03-file-conventions/02-route-segment-config/prefetch.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "50c59be7c11d8385169f6d929a5a6ef24c522052",
+    "size": 4648,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/50c59be7c11d8385169f6d929a5a6ef24c522052"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/03-file-conventions/02-route-segment-config/runtime.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "8244d7be193ae93caf370b74ecf61e802526baa1",
+    "size": 735,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/8244d7be193ae93caf370b74ecf61e802526baa1"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/03-file-conventions/default.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "17710a5373827c6be39b3277c95fd5a7891fe2fc",
+    "size": 3474,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/17710a5373827c6be39b3277c95fd5a7891fe2fc"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/03-file-conventions/dynamic-routes.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "135f9391b03136e2e408d815ae551b11d54ca3ee",
+    "size": 15338,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/135f9391b03136e2e408d815ae551b11d54ca3ee"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/03-file-conventions/error.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "b98562c61ae6d484e6f505827f811fe5f512a45f",
+    "size": 11040,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/b98562c61ae6d484e6f505827f811fe5f512a45f"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/03-file-conventions/forbidden.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "435697afe394f0988f52a417dc3b5caf138f9c74",
+    "size": 1207,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/435697afe394f0988f52a417dc3b5caf138f9c74"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/03-file-conventions/index.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "a69df3feeee97a3cd8c48448623c586fa63394ff",
+    "size": 103,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/a69df3feeee97a3cd8c48448623c586fa63394ff"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/03-file-conventions/instrumentation-client.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "4c908d00869dfeff1de9e1beedf80ca85a716759",
+    "size": 9821,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/4c908d00869dfeff1de9e1beedf80ca85a716759"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/03-file-conventions/instrumentation.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "d1fbbdc89225af342a581f24c39f219de0a621a2",
+    "size": 5116,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/d1fbbdc89225af342a581f24c39f219de0a621a2"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/03-file-conventions/intercepting-routes.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "e6c3f9479e9ff68335005f87718896d78db8fbbf",
+    "size": 3895,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/e6c3f9479e9ff68335005f87718896d78db8fbbf"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/03-file-conventions/layout.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "80160934fbef7d252b69399c7ce661877270a48f",
+    "size": 21144,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/80160934fbef7d252b69399c7ce661877270a48f"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/03-file-conventions/loading.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "20b62e3d34572d6873fd1494086a5cacb846eb44",
+    "size": 9950,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/20b62e3d34572d6873fd1494086a5cacb846eb44"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/03-file-conventions/mdx-components.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "456666a04c65a265f68921d416c38d1f6ed54d2e",
+    "size": 1575,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/456666a04c65a265f68921d416c38d1f6ed54d2e"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/03-file-conventions/middleware.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "13af4251aeebd3744c84780b24f24d68216ed3a1",
+    "size": 814,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/13af4251aeebd3744c84780b24f24d68216ed3a1"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/03-file-conventions/not-found.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "edcc3692112ba715600515595483fbf81d0faf9f",
+    "size": 8398,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/edcc3692112ba715600515595483fbf81d0faf9f"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/03-file-conventions/page.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "c5c202db61e56fdb59c870a911205f5b87d1ecf9",
+    "size": 8774,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/c5c202db61e56fdb59c870a911205f5b87d1ecf9"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/03-file-conventions/parallel-routes.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "604f163256248877e369ed1870d9bf555dc845c2",
+    "size": 16043,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/604f163256248877e369ed1870d9bf555dc845c2"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/03-file-conventions/proxy.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "17f0dd47bb9790a741bcab95b7fee579a1dd580e",
+    "size": 31175,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/17f0dd47bb9790a741bcab95b7fee579a1dd580e"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/03-file-conventions/public-folder.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "5695fc15f0c187ed7cfd0c6755aedd53629ebb60",
+    "size": 1801,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/5695fc15f0c187ed7cfd0c6755aedd53629ebb60"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/03-file-conventions/route-groups.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "1ebe744ad7e62fb3c212931b034391fee9193ef6",
+    "size": 1627,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/1ebe744ad7e62fb3c212931b034391fee9193ef6"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/03-file-conventions/route.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "5a95a2500dfe7f2e89ee57efa24be71089b422f6",
+    "size": 20046,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/5a95a2500dfe7f2e89ee57efa24be71089b422f6"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/03-file-conventions/src-folder.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "4f53d1f9bce9bac448711d945ff8fa392bb9e8db",
+    "size": 2032,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/4f53d1f9bce9bac448711d945ff8fa392bb9e8db"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/03-file-conventions/template.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "51a6481d4064b801729f9485bdb8e7b7175db017",
+    "size": 5255,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/51a6481d4064b801729f9485bdb8e7b7175db017"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/03-file-conventions/unauthorized.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "65fbc184ff6525404764235a2bc85217731df4a6",
+    "size": 2610,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/65fbc184ff6525404764235a2bc85217731df4a6"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/04-functions/after.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "5f8e2833cc87f0609d37dca4cf728f05e2238c11",
+    "size": 11299,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/5f8e2833cc87f0609d37dca4cf728f05e2238c11"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/04-functions/cacheLife.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "c989c67cd26e4bca6cb08a8b740effbd4159708e",
+    "size": 21660,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/c989c67cd26e4bca6cb08a8b740effbd4159708e"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/04-functions/cacheTag.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "49f13e6f9f849c1ad9acd370f133061609b0c7f9",
+    "size": 6152,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/49f13e6f9f849c1ad9acd370f133061609b0c7f9"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/04-functions/catchError.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "ad41f1917efafe7315b98088dbea49bfe90c5457",
+    "size": 12356,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/ad41f1917efafe7315b98088dbea49bfe90c5457"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/04-functions/connection.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "70dcbf80826211b927489cf9688386767476b3f9",
+    "size": 3021,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/70dcbf80826211b927489cf9688386767476b3f9"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/04-functions/cookies.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "2f31c1247cffaa37efaf87f192c7f46ab8f55493",
+    "size": 12361,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/2f31c1247cffaa37efaf87f192c7f46ab8f55493"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/04-functions/draft-mode.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "5be8474e7ec25f0f88e4b402dfb8da0cfd9a2dbd",
+    "size": 5426,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/5be8474e7ec25f0f88e4b402dfb8da0cfd9a2dbd"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/04-functions/fetch.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "fbed6cf6f87c3ed6a867505413390fa339265dc2",
+    "size": 6416,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/fbed6cf6f87c3ed6a867505413390fa339265dc2"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/04-functions/forbidden.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "f55d4f0e815267f159a0b7e936d82aed2d2a5e82",
+    "size": 9122,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/f55d4f0e815267f159a0b7e936d82aed2d2a5e82"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/04-functions/generate-image-metadata.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "c0c4149342a2502d07bf7ceb0c7ec9c8f58dea39",
+    "size": 7452,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/c0c4149342a2502d07bf7ceb0c7ec9c8f58dea39"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/04-functions/generate-metadata.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "1474707b9c2017e263fc6615d184630eb4d103ea",
+    "size": 49181,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/1474707b9c2017e263fc6615d184630eb4d103ea"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/04-functions/generate-sitemaps.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "961aa2d747b9233adbc3f4496d0dd952a64f54e8",
+    "size": 3167,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/961aa2d747b9233adbc3f4496d0dd952a64f54e8"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/04-functions/generate-static-params.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "907d6c04fd4eb4536f775cf65f8a5e9c1a8795a6",
+    "size": 18465,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/907d6c04fd4eb4536f775cf65f8a5e9c1a8795a6"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/04-functions/generate-viewport.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "06b6a41dee505b3eb1c2da5f8af5ca0693cfcd56",
+    "size": 9160,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/06b6a41dee505b3eb1c2da5f8af5ca0693cfcd56"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/04-functions/headers.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "43279bd789298140bfb3038cc01cd6b0dd8ce63e",
+    "size": 4213,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/43279bd789298140bfb3038cc01cd6b0dd8ce63e"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/04-functions/image-response.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "6cbac1e20c45a82ba33b8047482ed2ec696e5350",
+    "size": 5818,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/6cbac1e20c45a82ba33b8047482ed2ec696e5350"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/04-functions/index.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "3c24f835f0a896d0d34ad0a38f1d862a05373385",
+    "size": 331,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/3c24f835f0a896d0d34ad0a38f1d862a05373385"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/04-functions/io.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "c97899ef64f4f76620eb5774d36c4d822f6f6ffd",
+    "size": 4393,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/c97899ef64f4f76620eb5774d36c4d822f6f6ffd"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/04-functions/next-request.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "7b1fbee0d2079bcc7246273c7cd8a70b11d49b6a",
+    "size": 6210,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/7b1fbee0d2079bcc7246273c7cd8a70b11d49b6a"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/04-functions/next-response.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "8b4fe84b93c15f0148e9d0cd72c29a308806e018",
+    "size": 6506,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/8b4fe84b93c15f0148e9d0cd72c29a308806e018"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/04-functions/next-root-params.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "c110f50559533c51354140266e62d3ab2e26dc49",
+    "size": 15877,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/c110f50559533c51354140266e62d3ab2e26dc49"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/04-functions/not-found.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "3da33ba62e869afb08a3f4e3fb117a65849342e9",
+    "size": 7800,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/3da33ba62e869afb08a3f4e3fb117a65849342e9"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/04-functions/permanentRedirect.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "f9b8d3752cc9836eaf809e112ba9596b948420f3",
+    "size": 3444,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/f9b8d3752cc9836eaf809e112ba9596b948420f3"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/04-functions/redirect.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "5b0378952a684ea3bf3b36cef436456e842d8e48",
+    "size": 8252,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/5b0378952a684ea3bf3b36cef436456e842d8e48"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/04-functions/refresh.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "10fa22e10f5dc5e04283ae314d0479a5f66fbc16",
+    "size": 1417,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/10fa22e10f5dc5e04283ae314d0479a5f66fbc16"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/04-functions/revalidatePath.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "f071de314d975333338b57a27ec18490c733694c",
+    "size": 8072,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/f071de314d975333338b57a27ec18490c733694c"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/04-functions/revalidateTag.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "0f793c413b9922be3c3c1bdb8a519d869d803ee4",
+    "size": 6086,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/0f793c413b9922be3c3c1bdb8a519d869d803ee4"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/04-functions/unauthorized.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "060bf1182847c1c2f847da1fb1fb01efcaae9cb0",
+    "size": 10414,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/060bf1182847c1c2f847da1fb1fb01efcaae9cb0"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/04-functions/unstable_cache.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "9cbc399df68a9aeaf569717b9b97e46787882f82",
+    "size": 3574,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/9cbc399df68a9aeaf569717b9b97e46787882f82"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/04-functions/unstable_noStore.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "76c6050a8bcc974701b6239cdd54c85872b05315",
+    "size": 1726,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/76c6050a8bcc974701b6239cdd54c85872b05315"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/04-functions/unstable_rethrow.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "8fbbfd6256acae549ebf094c7f77a402bb03ec7f",
+    "size": 3005,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/8fbbfd6256acae549ebf094c7f77a402bb03ec7f"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/04-functions/updateTag.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "2726d57dadc1a25a00aab983f5843dea0547f991",
+    "size": 4990,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/2726d57dadc1a25a00aab983f5843dea0547f991"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/04-functions/use-link-status.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "b72efa86ba14b838171127ecdbb1c9fce2beb40f",
+    "size": 6817,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/b72efa86ba14b838171127ecdbb1c9fce2beb40f"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/04-functions/use-offline.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "0df88de4e7deb346fc0ec575fba453e4d0c46544",
+    "size": 4959,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/0df88de4e7deb346fc0ec575fba453e4d0c46544"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/04-functions/use-params.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "1e17c62c426e48016172f1ef7cd839b4f175e6da",
+    "size": 3487,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/1e17c62c426e48016172f1ef7cd839b4f175e6da"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/04-functions/use-pathname.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "c8cd4f9bd65b204b90c526dfbdcb2b560201677a",
+    "size": 7385,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/c8cd4f9bd65b204b90c526dfbdcb2b560201677a"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/04-functions/use-report-web-vitals.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "079b83dc973592ab0a84719273b6c39ed02763bc",
+    "size": 8317,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/079b83dc973592ab0a84719273b6c39ed02763bc"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/04-functions/use-router.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "ecf0514cdfc399e67ddee132537d62767009571c",
+    "size": 8637,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/ecf0514cdfc399e67ddee132537d62767009571c"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/04-functions/use-search-params.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "dd99a8fc2fc903a98e216d2cc102acc8832b0aba",
+    "size": 14012,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/dd99a8fc2fc903a98e216d2cc102acc8832b0aba"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/04-functions/use-selected-layout-segment.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "b485046ca0261ab28ce073fa97d9c47f0ad11213",
+    "size": 7884,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/b485046ca0261ab28ce073fa97d9c47f0ad11213"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/04-functions/use-selected-layout-segments.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "b2c98919d9007db6c5b830787592045ab29cfee2",
+    "size": 5559,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/b2c98919d9007db6c5b830787592045ab29cfee2"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/04-functions/userAgent.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "0a51909270a592960e06c01d40508ab56fe6eb2d",
+    "size": 3218,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/0a51909270a592960e06c01d40508ab56fe6eb2d"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/05-config/01-next-config-js/adapterPath.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "de47ac50e310b1904e3764dbc30298062d4c8d97",
+    "size": 2713,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/de47ac50e310b1904e3764dbc30298062d4c8d97"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/05-config/01-next-config-js/allowedDevOrigins.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "c819b6e1f42dfa17ed124df318fc756a0e5b688c",
+    "size": 2929,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/c819b6e1f42dfa17ed124df318fc756a0e5b688c"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/05-config/01-next-config-js/appDir.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "9c7163ec4665dad845a060e3d6a9c6a5ebed4a99",
+    "size": 795,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/9c7163ec4665dad845a060e3d6a9c6a5ebed4a99"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/05-config/01-next-config-js/assetPrefix.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "e15cc3081d3937b17bb0b1217f56e86893a28f81",
+    "size": 3557,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/e15cc3081d3937b17bb0b1217f56e86893a28f81"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/05-config/01-next-config-js/authInterrupts.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "6509d0ce55017248d16bb46f423f4ee28c275ccd",
+    "size": 1042,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/6509d0ce55017248d16bb46f423f4ee28c275ccd"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/05-config/01-next-config-js/basePath.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "1c0eb46fe4887b55c3ad53e18fda590cc90c9378",
+    "size": 2164,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/1c0eb46fe4887b55c3ad53e18fda590cc90c9378"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/05-config/01-next-config-js/cacheComponents.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "3d739d226d30dc8dd429b3eca344caac4d0f42bd",
+    "size": 4346,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/3d739d226d30dc8dd429b3eca344caac4d0f42bd"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/05-config/01-next-config-js/cacheHandlers.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "1673c5297563114655c9166e78f356bd76e05a2e",
+    "size": 19981,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/1673c5297563114655c9166e78f356bd76e05a2e"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/05-config/01-next-config-js/cacheLife.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "b5f5f99400fec5a97bd6dfc81c07b330cc6268b3",
+    "size": 3319,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/b5f5f99400fec5a97bd6dfc81c07b330cc6268b3"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/05-config/01-next-config-js/cacheMaxMemorySize.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "727cd825550253300d14787b6c74258ae776791f",
+    "size": 1887,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/727cd825550253300d14787b6c74258ae776791f"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/05-config/01-next-config-js/compress.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "132f4375d8fdff27255eff638db27fdbf0f09cbe",
+    "size": 1628,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/132f4375d8fdff27255eff638db27fdbf0f09cbe"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/05-config/01-next-config-js/crossOrigin.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "160c53b7b1ba87ecad084938489c5f24face5aa3",
+    "size": 1231,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/160c53b7b1ba87ecad084938489c5f24face5aa3"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/05-config/01-next-config-js/cssChunking.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "10bdef5b571e2fd66475d25f48e0b01ebf4b3cb7",
+    "size": 9296,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/10bdef5b571e2fd66475d25f48e0b01ebf4b3cb7"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/05-config/01-next-config-js/deploymentId.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "70718b19911dfd6318367a6dec9672aa55fdb83f",
+    "size": 4443,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/70718b19911dfd6318367a6dec9672aa55fdb83f"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/05-config/01-next-config-js/devIndicators.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "4de054f141723fabe17bdef213afd1b87e5d48ce",
+    "size": 3438,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/4de054f141723fabe17bdef213afd1b87e5d48ce"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/05-config/01-next-config-js/distDir.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "8672c02e73fde28d1a51705dcb461693210ace3a",
+    "size": 780,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/8672c02e73fde28d1a51705dcb461693210ace3a"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/05-config/01-next-config-js/env.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "537ce279ff5b1304816b2397630bb7d4bff2185a",
+    "size": 2346,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/537ce279ff5b1304816b2397630bb7d4bff2185a"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/05-config/01-next-config-js/expireTime.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "111677446e286c68457fa11a09327b1c51a824d6",
+    "size": 1036,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/111677446e286c68457fa11a09327b1c51a824d6"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/05-config/01-next-config-js/exportPathMap.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "0de97356667c8d5cb80867ee2b78cc36078e704f",
+    "size": 4325,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/0de97356667c8d5cb80867ee2b78cc36078e704f"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/05-config/01-next-config-js/generateBuildId.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "226ff6005b443509635ed53141a540ad4d8eff45",
+    "size": 1231,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/226ff6005b443509635ed53141a540ad4d8eff45"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/05-config/01-next-config-js/generateEtags.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "31620b0164ad0c18a11f414dd491825e5b05624a",
+    "size": 730,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/31620b0164ad0c18a11f414dd491825e5b05624a"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/05-config/01-next-config-js/headers.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "e30cb86cff93c2877aa806102ed8645b0d86c99d",
+    "size": 18319,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/e30cb86cff93c2877aa806102ed8645b0d86c99d"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/05-config/01-next-config-js/htmlLimitedBots.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "e8746f5773bb94e3be594fbddce3a718a193fc21",
+    "size": 1952,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/e8746f5773bb94e3be594fbddce3a718a193fc21"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/05-config/01-next-config-js/httpAgentOptions.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "00c4883a13615e37ed146ce04ea781c11b0db872",
+    "size": 889,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/00c4883a13615e37ed146ce04ea781c11b0db872"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/05-config/01-next-config-js/images.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "13940c8ad3d9a1521a7b874d74c4b6475278a5a5",
+    "size": 8830,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/13940c8ad3d9a1521a7b874d74c4b6475278a5a5"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/05-config/01-next-config-js/incrementalCacheHandlerPath.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "4c6f8e020c856f52ad5c290bcd77edcf15976be8",
+    "size": 5451,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/4c6f8e020c856f52ad5c290bcd77edcf15976be8"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/05-config/01-next-config-js/index.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "62b7df803d65f2f08f903e477593e53c41ac661c",
+    "size": 4664,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/62b7df803d65f2f08f903e477593e53c41ac661c"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/05-config/01-next-config-js/inlineCss.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "2f24e1811dab0b53fbba53d2b0b38d7ea655a580",
+    "size": 3697,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/2f24e1811dab0b53fbba53d2b0b38d7ea655a580"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/05-config/01-next-config-js/instrumentationClientInject.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "241ee9a05f46ad14a775df4dc3282b8bc969c4d8",
+    "size": 2886,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/241ee9a05f46ad14a775df4dc3282b8bc969c4d8"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/05-config/01-next-config-js/logging.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "5772e5d48a2e2b5966f20ee3e823e65dc8436aa8",
+    "size": 5068,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/5772e5d48a2e2b5966f20ee3e823e65dc8436aa8"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/05-config/01-next-config-js/mdxRs.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "90021f422f5601788ea24149ac02740cf23e7efc",
+    "size": 469,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/90021f422f5601788ea24149ac02740cf23e7efc"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/05-config/01-next-config-js/onDemandEntries.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "0f40387a326e37463dfe329a3f029255aa383cc5",
+    "size": 886,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/0f40387a326e37463dfe329a3f029255aa383cc5"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/05-config/01-next-config-js/optimizePackageImports.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "5e208bbdb28901ca352c47f9317cc37a28ff0ea2",
+    "size": 1384,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/5e208bbdb28901ca352c47f9317cc37a28ff0ea2"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/05-config/01-next-config-js/output.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "5e06e34a98af8bc72dda25af45007e0fe33ee280",
+    "size": 6969,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/5e06e34a98af8bc72dda25af45007e0fe33ee280"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/05-config/01-next-config-js/outputHashSalt.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "418a0a98248f0eaf04361eb1498365af81c95435",
+    "size": 1289,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/418a0a98248f0eaf04361eb1498365af81c95435"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/05-config/01-next-config-js/pageExtensions.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "703331919d0a99320d22614a06c27420b576693b",
+    "size": 2059,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/703331919d0a99320d22614a06c27420b576693b"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/05-config/01-next-config-js/partialPrefetching.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "9cb6e49ca73135196f593c59e529343436c6237f",
+    "size": 3554,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/9cb6e49ca73135196f593c59e529343436c6237f"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/05-config/01-next-config-js/poweredByHeader.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "533657af1e043a49fef0ae943e65ac1181079462",
+    "size": 596,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/533657af1e043a49fef0ae943e65ac1181079462"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/05-config/01-next-config-js/prefetchInlining.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "5ab46a6cfe1df28722e57730f8f840be5fc90233",
+    "size": 3677,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/5ab46a6cfe1df28722e57730f8f840be5fc90233"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/05-config/01-next-config-js/productionBrowserSourceMaps.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "e02b9910c2cbf0731df2a0b3bb4202abb0ebcaa6",
+    "size": 1090,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/e02b9910c2cbf0731df2a0b3bb4202abb0ebcaa6"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/05-config/01-next-config-js/proxyClientMaxBodySize.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "b861c15f467e4ddb4f2ba526d99f944e67002cdc",
+    "size": 3379,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/b861c15f467e4ddb4f2ba526d99f944e67002cdc"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/05-config/01-next-config-js/reactCompiler.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "0404e1859a01c18ba7eaadc5b8be7f7c1ce77327",
+    "size": 2794,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/0404e1859a01c18ba7eaadc5b8be7f7c1ce77327"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/05-config/01-next-config-js/reactMaxHeadersLength.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "379ec6d6118f653884906d83ae62698889cf5d3c",
+    "size": 882,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/379ec6d6118f653884906d83ae62698889cf5d3c"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/05-config/01-next-config-js/reactStrictMode.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "c81c5347d09f16d2d823c0815da57340ece487a6",
+    "size": 1379,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/c81c5347d09f16d2d823c0815da57340ece487a6"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/05-config/01-next-config-js/redirects.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "343dd9b6bac39ea63d9c5a5a855c9922e967bf76",
+    "size": 12885,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/343dd9b6bac39ea63d9c5a5a855c9922e967bf76"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/05-config/01-next-config-js/rewrites.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "c9b857184b1aa081c5f8c6e7f9993934702aedb0",
+    "size": 16931,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/c9b857184b1aa081c5f8c6e7f9993934702aedb0"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/05-config/01-next-config-js/sassOptions.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "138c7d08b5f5205361c8dfedc1d159e53efc3908",
+    "size": 1120,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/138c7d08b5f5205361c8dfedc1d159e53efc3908"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/05-config/01-next-config-js/serverActions.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "3b2b7c8973d7238fc5004c75966010a90c46c150",
+    "size": 4972,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/3b2b7c8973d7238fc5004c75966010a90c46c150"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/05-config/01-next-config-js/serverComponentsHmrCache.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "ea9594f0fedbc545dab5d03f6c1bf0452c753e93",
+    "size": 1467,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/ea9594f0fedbc545dab5d03f6c1bf0452c753e93"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/05-config/01-next-config-js/serverExternalPackages.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "e141d9986e399029247239332873d81d30c95add",
+    "size": 2655,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/e141d9986e399029247239332873d81d30c95add"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/05-config/01-next-config-js/skipProxyUrlNormalize.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "aa250f706e7e8bce6b3b8a65b50cc06268b5e2bd",
+    "size": 6896,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/aa250f706e7e8bce6b3b8a65b50cc06268b5e2bd"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/05-config/01-next-config-js/skipTrailingSlashRedirect.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "0c496389104e7fbba1cd33fa6e927f9fee651d32",
+    "size": 6203,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/0c496389104e7fbba1cd33fa6e927f9fee651d32"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/05-config/01-next-config-js/staleTimes.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "aa1ea1cdf1918050c0ef02a8e4202f66866864fc",
+    "size": 2079,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/aa1ea1cdf1918050c0ef02a8e4202f66866864fc"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/05-config/01-next-config-js/staticGeneration.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "a1ac57d6b0f4a3d1a9aae7922bac90cd873d6aa7",
+    "size": 1149,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/a1ac57d6b0f4a3d1a9aae7922bac90cd873d6aa7"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/05-config/01-next-config-js/supportsImmutableAssets.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "5560031980348b0ad0655c85e6874e1c14599624",
+    "size": 1873,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/5560031980348b0ad0655c85e6874e1c14599624"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/05-config/01-next-config-js/taint.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "e2363b118272307341416da442dff8bcc9e13a3d",
+    "size": 6907,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/e2363b118272307341416da442dff8bcc9e13a3d"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/05-config/01-next-config-js/trailingSlash.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "3fb2451d357a525af6865e3551e9209c2a0af108",
+    "size": 1520,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/3fb2451d357a525af6865e3551e9209c2a0af108"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/05-config/01-next-config-js/transpilePackages.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "4c54feec72cc0748c845edbe32895282c4da8a71",
+    "size": 2732,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/4c54feec72cc0748c845edbe32895282c4da8a71"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/05-config/01-next-config-js/turbopack.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "fbbec1135a0e75846970d937a0260aa7297ba97b",
+    "size": 18276,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/fbbec1135a0e75846970d937a0260aa7297ba97b"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/05-config/01-next-config-js/turbopackChunking.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "209bbea3aefb6d6bdfb7f6d099b76fcda12643c7",
+    "size": 5782,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/209bbea3aefb6d6bdfb7f6d099b76fcda12643c7"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/05-config/01-next-config-js/turbopackFileSystemCache.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "5c073e3a4747f76da88bac1e5200f5ef7a4752ab",
+    "size": 2581,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/5c073e3a4747f76da88bac1e5200f5ef7a4752ab"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/05-config/01-next-config-js/turbopackIgnoreIssue.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "0f39339b2f851bb622132813f043eeca350acc94",
+    "size": 4723,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/0f39339b2f851bb622132813f043eeca350acc94"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/05-config/01-next-config-js/turbopackLocalPostcssConfig.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "498d3487ab35196591e12779d0c6fae6c9be0c25",
+    "size": 2401,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/498d3487ab35196591e12779d0c6fae6c9be0c25"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/05-config/01-next-config-js/turbopackMemoryEviction.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "cc8a774232c59cc21d56273c6c42a15635acacf1",
+    "size": 1787,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/cc8a774232c59cc21d56273c6c42a15635acacf1"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/05-config/01-next-config-js/turbopackRustReactCompiler.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "1cf789a04eb8dab915765455eaf1a7c91555d0f4",
+    "size": 2207,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/1cf789a04eb8dab915765455eaf1a7c91555d0f4"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/05-config/01-next-config-js/typedRoutes.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "9f6019f7ed4a5739637de24c1e093e7628832193",
+    "size": 518,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/9f6019f7ed4a5739637de24c1e093e7628832193"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/05-config/01-next-config-js/typescript.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "21748f2f9948a12d53c2fd6f2c584d80cc397548",
+    "size": 2272,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/21748f2f9948a12d53c2fd6f2c584d80cc397548"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/05-config/01-next-config-js/urlImports.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "49bb7bad094ffc22d8216c41620d13c718907f2b",
+    "size": 2880,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/49bb7bad094ffc22d8216c41620d13c718907f2b"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/05-config/01-next-config-js/useLightningcss.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "189442d6eb24fa901773c64add66bfd8b4271402",
+    "size": 6898,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/189442d6eb24fa901773c64add66bfd8b4271402"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/05-config/01-next-config-js/useOffline.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "6fc6c4f2c996d817c2ffe0c3bae52fd9d890087b",
+    "size": 5399,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/6fc6c4f2c996d817c2ffe0c3bae52fd9d890087b"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/05-config/01-next-config-js/useTypeScriptCli.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "5f40b06d77f402604b9529a4683c9df3fc610814",
+    "size": 2357,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/5f40b06d77f402604b9529a4683c9df3fc610814"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/05-config/01-next-config-js/webVitalsAttribution.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "111422ad401e3716ed3b0e9aa68f7c9d9f7b2b35",
+    "size": 1958,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/111422ad401e3716ed3b0e9aa68f7c9d9f7b2b35"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/05-config/01-next-config-js/webpack.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "e243bdaed5ff8f68ba2835a0cddcb9439233814b",
+    "size": 3323,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/e243bdaed5ff8f68ba2835a0cddcb9439233814b"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/05-config/02-typescript.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "6be6bf25420d2a273ccd3de78bd63d37701aa17f",
+    "size": 23046,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/6be6bf25420d2a273ccd3de78bd63d37701aa17f"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/05-config/03-eslint.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "f94e9d8ae4763fb29670748954e58eac4a59c937",
+    "size": 18222,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/f94e9d8ae4763fb29670748954e58eac4a59c937"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/05-config/index.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "e80f5d3532ac073cff9975e8378a64e57168efbd",
+    "size": 87,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/e80f5d3532ac073cff9975e8378a64e57168efbd"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/06-cli/create-next-app.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "6bb3f01d1ede11d13d2dde876e6e14d9da1fe9aa",
+    "size": 7685,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/6bb3f01d1ede11d13d2dde876e6e14d9da1fe9aa"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/06-cli/index.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "80d311cc22c25d40bd2e1cc8f712a385003eeeb6",
+    "size": 691,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/80d311cc22c25d40bd2e1cc8f712a385003eeeb6"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/06-cli/next.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "8e33d828ea47768f148a27544cf38be7229fe02f",
+    "size": 25754,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/8e33d828ea47768f148a27544cf38be7229fe02f"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/07-adapters/01-configuration.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "3e02a3e1030204d5045ab5d060713a38994bfbf8",
+    "size": 483,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/3e02a3e1030204d5045ab5d060713a38994bfbf8"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/07-adapters/02-creating-an-adapter.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "b3fcc849e57a750255dedc8b123b381efed994a1",
+    "size": 3064,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/b3fcc849e57a750255dedc8b123b381efed994a1"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/07-adapters/03-api-reference.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "b1a4b5516fa75ce089d328bdafb7f919a072e691",
+    "size": 2208,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/b1a4b5516fa75ce089d328bdafb7f919a072e691"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/07-adapters/04-testing-adapters.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "88c40e5ef4ca23a4b97853040861bf5d306ab0b4",
+    "size": 7316,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/88c40e5ef4ca23a4b97853040861bf5d306ab0b4"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/07-adapters/05-routing-with-next-routing.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "61e26ce7de658a7300b4914bf82d1387750eb05f",
+    "size": 2184,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/61e26ce7de658a7300b4914bf82d1387750eb05f"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/07-adapters/06-implementing-ppr-in-an-adapter.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "53d8d9ef85c3ec0d6d5c65b798823fcc6ce86bbf",
+    "size": 3708,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/53d8d9ef85c3ec0d6d5c65b798823fcc6ce86bbf"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/07-adapters/07-runtime-integration.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "a9e3694a2de677ff638dfd87553261f9f0424173",
+    "size": 2819,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/a9e3694a2de677ff638dfd87553261f9f0424173"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/07-adapters/08-invoking-entrypoints.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "0e258831178ff79008897b87fa5e11387ded821c",
+    "size": 3903,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/0e258831178ff79008897b87fa5e11387ded821c"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/07-adapters/09-output-types.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "c2c01defc2c4cb8a1bc09863961cefd41bc3a070",
+    "size": 11908,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/c2c01defc2c4cb8a1bc09863961cefd41bc3a070"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/07-adapters/10-routing-information.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "7dcd2b96f746d9444d641575becd753b4fa2099f",
+    "size": 1485,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/7dcd2b96f746d9444d641575becd753b4fa2099f"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/07-adapters/11-use-cases.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "4dca8c46c939f81a25b589d124f71547b1440830",
+    "size": 626,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/4dca8c46c939f81a25b589d124f71547b1440830"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/07-adapters/12-immutable-static-assets.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "46cc57adb67aa0ad02d2fce7e1244ab95d4e839c",
+    "size": 3039,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/46cc57adb67aa0ad02d2fce7e1244ab95d4e839c"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/07-adapters/index.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "72c66258b7c01292a135c2f1f47c63efa65ba49b",
+    "size": 222,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/72c66258b7c01292a135c2f1f47c63efa65ba49b"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/07-edge.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "7ca08888765564cc57d4bf91515d3dbf332cfc2e",
+    "size": 29317,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/7ca08888765564cc57d4bf91515d3dbf332cfc2e"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/08-turbopack.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "2273fddc2aabe557e9174e6da3a1d3074baab65e",
+    "size": 36218,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/2273fddc2aabe557e9174e6da3a1d3074baab65e"
+  },
+  {
+    "path": "docs/01-app/03-api-reference/index.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "a130064e849b56873398c0092cc6cbc24ab0913e",
+    "size": 84,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/a130064e849b56873398c0092cc6cbc24ab0913e"
+  },
+  {
+    "path": "docs/01-app/04-glossary.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "a11297f1047041f51817855e2af92fdbd57de290",
+    "size": 22707,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/a11297f1047041f51817855e2af92fdbd57de290"
+  },
+  {
+    "path": "docs/01-app/index.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "1cbe9dbde9550883b132f790d2ca9b91556e6d7b",
+    "size": 891,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/1cbe9dbde9550883b132f790d2ca9b91556e6d7b"
+  },
+  {
+    "path": "docs/02-pages/01-getting-started/01-installation.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "318386643031163329865b82ed9a06a5a5c4a9d6",
+    "size": 587,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/318386643031163329865b82ed9a06a5a5c4a9d6"
+  },
+  {
+    "path": "docs/02-pages/01-getting-started/02-project-structure.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "c4be62c32b06fd2cfbbe249324905f332329b980",
+    "size": 567,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/c4be62c32b06fd2cfbbe249324905f332329b980"
+  },
+  {
+    "path": "docs/02-pages/01-getting-started/04-images.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "90c8649a4a6fdb790008e0fcbeae58d1043ea889",
+    "size": 655,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/90c8649a4a6fdb790008e0fcbeae58d1043ea889"
+  },
+  {
+    "path": "docs/02-pages/01-getting-started/05-fonts.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "17b43fd6b205ecb93e0f6ff88482c11f4f8a892c",
+    "size": 620,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/17b43fd6b205ecb93e0f6ff88482c11f4f8a892c"
+  },
+  {
+    "path": "docs/02-pages/01-getting-started/06-css.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "26e3c46ae93b7c150af30864e3bd67d867fd8a8e",
+    "size": 756,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/26e3c46ae93b7c150af30864e3bd67d867fd8a8e"
+  },
+  {
+    "path": "docs/02-pages/01-getting-started/11-deploying.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "1c3473201d3f5163581dcee76b87b7e4fb31c2e6",
+    "size": 172,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/1c3473201d3f5163581dcee76b87b7e4fb31c2e6"
+  },
+  {
+    "path": "docs/02-pages/01-getting-started/index.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "17447669def9e0291a1581e2bbd9b614e493fac2",
+    "size": 170,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/17447669def9e0291a1581e2bbd9b614e493fac2"
+  },
+  {
+    "path": "docs/02-pages/02-guides/analytics.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "a43f65cb5a9c51b570fce4cdf7370ea40c887e83",
+    "size": 480,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/a43f65cb5a9c51b570fce4cdf7370ea40c887e83"
+  },
+  {
+    "path": "docs/02-pages/02-guides/authentication.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "154aaca995ffff309bedab5e6461f4cdcbd9b69b",
+    "size": 602,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/154aaca995ffff309bedab5e6461f4cdcbd9b69b"
+  },
+  {
+    "path": "docs/02-pages/02-guides/babel.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "33256f9ab90edad750ca1c6a5e0aa76174dfeb34",
+    "size": 2100,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/33256f9ab90edad750ca1c6a5e0aa76174dfeb34"
+  },
+  {
+    "path": "docs/02-pages/02-guides/ci-build-caching.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "8c7ed084bf591ff417522c0102915be245df2fe4",
+    "size": 530,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/8c7ed084bf591ff417522c0102915be245df2fe4"
+  },
+  {
+    "path": "docs/02-pages/02-guides/content-security-policy.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "b9b0c111f22e60ea7c832a492c6a43d090782e8f",
+    "size": 586,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/b9b0c111f22e60ea7c832a492c6a43d090782e8f"
+  },
+  {
+    "path": "docs/02-pages/02-guides/css-in-js.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "c4e2f54bab848b06936d859f0c4ed613426d41ae",
+    "size": 475,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/c4e2f54bab848b06936d859f0c4ed613426d41ae"
+  },
+  {
+    "path": "docs/02-pages/02-guides/custom-server.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "99983915137ed9f56d17bc0d135996a3a5474adc",
+    "size": 516,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/99983915137ed9f56d17bc0d135996a3a5474adc"
+  },
+  {
+    "path": "docs/02-pages/02-guides/debugging.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "ead4cea5390e390b629cd5d4904c414cbe574ec5",
+    "size": 524,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/ead4cea5390e390b629cd5d4904c414cbe574ec5"
+  },
+  {
+    "path": "docs/02-pages/02-guides/draft-mode.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "73adc73a4174365d4306efa2614dae97c8d44d4c",
+    "size": 8174,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/73adc73a4174365d4306efa2614dae97c8d44d4c"
+  },
+  {
+    "path": "docs/02-pages/02-guides/environment-variables.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "fd644b2cf5a8198c1c9461c9ceebc63574327518",
+    "size": 550,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/fd644b2cf5a8198c1c9461c9ceebc63574327518"
+  },
+  {
+    "path": "docs/02-pages/02-guides/forms.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "f34247b9a04768697f83fe82d26c1c970c190141",
+    "size": 8959,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/f34247b9a04768697f83fe82d26c1c970c190141"
+  },
+  {
+    "path": "docs/02-pages/02-guides/incremental-static-regeneration.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "45b2b9ad57651426419e3931ea8aa9f0792471a2",
+    "size": 570,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/45b2b9ad57651426419e3931ea8aa9f0792471a2"
+  },
+  {
+    "path": "docs/02-pages/02-guides/index.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "384e946cee06fc27e2a4df1f72f2717e24b12329",
+    "size": 105,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/384e946cee06fc27e2a4df1f72f2717e24b12329"
+  },
+  {
+    "path": "docs/02-pages/02-guides/instrumentation.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "9ff275d1a6f18d388d03a63f1955273f625b7b5e",
+    "size": 532,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/9ff275d1a6f18d388d03a63f1955273f625b7b5e"
+  },
+  {
+    "path": "docs/02-pages/02-guides/internationalization.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "1c7d11ddc9b8c0f826c33d6dfee73e9612773e9f",
+    "size": 15058,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/1c7d11ddc9b8c0f826c33d6dfee73e9612773e9f"
+  },
+  {
+    "path": "docs/02-pages/02-guides/lazy-loading.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "bdb30655062416c565cf123e1fa35e134f7f4d81",
+    "size": 571,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/bdb30655062416c565cf123e1fa35e134f7f4d81"
+  },
+  {
+    "path": "docs/02-pages/02-guides/mdx.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "abebc6f9c9b943a3a860a987e2a607d258d4b526",
+    "size": 498,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/abebc6f9c9b943a3a860a987e2a607d258d4b526"
+  },
+  {
+    "path": "docs/02-pages/02-guides/migrating/app-router-migration.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "417c11acf20888e716ae99ba8bc4e9da9df5b990",
+    "size": 569,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/417c11acf20888e716ae99ba8bc4e9da9df5b990"
+  },
+  {
+    "path": "docs/02-pages/02-guides/migrating/from-create-react-app.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "c522841fc2162584b9dd00110a0e4f3604f8abcb",
+    "size": 571,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/c522841fc2162584b9dd00110a0e4f3604f8abcb"
+  },
+  {
+    "path": "docs/02-pages/02-guides/migrating/from-vite.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "12f15127e7c8f292156bb1901b302a309eee0b83",
+    "size": 523,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/12f15127e7c8f292156bb1901b302a309eee0b83"
+  },
+  {
+    "path": "docs/02-pages/02-guides/migrating/index.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "6d7047ebc0f523e89a024e1bee989a1710d1c530",
+    "size": 94,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/6d7047ebc0f523e89a024e1bee989a1710d1c530"
+  },
+  {
+    "path": "docs/02-pages/02-guides/multi-zones.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "0212167f8912b9ebed3bdbc4d238f673d7dc5eba",
+    "size": 586,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/0212167f8912b9ebed3bdbc4d238f673d7dc5eba"
+  },
+  {
+    "path": "docs/02-pages/02-guides/open-telemetry.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "84c6d14a5cb09e737a7c1fce6265490976d4bfeb",
+    "size": 531,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/84c6d14a5cb09e737a7c1fce6265490976d4bfeb"
+  },
+  {
+    "path": "docs/02-pages/02-guides/package-bundling.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "9c35d046978455f4418f2d4a817563cc6688a51e",
+    "size": 656,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/9c35d046978455f4418f2d4a817563cc6688a51e"
+  },
+  {
+    "path": "docs/02-pages/02-guides/post-css.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "e464a8d7a56520244e2dac03e0d4bb99f4a280b5",
+    "size": 5820,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/e464a8d7a56520244e2dac03e0d4bb99f4a280b5"
+  },
+  {
+    "path": "docs/02-pages/02-guides/preview-mode.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "72abce1bf18f957d4ef892ed1cdc1d5fed569cc8",
+    "size": 14383,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/72abce1bf18f957d4ef892ed1cdc1d5fed569cc8"
+  },
+  {
+    "path": "docs/02-pages/02-guides/production-checklist.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "d6af4158f52a4b81253b5371e10653b83d9f4dcd",
+    "size": 596,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/d6af4158f52a4b81253b5371e10653b83d9f4dcd"
+  },
+  {
+    "path": "docs/02-pages/02-guides/redirecting.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "3a174140746831ccb558b3530fab3f6b79d0e676",
+    "size": 503,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/3a174140746831ccb558b3530fab3f6b79d0e676"
+  },
+  {
+    "path": "docs/02-pages/02-guides/sass.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "a15764b12b6a182728eb4a34f80b4d3928950f94",
+    "size": 475,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/a15764b12b6a182728eb4a34f80b4d3928950f94"
+  },
+  {
+    "path": "docs/02-pages/02-guides/scripts.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "e1579efc014eb7aac6cc3b2a4d835117a0ca507f",
+    "size": 499,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/e1579efc014eb7aac6cc3b2a4d835117a0ca507f"
+  },
+  {
+    "path": "docs/02-pages/02-guides/self-hosting.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "4f4e9992c17c14eeec65ffba3758ff0075747799",
+    "size": 577,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/4f4e9992c17c14eeec65ffba3758ff0075747799"
+  },
+  {
+    "path": "docs/02-pages/02-guides/static-exports.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "f4292c15e7ffea4610d9cc38b4ee1456b1fcc178",
+    "size": 622,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/f4292c15e7ffea4610d9cc38b4ee1456b1fcc178"
+  },
+  {
+    "path": "docs/02-pages/02-guides/tailwind-v3-css.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "1e7cae8928cd28fab02e916bb3240aaca89da76b",
+    "size": 456,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/1e7cae8928cd28fab02e916bb3240aaca89da76b"
+  },
+  {
+    "path": "docs/02-pages/02-guides/testing/cypress.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "85873fc3dabe5203ec664e6fb0d3764874898e66",
+    "size": 531,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/85873fc3dabe5203ec664e6fb0d3764874898e66"
+  },
+  {
+    "path": "docs/02-pages/02-guides/testing/index.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "7c014535cd4e4628e999ece6c53057671c46f6eb",
+    "size": 502,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/7c014535cd4e4628e999ece6c53057671c46f6eb"
+  },
+  {
+    "path": "docs/02-pages/02-guides/testing/jest.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "b6495096fc57d72a18e046ce40ca0ec8b3b45d8e",
+    "size": 493,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/b6495096fc57d72a18e046ce40ca0ec8b3b45d8e"
+  },
+  {
+    "path": "docs/02-pages/02-guides/testing/playwright.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "2424861c35f3b5eebfaf1ef4d5bc1ef233ca21a3",
+    "size": 545,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/2424861c35f3b5eebfaf1ef4d5bc1ef233ca21a3"
+  },
+  {
+    "path": "docs/02-pages/02-guides/testing/vitest.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "d29d90a64a2f6970e230d8548f996135b7e4a42a",
+    "size": 547,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/d29d90a64a2f6970e230d8548f996135b7e4a42a"
+  },
+  {
+    "path": "docs/02-pages/02-guides/third-party-libraries.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "48a5b97f67cb218c4446a5752eb3af38dd03bb29",
+    "size": 579,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/48a5b97f67cb218c4446a5752eb3af38dd03bb29"
+  },
+  {
+    "path": "docs/02-pages/02-guides/upgrading/codemods.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "6d36cee9edecc73cd06b15037d1952907a23d7ba",
+    "size": 482,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/6d36cee9edecc73cd06b15037d1952907a23d7ba"
+  },
+  {
+    "path": "docs/02-pages/02-guides/upgrading/index.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "b7d5f8eefee28c1335c256ecb453c311dc6f3bda",
+    "size": 190,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/b7d5f8eefee28c1335c256ecb453c311dc6f3bda"
+  },
+  {
+    "path": "docs/02-pages/02-guides/upgrading/version-10.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "77c7065b67156ff6b391eaa5b464a2282fbbd651",
+    "size": 595,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/77c7065b67156ff6b391eaa5b464a2282fbbd651"
+  },
+  {
+    "path": "docs/02-pages/02-guides/upgrading/version-11.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "f6d9f4f6db62aea6e3a003ce468b3d1f567513e6",
+    "size": 6561,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/f6d9f4f6db62aea6e3a003ce468b3d1f567513e6"
+  },
+  {
+    "path": "docs/02-pages/02-guides/upgrading/version-12.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "bba689b0437151e9be91fa70564f120dd30bc41e",
+    "size": 7597,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/bba689b0437151e9be91fa70564f120dd30bc41e"
+  },
+  {
+    "path": "docs/02-pages/02-guides/upgrading/version-13.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "efa9ef1a65e75ddaab9814d0116c70d2dce2a05f",
+    "size": 5293,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/efa9ef1a65e75ddaab9814d0116c70d2dce2a05f"
+  },
+  {
+    "path": "docs/02-pages/02-guides/upgrading/version-14.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "0c405800e387f31f51031bf80e4d55de052cd2b7",
+    "size": 504,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/0c405800e387f31f51031bf80e4d55de052cd2b7"
+  },
+  {
+    "path": "docs/02-pages/02-guides/upgrading/version-9.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "e0be09e6ebc470bdce35f21d564656d386031fa4",
+    "size": 6124,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/e0be09e6ebc470bdce35f21d564656d386031fa4"
+  },
+  {
+    "path": "docs/02-pages/03-building-your-application/01-routing/01-pages-and-layouts.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "933f0bf4988db51dbc9a1e6d09cb55d2f306a591",
+    "size": 6820,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/933f0bf4988db51dbc9a1e6d09cb55d2f306a591"
+  },
+  {
+    "path": "docs/02-pages/03-building-your-application/01-routing/02-dynamic-routes.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "50dde821c6ef780e5ac5a550090cd9afe9681aca",
+    "size": 3172,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/50dde821c6ef780e5ac5a550090cd9afe9681aca"
+  },
+  {
+    "path": "docs/02-pages/03-building-your-application/01-routing/03-linking-and-navigating.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "55fa9caa2d6f26b8e1a4c635e8bd494324919d64",
+    "size": 6390,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/55fa9caa2d6f26b8e1a4c635e8bd494324919d64"
+  },
+  {
+    "path": "docs/02-pages/03-building-your-application/01-routing/05-custom-app.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "beb9efb51cbd6cef83cea45a6e0374f7d987c002",
+    "size": 3239,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/beb9efb51cbd6cef83cea45a6e0374f7d987c002"
+  },
+  {
+    "path": "docs/02-pages/03-building-your-application/01-routing/06-custom-document.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "27b32940ca51696068ba2eb224e093f24cfe7d87",
+    "size": 4855,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/27b32940ca51696068ba2eb224e093f24cfe7d87"
+  },
+  {
+    "path": "docs/02-pages/03-building-your-application/01-routing/07-api-routes.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "05be119a4e651122680b757b9a70a375eac9e6da",
+    "size": 15763,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/05be119a4e651122680b757b9a70a375eac9e6da"
+  },
+  {
+    "path": "docs/02-pages/03-building-your-application/01-routing/08-custom-error.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "dc1a05e05a9e4fde8c0d30e515d78d66727fdcd8",
+    "size": 4098,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/dc1a05e05a9e4fde8c0d30e515d78d66727fdcd8"
+  },
+  {
+    "path": "docs/02-pages/03-building-your-application/01-routing/index.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "eccc04dab7845598929f97b0d60552b97da1a83d",
+    "size": 330,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/eccc04dab7845598929f97b0d60552b97da1a83d"
+  },
+  {
+    "path": "docs/02-pages/03-building-your-application/02-rendering/01-server-side-rendering.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "7ab0bd420145ca6c8cc55bfd214f15fc37a1f668",
+    "size": 1319,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/7ab0bd420145ca6c8cc55bfd214f15fc37a1f668"
+  },
+  {
+    "path": "docs/02-pages/03-building-your-application/02-rendering/02-static-site-generation.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "aee03ca90ad9dbab8e38d3c5b9af48c51a7c4f7f",
+    "size": 10273,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/aee03ca90ad9dbab8e38d3c5b9af48c51a7c4f7f"
+  },
+  {
+    "path": "docs/02-pages/03-building-your-application/02-rendering/04-automatic-static-optimization.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "ea13ba0cbfac65a0f352c5cab678d5ce8f2009f9",
+    "size": 3813,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/ea13ba0cbfac65a0f352c5cab678d5ce8f2009f9"
+  },
+  {
+    "path": "docs/02-pages/03-building-your-application/02-rendering/05-client-side-rendering.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "6a9a57265e2c9ef01ad8f3f6ba10a40c46a7f3d6",
+    "size": 3993,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/6a9a57265e2c9ef01ad8f3f6ba10a40c46a7f3d6"
+  },
+  {
+    "path": "docs/02-pages/03-building-your-application/02-rendering/index.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "9670ece7f345b040d0c1a9e6eb7ea097072a5b42",
+    "size": 1747,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/9670ece7f345b040d0c1a9e6eb7ea097072a5b42"
+  },
+  {
+    "path": "docs/02-pages/03-building-your-application/03-data-fetching/01-get-static-props.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "215df85f207ebdab731dd992a069dd3b0c961a64",
+    "size": 9440,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/215df85f207ebdab731dd992a069dd3b0c961a64"
+  },
+  {
+    "path": "docs/02-pages/03-building-your-application/03-data-fetching/02-get-static-paths.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "531bc2f6732ff8c441a2eb5120105680b4f5cb5a",
+    "size": 5265,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/531bc2f6732ff8c441a2eb5120105680b4f5cb5a"
+  },
+  {
+    "path": "docs/02-pages/03-building-your-application/03-data-fetching/03-get-server-side-props.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "853b3c0509806445915661573d4cd408700e9662",
+    "size": 5043,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/853b3c0509806445915661573d4cd408700e9662"
+  },
+  {
+    "path": "docs/02-pages/03-building-your-application/03-data-fetching/05-client-side.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "6eeeee854805476b5ceae7546c356f7c74130051",
+    "size": 2681,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/6eeeee854805476b5ceae7546c356f7c74130051"
+  },
+  {
+    "path": "docs/02-pages/03-building-your-application/03-data-fetching/index.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "dc058f4efcd3d22dd9752b55ed34943b8ce62e3d",
+    "size": 4436,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/dc058f4efcd3d22dd9752b55ed34943b8ce62e3d"
+  },
+  {
+    "path": "docs/02-pages/03-building-your-application/06-configuring/12-error-handling.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "6c32aed00c1398f1878a8e8b2cb1bae4b89b541e",
+    "size": 4018,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/6c32aed00c1398f1878a8e8b2cb1bae4b89b541e"
+  },
+  {
+    "path": "docs/02-pages/03-building-your-application/06-configuring/index.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "326ea00a215134492034289fbc68e25816f93f73",
+    "size": 322,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/326ea00a215134492034289fbc68e25816f93f73"
+  },
+  {
+    "path": "docs/02-pages/03-building-your-application/index.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "17a1eb67866f67cd1b8b792110a3ec5b1404eb32",
+    "size": 115,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/17a1eb67866f67cd1b8b792110a3ec5b1404eb32"
+  },
+  {
+    "path": "docs/02-pages/04-api-reference/01-components/font.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "f1c15773bc5fce2bae3c98886891124140467db0",
+    "size": 461,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/f1c15773bc5fce2bae3c98886891124140467db0"
+  },
+  {
+    "path": "docs/02-pages/04-api-reference/01-components/form.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "a17f14b8be9bb22a06fcdaee3cdc109a708b6584",
+    "size": 526,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/a17f14b8be9bb22a06fcdaee3cdc109a708b6584"
+  },
+  {
+    "path": "docs/02-pages/04-api-reference/01-components/head.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "be5ac7ec981bfc9bfac4a5db19f87114cbde5a35",
+    "size": 2163,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/be5ac7ec981bfc9bfac4a5db19f87114cbde5a35"
+  },
+  {
+    "path": "docs/02-pages/04-api-reference/01-components/image-legacy.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "7ea3a47a487e2ec1e8130e4221bd2ce01c08f21a",
+    "size": 32244,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/7ea3a47a487e2ec1e8130e4221bd2ce01c08f21a"
+  },
+  {
+    "path": "docs/02-pages/04-api-reference/01-components/image.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "a6524ba8b16ed2553bc418730280365da5d97c79",
+    "size": 493,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/a6524ba8b16ed2553bc418730280365da5d97c79"
+  },
+  {
+    "path": "docs/02-pages/04-api-reference/01-components/index.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "642bdc75cf0a46cfbc203d90d913f5db14911a54",
+    "size": 472,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/642bdc75cf0a46cfbc203d90d913f5db14911a54"
+  },
+  {
+    "path": "docs/02-pages/04-api-reference/01-components/link.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "89401b641986f97a9a287537636fd2b45b0648f7",
+    "size": 446,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/89401b641986f97a9a287537636fd2b45b0648f7"
+  },
+  {
+    "path": "docs/02-pages/04-api-reference/01-components/script.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "906cb0745978ed731118002fd1a4ee60ec6537e1",
+    "size": 509,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/906cb0745978ed731118002fd1a4ee60ec6537e1"
+  },
+  {
+    "path": "docs/02-pages/04-api-reference/02-file-conventions/index.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "a69df3feeee97a3cd8c48448623c586fa63394ff",
+    "size": 103,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/a69df3feeee97a3cd8c48448623c586fa63394ff"
+  },
+  {
+    "path": "docs/02-pages/04-api-reference/02-file-conventions/instrumentation.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "89ec7795c8150e8e0e918318452cc3fde639904a",
+    "size": 482,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/89ec7795c8150e8e0e918318452cc3fde639904a"
+  },
+  {
+    "path": "docs/02-pages/04-api-reference/02-file-conventions/proxy.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "0884d693e510403aca4dbd9262ec41009cfa97ee",
+    "size": 478,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/0884d693e510403aca4dbd9262ec41009cfa97ee"
+  },
+  {
+    "path": "docs/02-pages/04-api-reference/02-file-conventions/public-folder.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "436210bcf67ff1988602000bdfa9c7c3916a00c3",
+    "size": 559,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/436210bcf67ff1988602000bdfa9c7c3916a00c3"
+  },
+  {
+    "path": "docs/02-pages/04-api-reference/02-file-conventions/src-folder.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "bd76fcaa385efa17b830571b829cfb4ff5bd0b35",
+    "size": 508,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/bd76fcaa385efa17b830571b829cfb4ff5bd0b35"
+  },
+  {
+    "path": "docs/02-pages/04-api-reference/03-functions/catchError.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "7e340a915a0e808433c4d12e757260a8b513b034",
+    "size": 458,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/7e340a915a0e808433c4d12e757260a8b513b034"
+  },
+  {
+    "path": "docs/02-pages/04-api-reference/03-functions/get-initial-props.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "6f94d5156e5e0d8178ab0da1f6ec3f90a36586c3",
+    "size": 3769,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/6f94d5156e5e0d8178ab0da1f6ec3f90a36586c3"
+  },
+  {
+    "path": "docs/02-pages/04-api-reference/03-functions/get-server-side-props.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "6b26e5201a874dc53d82aa528b8db3386bdcbb4a",
+    "size": 7614,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/6b26e5201a874dc53d82aa528b8db3386bdcbb4a"
+  },
+  {
+    "path": "docs/02-pages/04-api-reference/03-functions/get-static-paths.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "65eb40159d24010b2b5835c36db4df672f583d9d",
+    "size": 12568,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/65eb40159d24010b2b5835c36db4df672f583d9d"
+  },
+  {
+    "path": "docs/02-pages/04-api-reference/03-functions/get-static-props.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "7c237e49948aea40c790eac81b2d70db599ec312",
+    "size": 12933,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/7c237e49948aea40c790eac81b2d70db599ec312"
+  },
+  {
+    "path": "docs/02-pages/04-api-reference/03-functions/index.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "8a2aa43cba2e434a5908c79aa3d70423257e7598",
+    "size": 458,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/8a2aa43cba2e434a5908c79aa3d70423257e7598"
+  },
+  {
+    "path": "docs/02-pages/04-api-reference/03-functions/next-request.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "fa85f33e18078bf37f0af2e81b507e6df5cf4071",
+    "size": 449,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/fa85f33e18078bf37f0af2e81b507e6df5cf4071"
+  },
+  {
+    "path": "docs/02-pages/04-api-reference/03-functions/next-response.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "6c0a13527e6817f83e503637d8cfacc8e93c8b7d",
+    "size": 452,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/6c0a13527e6817f83e503637d8cfacc8e93c8b7d"
+  },
+  {
+    "path": "docs/02-pages/04-api-reference/03-functions/use-params.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "b75656182a649bab555f2d459c74fc55ed19217a",
+    "size": 7115,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/b75656182a649bab555f2d459c74fc55ed19217a"
+  },
+  {
+    "path": "docs/02-pages/04-api-reference/03-functions/use-report-web-vitals.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "1f66c66edac481bc587a16dabb91bbd5b9f3bd6a",
+    "size": 545,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/1f66c66edac481bc587a16dabb91bbd5b9f3bd6a"
+  },
+  {
+    "path": "docs/02-pages/04-api-reference/03-functions/use-router.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "35cfde871d2d0403275ac6a86ea4fc6d85b8d143",
+    "size": 21203,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/35cfde871d2d0403275ac6a86ea4fc6d85b8d143"
+  },
+  {
+    "path": "docs/02-pages/04-api-reference/03-functions/use-search-params.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "dd28f4a0dcf3974235c752d95a003cb70e60f3d7",
+    "size": 10181,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/dd28f4a0dcf3974235c752d95a003cb70e60f3d7"
+  },
+  {
+    "path": "docs/02-pages/04-api-reference/03-functions/userAgent.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "21b37946d3c1342b72141cf7b5dc3e7315fd1edb",
+    "size": 558,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/21b37946d3c1342b72141cf7b5dc3e7315fd1edb"
+  },
+  {
+    "path": "docs/02-pages/04-api-reference/04-config/01-next-config-js/adapterPath.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "9143d16afed30969654d013db3c6548d1a9fcc03",
+    "size": 500,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/9143d16afed30969654d013db3c6548d1a9fcc03"
+  },
+  {
+    "path": "docs/02-pages/04-api-reference/04-config/01-next-config-js/allowedDevOrigins.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "065a34a7f16b3a294479ae8c2ba80c5d6c2077f4",
+    "size": 530,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/065a34a7f16b3a294479ae8c2ba80c5d6c2077f4"
+  },
+  {
+    "path": "docs/02-pages/04-api-reference/04-config/01-next-config-js/assetPrefix.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "7bbb797784b716b86c0aa98c2616b5260643af56",
+    "size": 499,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/7bbb797784b716b86c0aa98c2616b5260643af56"
+  },
+  {
+    "path": "docs/02-pages/04-api-reference/04-config/01-next-config-js/basePath.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "3e01cef656f0941d7199b9a0aa06f17d1332ddfc",
+    "size": 500,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/3e01cef656f0941d7199b9a0aa06f17d1332ddfc"
+  },
+  {
+    "path": "docs/02-pages/04-api-reference/04-config/01-next-config-js/bundlePagesRouterDependencies.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "e8448f2ba07a7efa88d2c8d4e7e5299234cac480",
+    "size": 979,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/e8448f2ba07a7efa88d2c8d4e7e5299234cac480"
+  },
+  {
+    "path": "docs/02-pages/04-api-reference/04-config/01-next-config-js/compress.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "f3f9653e3d54f46323742d0d4bed5f50128ad88d",
+    "size": 568,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/f3f9653e3d54f46323742d0d4bed5f50128ad88d"
+  },
+  {
+    "path": "docs/02-pages/04-api-reference/04-config/01-next-config-js/crossOrigin.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "f966da8dd4038e2e3ed548585d514996cfc290f6",
+    "size": 465,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/f966da8dd4038e2e3ed548585d514996cfc290f6"
+  },
+  {
+    "path": "docs/02-pages/04-api-reference/04-config/01-next-config-js/deploymentId.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "7bc1604fca9c8a2d3a8641757d3e9b13f70283ac",
+    "size": 517,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/7bc1604fca9c8a2d3a8641757d3e9b13f70283ac"
+  },
+  {
+    "path": "docs/02-pages/04-api-reference/04-config/01-next-config-js/devIndicators.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "6bd1cab65866c8a62527e1f2db5c7304e8817c29",
+    "size": 550,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/6bd1cab65866c8a62527e1f2db5c7304e8817c29"
+  },
+  {
+    "path": "docs/02-pages/04-api-reference/04-config/01-next-config-js/distDir.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "a137fcc495b06bff04ced5cc8de12158397dd9e5",
+    "size": 497,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/a137fcc495b06bff04ced5cc8de12158397dd9e5"
+  },
+  {
+    "path": "docs/02-pages/04-api-reference/04-config/01-next-config-js/env.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "fc153936a3ec9ca0148d931fe3695b271213ed6b",
+    "size": 502,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/fc153936a3ec9ca0148d931fe3695b271213ed6b"
+  },
+  {
+    "path": "docs/02-pages/04-api-reference/04-config/01-next-config-js/exportPathMap.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "5e9f97f1e1af15fe4f4211d1a51eb8ca926ab4dc",
+    "size": 515,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/5e9f97f1e1af15fe4f4211d1a51eb8ca926ab4dc"
+  },
+  {
+    "path": "docs/02-pages/04-api-reference/04-config/01-next-config-js/generateBuildId.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "43a89965931968e85009888efd9eb2211226c5b9",
+    "size": 548,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/43a89965931968e85009888efd9eb2211226c5b9"
+  },
+  {
+    "path": "docs/02-pages/04-api-reference/04-config/01-next-config-js/generateEtags.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "d42aee381314d9fea39d1d478caa3ad453f3edfe",
+    "size": 542,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/d42aee381314d9fea39d1d478caa3ad453f3edfe"
+  },
+  {
+    "path": "docs/02-pages/04-api-reference/04-config/01-next-config-js/headers.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "c5dbc9e0ed448dcac340cbd8fc2f56a5faf5da70",
+    "size": 466,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/c5dbc9e0ed448dcac340cbd8fc2f56a5faf5da70"
+  },
+  {
+    "path": "docs/02-pages/04-api-reference/04-config/01-next-config-js/httpAgentOptions.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "ce0834850c54f3647253623490c9cf1cd83a10e0",
+    "size": 552,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/ce0834850c54f3647253623490c9cf1cd83a10e0"
+  },
+  {
+    "path": "docs/02-pages/04-api-reference/04-config/01-next-config-js/images.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "691ab3204c7a23ae88fabc421d22f729dcea2796",
+    "size": 466,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/691ab3204c7a23ae88fabc421d22f729dcea2796"
+  },
+  {
+    "path": "docs/02-pages/04-api-reference/04-config/01-next-config-js/index.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "c157a5d4ccea30303d89a7c8e830e2da23eeb249",
+    "size": 502,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/c157a5d4ccea30303d89a7c8e830e2da23eeb249"
+  },
+  {
+    "path": "docs/02-pages/04-api-reference/04-config/01-next-config-js/logging.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "de21ea619e006dc9ec1d45d434348175a1beafb1",
+    "size": 506,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/de21ea619e006dc9ec1d45d434348175a1beafb1"
+  },
+  {
+    "path": "docs/02-pages/04-api-reference/04-config/01-next-config-js/onDemandEntries.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "88d8a0a220d10868ff9146393dc1583fb0dd4b63",
+    "size": 521,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/88d8a0a220d10868ff9146393dc1583fb0dd4b63"
+  },
+  {
+    "path": "docs/02-pages/04-api-reference/04-config/01-next-config-js/optimizePackageImports.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "079d3c73ffcd3e4a538472a40cfe9a2aba135e8e",
+    "size": 536,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/079d3c73ffcd3e4a538472a40cfe9a2aba135e8e"
+  },
+  {
+    "path": "docs/02-pages/04-api-reference/04-config/01-next-config-js/output.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "9e60593a90f1ce590e4022287bd4bcc079e3b687",
+    "size": 559,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/9e60593a90f1ce590e4022287bd4bcc079e3b687"
+  },
+  {
+    "path": "docs/02-pages/04-api-reference/04-config/01-next-config-js/pageExtensions.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "747178da4e9ec16bce507d27338d2e26251fd3f1",
+    "size": 528,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/747178da4e9ec16bce507d27338d2e26251fd3f1"
+  },
+  {
+    "path": "docs/02-pages/04-api-reference/04-config/01-next-config-js/poweredByHeader.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "914b3ccab23c347ee3e4e980f802f316696cab5a",
+    "size": 521,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/914b3ccab23c347ee3e4e980f802f316696cab5a"
+  },
+  {
+    "path": "docs/02-pages/04-api-reference/04-config/01-next-config-js/productionBrowserSourceMaps.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "51b11cd366be6f8528c6c1dc426fcc029cae2004",
+    "size": 528,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/51b11cd366be6f8528c6c1dc426fcc029cae2004"
+  },
+  {
+    "path": "docs/02-pages/04-api-reference/04-config/01-next-config-js/proxyClientMaxBodySize.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "99d233f39b06712fae36b537fe1cd20c253e7c4a",
+    "size": 522,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/99d233f39b06712fae36b537fe1cd20c253e7c4a"
+  },
+  {
+    "path": "docs/02-pages/04-api-reference/04-config/01-next-config-js/reactStrictMode.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "97de1c86dab88c41d079eeed379b290640aea8d0",
+    "size": 516,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/97de1c86dab88c41d079eeed379b290640aea8d0"
+  },
+  {
+    "path": "docs/02-pages/04-api-reference/04-config/01-next-config-js/redirects.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "45e28d9863200f043f842a6cf66569c211fa8928",
+    "size": 460,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/45e28d9863200f043f842a6cf66569c211fa8928"
+  },
+  {
+    "path": "docs/02-pages/04-api-reference/04-config/01-next-config-js/rewrites.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "ef8c388c5f90bad0eb23b963514c49443592c480",
+    "size": 457,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/ef8c388c5f90bad0eb23b963514c49443592c480"
+  },
+  {
+    "path": "docs/02-pages/04-api-reference/04-config/01-next-config-js/serverExternalPackages.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "72c32e37cf295316d8c521513149f4f7ece1149f",
+    "size": 2176,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/72c32e37cf295316d8c521513149f4f7ece1149f"
+  },
+  {
+    "path": "docs/02-pages/04-api-reference/04-config/01-next-config-js/skipProxyUrlNormalize.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "3c8c76a2a9b9a92239f2b6a8b38daeb2f264bcd4",
+    "size": 562,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/3c8c76a2a9b9a92239f2b6a8b38daeb2f264bcd4"
+  },
+  {
+    "path": "docs/02-pages/04-api-reference/04-config/01-next-config-js/skipTrailingSlashRedirect.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "7c73515b263e70acce1663e04de725a39f58f52c",
+    "size": 558,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/7c73515b263e70acce1663e04de725a39f58f52c"
+  },
+  {
+    "path": "docs/02-pages/04-api-reference/04-config/01-next-config-js/trailingSlash.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "4e272ce94c9c365d879fe5c298de4e209a98c337",
+    "size": 502,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/4e272ce94c9c365d879fe5c298de4e209a98c337"
+  },
+  {
+    "path": "docs/02-pages/04-api-reference/04-config/01-next-config-js/transpilePackages.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "478db1a0a103b5222dc40e9c2dcb092ac6200c44",
+    "size": 574,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/478db1a0a103b5222dc40e9c2dcb092ac6200c44"
+  },
+  {
+    "path": "docs/02-pages/04-api-reference/04-config/01-next-config-js/turbopack.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "6b56e41398ad09166303c6d9364ea5ef106169e0",
+    "size": 475,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/6b56e41398ad09166303c6d9364ea5ef106169e0"
+  },
+  {
+    "path": "docs/02-pages/04-api-reference/04-config/01-next-config-js/turbopackChunking.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "2655785d1e0105308c3cd113f711b86982bd0e5c",
+    "size": 549,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/2655785d1e0105308c3cd113f711b86982bd0e5c"
+  },
+  {
+    "path": "docs/02-pages/04-api-reference/04-config/01-next-config-js/typescript.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "898684caa4e72ffbf04db5ac2de1fe74cd8754f2",
+    "size": 513,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/898684caa4e72ffbf04db5ac2de1fe74cd8754f2"
+  },
+  {
+    "path": "docs/02-pages/04-api-reference/04-config/01-next-config-js/urlImports.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "79537910c6dd969979198d19101985a1ae58d229",
+    "size": 514,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/79537910c6dd969979198d19101985a1ae58d229"
+  },
+  {
+    "path": "docs/02-pages/04-api-reference/04-config/01-next-config-js/useLightningcss.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "e302abc953eb41489e1ffd9ab4f98452154b75bf",
+    "size": 506,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/e302abc953eb41489e1ffd9ab4f98452154b75bf"
+  },
+  {
+    "path": "docs/02-pages/04-api-reference/04-config/01-next-config-js/useTypeScriptCli.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "5cfc374df1fdef0df73ebcb1117eadc04fd1fc7b",
+    "size": 542,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/5cfc374df1fdef0df73ebcb1117eadc04fd1fc7b"
+  },
+  {
+    "path": "docs/02-pages/04-api-reference/04-config/01-next-config-js/webVitalsAttribution.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "890899ce9758d62895f50e4f0d8056ebd807dcf4",
+    "size": 541,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/890899ce9758d62895f50e4f0d8056ebd807dcf4"
+  },
+  {
+    "path": "docs/02-pages/04-api-reference/04-config/01-next-config-js/webpack.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "8f0713dd2a6a9e506b2453eeca6fa4e7ec973c83",
+    "size": 512,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/8f0713dd2a6a9e506b2453eeca6fa4e7ec973c83"
+  },
+  {
+    "path": "docs/02-pages/04-api-reference/04-config/01-typescript.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "556ed895c15c20bbaf91967e8482def968d0c22d",
+    "size": 508,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/556ed895c15c20bbaf91967e8482def968d0c22d"
+  },
+  {
+    "path": "docs/02-pages/04-api-reference/04-config/02-eslint.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "1add2d58a6140589a5e9630398933abc3fa4bd84",
+    "size": 517,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/1add2d58a6140589a5e9630398933abc3fa4bd84"
+  },
+  {
+    "path": "docs/02-pages/04-api-reference/04-config/index.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "f2028e65f81edd853c59717f268369f5ae11204e",
+    "size": 91,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/f2028e65f81edd853c59717f268369f5ae11204e"
+  },
+  {
+    "path": "docs/02-pages/04-api-reference/05-cli/create-next-app.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "c37bde4a119f8bf2306957c8c6f6ca6efe40f0ff",
+    "size": 491,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/c37bde4a119f8bf2306957c8c6f6ca6efe40f0ff"
+  },
+  {
+    "path": "docs/02-pages/04-api-reference/05-cli/index.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "b343c5925c9770aa0a4b53b658c752860fa71320",
+    "size": 457,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/b343c5925c9770aa0a4b53b658c752860fa71320"
+  },
+  {
+    "path": "docs/02-pages/04-api-reference/05-cli/next.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "f4863058bc41f0582234ba5610d710e472412e4d",
+    "size": 467,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/f4863058bc41f0582234ba5610d710e472412e4d"
+  },
+  {
+    "path": "docs/02-pages/04-api-reference/06-adapters/01-configuration.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "77b888d8fbc58f14709c25f652e750ccb15d06b7",
+    "size": 501,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/77b888d8fbc58f14709c25f652e750ccb15d06b7"
+  },
+  {
+    "path": "docs/02-pages/04-api-reference/06-adapters/02-creating-an-adapter.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "de9c4a5c5ac2d58c0e350059ab734ef4f69e85e3",
+    "size": 500,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/de9c4a5c5ac2d58c0e350059ab734ef4f69e85e3"
+  },
+  {
+    "path": "docs/02-pages/04-api-reference/06-adapters/03-api-reference.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "05abfb3907a192bc1ee99686739c2c648ee9a4e4",
+    "size": 501,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/05abfb3907a192bc1ee99686739c2c648ee9a4e4"
+  },
+  {
+    "path": "docs/02-pages/04-api-reference/06-adapters/04-testing-adapters.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "e2f72d196385a6690bdf70d343e69e2b8c618fe6",
+    "size": 516,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/e2f72d196385a6690bdf70d343e69e2b8c618fe6"
+  },
+  {
+    "path": "docs/02-pages/04-api-reference/06-adapters/05-routing-with-next-routing.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "750b9441fc987d51acf44c37d8f2343e7c7e0e86",
+    "size": 517,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/750b9441fc987d51acf44c37d8f2343e7c7e0e86"
+  },
+  {
+    "path": "docs/02-pages/04-api-reference/06-adapters/06-runtime-integration.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "c9da7c119c71acd81aa98a731c7ef3c55c197045",
+    "size": 509,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/c9da7c119c71acd81aa98a731c7ef3c55c197045"
+  },
+  {
+    "path": "docs/02-pages/04-api-reference/06-adapters/07-invoking-entrypoints.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "08f43958cb11a6f35c308393839e4472e7c1e642",
+    "size": 504,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/08f43958cb11a6f35c308393839e4472e7c1e642"
+  },
+  {
+    "path": "docs/02-pages/04-api-reference/06-adapters/08-output-types.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "30f3b56a38b1479c50f6b41879f3dbc0c57f14a1",
+    "size": 474,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/30f3b56a38b1479c50f6b41879f3dbc0c57f14a1"
+  },
+  {
+    "path": "docs/02-pages/04-api-reference/06-adapters/09-routing-information.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "294c143d2fddac23ddced2adfa83c0b4c61bb97e",
+    "size": 506,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/294c143d2fddac23ddced2adfa83c0b4c61bb97e"
+  },
+  {
+    "path": "docs/02-pages/04-api-reference/06-adapters/10-use-cases.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "f269056682943e7588f3f44a777cc700be07d6e4",
+    "size": 479,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/f269056682943e7588f3f44a777cc700be07d6e4"
+  },
+  {
+    "path": "docs/02-pages/04-api-reference/06-adapters/index.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "6bf6e68aa01041fd772fd549f338e8f50aedd077",
+    "size": 467,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/6bf6e68aa01041fd772fd549f338e8f50aedd077"
+  },
+  {
+    "path": "docs/02-pages/04-api-reference/06-edge.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "75e966d4dcf3e7760e076f07de0864b8e0fc5b56",
+    "size": 437,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/75e966d4dcf3e7760e076f07de0864b8e0fc5b56"
+  },
+  {
+    "path": "docs/02-pages/04-api-reference/08-turbopack.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "394564ac562f9431a322c52fc9e08306cd7e1c08",
+    "size": 192,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/394564ac562f9431a322c52fc9e08306cd7e1c08"
+  },
+  {
+    "path": "docs/02-pages/04-api-reference/index.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "59ed768249f9262f6a13f4cf61ed74d4a06c3a94",
+    "size": 86,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/59ed768249f9262f6a13f4cf61ed74d4a06c3a94"
+  },
+  {
+    "path": "docs/02-pages/index.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "6eb49f60133fde0be28e636b73e565ca58ead37a",
+    "size": 610,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/6eb49f60133fde0be28e636b73e565ca58ead37a"
+  },
+  {
+    "path": "docs/03-architecture/accessibility.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "dfa1d87c02d08759c641bd4a7241d7b97ca43846",
+    "size": 2821,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/dfa1d87c02d08759c641bd4a7241d7b97ca43846"
+  },
+  {
+    "path": "docs/03-architecture/fast-refresh.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "32a1eb01bf200a3ff8f8952809a1e1e728fc68a5",
+    "size": 5698,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/32a1eb01bf200a3ff8f8952809a1e1e728fc68a5"
+  },
+  {
+    "path": "docs/03-architecture/index.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "5b2fde426541a81deb8b4addf90f0107314f1b82",
+    "size": 130,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/5b2fde426541a81deb8b4addf90f0107314f1b82"
+  },
+  {
+    "path": "docs/03-architecture/nextjs-compiler.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "ea29d52968f4d269af4b35e6bdcfdfa42d5e4ded",
+    "size": 14563,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/ea29d52968f4d269af4b35e6bdcfdfa42d5e4ded"
+  },
+  {
+    "path": "docs/03-architecture/supported-browsers.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "4b947dbe2cac99bc4b6be06c1d9fa584afead0b6",
+    "size": 4592,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/4b947dbe2cac99bc4b6be06c1d9fa584afead0b6"
+  },
+  {
+    "path": "docs/04-community/01-contribution-guide.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "1ec139ba38b590631625eecf20e8d077cb835d13",
+    "size": 19272,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/1ec139ba38b590631625eecf20e8d077cb835d13"
+  },
+  {
+    "path": "docs/04-community/02-rspack.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "95fe37fd299c80472134b18de4ca3189124db60f",
+    "size": 657,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/95fe37fd299c80472134b18de4ca3189124db60f"
+  },
+  {
+    "path": "docs/04-community/index.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "c5712b2f728a7319b582a8777050ce758e843518",
+    "size": 1732,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/c5712b2f728a7319b582a8777050ce758e843518"
+  },
+  {
+    "path": "docs/index.mdx",
+    "mode": "100644",
+    "type": "blob",
+    "sha": "07b60481976debceed4754ca39950bd8edd20a51",
+    "size": 3138,
+    "url": "https://api.github.com/repos/vercel/next.js/git/blobs/07b60481976debceed4754ca39950bd8edd20a51"
+  }
+]
