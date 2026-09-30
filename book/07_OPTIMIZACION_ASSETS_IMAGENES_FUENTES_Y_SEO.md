@@ -2,7 +2,7 @@
 
 > 📌 **Capítulo 07** | Libro Guía Next.js v16.3.7  
 > 📝 **Resumen:** *next/image, next/font, Scripts de terceros, Metadata, Open Graph, Sitemap y Robots.txt.*  
-> 📄 **Temas incluidos:** 18 secciones  
+> 📄 **Temas incluidos en este capítulo:** 18 secciones  
 
 [⬅ Volver al Índice General](./00_INDICE_GENERAL.md)
 
@@ -280,6 +280,7 @@ module.exports = {
   },
 }
 ```
+
 
 
 [⬆ Subir al inicio del capítulo](#)
@@ -639,6 +640,7 @@ const roboto = localFont({
 ```
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -976,6 +978,7 @@ export default async function Image({ params }) {
 > - Examples are available in the [Vercel OG Playground](https://og-playground.vercel.app/).
 > - `ImageResponse` uses [`@vercel/og`](https://vercel.com/docs/og-image-generation), [`satori`](https://github.com/vercel/satori), and `resvg` to convert HTML and CSS into PNG.
 > - Only flexbox and a subset of CSS properties are supported. Advanced layouts (e.g. `display: grid`) will not work.
+
 
 
 [⬆ Subir al inicio del capítulo](#)
@@ -1403,6 +1406,7 @@ export default function Page() {
 > ```
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -1697,6 +1701,7 @@ export default function Icon() {}
 | `v13.3.0` | `favicon` `icon` and `apple-icon` introduced         |
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -1722,6 +1727,7 @@ Once a file is defined, Next.js will automatically serve the file (with hashes i
 >
 > - Special Route Handlers like [`sitemap.ts`](/docs/app/api-reference/file-conventions/metadata/sitemap), [`opengraph-image.tsx`](/docs/app/api-reference/file-conventions/metadata/opengraph-image), and [`icon.tsx`](/docs/app/api-reference/file-conventions/metadata/app-icons), and other [metadata files](/docs/app/api-reference/file-conventions/metadata) are cached by default.
 > - If using along with [`proxy.ts`](/docs/app/api-reference/file-conventions/proxy), [configure the matcher](/docs/app/api-reference/file-conventions/proxy#matcher) to exclude the metadata files.
+
 
 
 [⬆ Subir al inicio del capítulo](#)
@@ -1809,6 +1815,7 @@ export default function manifest() {
 ### Manifest Object
 
 The manifest object contains an extensive list of options that may be updated due to new web standards. For information on all the current options, refer to the `MetadataRoute.Manifest` type in your code editor if using [TypeScript](/docs/app/api-reference/config/typescript#ide-plugin) or see the [MDN](https://developer.mozilla.org/docs/Web/Manifest) docs.
+
 
 
 [⬆ Subir al inicio del capítulo](#)
@@ -2378,6 +2385,7 @@ export default async function Image() {
 | `v13.3.0` | `opengraph-image` and `twitter-image` introduced.    |
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -2599,6 +2607,7 @@ type Robots = {
 | --------- | ---------------------------------------------------------- |
 | `v16.3.0` | Added `other` field for non-standard per-agent directives. |
 | `v13.3.0` | `robots` introduced.                                       |
+
 
 
 [⬆ Subir al inicio del capítulo](#)
@@ -3049,6 +3058,7 @@ type Sitemap = Array<{
 | `v13.3.0`  | `sitemap` introduced.                                        |
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -3338,6 +3348,7 @@ export default async function Image({ params, id }) {
 | `v16.0.0` | `id` passed to the Image generation function is now a promise that resolves to `string` or `number` |
 | `v16.0.0` | `params` passed to the Image generation function is now a promise that resolves to an object        |
 | `v13.3.0` | `generateImageMetadata` introduced.                                                                 |
+
 
 
 [⬆ Subir al inicio del capítulo](#)
@@ -4743,9 +4754,7 @@ const Connection = async () => {
 
 async function DynamicMarker() {
   return (
-    <Suspense>
-      <Connection />
-    </Suspense>
+    ``<Suspense>``
   )
 }
 
@@ -4884,6 +4893,7 @@ export const metadata = {
 | `v13.2.0` | `metadata` and `generateMetadata` introduced.                                                                                                           |
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -4971,6 +4981,7 @@ export default async function sitemap(props) {
 | `v16.0.0` | The `id` values returned from `generateSitemaps` are now passed as a promise that resolves to a `string` to the sitemap function.                    |
 | `v15.0.0` | `generateSitemaps` now generates consistent URLs between development and production                                                                  |
 | `v13.3.2` | `generateSitemaps` introduced. In development, you can view the generated sitemap on `/.../sitemap.xml/[id]`. For example, `/product/sitemap.xml/1`. |
+
 
 
 [⬆ Subir al inicio del capítulo](#)
@@ -5249,6 +5260,7 @@ export default function aioLoader({ src, width, quality }) {
 ```
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -5263,6 +5275,7 @@ export default function aioLoader({ src, width, quality }) {
 > 📝 **Descripción:** *Optimize your images with the built-in `next/image` component.*  
 
 ---
+
 
 
 
@@ -5285,6 +5298,7 @@ export default function aioLoader({ src, width, quality }) {
 
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -5303,6 +5317,7 @@ export default function aioLoader({ src, width, quality }) {
 
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -5317,6 +5332,7 @@ export default function aioLoader({ src, width, quality }) {
 > 📝 **Descripción:** *Custom configuration for the next/image loader*  
 
 ---
+
 
 
 

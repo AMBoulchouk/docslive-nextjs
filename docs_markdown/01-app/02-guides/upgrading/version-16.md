@@ -1326,7 +1326,7 @@ module.exports = {
 }
 ```
 
-If you were not actively adopting Cache Components, remove the flags instead. Enabling `cacheComponents` is not a rename-only change: it can surface build errors for uncached data outside of `<Suspense>` and requires adopting the Cache Components model.
+If you were not actively adopting Cache Components, remove the flags instead. Enabling `cacheComponents` is not a rename-only change: it can surface build errors for uncached data outside of ``<Suspense>`` and requires adopting the Cache Components model.
 
 For the full migration path, see [Migrating to Cache Components](/docs/app/guides/migrating-to-cache-components).
 

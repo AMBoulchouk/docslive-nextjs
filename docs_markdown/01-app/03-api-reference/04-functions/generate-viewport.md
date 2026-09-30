@@ -206,27 +206,7 @@ export async function generateViewport() {
 }
 ```
 
-If viewport genuinely requires runtime data, wrap the document `<body>` in a [`<Suspense>`](https://react.dev/reference/react/Suspense) boundary to signal that the entire route should be dynamic. The shell ships immediately and the document streams in once the viewport resolves:
-
-```tsx
-// Archivo: app/layout.tsx highlight={1,13,17}
-import { Suspense } from 'react'
-import { cookies } from 'next/headers'
-
-export async function generateViewport() {
-  const cookieJar = await cookies()
-  return {
-    themeColor: cookieJar.get('theme-color')?.value,
-  }
-}
-
-export default function RootLayout({ children }) {
-  return (
-    <Suspense>
-      <html>
-        <body>{children}</body>
-      </html>
-    </Suspense>
+If viewport genuinely requires runtime data, wrap the document `<body>` in a [```<Suspense>``
   )
 }
 ```

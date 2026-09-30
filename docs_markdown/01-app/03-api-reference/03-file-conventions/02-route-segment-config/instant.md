@@ -92,7 +92,7 @@ Setting `false` on the root layout disables static shell validation for the enti
 
 `instant` triggers validation at every shared layout boundary in the route. Validation runs during development (on page loads and HMR updates) and surfaces errors in the dev error overlay.
 
-Each error identifies the component that would block navigation. The fix is usually to cache the data with `use cache` or wrap it in a `<Suspense>` boundary.
+Each error identifies the component that would block navigation. The fix is usually to cache the data with `use cache` or wrap it in a ``<Suspense>`` boundary.
 
 ## Configuring validation defaults
 

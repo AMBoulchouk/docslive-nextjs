@@ -2,7 +2,7 @@
 
 > 📌 **Capítulo 10** | Libro Guía Next.js v16.3.7  
 > 📝 **Resumen:** *Compilación con Turbopack, despliegue en Vercel, Docker y servidores propios, CI build caching y servidor personalizado.*  
-> 📄 **Temas incluidos:** 40 secciones  
+> 📄 **Temas incluidos en este capítulo:** 40 secciones  
 
 [⬅ Volver al Índice General](./00_INDICE_GENERAL.md)
 
@@ -162,6 +162,7 @@ The following platforms offer their own Next.js integrations. These are not buil
 For details on which Next.js features require specific platform capabilities, see [Deploying to Platforms](/docs/app/guides/deploying-to-platforms).
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -270,18 +271,18 @@ export default async function Page({ params }) {
 }
 ```
 
-During the build, Next.js prerenders as much of each route as it can at [build time](/docs/app/glossary#build-time). [Runtime data](/docs/app/glossary#request-time-apis) ([`params`](/docs/app/api-reference/file-conventions/page#params-optional), [`searchParams`](/docs/app/api-reference/file-conventions/page#searchparams-optional), [`cookies()`](/docs/app/api-reference/functions/cookies), [`headers()`](/docs/app/api-reference/functions/headers)) and uncached data (`fetch()`, database calls) are not available during that pass. Wrap runtime reads in [`<Suspense>`](https://react.dev/reference/react/Suspense), and cache data accesses with [`use cache`](/docs/app/api-reference/directives/use-cache) or wrap them in `<Suspense>` too. Otherwise, the build fails with a [`blocking-prerender-runtime`](/docs/messages/blocking-prerender-runtime) or [`blocking-prerender-dynamic`](/docs/messages/blocking-prerender-dynamic) error. [Random values and timestamps](/docs/app/getting-started/caching#random-values-and-timestamps) such as `Math.random()` or `new Date()` can also fail the build.
+During the build, Next.js prerenders as much of each route as it can at [build time](/docs/app/glossary#build-time). [Runtime data](/docs/app/glossary#request-time-apis) ([`params`](/docs/app/api-reference/file-conventions/page#params-optional), [`searchParams`](/docs/app/api-reference/file-conventions/page#searchparams-optional), [`cookies()`](/docs/app/api-reference/functions/cookies), [`headers()`](/docs/app/api-reference/functions/headers)) and uncached data (`fetch()`, database calls) are not available during that pass. Wrap runtime reads in [``<Suspense>``](https://react.dev/reference/react/Suspense), and cache data accesses with [`use cache`](/docs/app/api-reference/directives/use-cache) or wrap them in ``<Suspense>`` too. Otherwise, the build fails with a [`blocking-prerender-runtime`](/docs/messages/blocking-prerender-runtime) or [`blocking-prerender-dynamic`](/docs/messages/blocking-prerender-dynamic) error. [Random values and timestamps](/docs/app/getting-started/caching#random-values-and-timestamps) such as `Math.random()` or `new Date()` can also fail the build.
 
-Run `next build`. It fails with a prerender-blocking error because the `params` read and the uncached `fetch` run outside a `<Suspense>` boundary:
+Run `next build`. It fails with a prerender-blocking error because the `params` read and the uncached `fetch` run outside a ``<Suspense>`` boundary:
 
 ```bash
 // Archivo: Terminal
 Error: Route "/products/[id]": Next.js encountered uncached or runtime data during prerendering.
 
-`fetch(...)`, `cookies()`, `headers()`, `params`, `searchParams`, or `connection()` accessed outside of `<Suspense>` prevents the route from being prerendered, blocking the page load and leading to a slower user experience.
+`fetch(...)`, `cookies()`, `headers()`, `params`, `searchParams`, or `connection()` accessed outside of ``<Suspense>`` prevents the route from being prerendered, blocking the page load and leading to a slower user experience.
 
 Ways to fix this:
-  - [stream] Provide a placeholder with `<Suspense fallback={...}>` around the data access
+  - [stream] Provide a placeholder with ``<Suspense>`` around the data access
   - [cache] For uncached data (`fetch`, database calls): cache the access with `"use cache"` (does not apply to `connection()`)
   - [block] Set `export const instant = false` to allow a blocking route
 
@@ -325,7 +326,7 @@ With the cause located, let's apply each fix and see how the build output change
 
 ### A streaming route
 
-The error's first suggestion, `[stream]`, is to provide a placeholder around the data access. Add a [`loading.js`](/docs/app/api-reference/file-conventions/loading) file to wrap the whole segment in a `<Suspense>` boundary. Next.js prerenders the fallback as the route's static shell, while the params and data work runs at request time. For other boundary placements, see [Streaming](/docs/app/guides/streaming):
+The error's first suggestion, `[stream]`, is to provide a placeholder around the data access. Add a [`loading.js`](/docs/app/api-reference/file-conventions/loading) file to wrap the whole segment in a ``<Suspense>`` boundary. Next.js prerenders the fallback as the route's static shell, while the params and data work runs at request time. For other boundary placements, see [Streaming](/docs/app/guides/streaming):
 
 ```tsx
 // Archivo: app/products/[id]/loading.tsx switcher
@@ -567,6 +568,7 @@ We've learned how to run a production build, read the route table, and understan
 - [Configure CI build caching](/docs/app/guides/ci-build-caching)
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -747,6 +749,7 @@ stage("Build") {
 ```
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -884,6 +887,7 @@ The returned `app` can then be used to let Next.js handle requests as required.
 > > You may also wish to configure the client-side router to disallow client-side redirects to filename routes; for that refer to [`router.beforePopState`](/docs/pages/api-reference/functions/use-router#routerbeforepopstate).
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -979,6 +983,7 @@ For verified adapters and platforms working toward verified status through the [
 ## A Note on Infrastructure Requirements
 
 Next.js's [rendering model](/docs/app/guides/rendering-philosophy) places the static/dynamic boundary at the component level rather than the route level. Finer-grained boundaries provide more flexibility for developers at the cost of broader requirements for hosting platforms. This is a deliberate trade-off: the infrastructure requirements on this page exist because of what the rendering model delivers.
+
 
 
 [⬆ Subir al inicio del capítulo](#)
@@ -1403,6 +1408,7 @@ The option automatically adds a polyfill for debug IDs to the JavaScript bundle 
 | `13.0.0` | `experimental.turbo` introduced.                     |
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -1560,6 +1566,7 @@ chunks is worth it.
   bias toward fewer, larger chunks and fewer requests overall.
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -1632,6 +1639,7 @@ If your build environment never preserves `.next/cache`, set `turbopackFileSyste
 | `v16.1.0` | FileSystem caching is enabled by default for development       |
 | `v16.0.0` | Beta release with separate flags for build and dev             |
 | `v15.5.0` | Persistent caching released as experimental on canary releases |
+
 
 
 [⬆ Subir al inicio del capítulo](#)
@@ -1821,6 +1829,7 @@ module.exports = {
 | `v16.2.0` | `turbopack.ignoreIssue` introduced. |
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -1898,6 +1907,7 @@ my-app/
 | `v16.3.0` | `turbopackLocalPostcssConfig` introduced. |
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -1955,6 +1965,7 @@ module.exports = nextConfig
 | Version   | Changes                                             |
 | --------- | --------------------------------------------------- |
 | `v16.3.0` | `turbopackMemoryEviction` released as experimental. |
+
 
 
 [⬆ Subir al inicio del capítulo](#)
@@ -2020,6 +2031,7 @@ See the [`reactCompiler` option documentation](/docs/app/api-reference/config/ne
 | Version   | Changes                                                                                             |
 | --------- | --------------------------------------------------------------------------------------------------- |
 | `v16.3.0` | Introduced the experimental `turbopackRustReactCompiler` option for the native Rust React Compiler. |
+
 
 
 [⬆ Subir al inicio del capítulo](#)
@@ -2500,6 +2512,7 @@ Turbopack is a **Rust-based**, **incremental** bundler designed to make local de
 | `v15.0.0` | Turbopack for `dev` stable                                                                                         |
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -2514,6 +2527,7 @@ Turbopack is a **Rust-based**, **incremental** bundler designed to make local de
 > 📝 **Descripción:** *Learn how to deploy your Next.js application.*  
 
 ---
+
 
 
 
@@ -2536,6 +2550,7 @@ Turbopack is a **Rust-based**, **incremental** bundler designed to make local de
 
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -2550,6 +2565,7 @@ Turbopack is a **Rust-based**, **incremental** bundler designed to make local de
 > 📝 **Descripción:** *Start a Next.js app programmatically using a custom server.*  
 
 ---
+
 
 
 
@@ -2788,6 +2804,7 @@ export default function Layout({ children }) {
 ```
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -2856,6 +2873,7 @@ The difference between **catch-all** and **optional catch-all** segments is that
 | `pages/shop/[[...slug]].js` | `/shop/a`     | `{ slug: ['a'] }`           |
 | `pages/shop/[[...slug]].js` | `/shop/a/b`   | `{ slug: ['a', 'b'] }`      |
 | `pages/shop/[[...slug]].js` | `/shop/a/b/c` | `{ slug: ['a', 'b', 'c'] }` |
+
 
 
 [⬆ Subir al inicio del capítulo](#)
@@ -3054,6 +3072,7 @@ Since that's a new page, it'll unload the current page, load the new one and wai
 When shallow routing is used with proxy it will not ensure the new page matches the current page like previously done without proxy. This is due to proxy being able to rewrite dynamically and can't be verified client-side without a data fetch which is skipped with shallow, so a shallow route change must always be treated as shallow.
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -3157,6 +3176,7 @@ MyApp.getInitialProps = async (context) => {
   return { ...ctx, example: 'data' }
 }
 ```
+
 
 
 [⬆ Subir al inicio del capítulo](#)
@@ -3320,6 +3340,7 @@ export default MyDocument
 >
 > - `getInitialProps` in `_document` is not called during client-side transitions.
 > - The `ctx` object for `_document` is equivalent to the one received in [`getInitialProps`](/docs/pages/api-reference/functions/get-initial-props#context-object), with the addition of `renderPage`.
+
 
 
 [⬆ Subir al inicio del capítulo](#)
@@ -3811,6 +3832,7 @@ export default async function handler(req, res) {
 ```
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -3925,6 +3947,7 @@ If you have a custom `Error` component be sure to import that one instead. `next
 - `_error`, like `_app`, is a reserved pathname. `_error` is used to define the customized layouts and behaviors of the error pages. `/_error` will render 404 when accessed directly via [routing](/docs/pages/building-your-application/routing) or rendering in a [custom server](/docs/pages/guides/custom-server).
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -3941,6 +3964,7 @@ If you have a custom `Error` component be sure to import that one instead. `next
 ---
 
 The Pages Router has a file-system based router built on concepts of pages. When a file is added to the `pages` directory it's automatically available as a route. Learn more about routing in the Pages Router:
+
 
 
 [⬆ Subir al inicio del capítulo](#)
@@ -3985,6 +4009,7 @@ export async function getServerSideProps() {
 As you can see, `getServerSideProps` is similar to `getStaticProps`, but the difference is that `getServerSideProps` is run on every request instead of on build time.
 
 To learn more about how `getServerSideProps` works, check out our [Data Fetching documentation](/docs/pages/building-your-application/data-fetching/get-server-side-props).
+
 
 
 [⬆ Subir al inicio del capítulo](#)
@@ -4182,6 +4207,7 @@ In cases like this, you can do one of the following:
 - Use **Server-Side Rendering:** Next.js prerenders a page on each request. It will be slower because the page cannot be cached by a CDN, but the prerendered page will always be up-to-date. We'll talk about this approach below.
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -4242,6 +4268,7 @@ And if you add `getServerSideProps` to the page, it will then be JavaScript, lik
 - If you have a [custom `App`](/docs/pages/building-your-application/routing/custom-app) with `getInitialProps` then this optimization will be turned off in pages without [Static Generation](/docs/pages/building-your-application/data-fetching/get-static-props).
 - If you have a [custom `Document`](/docs/pages/building-your-application/routing/custom-document) with `getInitialProps` be sure you check if `ctx.req` is defined before assuming the page is server-side rendered. `ctx.req` will be `undefined` for pages that are prerendered.
 - Avoid using the `asPath` value on [`next/router`](/docs/pages/api-reference/functions/use-router#router-object) in the rendering tree until the router's `isReady` field is `true`. Statically optimized pages only know `asPath` on the client and not the server, so using it as a prop may lead to mismatch errors. The [`active-class-name` example](https://github.com/vercel/next.js/tree/canary/examples/active-class-name) demonstrates one way to use `asPath` as a prop.
+
 
 
 [⬆ Subir al inicio del capítulo](#)
@@ -4323,6 +4350,7 @@ export function Page() {
 > Keep in mind that CSR can impact SEO. Some search engine crawlers might not execute JavaScript and therefore only see the initial empty or loading state of your application. It can also lead to performance issues for users with slower internet connections or devices, as they need to wait for all the JavaScript to load and run before they can see the full page. Next.js promotes a hybrid approach that allows you to use a combination of [server-side rendering](/docs/pages/building-your-application/rendering/server-side-rendering), [static site generation](/docs/pages/building-your-application/rendering/static-site-generation), and client-side rendering, **depending on the needs of each page** in your application. In the App Router, you can also use [Loading UI with Suspense](/docs/app/api-reference/file-conventions/loading) to show a loading indicator while the page is being rendered.
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -4354,6 +4382,7 @@ Importantly, Next.js lets you choose which prerendering form you'd like to use f
 We recommend using Static Generation over Server-side Rendering for performance reasons. Statically generated pages can be cached by CDN with no extra configuration to boost performance. However, in some cases, Server-side Rendering might be the only option.
 
 You can also use client-side data fetching along with Static Generation or Server-side Rendering. That means some parts of a page can be rendered entirely by clientside JavaScript. To learn more, take a look at the [Data Fetching](/docs/pages/building-your-application/data-fetching/client-side) documentation.
+
 
 
 [⬆ Subir al inicio del capítulo](#)
@@ -4576,6 +4605,7 @@ In development (`next dev`), `getStaticProps` will be called on every request.
 You can temporarily bypass static generation and render the page at **request time** instead of build time using [**Preview Mode**](/docs/pages/guides/preview-mode). For example, you might be using a headless CMS and want to preview drafts before they're published.
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -4732,6 +4762,7 @@ export async function getStaticPaths() {
 ```
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -4854,6 +4885,7 @@ export async function getServerSideProps({ req, res }) {
 However, before reaching for `cache-control`, we recommend seeing if [`getStaticProps`](/docs/pages/building-your-application/data-fetching/get-static-props) with [ISR](/docs/pages/guides/incremental-static-regeneration) is a better fit for your use case.
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -4936,6 +4968,7 @@ function Profile() {
 ```
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -4983,6 +5016,7 @@ Data fetching in Next.js allows you to render your content in different ways, de
 - [WordPress Example](https://github.com/vercel/next.js/tree/canary/examples/cms-wordpress) ([Demo](https://next-blog-wordpress.vercel.app/))
 - [Blog Starter Example](https://github.com/vercel/next.js/tree/canary/examples/blog-starter) ([Demo](https://next-blog-starter.vercel.app/))
 - [Static Tweet (Demo)](https://react-tweet.vercel.app/)
+
 
 
 [⬆ Subir al inicio del capítulo](#)
@@ -5096,6 +5130,7 @@ You can learn more about [Error Boundaries](https://react.dev/reference/react/Co
 To monitor client errors, use a service like [Sentry](https://github.com/vercel/next.js/tree/canary/examples/with-sentry), Bugsnag or Datadog.
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -5114,6 +5149,7 @@ To monitor client errors, use a service like [Sentry](https://github.com/vercel/
 Next.js allows you to customize your project to meet specific requirements. This includes integrations with TypeScript, ESlint, and more, as well as internal configuration options such as Absolute Imports and Environment Variables.
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -5128,6 +5164,7 @@ Next.js allows you to customize your project to meet specific requirements. This
 > 📝 **Descripción:** *Learn how to use Next.js features to build your application.*  
 
 ---
+
 
 
 
@@ -5150,6 +5187,7 @@ Next.js allows you to customize your project to meet specific requirements. This
 
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -5168,6 +5206,7 @@ Next.js allows you to customize your project to meet specific requirements. This
 
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -5182,6 +5221,7 @@ Next.js allows you to customize your project to meet specific requirements. This
 > 📝 **Descripción:** *Turbopack is an incremental bundler optimized for JavaScript and TypeScript, written in Rust, and built into Next.js.*  
 
 ---
+
 
 
 

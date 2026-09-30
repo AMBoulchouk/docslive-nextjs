@@ -155,34 +155,7 @@ export default async function Page(props: PageProps<'/[locale]'>) {
 
 When using [Cache Components](/docs/app/getting-started/caching) with dynamic route segments, how you handle params depends on whether you use [`generateStaticParams`](/docs/app/api-reference/functions/generate-static-params).
 
-Without `generateStaticParams`, param values are unknown during prerendering, making params runtime data. You must wrap param access in `<Suspense>` boundaries to provide fallback UI.
-
-With `generateStaticParams`, you provide sample param values that can be used at build time. The build process validates that dynamic content and other runtime APIs are correctly handled, then generates static HTML files for the samples. Pages rendered with runtime params are saved to disk after a successful first request.
-
-The sections below demonstrate both patterns.
-
-#### Without `generateStaticParams`
-
-All params are runtime data. Param access must be wrapped by Suspense fallback UI. Next.js generates a static shell at build time, and content loads on each request.
-
-> **Good to know**:
->
-> - You can also use [`loading.tsx`](/docs/app/api-reference/file-conventions/loading) for page-level fallback UI.
-> - In layouts, avoid awaiting `params` at the top level. Doing so prevents the layout from being prerendered. Instead, pass the params promise down to the component that needs it and await there. See [Maximizing the static shell](/docs/app/getting-started/caching#maximizing-the-static-shell) for examples.
-
-```tsx
-// Archivo: app/blog/[slug]/page.tsx
-import { Suspense } from 'react'
-
-export default function Page({ params }: PageProps<'/blog/[slug]'>) {
-  return (
-    <div>
-      <h1>Blog Post</h1>
-      <Suspense fallback={<div>Loading...</div>}>
-        {params.then(({ slug }) => (
-          <Content slug={slug} />
-        ))}
-      </Suspense>
+Without `generateStaticParams`, param values are unknown during prerendering, making params runtime data. You must wrap param access in ```<Suspense>``
     </div>
   )
 }
@@ -288,9 +261,7 @@ export default async function Page({ params }: PageProps<'/blog/[slug]'>) {
 
   if (slug.startsWith('private-')) {
     return (
-      <Suspense fallback={<div>Loading...</div>}>
-        <PrivatePost slug={slug} />
-      </Suspense>
+      ``<Suspense>``
     )
   }
 

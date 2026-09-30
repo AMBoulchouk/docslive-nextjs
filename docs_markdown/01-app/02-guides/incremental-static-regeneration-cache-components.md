@@ -74,64 +74,20 @@ async function CategoryHeader({
 export default function CategoryLayout(props: LayoutProps<'/[category]'>) {
   return (
     <div>
-      <Suspense fallback={<div>Loading...</div>}>
-        <CategoryHeader params={props.params} />
-      </Suspense>
+      ``<Suspense>``
       {props.children}
     </div>
   )
 }
 ```
 
-Notice that `CategoryLayout` does not `await props.params` itself. Instead, it passes the `params` promise to `CategoryHeader` inside `<Suspense>`. The `await` happens inside the boundary, so for unknown categories Next.js can still generate the App Shell. Keep the read inside the boundary even for the categories `generateStaticParams` covers. A statically known param still belongs to one URL, so awaiting it above the Suspense boundary would tie this layout's App Shell to that URL. See [Instant navigation](/docs/app/guides/instant-navigation) for structuring routes this way.
-
-The product page prerenders one product per category. `generateStaticParams` receives the parent `category` param:
-
-```tsx
-// Archivo: app/[category]/[product]/page.tsx highlight={5-12}
-import { Suspense } from 'react'
-import Link from 'next/link'
-import { getProduct, getPopularProducts } from '../../lib/data'
-
-export async function generateStaticParams({
-  params,
-}: {
-  params: { category: string }
-}) {
-  const products = await getPopularProducts(params.category)
-  return products.map((p) => ({ product: p.slug }))
-}
-
-async function ProductDetails(props: PageProps<'/[category]/[product]'>) {
-  const { category, product } = await props.params
-  const data = await getProduct(category, product)
-
-  if (!data) {
-    return <p>Product not found.</p>
-  }
-
-  return (
-    <>
-      <Link href={`/${category}`}>&larr; Back to products</Link>
-      <h2>{data.name}</h2>
-      <p>${data.price}</p>
-      <p>{data.description}</p>
-    </>
-  )
-}
-
-export default function ProductPage(props: PageProps<'/[category]/[product]'>) {
-  return (
-    <div>
-      <Suspense fallback={<div>Loading product...</div>}>
-        <ProductDetails {...props} />
-      </Suspense>
+Notice that `CategoryLayout` does not `await props.params` itself. Instead, it passes the `params` promise to `CategoryHeader` inside ```<Suspense>``
     </div>
   )
 }
 ```
 
-> **Good to know:** You can also use [`loading.tsx`](/docs/app/api-reference/file-conventions/loading) files instead of `<Suspense>` in JSX. `loading.tsx` puts the boundary at the segment edge, while inline `<Suspense>` lets you place it anywhere in the tree.
+> **Good to know:** You can also use [`loading.tsx`](/docs/app/api-reference/file-conventions/loading) files instead of ``<Suspense>`` in JSX. `loading.tsx` puts the boundary at the segment edge, while inline ``<Suspense>`` lets you place it anywhere in the tree.
 
 The data helpers use `'use cache'` at the module level so all exported functions are cached. This lets their results be included in the static shell:
 
@@ -166,7 +122,7 @@ export async function getPopularProducts(category: string) {
 }
 ```
 
-If your components access runtime APIs like `cookies` or `headers`, wrap them in `<Suspense>`. Their fallback UI is included in the static shell instead.
+If your components access runtime APIs like `cookies` or `headers`, wrap them in ``<Suspense>``. Their fallback UI is included in the static shell instead.
 
 ### At build time
 
@@ -199,7 +155,7 @@ A prefetch counts as that first visit. When a [`<Link>`](/docs/app/api-reference
 After the first visit, Next.js renders the page in the background with the known params and tries to push the static boundary as far down the component tree as possible:
 
 - If every data access is cached and all params are resolved, the upgrade produces a **fully static page**.
-- If all params are resolved but the render still hits uncached data or runtime APIs (`cookies`, `headers`) wrapped in `<Suspense>` boundaries, the upgrade produces a **cached page with those fallbacks**. The uncached or runtime parts stream in at request time.
+- If all params are resolved but the render still hits uncached data or runtime APIs (`cookies`, `headers`) wrapped in ``<Suspense>`` boundaries, the upgrade produces a **cached page with those fallbacks**. The uncached or runtime parts stream in at request time.
 - Params are resolved in route order. A param value not returned by `generateStaticParams` stays unresolved and prevents any deeper params from upgrading.
 
 ## Choosing what to prerender
@@ -212,7 +168,7 @@ Instead, use [`generateStaticParams`](/docs/app/api-reference/functions/generate
 
 If you are migrating from the Pages Router:
 
-- `fallback: true` in `getStaticPaths` is now the default behavior with `cacheComponents`. Visitors get a `<Suspense>` fallback instantly and content streams in.
+- `fallback: true` in `getStaticPaths` is now the default behavior with `cacheComponents`. Visitors get a ``<Suspense>`` fallback instantly and content streams in.
 - `router.isFallback` is not needed. The prerendering step generates a static shell, and you can grow it further with `'use cache'`.
 - `getStaticProps` with `revalidate` maps to `'use cache'` with [`cacheLife`](/docs/app/api-reference/functions/cacheLife).
 - `getStaticPaths` maps to [`generateStaticParams`](/docs/app/api-reference/functions/generate-static-params).

@@ -118,11 +118,25 @@ function cleanMdxContent(body, isAppRouter, isPagesRouter) {
   // 5. Convert <Link href="...">Text</Link> to [Text](href)
   text = text.replace(/<Link\s+href=["']([^"']+)["']>([\s\S]*?)<\/Link>/g, '[$2]($1)');
 
-  // 6. Unwrap FixCard / FixCardGrid
+  // 6. Unwrap FixCard / FixCardGrid properly (including multi-line self-closing FixCards)
   text = text.replace(/<\/?FixCardGrid>/g, '');
-  text = text.replace(/<FixCard\s+([^>]*?)>([\s\S]*?)<\/FixCard>/g, (_, attrs, inner) => {
-    return `\n- ${inner.trim()}\n`;
+  text = text.replace(/<FixCard\s+([\s\S]*?)(?:>([\s\S]*?)<\/FixCard>|\/>)/g, (_, attrs, inner) => {
+    const titleMatch = attrs.match(/title=["']([^"']*)["']/);
+    const hrefMatch = attrs.match(/href=["']([^"']*)["']/);
+    const groupMatch = attrs.match(/group=["']([^"']*)["']/);
+    const title = titleMatch ? titleMatch[1] : 'Solución';
+    const group = groupMatch ? ` (${groupMatch[1]})` : '';
+    let linkStr = '';
+    if (hrefMatch) {
+      const fullHref = hrefMatch[1].startsWith('/') ? `https://nextjs.org${hrefMatch[1]}` : hrefMatch[1];
+      linkStr = ` — [Ver guía de solución](${fullHref})`;
+    }
+    return `\n> 💡 **Solución recomendada${group}:** ${title}${linkStr}\n`;
   });
+
+  // Clean any remaining unparsed JSX self-closing or paired tags outside code blocks
+  text = text.replace(/<(Details|Suspense|DataChild|SearchBar|Item|List|Video)\b([^>]*?)(?:\/>|>[\s\S]*?<\/\1>)/g, '`<$1 />`');
+  text = text.replace(/<\/?(Details|Suspense|DataChild|SearchBar|Item|List|Video)\b[^>]*?>/g, '`<$1>`');
 
   // 7. Clean code block fences with metadata (e.g., ```bash package="pnpm")
   text = text.replace(/^```([a-zA-Z0-9_-]+)\s+package=["']([^"']+)["']/gm, (_, lang, pkg) => {

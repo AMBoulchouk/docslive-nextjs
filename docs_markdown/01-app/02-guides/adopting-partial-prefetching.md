@@ -167,9 +167,9 @@ async function TeamTopics() {
 
 export default function Page() {
   return (
-    <Suspense fallback={<Skeleton />}>
+    ``<Suspense>``}>
       <TeamTopics />
-    </Suspense>
+    `<Suspense>`
   )
 }
 ```
@@ -188,9 +188,9 @@ async function TeamTopics() {
 
 export default function Page() {
   return (
-    <Suspense fallback={<Skeleton />}>
+    ``<Suspense>``}>
       <TeamTopics />
-    </Suspense>
+    `<Suspense>`
   )
 }
 ```
@@ -213,9 +213,9 @@ async function TeamTopics() {
 
 export default function Page() {
   return (
-    <Suspense fallback={<Skeleton />}>
+    ``<Suspense>``}>
       <TeamTopics />
-    </Suspense>
+    `<Suspense>`
   )
 }
 ```
@@ -238,177 +238,24 @@ async function TeamTopics() {
 
 export default function Page() {
   return (
-    <Suspense fallback={<Skeleton />}>
+    ``<Suspense>``}>
       <TeamTopics />
-    </Suspense>
+    `<Suspense>`
   )
 }
 ```
 
 ### URL data
 
-[URL data](/docs/app/glossary#url-data) (`params`, `searchParams`) varies per link, so content that depends on it can't be included in the shared App Shell and streams in after navigation from behind its `<Suspense>` boundary. The links keep `prefetch={true}`, and [Prefetching URL data](#prefetching-url-data) covers prefetching the content ahead of the click.
-
-### Real-time content
-
-A prefetch of real-time content would be stale by the click, so there is nothing to preserve. Remove `prefetch={true}` and let the content stream in from behind its `<Suspense>` boundary.
-
-| Destination                                                                       | Recommendation                                                            |
-| --------------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
-| [Fully static, or content already cached](#static-or-cached-content)              | Remove the now-redundant `prefetch={true}`.                               |
-| [Delivered uncached content you want kept ahead of the click](#uncached-content)  | Cache it with `use cache`, then remove `prefetch={true}`.                 |
-| [Delivered content that depends on `cookies()` or `headers()`](#session-content)  | Cache the lookup behind the session value, then remove `prefetch={true}`. |
-| [Reads URL data, or has cached content that depends on it](#url-data)             | Keep `prefetch={true}` to resolve the content ahead of the click.         |
-| [Delivers real-time content that must stay fresh per request](#real-time-content) | Remove `prefetch={true}` and let the content stream in.                   |
-
-## Adopting incrementally
-
-Adoption doesn't have to happen in one change. [`prefetch = 'partial'`](/docs/app/api-reference/file-conventions/route-segment-config/prefetch) is the global flag scoped to one route, so with the global flag still off, you can adopt and deploy each destination on its own.
-
-Before a destination opts into Partial Prefetching, `prefetch={true}` performs the legacy full prefetch. Navigating through one of these links in development surfaces the [dynamic data during prefetching](/docs/messages/instant-link-prefetch-partial) insight, naming the destination and pointing at its fixes:
-
-
-  <FixCard
-    group="upgrade"
-    title="Opt into Partial Prefetching"
-    href="/docs/messages/instant-link-prefetch-partial#opt-into-partial-prefetching"
-    snippets={[
-      { text: '// page.tsx or layout.tsx' },
-      { text: "export const prefetch = 'partial'", highlight: true },
+[URL data](/docs/app/glossary#url-data) (`params`, `searchParams`) varies per link, so content that depends on it can't be included in the shared App Shell and streams in after navigation from behind its ```<Suspense>``', highlight: true },
     ]}
   />
-  <FixCard
-    group="disable"
-    title="Use the default prefetch"
-    href="/docs/messages/instant-link-prefetch-partial#use-the-default-prefetch"
-    snippets={[
-      { text: '[', highlight: true },
-      { text: '  Dashboard' },
-      { text: '](/dashboard)' },
-    ]}
-  />
-
-
-Each card is clickable and opens a page with patterns, code samples, and trade-offs.
-
-1. Start with one destination. Preserve the intended prefetched UI and update its `prefetch={true}` links using the [patterns above](#migrate-existing-full-prefetches). Then add `export const prefetch = 'partial'` to its page or layout, which clears the insight for every link pointing at the route:
-
-   ```tsx filename="app/dashboard/page.tsx" switcher
-   // Before
-   export default function Page() {
-     return <Dashboard />
-   }
-   ```
-
-   ```jsx filename="app/dashboard/page.js" switcher
-   // Before
-   export default function Page() {
-     return <Dashboard />
-   }
-   ```
-
-   ```tsx filename="app/dashboard/page.tsx" switcher
-   // After - adopted without the global flag
-   export const prefetch = 'partial'
-
-   export default function Page() {
-     return <Dashboard />
-   }
-   ```
-
-   ```jsx filename="app/dashboard/page.js" switcher
-   // After - adopted without the global flag
-   export const prefetch = 'partial'
-
-   export default function Page() {
-     return <Dashboard />
-   }
-   ```
-
-2. Deploy the change. Links to the adopted destination load the App Shell, and the insight keeps surfacing for the destinations you haven't reached.
-3. Repeat until every destination in scope is adopted, then [enable the flag](#enable-partial-prefetching).
-
-The per-route `prefetch = 'partial'` exports are now redundant. Remove them in one pass with the [`remove-partial-prefetch`](/docs/app/guides/upgrading/codemods#remove-partial-prefetch) codemod, which strips `export const prefetch = 'partial'` from every `page` and `layout`:
-
-```bash
-// Archivo: Terminal
-npx @next/codemod@canary remove-partial-prefetch ./app
-```
-
-> **Good to know**: Pass `./src/app` in a `src/` project. A wrong path reports `0 ok` instead of failing, so check the file count.
-
-The codemod removes only the `'partial'` value and leaves other values such as `prefetch = 'force-disabled'` in place.
-
-## Move URL data behind Suspense
-
-With the flag enabled, Next.js validates each App Shell as you navigate in development. The App Shell is shared across every link to a route, so it can't contain data that belongs to a single URL. Reading [`params`](/docs/app/api-reference/file-conventions/page#params-optional) or [`searchParams`](/docs/app/api-reference/file-conventions/page#searchparams-optional) outside a [`<Suspense>`](https://react.dev/reference/react/Suspense) boundary ties the shell to the link's URL and surfaces the [URL data outside of Suspense](/docs/messages/instant-shell-url-data) insight, naming the route and pointing at its fixes:
-
-
-  <FixCard
-    group="stream"
-    title="Wrap in or move into Suspense"
-    href="/docs/messages/instant-shell-url-data#wrap-in-or-move-into-suspense"
-    snippets={[
-      { text: '<Suspense fallback={…}>', highlight: true },
-      { text: '  <Details params={params} />' },
-      { text: '</Suspense>', highlight: true },
-    ]}
-  />
-  <FixCard
-    group="block"
-    title="Allow blocking route"
-    href="/docs/messages/instant-shell-url-data#allow-blocking-route"
-    snippets={[
-      { text: '// page.tsx or layout.tsx' },
-      { text: 'export const instant = false', highlight: true },
-    ]}
-  />
-
+  
+> 💡 **Solución recomendada (block):** Allow blocking route — [Ver guía de solución](https://nextjs.org/docs/messages/instant-shell-url-data#allow-blocking-route)
 
 The insight never blocks the build, so this pass can happen any time after the flag is on. Load every route in `next dev` to check for it.
 
-The fix is to keep the URL-independent parts of the route outside the boundary and move the `params` or `searchParams` read into a child wrapped in `<Suspense>`:
-
-```tsx
-// Archivo: app/products/[slug]/page.tsx switcher
-// Before - awaiting params at the top ties the App Shell to one URL
-export default async function Page({ params }: PageProps<'/products/[slug]'>) {
-  const { slug } = await params
-  const product = await getProduct(slug)
-  return (
-    <ProductLayout>
-      <Details product={product} />
-    </ProductLayout>
-  )
-}
-```
-
-```jsx
-// Archivo: app/products/[slug]/page.js switcher
-// Before - awaiting params at the top ties the App Shell to one URL
-export default async function Page({ params }) {
-  const { slug } = await params
-  const product = await getProduct(slug)
-  return (
-    <ProductLayout>
-      <Details product={product} />
-    </ProductLayout>
-  )
-}
-```
-
-```tsx
-// Archivo: app/products/[slug]/page.tsx switcher
-// After - pass the promise down without awaiting it
-import { Suspense } from 'react'
-import { ProductDetails } from './product-details'
-
-export default function Page({ params }: PageProps<'/products/[slug]'>) {
-  return (
-    <ProductLayout>
-      <Suspense fallback={<DetailsSkeleton />}>
-        <ProductDetails params={params} />
-      </Suspense>
+The fix is to keep the URL-independent parts of the route outside the boundary and move the `params` or `searchParams` read into a child wrapped in ```<Suspense>``
     </ProductLayout>
   )
 }
@@ -423,9 +270,9 @@ import { ProductDetails } from './product-details'
 export default function Page({ params }) {
   return (
     <ProductLayout>
-      <Suspense fallback={<DetailsSkeleton />}>
+      ``<Suspense>``}>
         <ProductDetails params={params} />
-      </Suspense>
+      `<Suspense>`
     </ProductLayout>
   )
 }
@@ -440,7 +287,7 @@ export async function ProductDetails({
 }: Pick<PageProps<'/products/[slug]'>, 'params'>) {
   const { slug } = await params
   const product = await getProduct(slug)
-  return <Details product={product} />
+  return ``<Details>``
 }
 ```
 
@@ -449,7 +296,7 @@ export async function ProductDetails({
 export async function ProductDetails({ params }) {
   const { slug } = await params
   const product = await getProduct(slug)
-  return <Details product={product} />
+  return ``<Details>``
 }
 ```
 
@@ -480,9 +327,9 @@ async function Results({
 
 export default function Page({ searchParams }: PageProps<'/search'>) {
   return (
-    <Suspense fallback={<Skeleton />}>
+    ``<Suspense>``}>
       <Results searchParams={searchParams} />
-    </Suspense>
+    `<Suspense>`
   )
 }
 ```
@@ -504,9 +351,9 @@ async function Results({ searchParams }) {
 
 export default function Page({ searchParams }) {
   return (
-    <Suspense fallback={<Skeleton />}>
+    ``<Suspense>``}>
       <Results searchParams={searchParams} />
-    </Suspense>
+    `<Suspense>`
   )
 }
 ```
@@ -531,9 +378,9 @@ async function Results({
 
 export default function Page({ searchParams }: PageProps<'/search'>) {
   return (
-    <Suspense fallback={<Skeleton />}>
+    ``<Suspense>``}>
       <Results searchParams={searchParams} />
-    </Suspense>
+    `<Suspense>`
   )
 }
 ```
@@ -556,9 +403,9 @@ async function Results({ searchParams }) {
 
 export default function Page({ searchParams }) {
   return (
-    <Suspense fallback={<Skeleton />}>
+    ``<Suspense>``}>
       <Results searchParams={searchParams} />
-    </Suspense>
+    `<Suspense>`
   )
 }
 ```

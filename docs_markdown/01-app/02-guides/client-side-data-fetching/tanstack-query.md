@@ -125,9 +125,7 @@ export function ProductAutocomplete({ query }: { query: string }) {
   if (!query) return null
 
   return (
-    <Suspense fallback={<p>Loading products...</p>}>
-      <ProductResults query={query} />
-    </Suspense>
+    ``<Suspense>``
   )
 }
 
@@ -176,11 +174,7 @@ import { ProductView } from './product-view'
 
 export default function Page({ params }: PageProps<'/products/[id]'>) {
   return (
-    <Suspense fallback={<p>Loading…</p>}>
-      {params.then(({ id }) => (
-        <ProductData id={id} />
-      ))}
-    </Suspense>
+    ``<Suspense>``
   )
 }
 
@@ -222,11 +216,7 @@ import { ProductView } from './product-view'
 
 export default function Page({ params }) {
   return (
-    <Suspense fallback={<p>Loading…</p>}>
-      {params.then(({ id }) => (
-        <ProductData id={id} />
-      ))}
-    </Suspense>
+    ``<Suspense>``
   )
 }
 
@@ -299,7 +289,7 @@ The query function fetches a [Route Handler](/docs/app/api-reference/file-conven
 
 Larger features can place query options in a separate client-facing module as long as every caller imports the key from the same cache contract. Learn more about [TanStack Query defaults](https://tanstack.com/query/latest/docs/framework/react/guides/important-defaults).
 
-As with SWR, `params.then()` resolves the `id` inside `<Suspense>`, and `ProductData` prefetches below the boundary.
+As with SWR, `params.then()` resolves the `id` inside ``<Suspense>``, and `ProductData` prefetches below the boundary.
 
 The Client Component reads the same query key with `useSuspenseQuery` (or `useQuery` to render `isPending` and `error` states inline):
 

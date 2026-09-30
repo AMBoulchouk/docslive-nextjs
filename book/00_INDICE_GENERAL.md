@@ -1,10 +1,11 @@
 # 📖 Next.js v16.3.7 — Libro Guía Definitivo
+
 > **Compilación de la Documentación Oficial de Next.js**  
-> **Versión de referencia:** v16.3.7  
+> **Versión de referencia:** v16.3.7 (Última versión estable)  
 > **Fuente:** [https://nextjs.org/docs](https://nextjs.org/docs)  
 > **Total de Secciones:** 456 archivos  
 
-Este libro guía recopila de forma estructurada, limpia y navegable toda la documentación oficial de Next.js 16.3.7.
+Este libro guía recopila de forma estructurada, limpia y navegable toda la documentación oficial de Next.js 16.3.7. Cada sección contiene código TypeScript/JavaScript verificado, explicaciones de arquitectura y enlaces a la documentación oficial en vivo.
 
 ---
 

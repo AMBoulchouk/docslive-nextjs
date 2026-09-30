@@ -76,9 +76,7 @@ export function ProductAutocomplete({ query }: { query: string }) {
   if (!query) return null
 
   return (
-    <Suspense fallback={<p>Loading products...</p>}>
-      <ProductResults query={query} />
-    </Suspense>
+    ``<Suspense>``
   )
 }
 
@@ -125,11 +123,7 @@ import { ProductView } from './product-view'
 
 export default function Page({ params }: PageProps<'/products/[id]'>) {
   return (
-    <Suspense fallback={<p>Loading…</p>}>
-      {params.then(({ id }) => (
-        <ProductData id={id} />
-      ))}
-    </Suspense>
+    ``<Suspense>``
   )
 }
 
@@ -159,11 +153,7 @@ import { ProductView } from './product-view'
 
 export default function Page({ params }) {
   return (
-    <Suspense fallback={<p>Loading…</p>}>
-      {params.then(({ id }) => (
-        <ProductData id={id} />
-      ))}
-    </Suspense>
+    ``<Suspense>``
   )
 }
 

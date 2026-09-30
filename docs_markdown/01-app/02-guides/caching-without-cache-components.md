@@ -361,7 +361,7 @@ export default async function Page({
   // Perform another asynchronous task
   const isAvailable = await checkIsAvailable()
 
-  return isAvailable ? <Item id={id} /> : null
+  return isAvailable ? ``<Item>`` : null
 }
 
 async function Item({ id }: { id: string }) {
@@ -381,7 +381,7 @@ export default async function Page({ params }) {
   // Perform another asynchronous task
   const isAvailable = await checkIsAvailable()
 
-  return isAvailable ? <Item id={id} /> : null
+  return isAvailable ? ``<Item>`` : null
 }
 
 async function Item({ id }) {

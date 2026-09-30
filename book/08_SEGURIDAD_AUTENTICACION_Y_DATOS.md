@@ -2,7 +2,7 @@
 
 > 📌 **Capítulo 08** | Libro Guía Next.js v16.3.7  
 > 📝 **Resumen:** *Autenticación con Cache Components, Content Security Policy (CSP), protección contra ataques, cookies y middleware.*  
-> 📄 **Temas incluidos:** 8 secciones  
+> 📄 **Temas incluidos en este capítulo:** 8 secciones  
 
 [⬅ Volver al Índice General](./00_INDICE_GENERAL.md)
 
@@ -32,126 +32,7 @@
 
 ---
 
-With [Cache Components](/docs/app/getting-started/caching) enabled, a session read happens at request time, so it can't be prerendered into the static shell. Authenticated UI streams in behind a `<Suspense>` boundary instead, and data derived from the session can still be cached.
-
-The examples use [iron-session](https://github.com/vvo/iron-session) for encrypted cookie sessions, but the patterns apply to any session or authentication library. For a complete, runnable version, see the [with-iron-session-cache-components example](https://github.com/vercel/next.js/tree/canary/examples/with-iron-session-cache-components).
-
-## Prerequisites
-
-Enable [`cacheComponents`](/docs/app/api-reference/config/next-config-js/cacheComponents):
-
-```ts
-// Archivo: next.config.ts
-import type { NextConfig } from 'next'
-
-const nextConfig: NextConfig = {
-  cacheComponents: true,
-}
-
-export default nextConfig
-```
-
-This guide covers code patterns for authentication with Cache Components: reading the session at request time, streaming authenticated UI, and caching session-derived data. It assumes you're comfortable with Cache Components (if not, read [Caching](/docs/app/getting-started/caching) first) and that you already have a session set on login.
-
-For the fundamentals this builds on, we recommend two guides:
-
-- [Authentication](/docs/app/guides/authentication) covers sign-up, login, session management, authorization, and the Data Access Layer.
-- [Data Security](/docs/app/guides/data-security) covers keeping data access on the server and sensitive data off the client.
-
-## Migrating an existing app
-
-With Cache Components enabled, instant navigation validation flags every route that reads the session, because a request read can't be prerendered into the static shell. You don't have to resolve them all before shipping. Set [`export const instant = false`](/docs/app/guides/instant-navigation#opting-out) on the page or layout to let it keep blocking on the server, then adopt the patterns below one route at a time. For the full migration workflow, see [Migrating to Cache Components](/docs/app/guides/migrating-to-cache-components#following-validation).
-
-## Step 1: Read the current user
-
-Reading the current user reads the session cookie, then looks the user up. A request read can't be part of the static shell, so it always sits behind a [`<Suspense>`](/docs/app/api-reference/file-conventions/loading) boundary and streams in on every navigation.
-
-Because a user session is valid for a period of time, adding a cache lifetime lets the framework prefetch that content ahead of time.
-
-The server-side directives can't give it that lifetime, though: neither a plain [`use cache`](/docs/app/api-reference/directives/use-cache) nor [`use cache: remote`](/docs/app/api-reference/directives/use-cache-remote) can call `cookies()`, and you can't [extract the value and pass it in](/docs/app/getting-started/caching#passing-runtime-values-to-cached-functions) either, because:
-
-- A session helper reads the cookie deep inside its own code, so there's nothing to lift out.
-- Validating it compares a token's expiry against the current time (iron-session's `unsealData` rejects an expired seal), so the read is request- and time-dependent.
-
-That's what [`use cache: private`](/docs/app/api-reference/directives/use-cache-private) is for: it reads `cookies()` and `headers()` directly, keeping the result in the browser only, never on the server.
-
-A private scope stays in the browser, so it never caches on the server. To cache on the server instead, extract a value (the `userId`, for example) and pass it into a plain [`use cache`](/docs/app/api-reference/directives/use-cache) or [`use cache: remote`](/docs/app/api-reference/directives/use-cache-remote). The same pattern caches data derived from the session, covered in [Step 4](#step-4-cache-session-derived-data).
-
-```tsx
-// Archivo: lib/session.ts
-import 'server-only'
-import { cookies } from 'next/headers'
-import { sealData, unsealData } from 'iron-session'
-
-export type SessionData = {
-  userId?: string
-}
-
-const COOKIE_NAME = 'app_session'
-const password = process.env.SESSION_PASSWORD!
-
-export async function getSession(): Promise<SessionData> {
-  const cookie = (await cookies()).get(COOKIE_NAME)?.value
-  if (!cookie) {
-    return {}
-  }
-  return unsealData<SessionData>(cookie, { password })
-}
-```
-
-```tsx
-// Archivo: lib/auth.ts
-import 'server-only'
-import { redirect } from 'next/navigation'
-import { getSession } from './session'
-import { findUserById } from './data'
-
-export type User = {
-  id: string
-  name: string
-}
-
-export async function getCurrentUser(): Promise<User> {
-  'use cache: private'
-
-  const { userId } = await getSession()
-  if (!userId) {
-    redirect('/login')
-  }
-
-  const user = await findUserById(userId)
-  if (!user) {
-    redirect('/login')
-  }
-
-  return { id: user.id, name: user.name }
-}
-```
-
-The `redirect()` calls throw to interrupt rendering rather than return a value, so they aren't cached. Only a resolved user is.
-
-> **Good to know:** `use cache: private` accepts `cookies()`, `headers()`, and `searchParams`, but not [`connection()`](/docs/app/api-reference/functions/connection). See [`use cache: private`](/docs/app/api-reference/directives/use-cache-private) for the full list.
-
-## Step 2: Show the user without blocking the page
-
-A component that reads the session must sit behind a [`<Suspense>`](/docs/app/api-reference/file-conventions/loading) boundary. With Cache Components, reading `cookies()` outside a boundary is a build error. The boundary is also what keeps the rest of the page fast. Anything outside it prerenders into the [static shell](/docs/app/getting-started/caching#prerendering) and loads instantly, as long as it's static or wrapped in [`use cache`](/docs/app/api-reference/directives/use-cache) and doesn't read runtime data of its own. Only the section behind the boundary waits for the request.
-
-```tsx
-// Archivo: app/page.tsx
-import { Suspense } from 'react'
-import { getCurrentUser } from '@/lib/auth'
-import { getAnnouncements } from '@/lib/data'
-
-export default function Page() {
-  return (
-    <main>
-      
-      <Announcements />
-
-      
-      <Suspense fallback={<p>Loading your dashboard…</p>}>
-        <Dashboard />
-      </Suspense>
+With [Cache Components](/docs/app/getting-started/caching) enabled, a session read happens at request time, so it can't be prerendered into the static shell. Authenticated UI streams in behind a ```<Suspense>``
     </main>
   )
 }
@@ -222,15 +103,13 @@ function Dashboard() {
 
   return (
     <UserProvider userPromise={userPromise}>
-      <Suspense fallback={<span>Loading…</span>}>
-        <UserBadge />
-      </Suspense>
+      ``<Suspense>``
     </UserProvider>
   )
 }
 ```
 
-Client Components call `useUser()` to get the current user. Because `use()` suspends until the promise resolves, keep the component behind a `<Suspense>` boundary:
+Client Components call `useUser()` to get the current user. Because `use()` suspends until the promise resolves, keep the component behind a ``<Suspense>`` boundary:
 
 ```tsx
 // Archivo: app/user-badge.tsx
@@ -339,6 +218,7 @@ The destination needs [Partial Prefetching](/docs/app/guides/adopting-partial-pr
 - **Reading `cookies()` or `headers()` inside a plain `use cache` function.** This throws. Read the request outside and pass the value in, or use `use cache: private`.
 - **Putting secrets or personal data in cache keys or tags.** Arguments and `cacheTag` values are stored in plain text. Key and tag on a stable identifier, not on sensitive input.
 - **Trusting the client for authorization.** UI checks hide elements, but they don't protect data. Re-verify the session in every Server Action and [Route Handler](/docs/app/api-reference/file-conventions/route), close to the data. See [Authorization](/docs/app/guides/authentication#authorization).
+
 
 
 [⬆ Subir al inicio del capítulo](#)
@@ -1725,7 +1605,7 @@ This guarantees that wherever `getUser()` is called within your application, the
 
 Session and user data often appear in shell UI (header, nav) that repeats across routes. A top-level `await` on `cookies()`, `headers()`, or the DAL in a layout delays the first streamed chunk for that segment and holds `{children}` behind that work.
 
-If only part of the shell needs session data (for example, a user menu), move the `await` into a nested Server Component and wrap it in `<Suspense>` so the rest of the page streams first. See [Push dynamic access down](/docs/app/guides/streaming#push-dynamic-access-down) for the pattern.
+If only part of the shell needs session data (for example, a user menu), move the `await` into a nested Server Component and wrap it in ``<Suspense>`` so the rest of the page streams first. See [Push dynamic access down](/docs/app/guides/streaming#push-dynamic-access-down) for the pattern.
 
 Client Components can't import the DAL. Run `verifySession()`, `getUser()`, or similar in a parent Server Component, then pass data to client children as props or through a context provider. For that pattern, see [Using React's `use` within a Context Provider](/docs/app/guides/single-page-applications#using-reacts-use-within-a-context-provider), and use React's [`taintUniqueValue`](https://react.dev/reference/react/experimental_taintUniqueValue) API to keep sensitive session fields from reaching the client.
 
@@ -2020,6 +1900,7 @@ To continue learning about authentication and security, check out the following 
 - [Understanding XSS Attacks](https://vercel.com/guides/understanding-xss-attacks)
 - [Understanding CSRF Attacks](https://vercel.com/guides/understanding-csrf-attacks)
 - [The Copenhagen Book](https://thecopenhagenbook.com/)
+
 
 
 [⬆ Subir al inicio del capítulo](#)
@@ -2756,6 +2637,7 @@ const cspHeader = `
 | `v13.4.20` | Recommended for proper nonce handling and CSP header parsing. |
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -3395,6 +3277,7 @@ If you're doing an audit of a Next.js project, here are a few things we recommen
 - **`proxy.ts` and `route.ts`:** Have a lot of power. Spend extra time auditing these using traditional techniques. Perform Penetration Testing or Vulnerability Scanning regularly or in alignment with your team's software development lifecycle.
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -3694,6 +3577,7 @@ For example, if `NODE_ENV` is `development` and you define a variable in both `.
 | `v9.4.0` | Support `.env` and `NEXT_PUBLIC_` introduced. |
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -3708,6 +3592,7 @@ For example, if `NODE_ENV` is `development` and you define a variable in both `.
 > 📝 **Descripción:** *Learn how to implement authentication in Next.js, covering best practices, securing routes, authorization techniques, and session management.*  
 
 ---
+
 
 
 
@@ -3730,6 +3615,7 @@ For example, if `NODE_ENV` is `development` and you define a variable in both `.
 
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -3744,6 +3630,7 @@ For example, if `NODE_ENV` is `development` and you define a variable in both `.
 > 📝 **Descripción:** *Learn to add and access environment variables in your Next.js application.*  
 
 ---
+
 
 
 

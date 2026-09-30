@@ -2,7 +2,7 @@
 
 > 📌 **Capítulo 02** | Libro Guía Next.js v16.3.7  
 > 📝 **Resumen:** *Layouts anidados, páginas, navegación dinámica, Link component, Route Handlers y organización de rutas.*  
-> 📄 **Temas incluidos:** 7 secciones  
+> 📄 **Temas incluidos en este capítulo:** 7 secciones  
 
 [⬅ Volver al Índice General](./00_INDICE_GENERAL.md)
 
@@ -369,6 +369,7 @@ export default function Layout(props: LayoutProps<'/dashboard'>) {
 > - Types are generated during `next dev`, `next build` or `next typegen`.
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -499,9 +500,9 @@ export default function Loading() {
 }
 ```
 
-Behind the scenes, Next.js will automatically wrap the `page.tsx` contents in a `<Suspense>` boundary. The prefetched fallback UI will be shown while the route is loading, and swapped for the actual content once ready.
+Behind the scenes, Next.js will automatically wrap the `page.tsx` contents in a ``<Suspense>`` boundary. The prefetched fallback UI will be shown while the route is loading, and swapped for the actual content once ready.
 
-> **Good to know**: You can also use [`<Suspense>`](https://react.dev/reference/react/Suspense) to create loading UI for nested components.
+> **Good to know**: You can also use [``<Suspense>``](https://react.dev/reference/react/Suspense) to create loading UI for nested components.
 
 Benefits of `loading.tsx`:
 
@@ -817,6 +818,7 @@ export function LocaleSwitcher() {
 ```
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -1029,6 +1031,7 @@ export async function GET(_req: NextRequest, ctx: RouteContext<'/users/[id]'>) {
 > - Types are generated during `next dev`, `next build` or `next typegen`.
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -1204,9 +1207,9 @@ async function TeamTopics() {
 
 export default function Page() {
   return (
-    <Suspense fallback={<Skeleton />}>
+    ``<Suspense>``}>
       <TeamTopics />
-    </Suspense>
+    `<Suspense>`
   )
 }
 ```
@@ -1225,9 +1228,9 @@ async function TeamTopics() {
 
 export default function Page() {
   return (
-    <Suspense fallback={<Skeleton />}>
+    ``<Suspense>``}>
       <TeamTopics />
-    </Suspense>
+    `<Suspense>`
   )
 }
 ```
@@ -1250,9 +1253,9 @@ async function TeamTopics() {
 
 export default function Page() {
   return (
-    <Suspense fallback={<Skeleton />}>
+    ``<Suspense>``}>
       <TeamTopics />
-    </Suspense>
+    `<Suspense>`
   )
 }
 ```
@@ -1275,177 +1278,24 @@ async function TeamTopics() {
 
 export default function Page() {
   return (
-    <Suspense fallback={<Skeleton />}>
+    ``<Suspense>``}>
       <TeamTopics />
-    </Suspense>
+    `<Suspense>`
   )
 }
 ```
 
 ### URL data
 
-[URL data](/docs/app/glossary#url-data) (`params`, `searchParams`) varies per link, so content that depends on it can't be included in the shared App Shell and streams in after navigation from behind its `<Suspense>` boundary. The links keep `prefetch={true}`, and [Prefetching URL data](#prefetching-url-data) covers prefetching the content ahead of the click.
-
-### Real-time content
-
-A prefetch of real-time content would be stale by the click, so there is nothing to preserve. Remove `prefetch={true}` and let the content stream in from behind its `<Suspense>` boundary.
-
-| Destination                                                                       | Recommendation                                                            |
-| --------------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
-| [Fully static, or content already cached](#static-or-cached-content)              | Remove the now-redundant `prefetch={true}`.                               |
-| [Delivered uncached content you want kept ahead of the click](#uncached-content)  | Cache it with `use cache`, then remove `prefetch={true}`.                 |
-| [Delivered content that depends on `cookies()` or `headers()`](#session-content)  | Cache the lookup behind the session value, then remove `prefetch={true}`. |
-| [Reads URL data, or has cached content that depends on it](#url-data)             | Keep `prefetch={true}` to resolve the content ahead of the click.         |
-| [Delivers real-time content that must stay fresh per request](#real-time-content) | Remove `prefetch={true}` and let the content stream in.                   |
-
-## Adopting incrementally
-
-Adoption doesn't have to happen in one change. [`prefetch = 'partial'`](/docs/app/api-reference/file-conventions/route-segment-config/prefetch) is the global flag scoped to one route, so with the global flag still off, you can adopt and deploy each destination on its own.
-
-Before a destination opts into Partial Prefetching, `prefetch={true}` performs the legacy full prefetch. Navigating through one of these links in development surfaces the [dynamic data during prefetching](/docs/messages/instant-link-prefetch-partial) insight, naming the destination and pointing at its fixes:
-
-
-  <FixCard
-    group="upgrade"
-    title="Opt into Partial Prefetching"
-    href="/docs/messages/instant-link-prefetch-partial#opt-into-partial-prefetching"
-    snippets={[
-      { text: '// page.tsx or layout.tsx' },
-      { text: "export const prefetch = 'partial'", highlight: true },
+[URL data](/docs/app/glossary#url-data) (`params`, `searchParams`) varies per link, so content that depends on it can't be included in the shared App Shell and streams in after navigation from behind its ```<Suspense>``', highlight: true },
     ]}
   />
-  <FixCard
-    group="disable"
-    title="Use the default prefetch"
-    href="/docs/messages/instant-link-prefetch-partial#use-the-default-prefetch"
-    snippets={[
-      { text: '[', highlight: true },
-      { text: '  Dashboard' },
-      { text: '](/dashboard)' },
-    ]}
-  />
-
-
-Each card is clickable and opens a page with patterns, code samples, and trade-offs.
-
-1. Start with one destination. Preserve the intended prefetched UI and update its `prefetch={true}` links using the [patterns above](#migrate-existing-full-prefetches). Then add `export const prefetch = 'partial'` to its page or layout, which clears the insight for every link pointing at the route:
-
-   ```tsx filename="app/dashboard/page.tsx" switcher
-   // Before
-   export default function Page() {
-     return <Dashboard />
-   }
-   ```
-
-   ```jsx filename="app/dashboard/page.js" switcher
-   // Before
-   export default function Page() {
-     return <Dashboard />
-   }
-   ```
-
-   ```tsx filename="app/dashboard/page.tsx" switcher
-   // After - adopted without the global flag
-   export const prefetch = 'partial'
-
-   export default function Page() {
-     return <Dashboard />
-   }
-   ```
-
-   ```jsx filename="app/dashboard/page.js" switcher
-   // After - adopted without the global flag
-   export const prefetch = 'partial'
-
-   export default function Page() {
-     return <Dashboard />
-   }
-   ```
-
-2. Deploy the change. Links to the adopted destination load the App Shell, and the insight keeps surfacing for the destinations you haven't reached.
-3. Repeat until every destination in scope is adopted, then [enable the flag](#enable-partial-prefetching).
-
-The per-route `prefetch = 'partial'` exports are now redundant. Remove them in one pass with the [`remove-partial-prefetch`](/docs/app/guides/upgrading/codemods#remove-partial-prefetch) codemod, which strips `export const prefetch = 'partial'` from every `page` and `layout`:
-
-```bash
-// Archivo: Terminal
-npx @next/codemod@canary remove-partial-prefetch ./app
-```
-
-> **Good to know**: Pass `./src/app` in a `src/` project. A wrong path reports `0 ok` instead of failing, so check the file count.
-
-The codemod removes only the `'partial'` value and leaves other values such as `prefetch = 'force-disabled'` in place.
-
-## Move URL data behind Suspense
-
-With the flag enabled, Next.js validates each App Shell as you navigate in development. The App Shell is shared across every link to a route, so it can't contain data that belongs to a single URL. Reading [`params`](/docs/app/api-reference/file-conventions/page#params-optional) or [`searchParams`](/docs/app/api-reference/file-conventions/page#searchparams-optional) outside a [`<Suspense>`](https://react.dev/reference/react/Suspense) boundary ties the shell to the link's URL and surfaces the [URL data outside of Suspense](/docs/messages/instant-shell-url-data) insight, naming the route and pointing at its fixes:
-
-
-  <FixCard
-    group="stream"
-    title="Wrap in or move into Suspense"
-    href="/docs/messages/instant-shell-url-data#wrap-in-or-move-into-suspense"
-    snippets={[
-      { text: '<Suspense fallback={…}>', highlight: true },
-      { text: '  <Details params={params} />' },
-      { text: '</Suspense>', highlight: true },
-    ]}
-  />
-  <FixCard
-    group="block"
-    title="Allow blocking route"
-    href="/docs/messages/instant-shell-url-data#allow-blocking-route"
-    snippets={[
-      { text: '// page.tsx or layout.tsx' },
-      { text: 'export const instant = false', highlight: true },
-    ]}
-  />
-
+  
+> 💡 **Solución recomendada (block):** Allow blocking route — [Ver guía de solución](https://nextjs.org/docs/messages/instant-shell-url-data#allow-blocking-route)
 
 The insight never blocks the build, so this pass can happen any time after the flag is on. Load every route in `next dev` to check for it.
 
-The fix is to keep the URL-independent parts of the route outside the boundary and move the `params` or `searchParams` read into a child wrapped in `<Suspense>`:
-
-```tsx
-// Archivo: app/products/[slug]/page.tsx switcher
-// Before - awaiting params at the top ties the App Shell to one URL
-export default async function Page({ params }: PageProps<'/products/[slug]'>) {
-  const { slug } = await params
-  const product = await getProduct(slug)
-  return (
-    <ProductLayout>
-      <Details product={product} />
-    </ProductLayout>
-  )
-}
-```
-
-```jsx
-// Archivo: app/products/[slug]/page.js switcher
-// Before - awaiting params at the top ties the App Shell to one URL
-export default async function Page({ params }) {
-  const { slug } = await params
-  const product = await getProduct(slug)
-  return (
-    <ProductLayout>
-      <Details product={product} />
-    </ProductLayout>
-  )
-}
-```
-
-```tsx
-// Archivo: app/products/[slug]/page.tsx switcher
-// After - pass the promise down without awaiting it
-import { Suspense } from 'react'
-import { ProductDetails } from './product-details'
-
-export default function Page({ params }: PageProps<'/products/[slug]'>) {
-  return (
-    <ProductLayout>
-      <Suspense fallback={<DetailsSkeleton />}>
-        <ProductDetails params={params} />
-      </Suspense>
+The fix is to keep the URL-independent parts of the route outside the boundary and move the `params` or `searchParams` read into a child wrapped in ```<Suspense>``
     </ProductLayout>
   )
 }
@@ -1460,9 +1310,9 @@ import { ProductDetails } from './product-details'
 export default function Page({ params }) {
   return (
     <ProductLayout>
-      <Suspense fallback={<DetailsSkeleton />}>
+      ``<Suspense>``}>
         <ProductDetails params={params} />
-      </Suspense>
+      `<Suspense>`
     </ProductLayout>
   )
 }
@@ -1477,7 +1327,7 @@ export async function ProductDetails({
 }: Pick<PageProps<'/products/[slug]'>, 'params'>) {
   const { slug } = await params
   const product = await getProduct(slug)
-  return <Details product={product} />
+  return ``<Details>``
 }
 ```
 
@@ -1486,7 +1336,7 @@ export async function ProductDetails({
 export async function ProductDetails({ params }) {
   const { slug } = await params
   const product = await getProduct(slug)
-  return <Details product={product} />
+  return ``<Details>``
 }
 ```
 
@@ -1517,9 +1367,9 @@ async function Results({
 
 export default function Page({ searchParams }: PageProps<'/search'>) {
   return (
-    <Suspense fallback={<Skeleton />}>
+    ``<Suspense>``}>
       <Results searchParams={searchParams} />
-    </Suspense>
+    `<Suspense>`
   )
 }
 ```
@@ -1541,9 +1391,9 @@ async function Results({ searchParams }) {
 
 export default function Page({ searchParams }) {
   return (
-    <Suspense fallback={<Skeleton />}>
+    ``<Suspense>``}>
       <Results searchParams={searchParams} />
-    </Suspense>
+    `<Suspense>`
   )
 }
 ```
@@ -1568,9 +1418,9 @@ async function Results({
 
 export default function Page({ searchParams }: PageProps<'/search'>) {
   return (
-    <Suspense fallback={<Skeleton />}>
+    ``<Suspense>``}>
       <Results searchParams={searchParams} />
-    </Suspense>
+    `<Suspense>`
   )
 }
 ```
@@ -1593,14 +1443,15 @@ async function Results({ searchParams }) {
 
 export default function Page({ searchParams }) {
   return (
-    <Suspense fallback={<Skeleton />}>
+    ``<Suspense>``}>
       <Results searchParams={searchParams} />
-    </Suspense>
+    `<Suspense>`
   )
 }
 ```
 
 The [Optimizing prefetching guide](/docs/app/guides/optimizing-prefetching) covers when the cost pays off and the caching patterns behind runtime reads.
+
 
 
 [⬆ Subir al inicio del capítulo](#)
@@ -1964,6 +1815,7 @@ async function getPost(slug) {
 The cache bypass still applies to both branches; the fork only chooses where to read from.
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -1987,159 +1839,8 @@ A navigation is **instant** when the browser can start rendering the new page th
 
 > **Good to know:** This definition assumes caches are warm. Cold caches still require the server to compute the cached result once, so the first navigation to a route may still wait.
 
-A direct visit and a client navigation to the same route can produce different initial UI. **Direct visits** get the [**static shell**](/docs/app/glossary#static-shell) as HTML, typically from a CDN. **Client navigations** only re-render below the layout the current and destination routes share, so the fallback UI defined by a `<Suspense>` boundary above that point can't be used during the transition.
-
-Whether the new page appears instantly depends on the `<Suspense>` boundaries and caching present below the shared layout.
-
-<details>
-<summary>Why page loads and client navigations produce different initial UI</summary>
-
-On a page load, the entire page renders from the document root. Every component runs on the server, and anything that suspends is caught by the nearest `<Suspense>` boundary in the full tree.
-
-On a client navigation between `/store/shoes` and `/store/hats`, only the components below the `/store` layout re-render. A `<Suspense>` boundary in the root layout covers everything on a page load, but on this navigation, it sits above the re-render scope and does not trigger.
-
-This is also why client-side hooks behave differently. `useSearchParams()` suspends during server rendering because search params are not available at build time. But on a client navigation, the router already has the params from the URL and the hook resolves synchronously. The same component can render immediately on a client navigation but sit behind a fallback on a page load.
-
-</details>
-
-With `prefetch={true}`, per-link prefetching resolves a link's URL data (`searchParams` and `params`) before navigation. First make the route instant with its App Shell. Per-link prefetching cannot fix a route that blocks without it. See [Optimizing prefetching](/docs/app/guides/optimizing-prefetching) for the patterns.
-
-## Quick start
-
-Getting the most out of Instant Navigation requires enabling [Cache Components](/docs/app/guides/migrating-to-cache-components) and [Partial Prefetching](/docs/app/guides/adopting-partial-prefetching), then following the [validation errors](#validate-instant-navigation) that appear:
-
-```ts
-// Archivo: next.config.ts
-import type { NextConfig } from 'next'
-
-const nextConfig: NextConfig = {
-  cacheComponents: true,
-  partialPrefetching: true,
-}
-
-export default nextConfig
-```
-
-To help you automate this process with an agent, there's a Skill for each part, [next-cache-components-adoption](https://www.skills.sh/vercel/next.js/next-cache-components-adoption) and [next-partial-prefetching-adoption](https://www.skills.sh/vercel/next.js/next-partial-prefetching-adoption). If you'd like to enable everything, give your agent this prompt:
-
-```prompt
-Adopt Cache Components and Partial Prefetching in this app so its navigations become instant. There is a Skill for each migration.
-
-1. Before you change anything, explain to me in plain terms what Instant Navigation is and what adopting it will change.
-
-2. Install the Skills you need, then verify your changes against a running dev server with next-dev-loop and agent-browser as you go:
-   - next-cache-components-adoption: https://www.skills.sh/vercel/next.js/next-cache-components-adoption
-   - next-partial-prefetching-adoption: https://www.skills.sh/vercel/next.js/next-partial-prefetching-adoption
-   - next-dev-loop: https://www.skills.sh/vercel/next.js/next-dev-loop
-
-3. Each Skill leaves decisions to me, like how much of the work lands in each pull request. Put those questions to me and wait for my answers instead of deciding on my behalf. Adopt Cache Components first, then Partial Prefetching, following the workflow each Skill lays out. Don't rush to a passing build.
-
-4. When you finish a step, show me a table of the routes you touched and what changed on each, and talk me through what it means for the app. Keep it to the outcome, not the implementation details.
-```
-
-The rest of this guide covers the tools these migrations use, walks a navigation that blocks to instant, inspects what lands in the initial UI, and locks the result in with end-to-end tests.
-
-## The tools
-
-### Build the static shell
-
-With Cache Components, **caching directives** (`"use cache"` and its variants) assign a lifetime to an async function's result, which is what lets Next.js include it in the static shell.
-
-> **Good to know:** [`"use cache: private"`](/docs/app/api-reference/directives/use-cache-private) is a variant for caching functions that read runtime APIs like `cookies()` and `headers()`. The result is cached in the browser only, not on the server. **It can't be part of the static shell.** See [`"use cache: private"`](/docs/app/guides/optimizing-prefetching#use-cache-private) in the Optimizing prefetching guide for how it pairs with prefetching.
-
-**`<Suspense>`** declares fallback UI for parts of the tree that read uncached data or runtime APIs like `cookies()` and `headers()`; the content streams into the fallback when it resolves.
-
-> **Good to know:** A fallback may access `cookies()`, `headers()`, or the full URL. At build time, the fallback itself suspends, and a `<Suspense>` boundary further up the tree is needed. For a link with `prefetch={true}`, [per-link prefetching](/docs/app/guides/optimizing-prefetching) makes URL data available before navigation, so the fallback can become part of the prefetched UI. Cached values like timestamps or data fetches can sit directly inside the fallback.
-
-Next.js can also generate an [**App Shell**](/docs/app/glossary#app-shell) per route, which renders during client navigations while remaining content streams. Partial Prefetching uses the App Shell as the default `<Link>` prefetch. A link with `prefetch={true}` can also resolve cached content that depends on that link's URL data.
-
-### Prefetch URL data for a link
-
-Under [Partial Prefetching](/docs/app/guides/adopting-partial-prefetching), each visible `<Link>` prefetches the destination's App Shell by default. Links to the same route share one App Shell instead of triggering a separate App Shell request for each link.
-
-To prefetch the page content alongside the shell for a specific link, set [`prefetch={true}`](/docs/app/api-reference/components/link#prefetch):
-
-```tsx
-<Link href="/checkout" prefetch>
-  Checkout
-</Link>
-```
-
-With Partial Prefetching enabled, `prefetch={true}` also opts the link into [per-link prefetching](/docs/app/guides/optimizing-prefetching), which resolves the per-link URL data (`params`, `searchParams`, the full URL) ahead of the click.
-
-### Validate instant navigation
-
-By **default** (`validationLevel: 'warning'`), Cache Components apps validate every Page and Default segment in development. Validation surfaces what would keep navigations into a segment from being instant — which navigations would block, where a `<Suspense>` boundary is missing, and which data is reaching the user uncached.
-
-To opt out of automatic validation and only validate segments that explicitly export `instant`, set [`validationLevel`](/docs/app/api-reference/file-conventions/route-segment-config/instant#configuring-validation-defaults) to `'manual-warning'`:
-
-```ts
-// Archivo: next.config.ts highlight={7}
-import type { NextConfig } from 'next'
-
-const nextConfig: NextConfig = {
-  cacheComponents: true,
-  experimental: {
-    instantInsights: {
-      validationLevel: 'manual-warning',
-    },
-  },
-}
-
-export default nextConfig
-```
-
-<details>
-<summary>How validation simulates different navigations</summary>
-
-For each validated route, Next.js checks both the initial page load and client navigations at different points in the route hierarchy.
-
-For a route like `/shop/[slug]`, validation checks:
-
-- **Page load**: the full tree renders from the root. The root layout `<Suspense>` catches everything.
-- **Client navigation** (e.g. from `/shop/shoes` to `/shop/hats`): the `/shop` layout is already mounted and only the page below it re-renders. A `<Suspense>` boundary in the root layout does not cover this navigation.
-
-Each case is validated independently. A `<Suspense>` boundary that covers one navigation path might not cover another. This is why a page can pass the page load check but fail for client navigations, and why catching these issues by hand is difficult as the number of routes grows.
-
-</details>
-
-### Test it in CI
-
-The `@next/playwright` package provides an [`instant()`](/docs/app/api-reference/file-conventions/route-segment-config/instant#testing-instant-navigation) helper that scopes your assertions to the UI that's immediately available on navigation, so regressions surface in CI. See [Prevent regressions with e2e tests](#prevent-regressions-with-e2e-tests) for the pattern.
-
-### Inspect loading states
-
-The **Navigation Inspector** in the Next.js DevTools freezes the page at its initial loading state, showing the static shell on direct visits and the prefetched destination on client navigations. Use the inspector to see how much meaningful content lands in the shell.
-
-Pair it with the React DevTools Suspense panel to see exactly which boundary covers which part of the page. See [Visualize loading states with the Next.js DevTools](#visualize-loading-states-with-the-nextjs-devtools) for the workflow.
-
-See [Maximizing the static shell](/docs/app/getting-started/caching#maximizing-the-static-shell) for patterns to reduce fallback coverage and pull more content into the shell.
-
-## A page that navigates instantly
-
-To see the primitives in action, consider a small store app. Each product has its own page at `/store/[slug]`, reachable from the homepage and from other product pages. The goal is that navigating to and between products is instant.
-
-The product page fetches two pieces of data: product details (name, price) and live inventory.
-
-- There is no `generateStaticParams`, meaning `slug` is only known at request time
-- Both components await `params` to get the `slug`, which suspends. Each has its own `<Suspense>` boundary
-- **Product info** rarely changes and is queried from the db using a cached function
-- **Inventory** must be fresh on each request. The db query is inside a `<Suspense>` boundary
-
-```tsx
-// Archivo: app/store/[slug]/page.tsx highlight={7-12,31}
-import { Suspense } from 'react'
-import { db } from '@/lib/db'
-
-export default function ProductPage(props: PageProps<'/store/[slug]'>) {
-  return (
-    <div>
-      <Suspense fallback={<p>Loading product...</p>}>
-        <ProductInfo params={props.params} />
-      </Suspense>
-      <Suspense fallback={<p>Checking availability...</p>}>
-        <Inventory params={props.params} />
-      </Suspense>
+A direct visit and a client navigation to the same route can produce different initial UI. **Direct visits** get the [**static shell**](/docs/app/glossary#static-shell) as HTML, typically from a CDN. **Client navigations** only re-render below the layout the current and destination routes share, so the fallback UI defined by a ```<Suspense>``
+      ``<Suspense>``
     </div>
   )
 }
@@ -2172,24 +1873,15 @@ async function Inventory({ params }: { params: Params }) {
 Cache Components validates this route automatically in development. If something would block a navigation, the dev overlay surfaces a **blocking-route** insight that names the offending component and points at these fixes:
 
 
-  <FixCard
-    group="cache"
-    title="Cache the component or data"
-    href="/docs/messages/blocking-prerender-dynamic#cache-the-component-or-data"
-    snippets={[
-      { text: 'async function Posts() {' },
-      { text: '  "use cache"', highlight: true },
-      { text: '  return <List items={…} />' },
+  
+> 💡 **Solución recomendada (cache):** Cache the component or data — [Ver guía de solución](https://nextjs.org/docs/messages/blocking-prerender-dynamic#cache-the-component-or-data)
+' },
     ]}
   />
-  <FixCard
-    group="stream"
-    title="Wrap in or move into Suspense"
-    href="/docs/messages/blocking-prerender-dynamic#wrap-in-or-move-into-suspense"
-    snippets={[
-      { text: '<Suspense fallback={…}>', highlight: true },
-      { text: '  <DataChild />' },
-      { text: '</Suspense>', highlight: true },
+  
+> 💡 **Solución recomendada (stream):** Wrap in or move into Suspense — [Ver guía de solución](https://nextjs.org/docs/messages/blocking-prerender-dynamic#wrap-in-or-move-into-suspense)
+' },
+      { text: '`<Suspense>`', highlight: true },
     ]}
   />
 
@@ -2202,242 +1894,7 @@ Validation runs on every page load using the real request from your browser, so 
 
 A soft navigation into a page with `"use client"` at the top behaves like a single-page app transition, with no server render at navigation time, which makes it instant. The dev overlay doesn't include this in its fix cards because it has bigger implications than the recommended approaches, which keep the page in the server-component model. Reach for `"use client"` when the page is fully interactive and must be a client component.
 
-> **Good to know**: `"use client"` doesn't skip validation for the static shell. Hooks like `useSearchParams()` still need a `<Suspense>` boundary.
-
-## Visualize loading states with the Next.js DevTools
-
-As you develop a route, the Next.js DevTools let you see what your users see on page loads and client navigations before dynamic data streams in. Use it to verify that your loading states look right, confirm the content you expect appears immediately, and iterate on where to place `<Suspense>` boundaries.
-
-The [React DevTools Suspense panel](https://react.dev/learn/react-developer-tools) complements this: it lists the `<Suspense>` boundaries in the tree and lets you toggle each one between its fallback and resolved state, so you can see exactly which boundary covers which part of the page.
-
-The Navigation Inspector is available when Cache Components is enabled:
-
-```ts
-// Archivo: next.config.ts highlight={4}
-import type { NextConfig } from 'next'
-
-const nextConfig: NextConfig = {
-  cacheComponents: true,
-}
-
-export default nextConfig
-```
-
-Open the Next.js DevTools and select **Navigation Inspector**, then toggle **Pause on navigations**. The panel shows **Awaiting navigation...** With the toggle on, the next refresh or link click freezes the page so you can inspect the shell.
-
-Refresh the product page. The Inspector freezes and shows **Loading shell** labeled **Page load** with the target URL. In the app, two fallbacks appear: "Loading product..." and "Checking availability...". On the first visit the cache is cold and both are visible.
-
-<div
-  style={{
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    gap: '0.5rem',
-  }}
->
-  
-
-![Navigation Inspector panel showing ]()
-
-
-  <span style={{ fontSize: '0.875rem', opacity: 0.7 }}>
-    After a page refresh.
-  </span>
-</div>
-
-Click **Resume** to complete the navigation. Refresh again, and the product name appears immediately from cache.
-
-Now click a link from `/store/shoes` to `/store/hats`. The Inspector shows **Loading shell** labeled **Client nav** with both source and target URLs. In the app, the product name and price appear immediately (cached). "Checking availability..." shows where inventory will stream in.
-
-<div
-  style={{
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    gap: '0.5rem',
-  }}
->
-  
-
-![Navigation Inspector panel showing ]()
-
-
-  <span style={{ fontSize: '0.875rem', opacity: 0.7 }}>
-    After a client navigation.
-  </span>
-</div>
-
-Toggle **Pause on navigations** off when you're done inspecting loading states. Each navigation pauses as long as the toggle is on.
-
-> **Good to know:** Page loads and client navigations can produce different shells. Client-side hooks like `useSearchParams` suspend on page loads (search params are not known at build time) but resolve synchronously on client navigations (the router already has the params).
-
-## Prevent regressions with e2e tests
-
-Validation catches structural problems during development, but as the codebase grows, the structural checks can only tell you that a shell exists. They can't tell you whether the right content is in it. E2E tests close that gap: they assert on what the user actually sees when the navigation completes, catching regressions before they ship.
-
-The [`@next/playwright`](https://www.npmjs.com/package/@next/playwright) package includes an `instant()` helper for this. Install it alongside `@playwright/test`:
-
-```bash
-# Manejador de paquetes: pnpm
-pnpm add -D @next/playwright @playwright/test
-```
-
-```bash
-# Manejador de paquetes: npm
-npm install -D @next/playwright @playwright/test
-```
-
-```bash
-# Manejador de paquetes: yarn
-yarn add -D @next/playwright @playwright/test
-```
-
-```bash
-# Manejador de paquetes: bun
-bun add -D @next/playwright @playwright/test
-```
-
-A route can be reached two ways, and a `<Suspense>` boundary can cover one without covering the other:
-
-- **Initial page load**: Use `page.goto()` to test the static UI from the document response.
-- **Client navigation**: Click a `<Link>` to test the destination's prefetched UI. [Per-link prefetching](/docs/app/guides/optimizing-prefetching) can add request-specific content to this UI.
-
-```typescript
-// Archivo: e2e/navigation.test.ts highlight={6-14,20-25}
-import { test, expect } from '@playwright/test'
-import { instant } from '@next/playwright'
-
-test.describe('Product page (/store/[slug])', () => {
-  test('is instant on an initial page load', async ({ page, baseURL }) => {
-    await instant(
-      page,
-      async () => {
-        await page.goto('/store/hats')
-        await expect(page.locator('h1')).toContainText('Baseball Cap')
-        await expect(page.getByText('In stock')).toHaveCount(0)
-      },
-      { baseURL }
-    )
-    await expect(page.getByText('In stock')).toBeVisible()
-  })
-
-  test('is instant on a client navigation', async ({ page }) => {
-    await page.goto('/store/shoes')
-    await instant(page, async () => {
-      await page.click('a[href="/store/hats"]')
-      await page.waitForURL((url) => url.pathname === '/store/hats')
-      await expect(page.locator('h1')).toContainText('Baseball Cap')
-      await expect(page.getByText('In stock')).toHaveCount(0)
-    })
-    await expect(page.getByText('In stock')).toBeVisible()
-  })
-})
-```
-
-Pass Playwright's `baseURL` to `instant()` when `page.goto()` is the first navigation. The helper needs the origin before requesting the document.
-
-Inside the callback, an initial page load shows the static UI and a client navigation shows the destination's prefetched UI. Other dynamic content remains blocked until the callback finishes.
-
-> **Good to know:** The start of the `instant()` scope is the same as turning on **Pause on navigations** in the Navigation Inspector, and the end of the scope releases the pause the way **Resume** does.
-
-For client navigations, wait for the destination URL before asserting on its UI. Otherwise, a shared selector can match the source page before the destination commits. If the prefetched destination cannot commit, the URL wait times out and the test fails.
-
-Run these against `next dev`, where the testing API is enabled automatically. To run them in CI against a production build, set `exposeTestingApiInProductionBuild` so `next start` exposes the same API:
-
-```ts
-// Archivo: next.config.ts highlight={5}
-import type { NextConfig } from 'next'
-
-const nextConfig: NextConfig = {
-  cacheComponents: true,
-  experimental: { exposeTestingApiInProductionBuild: true },
-}
-
-export default nextConfig
-```
-
-Focus these tests on the user flows that matter most.
-
-## Fixing a navigation that blocks
-
-Consider a different route, `/products/[slug]`, that fetches product data from a public API and shows a featured list alongside:
-
-```tsx
-// Archivo: app/products/[slug]/page.tsx
-export default async function ProductPage(
-  props: PageProps<'/products/[slug]'>
-) {
-  const featured = await getFeatured()
-  const { slug } = await props.params
-  const res = await fetch(`https://next-recipe-api.vercel.dev/products/${slug}`)
-  const product = await res.json()
-
-  return (
-    <div>
-      <FeaturedSection items={featured} />
-      <h1>{product.name}</h1>
-      <p>${product.price}</p>
-      <p>{product.description}</p>
-    </div>
-  )
-}
-
-async function getFeatured() {
-  const res = await fetch('https://next-recipe-api.vercel.dev/products?limit=3')
-  return res.json()
-}
-```
-
-Two `fetch()` calls block at the top level: an uncached featured-list fetch and a per-slug product fetch (which also awaits `params`). Both will surface as Instant validation errors, one at a time.
-
-### Step 1: Move the slug-dependent work into Suspense
-
-Validation surfaces the per-slug product fetch first.
-
-<div
-  style={{
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    gap: '0.5rem',
-  }}
->
-  
-
-![Dev overlay insight for a blocking-route, showing the uncached data access on app/products/[slug]/page.tsx with Stream, Cache, and Block fix cards]()
-
-
-</div>
-
-Extract the slug-dependent work into a sub-component and wrap it with `<Suspense>`:
-
-```tsx
-// Archivo: app/products/[slug]/page.tsx highlight={21-23}
-import { Suspense } from 'react'
-
-async function ProductInfo({ params }: { params: Promise<{ slug: string }> }) {
-  const { slug } = await params
-  const res = await fetch(`https://next-recipe-api.vercel.dev/products/${slug}`)
-  const product = await res.json()
-  return (
-    <>
-      <h1>{product.name}</h1>
-      <p>${product.price}</p>
-      <p>{product.description}</p>
-    </>
-  )
-}
-
-export default async function ProductPage(
-  props: PageProps<'/products/[slug]'>
-) {
-  const featured = await getFeatured()
-  return (
-    <div>
-      <FeaturedSection items={featured} />
-      <Suspense fallback={<p>Loading product...</p>}>
-        <ProductInfo params={props.params} />
-      </Suspense>
+> **Good to know**: `"use client"` doesn't skip validation for the static shell. Hooks like `useSearchParams()` still need a ```<Suspense>``
     </div>
   )
 }
@@ -2483,7 +1940,7 @@ Validation passes. Open the DevTools and try a client navigation. The featured s
 
 ### Iterate on loading states
 
-Validation passing means the navigation is instant. It does not mean the loading states are good. A `<Suspense>` boundary placed high in the tree (say, wrapping the whole page) might satisfy validation, but it replaces most of the page with a single fallback on every navigation.
+Validation passing means the navigation is instant. It does not mean the loading states are good. A ``<Suspense>`` boundary placed high in the tree (say, wrapping the whole page) might satisfy validation, but it replaces most of the page with a single fallback on every navigation.
 
 The best loading states keep as much real, cached content visible as possible and only show fallbacks where data is actually in flight. A product page that keeps the header, image, and description visible with only the price and availability behind a fallback feels faster than a full-page skeleton, even at the same total load time.
 
@@ -2495,10 +1952,10 @@ At a high level, an agent optimizes a single navigation like this:
 
 - **Observe**: read validation insights and choose the exact navigation and UI that should appear immediately.
 - **Test**: confirm the target UI renders normally, then write an `instant()` test and verify that it fails before changing the route.
-- **Fix**: validation errors name a specific component and suggest a fix (`use cache` or `<Suspense>`). The agent applies the fix and re-runs validation.
+- **Fix**: validation errors name a specific component and suggest a fix (`use cache` or ``<Suspense>``). The agent applies the fix and re-runs validation.
 - **Verify**: run the test against a production-like build and keep the passing test as a regression guard.
 
-The agent doesn't need to understand the full caching model, only to follow the insights and errors until they're gone. It does need your app-specific intent, though. Tell it what should appear immediately, what can stream in, and what must stay fresh. When a caching decision is unclear, keep the data fresh behind `<Suspense>` rather than guessing a cache lifetime.
+The agent doesn't need to understand the full caching model, only to follow the insights and errors until they're gone. It does need your app-specific intent, though. Tell it what should appear immediately, what can stream in, and what must stay fresh. When a caching decision is unclear, keep the data fresh behind ``<Suspense>`` rather than guessing a cache lifetime.
 
 For [iterating on loading states](#iterate-on-loading-states), a prompt like "maximize my content, and reduce the amount that needs to be behind a spinner" works well for pushing boundaries down.
 
@@ -2510,7 +1967,7 @@ Agents working on a Cache Components route typically reach for three levers:
 
 Each refactor should pair with a before/after capture to verify the change actually landed. Identical-looking captures mean the refactor didn't take effect.
 
-For agents to see what their changes actually render, pair this with [agent-browser](https://github.com/vercel-labs/agent-browser). With React DevTools enabled it reports the component tree and which `<Suspense>` boundaries are still pending, so an agent can make a change, snapshot the shell, check what landed, and adjust. See [Runtime visibility](/docs/app/guides/ai-agents#step-2-give-agents-runtime-visibility) in the AI agents guide for the setup.
+For agents to see what their changes actually render, pair this with [agent-browser](https://github.com/vercel-labs/agent-browser). With React DevTools enabled it reports the component tree and which ``<Suspense>`` boundaries are still pending, so an agent can make a change, snapshot the shell, check what landed, and adjust. See [Runtime visibility](/docs/app/guides/ai-agents#step-2-give-agents-runtime-visibility) in the AI agents guide for the setup.
 
 The [`next-cache-components-optimizer`](/docs/app/guides/ai-agents#next-cache-components-optimizer) Skill packages this loop. It confirms the target UI renders normally, writes an `instant()` test that fails before the fix, then works it to green against a production-like build and ships it as a regression guard. Use it for the initial load (hard navigation), client-side navigation (soft navigation), or both.
 
@@ -2521,16 +1978,8 @@ Not every layout or page can or should be instant. When the structural fix isn't
 The dev overlay surfaces this as the **Block** fix alongside every insight:
 
 
-  <FixCard
-    group="block"
-    title="Allow blocking route"
-    href="/docs/messages/blocking-prerender-dynamic#allow-blocking-route"
-    snippets={[
-      { text: '// page.tsx or layout.tsx' },
-      { text: 'export const instant = false', highlight: true },
-    ]}
-  />
-
+  
+> 💡 **Solución recomendada (block):** Allow blocking route — [Ver guía de solución](https://nextjs.org/docs/messages/blocking-prerender-dynamic#allow-blocking-route)
 
 Set `instant = false` on the page or layout file. This opts the segment out of validation feedback. The segment may still navigate instantly if its structure supports it; the framework just won't surface insights for it. Navigations between sibling segments below are still validated.
 
@@ -2550,6 +1999,7 @@ For opted-out segments, the navigation blocks on the server. If the content depe
 - [Optimizing prefetching](/docs/app/guides/optimizing-prefetching) when parts of your route depend on URL data (`searchParams` or `params`) and should resolve before navigation
 - [Caching](/docs/app/getting-started/caching) for background on `use cache`, Suspense, and Partial Prerendering
 - [Revalidating](/docs/app/getting-started/revalidating) for how to expire cached data with `cacheLife` and `updateTag`
+
 
 
 [⬆ Subir al inicio del capítulo](#)
@@ -3191,6 +2641,7 @@ export function GET(request) {
 >
 > - To generate a bloom filter, you can use a library like [`bloom-filters`](https://www.npmjs.com/package/bloom-filters).
 > - You should validate requests made to your Route Handler to prevent malicious requests.
+
 
 
 [⬆ Subir al inicio del capítulo](#)

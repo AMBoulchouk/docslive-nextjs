@@ -62,131 +62,7 @@ Import the `ViewTransition` component from React:
 import { ViewTransition } from 'react'
 ```
 
-`<ViewTransition>` animations are activated by [Transitions](https://react.dev/reference/react/useTransition), [`<Suspense>`](https://react.dev/reference/react/Suspense), and [`useDeferredValue`](https://react.dev/reference/react/useDeferredValue). Regular `setState` calls do not trigger them. In Next.js, route navigations are transitions, so `<ViewTransition>` animations activate automatically during navigation.
-
-### Step 1: Morph a thumbnail into a hero image
-
-The gallery displays photos in a grid. Clicking a photo opens a detail page with a larger version of the same image. Without transitions, the thumbnail disappears and the hero appears. Nothing connects them visually. The user has to scan the detail page to confirm they clicked the right photo.
-
-In motion design, when an object persists across a cut, it communicates continuity. The viewer understands they are looking at the same thing, not a replacement. This is the most important transition pattern: **shared element morphing**.
-
-Wrap both the grid thumbnail and the detail hero in `<ViewTransition>` with the same `name`:
-
-```tsx
-// Archivo: components/photo-grid.tsx
-import { ViewTransition } from 'react'
-import Image from 'next/image'
-import Link from 'next/link'
-
-function PhotoGrid({ photos }) {
-  return (
-    <div className="grid grid-cols-3 gap-3">
-      {photos.map((photo) => (
-        <Link key={photo.id} href={`/photo/${photo.id}`}>
-          <ViewTransition name={`photo-${photo.id}`}>
-            
-
-![Illustration]()
-
-
-          </ViewTransition>
-        </Link>
-      ))}
-    </div>
-  )
-}
-```
-
-```tsx
-// Archivo: app/photo/[id]/photo-content.tsx
-import { ViewTransition } from 'react'
-import Image from 'next/image'
-
-async function PhotoContent({ id }) {
-  const photo = await getPhoto(id)
-
-  return (
-    <ViewTransition name={`photo-${photo.id}`}>
-      <div style={{ position: 'relative', aspectRatio: '3 / 2' }}>
-        
-
-![Illustration]()
-
-
-      </div>
-    </ViewTransition>
-  )
-}
-```
-
-The `name` prop creates identity. React finds elements with the same name on the old and new pages, then animates between their size and position automatically. No additional props are needed for the morph to work.
-
-If we click a thumbnail now, the image scales and repositions from its grid cell to the hero slot. Navigating back reverses the morph. The user sees one object moving, not two objects swapping.
-
-The morph plays when the destination content renders in the same commit as the navigation, which is the case with prefetched (cached) pages. If the destination suspends into a fallback first, no pair forms, and the content animates with its enter animation instead when it arrives.
-
-#### Customizing the morph animation
-
-The morph works without any CSS. To customize it, add `share="morph"` together with `default="none"`. The `share` prop assigns the `morph` class to the view transition, which you can target with CSS pseudo-elements. For example, to soften the morph mid-flight with a [`blur`](https://developer.mozilla.org/en-US/docs/Web/CSS/filter-function/blur) keyframe:
-
-```tsx
-<ViewTransition name={`photo-${photo.id}`} share="morph" default="none">
-  
-
-![Illustration]()
-
-
-</ViewTransition>
-```
-
-Add the same props to both Step 1 snippets (`photo-grid.tsx` and `photo-content.tsx`). `default="none"` keeps each named image from running its own crossfade on every unrelated transition. Without it, every named `<ViewTransition>` animates whenever any transition runs on the page. When you add `default="none"` to a named pair, keep the explicit `share`. With `default="none"` and no `share` prop, the pair silently stops morphing.
-
-```css
-// Archivo: app/globals.css
-::view-transition-group(.morph) {
-  animation-duration: 400ms;
-}
-::view-transition-image-pair(.morph) {
-  animation-name: via-blur;
-}
-@keyframes via-blur {
-  30% {
-    filter: blur(3px);
-  }
-}
-```
-
-The blur hides pixel-level interpolation artifacts during the transition. At 400ms, the morph is slow enough to register but fast enough to feel direct.
-
-### Step 2: Animate loading states with Suspense reveals
-
-The photo detail page loads its content asynchronously. While data is in flight, a Suspense boundary shows a skeleton. When the data resolves, the skeleton is replaced by the real content.
-
-Without a transition, the swap is instant. The skeleton vanishes and the content pops in.
-
-In motion design, vertical direction encodes hierarchy. Content sliding up communicates arrival. Content sliding down communicates departure. The pair together creates a handoff: the placeholder yields to the real thing.
-
-Wrap the Suspense fallback in a `ViewTransition` with an exit animation, and the content in a `ViewTransition` with an enter animation:
-
-```tsx
-// Archivo: app/photo/[id]/page.tsx
-import { Suspense, ViewTransition } from 'react'
-
-export default async function PhotoPage({ params }) {
-  const { id } = await params
-
-  return (
-    <Suspense
-      fallback={
-        <ViewTransition exit="slide-down" default="none">
-          <PhotoContentSkeleton />
-        </ViewTransition>
-      }
-    >
-      <ViewTransition enter="slide-up" default="none">
-        <PhotoContent id={id} />
-      </ViewTransition>
-    </Suspense>
+`<ViewTransition>` animations are activated by [Transitions](https://react.dev/reference/react/useTransition), [```<Suspense>``
   )
 }
 ```
@@ -434,7 +310,7 @@ export default async function CollectionPage({ params }) {
   const { slug } = await params
 
   return (
-    <Suspense fallback={<CollectionGridSkeleton />}>
+    ``<Suspense>``}>
       <ViewTransition
         key={slug}
         name="collection-content"
@@ -444,7 +320,7 @@ export default async function CollectionPage({ params }) {
       >
         <CollectionGrid slug={slug} />
       </ViewTransition>
-    </Suspense>
+    `<Suspense>`
   )
 }
 ```

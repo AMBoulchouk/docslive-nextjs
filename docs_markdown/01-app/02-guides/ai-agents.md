@@ -139,11 +139,11 @@ The same menu prints in the `next dev` terminal and in `next build` output, so a
 // Archivo: Terminal
 Route "/products/[slug]": Next.js encountered uncached data during prerendering.
 
-`fetch(...)` or `connection()` accessed outside of `<Suspense>` prevents the route
+`fetch(...)` or `connection()` accessed outside of ``<Suspense>`` prevents the route
 from being prerendered, blocking the page load and leading to a slower user experience.
 
 Ways to fix this:
-  - [stream] Provide a placeholder with `<Suspense fallback={...}>` around the data access
+  - [stream] Provide a placeholder with ``<Suspense>`` around the data access
   - [cache] Cache the data access with `"use cache"` (does not apply to `connection()`)
   - [block] Set `export const instant = false` to allow a blocking route
 
@@ -209,7 +209,7 @@ Adopt Cache Components in this project using the next-cache-components-adoption 
 The [`next-cache-components-optimizer`](https://www.skills.sh/vercel/next.js/next-cache-components-optimizer) Skill takes a target route or set of routes and works toward the UI you want on screen at click time:
 
 1. Writes a failing [`instant()`](/docs/app/guides/instant-navigation#prevent-regressions-with-e2e-tests) test for the UI you named.
-2. Refactors the route until it passes, often by moving a data read below a `<Suspense>` boundary.
+2. Refactors the route until it passes, often by moving a data read below a ``<Suspense>`` boundary.
 3. Commits the passing test with the refactoring, so it catches future regressions.
 
 It needs a route that already builds with [Cache Components](/docs/app/getting-started/caching).

@@ -1395,9 +1395,7 @@ const Connection = async () => {
 
 async function DynamicMarker() {
   return (
-    <Suspense>
-      <Connection />
-    </Suspense>
+    ``<Suspense>``
   )
 }
 

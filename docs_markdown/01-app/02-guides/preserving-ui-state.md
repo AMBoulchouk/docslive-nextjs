@@ -441,9 +441,9 @@ export function ExpandableComments({
       </button>
 
       <Activity mode={expanded ? 'visible' : 'hidden'}>
-        <Suspense fallback={<CommentsSkeleton />}>
+        ``<Suspense>``}>
           <Comments commentsPromise={commentsPromise} />
-        </Suspense>
+        `<Suspense>`
       </Activity>
     </>
   )

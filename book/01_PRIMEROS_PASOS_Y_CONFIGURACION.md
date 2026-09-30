@@ -2,7 +2,7 @@
 
 > 📌 **Capítulo 01** | Libro Guía Next.js v16.3.7  
 > 📝 **Resumen:** *Instalación, estructura de proyectos, archivos de configuración, TypeScript, ESLint y primeros conceptos.*  
-> 📄 **Temas incluidos:** 5 secciones  
+> 📄 **Temas incluidos en este capítulo:** 6 secciones  
 
 [⬅ Volver al Índice General](./00_INDICE_GENERAL.md)
 
@@ -15,6 +15,7 @@
 - [CSS](#css)
 - [Proxy](#proxy)
 - [Upgrading](#upgrading)
+- [Getting Started](#getting-started)
 
 ---
 
@@ -527,6 +528,7 @@ Let's get our Next.js knowledge up to speed, and give me a summary of what's new
 See [Upgrading](/docs/app/getting-started/upgrading) for version guides and manual upgrade steps, or the [preview docs](https://preview.nextjs.org) to explore features before they ship in a stable version.
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -844,6 +846,7 @@ To create multiple [root layouts](/docs/app/api-reference/file-conventions/layou
 ![Route Groups with Multiple Root Layouts]()
 
 In the example above, both `(marketing)` and `(shop)` have their own root layout.
+
 
 
 [⬆ Subir al inicio del capítulo](#)
@@ -1303,6 +1306,7 @@ To keep CSS ordering predictable:
 - CSS ordering can behave differently in development, always ensure to check the build (`next build`) to verify the final CSS order.
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -1386,6 +1390,7 @@ export const config = {
 The `matcher` config allows you to filter Proxy to run on specific paths. See the [Matcher](/docs/app/api-reference/file-conventions/proxy#matcher) documentation for more details on path matching.
 
 Read more about [using `proxy`](/docs/app/guides/backend-for-frontend#proxy), or refer to the `proxy` [API reference](/docs/app/api-reference/file-conventions/proxy).
+
 
 
 [⬆ Subir al inicio del capítulo](#)
@@ -1491,6 +1496,41 @@ The following features are currently available in canary:
 - [`forbidden.js`](/docs/app/api-reference/file-conventions/forbidden)
 - [`unauthorized.js`](/docs/app/api-reference/file-conventions/unauthorized)
 - [`authInterrupts`](/docs/app/api-reference/config/next-config-js/authInterrupts)
+
+
+
+[⬆ Subir al inicio del capítulo](#)
+
+---
+
+<a id="getting-started"></a>
+
+## Getting Started
+
+> **Documentación Oficial Next.js v16.3.7**  
+> 🌐 **URL en vivo:** [https://nextjs.org/docs/app/getting-started](https://nextjs.org/docs/app/getting-started)  
+> 📂 **Sección:** App > Getting Started  
+> 📝 **Descripción:** *Learn how to create full-stack web applications with the Next.js App Router.*  
+
+---
+
+Welcome to the Next.js documentation!
+
+This **Getting Started** section will help you create your first Next.js app and learn the core features you'll use in every project.
+
+## Pre-requisite knowledge
+
+Our documentation assumes some familiarity with web development. Before getting started, it'll help if you're comfortable with:
+
+- HTML
+- CSS
+- JavaScript
+- React
+
+If you're new to React or need a refresher, we recommend starting with our [React Foundations course](/learn/react-foundations), and the [Next.js Foundations course](/learn/dashboard-app) that has you building an application as you learn.
+
+## Next Steps
+
 
 
 [⬆ Subir al inicio del capítulo](#)

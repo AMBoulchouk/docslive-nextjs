@@ -83,44 +83,7 @@ Like any exception, it travels up the call stack until something catches it. A `
 
 ### Calling `notFound()` after streaming has started
 
-To keep a page's shell and loading UI visible while data loads, do the existence check inside a component wrapped in [`<Suspense>`](https://react.dev/reference/react/Suspense) instead of blocking the whole route. The idiomatic place for the check is the data-access function itself, awaited by the component that needs the data:
-
-```tsx
-// Archivo: app/blog/[slug]/page.tsx switcher highlight={8}
-import { Suspense } from 'react'
-import Link from 'next/link'
-import { notFound } from 'next/navigation'
-
-async function getPost(slug: string) {
-  const res = await fetch(`https://api.example.com/posts/${slug}`)
-  if (res.status === 404) {
-    notFound()
-  }
-  if (!res.ok) {
-    throw new Error(`Failed to load post: ${res.status}`)
-  }
-  return res.json()
-}
-
-async function Article({ slug }: { slug: string }) {
-  const post = await getPost(slug)
-  return (
-    <article>
-      <h1>{post.title}</h1>
-      <p>{post.content}</p>
-    </article>
-  )
-}
-
-export default async function PostPage({ params }: PageProps<'/blog/[slug]'>) {
-  const { slug } = await params
-
-  return (
-    <section>
-      [Blog](/blog)
-      <Suspense fallback={<p>Loading...</p>}>
-        <Article slug={slug} />
-      </Suspense>
+To keep a page's shell and loading UI visible while data loads, do the existence check inside a component wrapped in [```<Suspense>``
     </section>
   )
 }
@@ -159,9 +122,7 @@ export default async function PostPage({ params }) {
   return (
     <section>
       [Blog](/blog)
-      <Suspense fallback={<p>Loading...</p>}>
-        <Article slug={slug} />
-      </Suspense>
+      ``<Suspense>``
     </section>
   )
 }
@@ -195,7 +156,7 @@ export default function NotFound() {
 }
 ```
 
-The trade-off is the HTTP status code. Because the check runs inside the `<Suspense>` boundary, the response has already begun streaming as a `200`, and the status can't change once streaming has started. The `noindex` tag keeps a soft 404 out of search results. To return a real `404` status, the resource has to be checked before the response streams. With [Cache Components](/docs/app/getting-started/caching), every dynamic route streams a static shell first, so run that check in [`proxy`](/docs/app/api-reference/file-conventions/proxy) instead. See [Status codes](/docs/app/api-reference/file-conventions/loading#status-codes).
+The trade-off is the HTTP status code. Because the check runs inside the ``<Suspense>`` boundary, the response has already begun streaming as a `200`, and the status can't change once streaming has started. The `noindex` tag keeps a soft 404 out of search results. To return a real `404` status, the resource has to be checked before the response streams. With [Cache Components](/docs/app/getting-started/caching), every dynamic route streams a static shell first, so run that check in [`proxy`](/docs/app/api-reference/file-conventions/proxy) instead. See [Status codes](/docs/app/api-reference/file-conventions/loading#status-codes).
 
 ### Serving a 404 from a Route Handler
 

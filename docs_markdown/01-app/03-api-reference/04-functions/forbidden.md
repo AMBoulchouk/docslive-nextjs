@@ -83,40 +83,7 @@ export default async function AdminPage() {
 
 ### Calling `forbidden()` after streaming has started
 
-To keep the page's shell and loading UI visible while the session is checked, put the role check in the [Data Access Layer](/docs/app/guides/authentication#creating-a-data-access-layer-dal) function that loads the data, and render it in a component wrapped in [`<Suspense>`](https://react.dev/reference/react/Suspense). The check runs inside the boundary, so the shell streams while the session resolves:
-
-```tsx
-// Archivo: app/projects/page.tsx switcher highlight={8}
-import { Suspense } from 'react'
-import { verifySession } from '@/app/lib/dal'
-import { forbidden } from 'next/navigation'
-
-async function getProjects() {
-  const session = await verifySession()
-  if (session?.role !== 'admin') {
-    forbidden()
-  }
-  return db.projects.findMany()
-}
-
-async function Projects() {
-  const projects = await getProjects()
-  return (
-    <ul>
-      {projects.map((project) => (
-        <li key={project.id}>{project.name}</li>
-      ))}
-    </ul>
-  )
-}
-
-export default function ProjectsPage() {
-  return (
-    <main>
-      <h1>Projects</h1>
-      <Suspense fallback={<p>Loading...</p>}>
-        <Projects />
-      </Suspense>
+To keep the page's shell and loading UI visible while the session is checked, put the role check in the [Data Access Layer](/docs/app/guides/authentication#creating-a-data-access-layer-dal) function that loads the data, and render it in a component wrapped in [```<Suspense>``
     </main>
   )
 }
@@ -151,9 +118,7 @@ export default function ProjectsPage() {
   return (
     <main>
       <h1>Projects</h1>
-      <Suspense fallback={<p>Loading...</p>}>
-        <Projects />
-      </Suspense>
+      ``<Suspense>``
     </main>
   )
 }
@@ -187,7 +152,7 @@ export default function Forbidden() {
 }
 ```
 
-The trade-off is the HTTP status code. Because the check runs inside the `<Suspense>` boundary, the response has already begun streaming as a `200`, and the status can't change once streaming has started. This is usually fine for a page, where the user sees the `forbidden` UI regardless. To return a real `403` status, the check has to run before the response streams. With [Cache Components](/docs/app/getting-started/caching), every dynamic route streams a static shell first, so run that check in [`proxy`](/docs/app/api-reference/file-conventions/proxy) instead. See [Status codes](/docs/app/api-reference/file-conventions/loading#status-codes).
+The trade-off is the HTTP status code. Because the check runs inside the ``<Suspense>`` boundary, the response has already begun streaming as a `200`, and the status can't change once streaming has started. This is usually fine for a page, where the user sees the `forbidden` UI regardless. To return a real `403` status, the check has to run before the response streams. With [Cache Components](/docs/app/getting-started/caching), every dynamic route streams a static shell first, so run that check in [`proxy`](/docs/app/api-reference/file-conventions/proxy) instead. See [Status codes](/docs/app/api-reference/file-conventions/loading#status-codes).
 
 ### Role-based route protection
 

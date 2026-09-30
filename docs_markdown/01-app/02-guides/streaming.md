@@ -13,116 +13,10 @@ In traditional server-side rendering, the server produces the full HTML document
 
 This is especially impactful for pages that combine fast static content (headers, navigation, layout) with slower dynamic content (personalized data, analytics, recommendations). The static parts can be prerendered and served from a CDN, painting instantly, while the dynamic parts stream in from the server as they become ready.
 
-React's server renderer produces HTML in chunks aligned with `<Suspense>` boundaries. Next.js integrates this into the App Router so streaming works without additional configuration.
-
-## Example
-
-The companion [streaming demo](https://streaming-demo.labs.vercel.dev/) ([source](https://github.com/vercel-labs/streaming-demo)) lets you see each concept from this guide in action:
-
-- Page-level streaming with `loading.tsx` (skeleton appears instantly, content streams in after ~2s)
-- Granular streaming with sibling `<Suspense>` boundaries that resolve independently
-- Hydration comparison: a single blocking pass vs split hydration with Suspense boundaries
-- Raw HTML streaming in a Route Handler, with early CSS discovery
-- A configurable `ReadableStream` API endpoint for experimenting with chunk sizes and browser buffering
-
-## How the App Router delivers a page
-
-When a browser requests a page, two streams work together during the initial page load:
-
-### The HTML stream
-
-React's server renderer produces progressive HTML chunks. The static parts of your page (layouts, navigation, Suspense fallbacks) render first and are sent immediately. When a `<Suspense>` boundary's content is ready, for example when an async [Server Component](/docs/app/glossary#server-component) resolves, React streams its completed HTML along with inline `<script>` tags: one that swaps the fallback DOM node with the new content, and another carrying the [component payload](#the-component-payload) so React can later hydrate it. The browser executes the swap instantly, without waiting for the page's JavaScript bundle to load or hydration to complete. This is what the user _sees_: the page painting progressively, section by section.
-
-### The component payload
-
-The component payload is a serialized representation of the component tree that React uses to [hydrate](/docs/app/glossary#hydration) the page and handle client-side updates. On initial load, it arrives embedded in the HTML stream (as described above). On **client-side navigation**, only the component payload is fetched (with an `rsc: 1` request header) and no HTML is transferred at all. React uses it to update the component tree in place.
-
-### The static shell
-
-Everything that renders before any async work resolves is called the **static shell**: your layouts, navigation, and the fallback UI defined by your `<Suspense>` boundaries. It is sent immediately, giving the user something to see and interact with while dynamic content streams in. With [Cache Components](/docs/app/getting-started/caching), the static shell is prerendered at build time and served instantly from the edge.
-
-![How Server Rendering with Streaming Works]()
-
-Each `<Suspense>` boundary is an independent streaming point. Components inside different boundaries resolve and stream in independently. They don't block each other.
-
-## Page-level streaming with `loading.js`
-
-The simplest way to add streaming is with a `loading.js` file. Place it alongside your `page.js` and Next.js automatically wraps the page content in a `<Suspense>` boundary, using your loading component as the fallback.
-
-![loading.js special file]()
-
-```tsx
-// Archivo: app/dashboard/loading.tsx switcher
-export default function Loading() {
-  return (
-    <div className="animate-pulse">
-      <div className="h-8 w-48 bg-gray-200 rounded mb-4" />
-      <div className="h-4 w-full bg-gray-200 rounded mb-2" />
-      <div className="h-4 w-full bg-gray-200 rounded mb-2" />
-      <div className="h-4 w-2/3 bg-gray-200 rounded" />
-    </div>
-  )
-}
-```
-
-```jsx
-// Archivo: app/dashboard/loading.js switcher
-export default function Loading() {
-  return (
-    <div className="animate-pulse">
-      <div className="h-8 w-48 bg-gray-200 rounded mb-4" />
-      <div className="h-4 w-full bg-gray-200 rounded mb-2" />
-      <div className="h-4 w-full bg-gray-200 rounded mb-2" />
-      <div className="h-4 w-2/3 bg-gray-200 rounded" />
-    </div>
-  )
-}
-```
-
-Behind the scenes, `loading.js` is nested inside `layout.js` and wraps `page.js` in a `<Suspense>` boundary:
-
-![loading.js overview]()
-
-This means:
-
-- The layout renders immediately as part of the static shell.
-- The loading skeleton is shown instantly as the Suspense fallback.
-- When the page component finishes loading, its HTML replaces the skeleton.
-
-`loading.js` is useful when there's nothing meaningful to show until the page's data resolves. If the page needs to await data before it can render anything, a full-page skeleton is a reasonable fallback.
-
-See the [`loading.js` API reference](/docs/app/api-reference/file-conventions/loading) for more details.
-
-## Granular streaming with `<Suspense>`
-
-`<Suspense>` lets you control exactly which parts of the page stream independently. Instead of a full-page skeleton, you can push fallbacks down into specific sections so the static shell includes more real content.
-
-### Parallel streaming with sibling boundaries
-
-When multiple components perform async work (fetching data, reading from a database), wrap each one in its own `<Suspense>` boundary. Each boundary streams independently as its async work completes, in whatever order that happens, without blocking each other:
-
-```tsx
-// Archivo: app/dashboard/page.tsx switcher
-import { Suspense } from 'react'
-import { Revenue } from './revenue'
-import { RecentOrders } from './recent-orders'
-import { Recommendations } from './recommendations'
-
-export default function Dashboard() {
-  return (
-    <div>
-      <h1>Dashboard</h1>
-      <div className="grid grid-cols-2 gap-4">
-        <Suspense fallback={<p>Loading revenue...</p>}>
-          <Revenue />
-        </Suspense>
-        <Suspense fallback={<p>Loading orders...</p>}>
-          <RecentOrders />
-        </Suspense>
+React's server renderer produces HTML in chunks aligned with ```<Suspense>``
+        ``<Suspense>``
       </div>
-      <Suspense fallback={<p>Loading recommendations...</p>}>
-        <Recommendations />
-      </Suspense>
+      ``<Suspense>``
     </div>
   )
 }
@@ -140,16 +34,10 @@ export default function Dashboard() {
     <div>
       <h1>Dashboard</h1>
       <div className="grid grid-cols-2 gap-4">
-        <Suspense fallback={<p>Loading revenue...</p>}>
-          <Revenue />
-        </Suspense>
-        <Suspense fallback={<p>Loading orders...</p>}>
-          <RecentOrders />
-        </Suspense>
+        ``<Suspense>``
+        ``<Suspense>``
       </div>
-      <Suspense fallback={<p>Loading recommendations...</p>}>
-        <Recommendations />
-      </Suspense>
+      ``<Suspense>``
     </div>
   )
 }
@@ -159,35 +47,8 @@ In this example, if `Revenue` resolves in 200ms, `RecentOrders` in 1s, and `Reco
 
 ### Nested boundaries for progressive detail
 
-You can nest `<Suspense>` boundaries to create a layered loading experience. For example, a product page might stream the header immediately, the product details next, and the reviews last:
-
-```tsx
-// Archivo: app/product/[id]/page.tsx switcher
-import { Suspense } from 'react'
-import { ProductDetails } from './product-details'
-import { Reviews } from './reviews'
-
-export async function generateStaticParams() {
-  const products = await getTopProducts()
-  return products.map((product) => ({ id: product.id }))
-}
-
-export default async function ProductPage({
-  params,
-}: {
-  params: Promise<{ id: string }>
-}) {
-  const { id } = await params
-
-  return (
-    <div>
-      <h1>Product</h1>
-      <Suspense fallback={<p>Loading product details...</p>}>
-        <ProductDetails id={id} />
-        <Suspense fallback={<p>Loading reviews...</p>}>
-          <Reviews productId={id} />
-        </Suspense>
-      </Suspense>
+You can nest ```<Suspense>``
+      `<Suspense>`
     </div>
   )
 }
@@ -210,12 +71,8 @@ export default async function ProductPage({ params }) {
   return (
     <div>
       <h1>Product</h1>
-      <Suspense fallback={<p>Loading product details...</p>}>
-        <ProductDetails id={id} />
-        <Suspense fallback={<p>Loading reviews...</p>}>
-          <Reviews productId={id} />
-        </Suspense>
-      </Suspense>
+      ``<Suspense>``
+      `<Suspense>`
     </div>
   )
 }
@@ -227,28 +84,7 @@ The outer boundary shows "Loading product details..." until `ProductDetails` res
 
 The key to maximizing what streams instantly is to defer dynamic data access to the component that actually needs it. This applies to `params`, `searchParams`, `cookies()`, `headers()`, and data fetches. If you `await` any of these at the top of a layout or page, everything below that point becomes dynamic and cannot be prerendered as part of the static shell.
 
-Instead, pass the promise down and let the consuming component resolve it inside a `<Suspense>` boundary:
-
-```tsx
-// Archivo: app/dashboard/layout.tsx switcher
-import { Suspense } from 'react'
-import { Nav } from './nav'
-import { UserMenu } from './user-menu'
-import { cookies } from 'next/headers'
-
-export default function DashboardLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
-  const cookieStore = cookies() // Start the work, but don't await
-
-  return (
-    <div>
-      <Nav>
-        <Suspense fallback={<p>Loading user...</p>}>
-          <UserMenu cookiePromise={cookieStore} />
-        </Suspense>
+Instead, pass the promise down and let the consuming component resolve it inside a ```<Suspense>``
       </Nav>
       {children}
     </div>
@@ -269,9 +105,7 @@ export default function DashboardLayout({ children }) {
   return (
     <div>
       <Nav>
-        <Suspense fallback={<p>Loading user...</p>}>
-          <UserMenu cookiePromise={cookieStore} />
-        </Suspense>
+        ``<Suspense>``
       </Nav>
       {children}
     </div>
@@ -302,9 +136,7 @@ export default function ShopPage({
   return (
     <div>
       <Hero />
-      <Suspense fallback={<p>Loading products...</p>}>
-        <ProductGrid paramsPromise={params} />
-      </Suspense>
+      ``<Suspense>``
     </div>
   )
 }
@@ -325,9 +157,7 @@ export default function ShopPage({ params }) {
   return (
     <div>
       <Hero />
-      <Suspense fallback={<p>Loading products...</p>}>
-        <ProductGrid paramsPromise={params} />
-      </Suspense>
+      ``<Suspense>``
     </div>
   )
 }
@@ -339,65 +169,17 @@ You can also unwrap the promise inline with `.then()`, so the child component re
 
 ```tsx
 // Archivo: app/shop/[category]/page.tsx switcher
-<Suspense fallback={<p>Loading products...</p>}>
-  {params.then(({ category }) => (
-    <ProductGrid category={category} />
-  ))}
-</Suspense>
+``<Suspense>``
 ```
 
 ```jsx
 // Archivo: app/shop/[category]/page.js switcher
-<Suspense fallback={<p>Loading products...</p>}>
-  {params.then(({ category }) => (
-    <ProductGrid category={category} />
-  ))}
-</Suspense>
+``<Suspense>``
 ```
 
 This keeps `ProductGrid` simple (it takes a `string`, not a `Promise`) while still deferring the `params` access to inside the Suspense boundary.
 
-### When to use `loading.js` vs `<Suspense>`
-
-|                | `loading.js`                             | `<Suspense>`                     |
-| -------------- | ---------------------------------------- | -------------------------------- |
-| **Scope**      | Entire page                              | Any component                    |
-| **Setup**      | Drop in a file                           | Wrap components explicitly       |
-| **Navigation** | Prefetched as instant fallback           | Not prefetched by default        |
-| **Best for**   | Pages where nothing renders without data | Most pages, for granular control |
-
-Prefer explicit `<Suspense>` boundaries close to the dynamic access. When the prerenderer encounters dynamic work, it walks up the tree looking for the nearest Suspense boundary. If none is found, the build fails with a [blocking route error](/docs/messages/blocking-prerender-dynamic). A `loading.js` high in the tree is a valid boundary, so the framework finds it and stops, but now the entire page falls back to a full-page skeleton instead of streaming granularly.
-
-### Error handling mid-stream
-
-If a component throws an error after streaming has started, the nearest [`error.js`](/docs/app/api-reference/file-conventions/error) boundary catches it and renders the error UI in place of the failed component. The rest of the page remains intact, only the section that errored is replaced.
-
-Because the HTTP status code (`200 OK`) has already been sent with the first chunk, it cannot be changed to a `4xx` or `5xx`. The error is handled entirely within the streamed HTML. See [The HTTP contract](#the-http-contract) for more on this constraint.
-
-## Streaming data to the client
-
-You can start a fetch in a [Server Component](/docs/app/glossary#server-component) and pass the unresolved promise as a prop to a [Client Component](/docs/app/glossary#client-component). The promise can be passed through as many layers as needed. Only the component that calls React's [`use`](https://react.dev/reference/react/use) API to read the value needs a `<Suspense>` boundary around it:
-
-```tsx
-// Archivo: app/dashboard/page.tsx switcher
-import { Suspense } from 'react'
-import { StatsChart } from './stats-chart'
-
-type Stats = { revenue: number; orders: number }
-
-async function getStats(): Promise<Stats> {
-  const res = await fetch('https://api.example.com/stats')
-  return res.json()
-}
-
-export default function Dashboard() {
-  // Start the fetch during server render, don't await it
-  const statsPromise = getStats()
-
-  return (
-    <Suspense fallback={<p>Loading chart...</p>}>
-      <StatsChart dataPromise={statsPromise} />
-    </Suspense>
+### When to use `loading.js` vs ```<Suspense>``
   )
 }
 ```
@@ -417,9 +199,7 @@ export default function Dashboard() {
   const statsPromise = getStats()
 
   return (
-    <Suspense fallback={<p>Loading chart...</p>}>
-      <StatsChart dataPromise={statsPromise} />
-    </Suspense>
+    ``<Suspense>``
   )
 }
 ```
@@ -598,50 +378,7 @@ When a Suspense fallback is replaced by the resolved content, the browser reflow
 
 ### INP (Interaction to Next Paint)
 
-Streaming enables [selective hydration](https://react.dev/reference/react-dom/client/hydrateRoot): React hydrates components independently as they stream in, and prioritizes hydrating whatever the user is interacting with. Each `<Suspense>` boundary is a hydration unit. Without them, React hydrates the entire page in one blocking pass. With them, hydration is broken into smaller tasks that yield to the browser, keeping the main thread responsive. The [companion demo](https://streaming-demo.labs.vercel.dev/hydration-single) lets you compare a single blocking hydration pass with [split hydration](https://streaming-demo.labs.vercel.dev/hydration-split) using Suspense boundaries.
-
-### Early resource discovery
-
-The static shell includes `<link>` and `<script>` tags in the very first HTML chunk. The browser discovers and starts fetching CSS, JavaScript, and fonts immediately, while the server is still generating content. Resources are fetched during server think time rather than after it.
-
-In the [dashboard example](#parallel-streaming-with-sibling-boundaries) above, the `<h1>` renders in the shell (good for LCP), each data section streams independently behind its own Suspense boundary (good for INP since hydration is split), and the skeleton fallbacks reserve space (good for CLS).
-
-## The HTTP contract
-
-Once streaming begins, the HTTP response headers (including the status code) have already been sent to the client. **You cannot change the status code or headers after streaming starts.** Everything in this section flows from this fundamental constraint.
-
-### Status codes
-
-When a `<Suspense>` fallback renders or a component suspends, the server must commit to `200 OK` in order to start sending the HTML stream. If a [`notFound()`](/docs/app/api-reference/functions/not-found) fires mid-stream, Next.js cannot go back and change the status to 404. Instead, it injects `<meta name="robots" content="noindex">` into the streamed HTML so that search engines don't index the page. Similarly, a [`redirect()`](/docs/app/api-reference/functions/redirect) mid-stream becomes a client-side redirect rather than an HTTP redirect header.
-
-### When does streaming start?
-
-The response body begins streaming when a Suspense fallback renders (for example, a `loading.tsx`) or when a component suspends under a `<Suspense>` boundary. To get a real HTTP status code for errors, place `notFound()` **before** any `await` or `<Suspense>` boundary:
-
-```tsx
-// Archivo: app/post/[slug]/page.tsx switcher
-import { Suspense } from 'react'
-import { notFound } from 'next/navigation'
-import { PostContent } from './post-content'
-
-export async function generateStaticParams() {
-  const posts = await getPublishedPosts()
-  return posts.map((post) => ({ slug: post.slug }))
-}
-
-export default async function PostPage({
-  params,
-}: {
-  params: Promise<{ slug: string }>
-}) {
-  const { slug } = await params
-  const exists = await checkSlugExists(slug) // Fast existence check
-  if (!exists) notFound() // Real 404, before any Suspense boundary
-
-  return (
-    <Suspense fallback={<p>Loading post...</p>}>
-      <PostContent slug={slug} />
-    </Suspense>
+Streaming enables [selective hydration](https://react.dev/reference/react-dom/client/hydrateRoot): React hydrates components independently as they stream in, and prioritizes hydrating whatever the user is interacting with. Each ```<Suspense>``
   )
 }
 ```
@@ -663,9 +400,7 @@ export default async function PostPage({ params }) {
   if (!exists) notFound() // Real 404, before any Suspense boundary
 
   return (
-    <Suspense fallback={<p>Loading post...</p>}>
-      <PostContent slug={slug} />
-    </Suspense>
+    ``<Suspense>``
   )
 }
 ```
@@ -731,7 +466,7 @@ Command-line tools like `curl` also buffer by default. The `-N` flag disables ou
 
 ### Verifying that streaming works
 
-This section is about confirming the HTTP response is actually arriving in chunks through your infrastructure. For guidance on designing meaningful loading states and placing Suspense boundaries effectively, see [Granular streaming with `<Suspense>`](#granular-streaming-with-suspense) and the [Cache Components](/docs/app/getting-started/caching) guide.
+This section is about confirming the HTTP response is actually arriving in chunks through your infrastructure. For guidance on designing meaningful loading states and placing Suspense boundaries effectively, see [Granular streaming with ``<Suspense>``](#granular-streaming-with-suspense) and the [Cache Components](/docs/app/getting-started/caching) guide.
 
 **Check the Network tab.** In Chrome DevTools, select the document request and look at the "Timing" breakdown. A long "Content Download" phase with an early "Time to First Byte" confirms the response is streaming rather than arriving all at once.
 
@@ -797,9 +532,9 @@ See the [Self-Hosting guide](/docs/app/guides/self-hosting#streaming-and-suspens
 
 ## Summary
 
-The trigger is **your code**: async work, non-deterministic output, or runtime data. When the framework encounters these, it walks up the tree looking for a `<Suspense>` boundary to use as a fallback. Everything above those boundaries forms the [static shell](#the-static-shell), which is sent immediately. As each boundary resolves, React streams the result into the page.
+The trigger is **your code**: async work, non-deterministic output, or runtime data. When the framework encounters these, it walks up the tree looking for a ``<Suspense>`` boundary to use as a fallback. Everything above those boundaries forms the [static shell](#the-static-shell), which is sent immediately. As each boundary resolves, React streams the result into the page.
 
-The key decisions are **what to cache** and **where to place Suspense boundaries**. Cache what you can with [`"use cache"`](/docs/app/api-reference/directives/use-cache) to grow the static shell. Push dynamic access down to the components that need it, and wrap those in `<Suspense>`. Everything else becomes part of the shell.
+The key decisions are **what to cache** and **where to place Suspense boundaries**. Cache what you can with [`"use cache"`](/docs/app/api-reference/directives/use-cache) to grow the static shell. Push dynamic access down to the components that need it, and wrap those in ``<Suspense>``. Everything else becomes part of the shell.
 
 ## Further reading
 

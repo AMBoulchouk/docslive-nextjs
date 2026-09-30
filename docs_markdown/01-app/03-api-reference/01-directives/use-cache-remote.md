@@ -114,9 +114,7 @@ export default async function ProductsPage({
   searchParams: Promise<{ minPrice?: string }>
 }) {
   return (
-    <Suspense fallback={<div>Loading...</div>}>
-      <ProductList params={params} searchParams={searchParams} />
-    </Suspense>
+    ``<Suspense>``
   )
 }
 
@@ -282,9 +280,7 @@ export default async function ProductPage({
   return (
     <div>
       <ProductDetails id={id} />
-      <Suspense fallback={<div>Loading price...</div>}>
-        <ProductPrice productId={id} />
-      </Suspense>
+      ``<Suspense>``
     </div>
   )
 }
@@ -334,9 +330,7 @@ export default async function ProductPage({ params }) {
   return (
     <div>
       <ProductDetails id={id} />
-      <Suspense fallback={<div>Loading price...</div>}>
-        <ProductPrice productId={id} />
-      </Suspense>
+      ``<Suspense>``
     </div>
   )
 }
@@ -382,9 +376,7 @@ import { cacheLife, cacheTag } from 'next/cache'
 
 export default function DashboardPage() {
   return (
-    <Suspense fallback={<div>Loading stats...</div>}>
-      <DashboardStats />
-    </Suspense>
+    ``<Suspense>``
   )
 }
 
@@ -429,9 +421,9 @@ import { cacheLife, cacheTag } from 'next/cache'
 export default async function FeedPage() {
   return (
     <div>
-      <Suspense fallback={<Skeleton />}>
+      ``<Suspense>``}>
         <FeedItems />
-      </Suspense>
+      `<Suspense>`
     </div>
   )
 }
@@ -544,14 +536,14 @@ export default async function ProductPage({ params }) {
       <ProductDetails product={product} />
 
       
-      <Suspense fallback={<PriceSkeleton />}>
+      ``<Suspense>``}>
         <ProductPriceComponent productId={id} />
-      </Suspense>
+      `<Suspense>`
 
       
-      <Suspense fallback={<RecommendationsSkeleton />}>
+      ``<Suspense>``}>
         <ProductRecommendations productId={id} />
-      </Suspense>
+      `<Suspense>`
     </div>
   )
 }

@@ -101,9 +101,25 @@ def clean_mdx_content(body, is_app, is_pages):
     # 5. Links
     text = re.sub(r'<Link\s+href=["\']([^"\']+)["\']>(.*?)</Link>', r'[\2](\1)', text, flags=re.DOTALL)
 
-    # 6. FixCard
+    # 6. FixCard (including self-closing multi-line)
     text = re.sub(r'</?FixCardGrid>', '', text)
-    text = re.sub(r'<FixCard\s+[^>]*?>(.*?)</FixCard>', r'\n- \1\n', text, flags=re.DOTALL)
+    def repl_fc(m):
+        attrs = m.group(1)
+        title_m = re.search(r'title=["\']([^"\']*)["\']', attrs)
+        href_m = re.search(r'href=["\']([^"\']*)["\']', attrs)
+        group_m = re.search(r'group=["\']([^"\']*)["\']', attrs)
+        title = title_m.group(1) if title_m else 'Solución'
+        group = f" ({group_m.group(1)})" if group_m else ""
+        link_str = ""
+        if href_m:
+            h = href_m.group(1)
+            full_h = f"https://nextjs.org{h}" if h.startswith('/') else h
+            link_str = f" — [Ver guía de solución]({full_h})"
+        return f"\n> 💡 **Solución recomendada{group}:** {title}{link_str}\n"
+
+    text = re.sub(r'<FixCard\s+([\s\S]*?)(?:>[\s\S]*?</FixCard>|/>)', repl_fc, text)
+    text = re.sub(r'<(Details|Suspense|DataChild|SearchBar|Item|List|Video)\b([^>]*?)(?:/>|>[\s\S]*?</\1>)', r'`<\1 />`', text)
+    text = re.sub(r'</?(Details|Suspense|DataChild|SearchBar|Item|List|Video)\b[^>]*?>', r'`<\1>`', text)
 
     # 7. Code block fence labels
     text = re.sub(r'^```([a-zA-Z0-9_-]+)\s+package=["\']([^"\']+)["\']', r'```\1\n# Manejador de paquetes: \2', text, flags=re.MULTILINE)

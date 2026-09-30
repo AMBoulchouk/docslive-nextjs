@@ -11,88 +11,10 @@ When a user interaction requires server-side work, the result is not available i
 
 This guide adds responsive feedback to a task management app called _Taskboard_. Each step handles a different kind of pending work, from streaming slow reads to confirming mutations before the server responds.
 
-> **Good to know:** The patterns in this guide also improve [Core Web Vitals](https://web.dev/articles/vitals). Streaming with [`<Suspense>`](https://react.dev/reference/react/Suspense) lowers [FCP](https://web.dev/articles/fcp) and [LCP](https://web.dev/articles/lcp) by letting the shell paint while slow reads finish. Optimistic UI and transitions lower [INP](https://web.dev/articles/inp) by keeping the click frame fast. Prefetching the next route makes FCP, LCP, and INP on the destination page near-instant. These patterns help, but they don't replace the usual INP work: shipping less client JavaScript and avoiding blocking roundtrips during interactions.
-
-## Example
-
-The patterns build in order: stream slow data behind loading boundaries, add an instant priority toggle, build a reusable filter with a callback prop, show comments before they're confirmed, move cards between columns on drop, manage form lifecycle in a create dialog, and signal pending deletion to a parent. The final step caches the reusable reads so navigations stay instant.
-
-The companion [Taskboard demo](https://async-react-demo.labs.vercel.dev) ([source](https://github.com/vercel-labs/async-react-demo)) lets you see each pattern from this guide in action.
-
-The app is organized by feature. Everything for the task domain (queries, Server Functions, and components) lives under `features/task/`. Shared UI primitives live in `components/ui/`, and pages in `app/` compose feature components. The file paths throughout this guide follow that structure.
-
-The starting point is a Server Component app that reads tasks and comments from a database, with no [`<Suspense>`](/docs/app/guides/streaming) boundaries and no caching. Client Components call [Server Functions](/docs/app/getting-started/mutating-data) to mutate that data. After each mutation, the Server Function calls [`refresh()`](/docs/app/api-reference/functions/refresh) so the server re-renders with fresh data:
-
-```ts
-// Archivo: features/task/task-actions.ts
-'use server'
-
-import { refresh } from 'next/cache'
-import { PRIORITY_CYCLE } from '@/lib/data'
-import { getTaskById, updateTaskPriority } from '@/lib/db'
-
-export async function cyclePriority(taskId: string) {
-  const task = await getTaskById(taskId)
-  if (!task) return null
-  const newPriority = PRIORITY_CYCLE[task.priority]
-  await updateTaskPriority(taskId, newPriority)
-  refresh()
-  return newPriority
-}
-```
-
-### Step 1: Stream slow data with Suspense
-
-The task detail page reads the task and its comments. When both are awaited at the top of the page component, the whole page blocks until the slowest read resolves.
-
-```tsx
-// Archivo: app/task/[id]/page.tsx
-import { getTask } from '@/features/task/task-queries'
-import { TaskDetail } from '@/features/task/components/task-detail'
-import { CommentSection } from '@/features/task/components/comment-section'
-
-export default async function TaskPage({ params }) {
-  const { id } = await params
-  const task = await getTask(id)
-
-  return (
-    <div>
-      <TaskDetail task={task} />
-      <CommentSection taskId={id} />
-    </div>
-  )
-}
-```
-
-With this version, nothing renders until `getTask` resolves, and the comments read starts only after that.
-
-Split the reads into separate components, pass each one a promise, and wrap them in [`<Suspense>`](https://react.dev/reference/react/Suspense). The page becomes synchronous, returns the shell immediately, and the server streams each section in as its data resolves:
-
-```tsx
-// Archivo: app/task/[id]/page.tsx
-import { Suspense } from 'react'
-import {
-  TaskDetail,
-  TaskDetailSkeleton,
-} from '@/features/task/components/task-detail'
-import {
-  CommentSection,
-  CommentSectionSkeleton,
-} from '@/features/task/components/comment-section'
-
-export default function TaskPage({ params }) {
-  return (
-    <div>
-      <Suspense fallback={<TaskDetailSkeleton />}>
-        {params.then(({ id }) => (
-          <>
-            <TaskDetail id={id} />
-            <Suspense fallback={<CommentSectionSkeleton />}>
-              <CommentSection taskId={id} />
-            </Suspense>
+> **Good to know:** The patterns in this guide also improve [Core Web Vitals](https://web.dev/articles/vitals). Streaming with [```<Suspense>``
           </>
         ))}
-      </Suspense>
+      `<Suspense>`
     </div>
   )
 }
@@ -108,7 +30,7 @@ export async function TaskDetail({ id }) {
 }
 ```
 
-Calling `params.then()` inline in JSX keeps the page synchronous. The outer `<Suspense>` covers the params resolution and the task detail read. Once `TaskDetail` resolves, React reveals the task header and the nested `<Suspense>` boundary, which shows `CommentSectionSkeleton` while comments load.
+Calling `params.then()` inline in JSX keeps the page synchronous. The outer ``<Suspense>`` covers the params resolution and the task detail read. Once `TaskDetail` resolves, React reveals the task header and the nested ``<Suspense>`` boundary, which shows `CommentSectionSkeleton` while comments load.
 
 The page shell now paints immediately, the task header streams in when `getTask` resolves, and the comments section follows when `getComments` resolves.
 
@@ -435,7 +357,7 @@ export function Board({ tasksPromise }) {
 }
 ```
 
-The component receives a promise from the parent server component (see Step 1's `<Suspense>` boundary) and unwraps it with [`use`](https://react.dev/reference/react/use). With this version, a card dragged from "Todo" to "In Progress" stays in the old column while the server processes the update, then jumps to the new column after the response arrives.
+The component receives a promise from the parent server component (see Step 1's ``<Suspense>`` boundary) and unwraps it with [`use`](https://react.dev/reference/react/use). With this version, a card dragged from "Todo" to "In Progress" stays in the old column while the server processes the update, then jumps to the new column after the response arrives.
 
 Add `useOptimistic` with a reducer to remap the card's status on the current frame. The reducer receives the full task list and an action describing which card moved where:
 
@@ -712,7 +634,7 @@ const nextConfig: NextConfig = {
 export default nextConfig
 ```
 
-Enabling Cache Components applies prerender validation across every route, not just the ones in this step. A route that reads request data such as `cookies()`, `headers()`, or `searchParams` outside [`<Suspense>`](https://react.dev/reference/react/Suspense) now blocks prerendering and needs the Step 1 treatment. To turn it on in an existing app, see [Migrating to Cache Components](/docs/app/guides/migrating-to-cache-components).
+Enabling Cache Components applies prerender validation across every route, not just the ones in this step. A route that reads request data such as `cookies()`, `headers()`, or `searchParams` outside [``<Suspense>``](https://react.dev/reference/react/Suspense) now blocks prerendering and needs the Step 1 treatment. To turn it on in an existing app, see [Migrating to Cache Components](/docs/app/guides/migrating-to-cache-components).
 
 #### Cache reusable reads
 
@@ -780,7 +702,7 @@ The patterns in this guide combine a handful of primitives:
 
 | Situation                                                                 | Use                                                                                                                                                                                                                                                                          |
 | ------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Slow data should stream in without blocking the page                      | [`<Suspense>`](https://react.dev/reference/react/Suspense)                                                                                                                                                                                                                   |
+| Slow data should stream in without blocking the page                      | [``<Suspense>``](https://react.dev/reference/react/Suspense)                                                                                                                                                                                                                   |
 | A value should update while async work runs                               | [`useOptimistic`](https://react.dev/reference/react/useOptimistic)                                                                                                                                                                                                           |
 | Async work needs pending state, error handling, or coordinated UI updates | [`useTransition`](https://react.dev/reference/react/useTransition)                                                                                                                                                                                                           |
 | A form needs pending, reset, and result state                             | [`useActionState`](https://react.dev/reference/react/useActionState)                                                                                                                                                                                                         |
@@ -793,7 +715,7 @@ Most patterns mix two or more of these. Reach for whichever primitive fits the c
 Related guides:
 
 - [Client-side data fetching](/docs/app/guides/client-side-data-fetching) for direct browser fetching, providing initial data from a Server Component, and client cache coordination
-- [Streaming](/docs/app/guides/streaming) for loading boundaries and `<Suspense>` patterns
+- [Streaming](/docs/app/guides/streaming) for loading boundaries and ``<Suspense>`` patterns
 - [Instant Navigation](/docs/app/guides/instant-navigation) for validating that navigations stay instant
 - [View Transitions](/docs/app/guides/view-transitions) for animating state changes
 - [Single-page applications](/docs/app/guides/single-page-applications#mutating-data-with-server-actions) for a shared-reducer `useOptimistic` example that keeps client and server list updates in sync

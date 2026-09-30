@@ -89,7 +89,7 @@ If a route is [prerendered](/docs/app/glossary#prerendering), calling `useSearch
 
 This allows a part of the route to be prerendered while the dynamic part that uses `useSearchParams` is client-side rendered.
 
-We recommend wrapping the Client Component that uses `useSearchParams` in a `<Suspense/>` boundary. This will allow any Client Components above it to be prerendered and sent as part of initial HTML.
+We recommend wrapping the Client Component that uses `useSearchParams` in a ```<Suspense>``` boundary. This will allow any Client Components above it to be prerendered and sent as part of initial HTML.
 
 See [Next.js encountered URL data in a Client Component outside of Suspense](/docs/messages/blocking-prerender-client-hook) for full fix options and trade-offs.
 
@@ -139,7 +139,7 @@ import SearchBar from './search-bar'
 // This component passed as a fallback to the Suspense boundary
 // will be rendered in place of the search bar in the initial HTML.
 // When the value is available during React hydration the fallback
-// will be replaced with the `<SearchBar>` component.
+// will be replaced with the ``<SearchBar>`` component.
 function SearchBarFallback() {
   return <>placeholder</>
 }
@@ -148,9 +148,9 @@ export default function Page() {
   return (
     <>
       <nav>
-        <Suspense fallback={<SearchBarFallback />}>
-          <SearchBar />
-        </Suspense>
+        ``<Suspense>``}>
+          ``<SearchBar>``
+        `<Suspense>`
       </nav>
       <h1>Dashboard</h1>
     </>
@@ -166,7 +166,7 @@ import SearchBar from './search-bar'
 // This component passed as a fallback to the Suspense boundary
 // will be rendered in place of the search bar in the initial HTML.
 // When the value is available during React hydration the fallback
-// will be replaced with the `<SearchBar>` component.
+// will be replaced with the ``<SearchBar>`` component.
 function SearchBarFallback() {
   return <>placeholder</>
 }
@@ -175,9 +175,9 @@ export default function Page() {
   return (
     <>
       <nav>
-        <Suspense fallback={<SearchBarFallback />}>
-          <SearchBar />
-        </Suspense>
+        ``<Suspense>``}>
+          ``<SearchBar>``
+        `<Suspense>`
       </nav>
       <h1>Dashboard</h1>
     </>
@@ -247,7 +247,7 @@ export default async function Page() {
   return (
     <>
       <nav>
-        <SearchBar />
+        ``<SearchBar>``
       </nav>
       <h1>Dashboard</h1>
     </>
@@ -265,7 +265,7 @@ export default async function Page() {
   return (
     <>
       <nav>
-        <SearchBar />
+        ``<SearchBar>``
       </nav>
       <h1>Dashboard</h1>
     </>

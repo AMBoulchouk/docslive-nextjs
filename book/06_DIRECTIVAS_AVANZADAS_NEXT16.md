@@ -2,7 +2,7 @@
 
 > 📌 **Capítulo 06** | Libro Guía Next.js v16.3.7  
 > 📝 **Resumen:** *Guía exhaustiva de directivas: 'use cache', 'use cache: private', 'use cache: remote', 'use client' y 'use server'.*  
-> 📄 **Temas incluidos:** 6 secciones  
+> 📄 **Temas incluidos en este capítulo:** 6 secciones  
 
 [⬅ Volver al Índice General](./00_INDICE_GENERAL.md)
 
@@ -113,6 +113,7 @@ With `'use cache'`, placement determines the scope of a cache entry. A directive
 With [`'use cache: remote'`](/docs/app/api-reference/directives/use-cache-remote), a remote cache handler stores entries. Larger entries can increase storage and network costs.
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -194,9 +195,7 @@ export default async function ProductPage({
   return (
     <div>
       <ProductDetails id={id} />
-      <Suspense fallback={<div>Loading recommendations...</div>}>
-        <Recommendations productId={id} />
-      </Suspense>
+      ``<Suspense>``
     </div>
   )
 }
@@ -241,9 +240,7 @@ export default async function ProductPage({ params }) {
   return (
     <div>
       <ProductDetails id={id} />
-      <Suspense fallback={<div>Loading recommendations...</div>}>
-        <Recommendations productId={id} />
-      </Suspense>
+      ``<Suspense>``
     </div>
   )
 }
@@ -298,6 +295,7 @@ The following request-specific APIs can be used inside `'use cache: private'` fu
 | Version   | Changes                                                              |
 | --------- | -------------------------------------------------------------------- |
 | `v16.0.0` | `"use cache: private"` is enabled with the Cache Components feature. |
+
 
 
 [⬆ Subir al inicio del capítulo](#)
@@ -422,9 +420,7 @@ export default async function ProductsPage({
   searchParams: Promise<{ minPrice?: string }>
 }) {
   return (
-    <Suspense fallback={<div>Loading...</div>}>
-      <ProductList params={params} searchParams={searchParams} />
-    </Suspense>
+    ``<Suspense>``
   )
 }
 
@@ -590,9 +586,7 @@ export default async function ProductPage({
   return (
     <div>
       <ProductDetails id={id} />
-      <Suspense fallback={<div>Loading price...</div>}>
-        <ProductPrice productId={id} />
-      </Suspense>
+      ``<Suspense>``
     </div>
   )
 }
@@ -642,9 +636,7 @@ export default async function ProductPage({ params }) {
   return (
     <div>
       <ProductDetails id={id} />
-      <Suspense fallback={<div>Loading price...</div>}>
-        <ProductPrice productId={id} />
-      </Suspense>
+      ``<Suspense>``
     </div>
   )
 }
@@ -690,9 +682,7 @@ import { cacheLife, cacheTag } from 'next/cache'
 
 export default function DashboardPage() {
   return (
-    <Suspense fallback={<div>Loading stats...</div>}>
-      <DashboardStats />
-    </Suspense>
+    ``<Suspense>``
   )
 }
 
@@ -737,9 +727,9 @@ import { cacheLife, cacheTag } from 'next/cache'
 export default async function FeedPage() {
   return (
     <div>
-      <Suspense fallback={<Skeleton />}>
+      ``<Suspense>``}>
         <FeedItems />
-      </Suspense>
+      `<Suspense>`
     </div>
   )
 }
@@ -852,14 +842,14 @@ export default async function ProductPage({ params }) {
       <ProductDetails product={product} />
 
       
-      <Suspense fallback={<PriceSkeleton />}>
+      ``<Suspense>``}>
         <ProductPriceComponent productId={id} />
-      </Suspense>
+      `<Suspense>`
 
       
-      <Suspense fallback={<RecommendationsSkeleton />}>
+      ``<Suspense>``}>
         <ProductRecommendations productId={id} />
-      </Suspense>
+      `<Suspense>`
     </div>
   )
 }
@@ -928,6 +918,7 @@ function RecommendationsList({ items }) {
 | Version   | Changes                                                             |
 | --------- | ------------------------------------------------------------------- |
 | `v16.0.0` | `"use cache: remote"` is enabled with the Cache Components feature. |
+
 
 
 [⬆ Subir al inicio del capítulo](#)
@@ -1665,9 +1656,7 @@ import { Suspense } from 'react'
 
 export default function Page() {
   return (
-    <Suspense fallback={<div>Loading...</div>}>
-      <Dynamic />
-    </Suspense>
+    ``<Suspense>``
   )
 }
 
@@ -1697,9 +1686,7 @@ const cache = new Map<string, Promise<string>>()
 export default function Page() {
   return (
     <>
-      <Suspense fallback={<div>Loading...</div>}>
-        <Dynamic id="data" />
-      </Suspense>
+      ``<Suspense>``
       <Cached id="data" />
     </>
   )
@@ -1739,6 +1726,7 @@ Learn how to [configure caching](/docs/app/guides/self-hosting#caching-and-isr) 
 | --------- | ----------------------------------------------------------- |
 | `v16.0.0` | `"use cache"` is enabled with the Cache Components feature. |
 | `v15.0.0` | `"use cache"` is introduced as an experimental feature.     |
+
 
 
 [⬆ Subir al inicio del capítulo](#)
@@ -1880,6 +1868,7 @@ export default function Page() {
 ## Reference
 
 See the [React documentation](https://react.dev/reference/rsc/use-client) for more information on `'use client'`.
+
 
 
 [⬆ Subir al inicio del capítulo](#)
@@ -2098,6 +2087,7 @@ Server Function return values are serialized and sent to the client. Only return
 ## Reference
 
 See the [React documentation](https://react.dev/reference/rsc/use-server) for more information on `use server`.
+
 
 
 [⬆ Subir al inicio del capítulo](#)

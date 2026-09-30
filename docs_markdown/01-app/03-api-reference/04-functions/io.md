@@ -26,9 +26,7 @@ import { io } from 'next/cache'
 
 export default function Page() {
   return (
-    <Suspense fallback={<p>Loading...</p>}>
-      <CurrentTime />
-    </Suspense>
+    ``<Suspense>``
   )
 }
 
@@ -45,9 +43,7 @@ import { io } from 'next/cache'
 
 export default function Page() {
   return (
-    <Suspense fallback={<p>Loading...</p>}>
-      <CurrentTime />
-    </Suspense>
+    ``<Suspense>``
   )
 }
 
@@ -57,7 +53,7 @@ async function CurrentTime() {
 }
 ```
 
-In this route `CurrentTime` is wrapped in a `<Suspense>` boundary, during prerender, the `await io()` suspends and the fallback ships in the static shell. If `CurrentTime` were rendered inside a [`"use cache"`](/docs/app/api-reference/directives/use-cache) scope instead, `io()` would be a no-op, the value is captured into the static shell and no `<Suspense>` boundary is required.
+In this route `CurrentTime` is wrapped in a ``<Suspense>`` boundary, during prerender, the `await io()` suspends and the fallback ships in the static shell. If `CurrentTime` were rendered inside a [`"use cache"`](/docs/app/api-reference/directives/use-cache) scope instead, `io()` would be a no-op, the value is captured into the static shell and no ``<Suspense>`` boundary is required.
 
 In a Client Component, call `io()` with React's [`use`](https://react.dev/reference/react/use) hook before reading a synchronous source like `Date.now()`. Client Components prerender on the server during SSR, where the read would otherwise be included in the static shell:
 
@@ -88,7 +84,7 @@ export function CurrentTime() {
 ## When you don't need `io()`
 
 - The component already uses a [Request-time API](/docs/app/glossary#request-time-apis) like `cookies()` or `headers()`. The request-time API is itself the suspension point.
-- The data comes from an awaited `fetch` or async database query wrapped in `<Suspense>`. The `await` is the suspension point.
+- The data comes from an awaited `fetch` or async database query wrapped in ``<Suspense>``. The `await` is the suspension point.
 
 ## How `io()` differs from `connection()`
 

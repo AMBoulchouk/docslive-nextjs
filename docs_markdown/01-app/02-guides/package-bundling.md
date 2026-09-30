@@ -52,12 +52,7 @@ bunx next experimental-analyze
 
 Within the UI, you can filter by route, environment (client or server), and type (JavaScript, CSS, JSON), or search by file:
 
-<Video
-  caption="Next.js bundle analyzer UI walkthrough"
-  src="/videos/bundle-analyzer.mp4"
-  width={1708}
-  height={1080}
-/>
+``<Video>``
 
 ### Step 3: Trace modules with import chains
 

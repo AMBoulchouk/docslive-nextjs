@@ -80,7 +80,7 @@ function Header() {}
 // Dynamic component
 async function ProductList() {
   const products = await db.product.findMany()
-  return <List items={products} />
+  return ``<List>``
 }
 
 export default async function Page() {
@@ -105,124 +105,7 @@ However, if this component is rendered at request time, fetching its data will d
 
 Even though the header is rendered instantly, it can't be sent to the browser until the product list has finished fetching.
 
-To protect us from this performance cliff, the first time we **await** this uncached data Next.js shows a [warning](/docs/messages/blocking-prerender-dynamic): accessing uncached data outside of `<Suspense>` prevents the route from being prerendered.
-
-At this point, we have to decide how to **unblock** the response. Either:
-
-- [**Cache**](/docs/app/glossary#cache-components) the component, so it becomes **stable** and can be prerendered with the rest of the page.
-- [**Stream**](/docs/app/glossary#streaming) the component, so it becomes **non-blocking** and the rest of the page doesn't have to wait for it.
-
-In our case, the product catalog is shared across all users, so caching is the right choice.
-
-### Cache components
-
-We can mark a function as cacheable using the [`'use cache'`](/docs/app/api-reference/directives/use-cache) directive.
-
-```tsx
-// Archivo: app/products/page.tsx
-import db from '@/db'
-import { List } from '@/app/products/ui'
-
-function Header() {}
-
-// Cache component
-async function ProductList() {
-  'use cache'
-  const products = await db.product.findMany()
-  return <List items={products} />
-}
-
-export default async function Page() {
-  return (
-    <>
-      <Header />
-      <ProductList />
-    </>
-  )
-}
-```
-
-This turns it into a [cache component](/docs/app/glossary#cache-components). The first time it runs, whatever we return will be cached and reused.
-
-If a cache component's inputs are available **before** the request arrives, it can be prerendered just like a static component.
-
-If we refresh again, we can see the page loads instantly because the cache component doesn't block the response. And, if we run `next build` again, we can confirm the page is still static:
-
-```bash
-// Archivo: Terminal
-Route (app)      Revalidate  Expire
-┌ ○ /products           15m      1y
-└ ○ /_not-found
-
-○  (Static)  prerendered as static content
-```
-
-But, pages rarely stay static forever.
-
-### Step 3: Add a dynamic promotion banner
-
-Sooner or later, even simple pages need some dynamic content. To demonstrate this, let's add a promotional banner:
-
-```tsx
-// Archivo: app/products/page.tsx
-import db from '@/db'
-import { List, Promotion } from '@/app/products/ui'
-import { getPromotion } from '@/app/products/data'
-
-function Header() {}
-
-async function ProductList() {}
-
-// Dynamic component
-async function PromotionContent() {
-  const promotion = await getPromotion()
-  return <Promotion data={promotion} />
-}
-
-export default async function Page() {
-  return (
-    <>
-      <PromotionContent />
-      <Header />
-      <ProductList />
-    </>
-  )
-}
-```
-
-Once again, this starts off as dynamic. And as before, introducing blocking behavior triggers a Next.js warning.
-
-Last time, the data was shared, so it could be cached. This time, the promotion depends on request specific inputs like the user's location and A/B tests, so we can't cache our way out of the blocking behavior.
-
-### Partial prerendering
-
-Adding dynamic content doesn't mean we have to go back to a fully blocking render. We can unblock the response with streaming.
-
-Next.js supports streaming by default. We can use a [Suspense boundary](/docs/app/glossary#suspense-boundary) to tell the framework where to slice the streamed response into _chunks_, and what fallback UI to show while content loads.
-
-```tsx
-// Archivo: app/products/page.tsx
-import { Suspense } from 'react'
-import db from '@/db'
-import { List, Promotion, PromotionSkeleton } from '@/app/products/ui'
-import { getPromotion } from '@/app/products/data'
-
-function Header() {}
-
-async function ProductList() {}
-
-// Dynamic component (streamed)
-async function PromotionContent() {
-  const promotion = await getPromotion()
-  return <Promotion data={promotion} />
-}
-
-export default async function Page() {
-  return (
-    <>
-      <Suspense fallback={<PromotionSkeleton />}>
-        <PromotionContent />
-      </Suspense>
+To protect us from this performance cliff, the first time we **await** this uncached data Next.js shows a [warning](/docs/messages/blocking-prerender-dynamic): accessing uncached data outside of ```<Suspense>``
       <Header />
       <ProductList />
     </>

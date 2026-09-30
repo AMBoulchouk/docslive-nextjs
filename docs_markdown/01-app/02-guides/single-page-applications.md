@@ -170,18 +170,7 @@ export function Profile() {
 }
 ```
 
-Wrap the consumer in a [`<Suspense>`](https://react.dev/reference/react/Suspense) boundary to show a fallback while the Promise resolves:
-
-```tsx
-// Archivo: app/page.tsx switcher
-import { Suspense } from 'react'
-import { Profile } from './profile'
-
-export default function Page() {
-  return (
-    <Suspense fallback={<p>Loading…</p>}>
-      <Profile />
-    </Suspense>
+Wrap the consumer in a [```<Suspense>``
   )
 }
 ```
@@ -193,9 +182,7 @@ import { Profile } from './profile'
 
 export default function Page() {
   return (
-    <Suspense fallback={<p>Loading…</p>}>
-      <Profile />
-    </Suspense>
+    ``<Suspense>``
   )
 }
 ```

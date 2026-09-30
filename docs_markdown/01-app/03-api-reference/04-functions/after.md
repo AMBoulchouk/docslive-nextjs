@@ -177,24 +177,7 @@ Calling `cookies()` or `headers()` inside the `after` callback in a Server Compo
 
 #### With Cache Components
 
-When using [Cache Components](/docs/app/getting-started/caching), components that access request data like `cookies` or `headers` must be wrapped in [`<Suspense>`](https://react.dev/reference/react/Suspense) so the rest of the page can be prerendered into a static shell.
-
-You can combine this pattern with `after` by reading request data in a dynamic component and passing it into `after`:
-
-```tsx
-// Archivo: app/page.tsx highlight={18-19,22-24} switcher
-import { Suspense } from 'react'
-import { after } from 'next/server'
-import { cookies } from 'next/headers'
-import { logUserAction } from '@/app/utils'
-
-export default function Page() {
-  return (
-    <>
-      <h1>Part of the static shell</h1>
-      <Suspense fallback={<p>Loading...</p>}>
-        <DynamicContent />
-      </Suspense>
+When using [Cache Components](/docs/app/getting-started/caching), components that access request data like `cookies` or `headers` must be wrapped in [```<Suspense>``
     </>
   )
 }
@@ -223,9 +206,7 @@ export default function Page() {
   return (
     <>
       <h1>Part of the static shell</h1>
-      <Suspense fallback={<p>Loading...</p>}>
-        <DynamicContent />
-      </Suspense>
+      ``<Suspense>``
     </>
   )
 }
@@ -243,7 +224,7 @@ async function DynamicContent() {
 }
 ```
 
-In this example, `<h1>` and the `<Suspense>` fallback are included in the static shell. `DynamicContent` reads the cookie during rendering and passes it into `after` via closure. Since `cookies()` is called _outside_ the `after` callback (during the component's render), this works correctly.
+In this example, `<h1>` and the ``<Suspense>`` fallback are included in the static shell. `DynamicContent` reads the cookie during rendering and passes it into `after` via closure. Since `cookies()` is called _outside_ the `after` callback (during the component's render), this works correctly.
 
 ## Platform Support
 

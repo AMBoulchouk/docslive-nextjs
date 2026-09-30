@@ -727,9 +727,7 @@ import { Suspense } from 'react'
 
 export default function Page() {
   return (
-    <Suspense fallback={<div>Loading...</div>}>
-      <Dynamic />
-    </Suspense>
+    ``<Suspense>``
   )
 }
 
@@ -759,9 +757,7 @@ const cache = new Map<string, Promise<string>>()
 export default function Page() {
   return (
     <>
-      <Suspense fallback={<div>Loading...</div>}>
-        <Dynamic id="data" />
-      </Suspense>
+      ``<Suspense>``
       <Cached id="data" />
     </>
   )

@@ -153,7 +153,7 @@ export default function RootLayout({ children }) {
 
 ### Offline-aware Suspense fallback
 
-When a user navigates to a route while offline, the prefetched static shell renders immediately but the dynamic content behind a `<Suspense>` boundary blocks on the network. For example, use `useOffline` inside a [`loading.tsx`](/docs/app/api-reference/file-conventions/loading) file to explain why the content is taking longer than expected.
+When a user navigates to a route while offline, the prefetched static shell renders immediately but the dynamic content behind a ``<Suspense>`` boundary blocks on the network. For example, use `useOffline` inside a [`loading.tsx`](/docs/app/api-reference/file-conventions/loading) file to explain why the content is taking longer than expected.
 
 ```tsx
 // Archivo: app/destination/loading.tsx switcher

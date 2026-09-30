@@ -91,34 +91,7 @@ export default async function DashboardPage() {
 
 ### Calling `unauthorized()` after streaming has started
 
-To keep the page's shell and loading UI visible while the session is verified, put the auth check in the [Data Access Layer](/docs/app/guides/authentication#creating-a-data-access-layer-dal) function that loads the data, and render it in a component wrapped in [`<Suspense>`](https://react.dev/reference/react/Suspense). The check runs inside the boundary, so the shell streams while the session resolves:
-
-```tsx
-// Archivo: app/account/page.tsx switcher highlight={8}
-import { Suspense } from 'react'
-import { verifySession } from '@/app/lib/dal'
-import { unauthorized } from 'next/navigation'
-
-async function getAccount() {
-  const session = await verifySession()
-  if (!session) {
-    unauthorized()
-  }
-  return db.accounts.findByUserId(session.userId)
-}
-
-async function AccountDetails() {
-  const account = await getAccount()
-  return <p>Signed in as {account.email}</p>
-}
-
-export default function AccountPage() {
-  return (
-    <main>
-      <h1>Account</h1>
-      <Suspense fallback={<p>Loading...</p>}>
-        <AccountDetails />
-      </Suspense>
+To keep the page's shell and loading UI visible while the session is verified, put the auth check in the [Data Access Layer](/docs/app/guides/authentication#creating-a-data-access-layer-dal) function that loads the data, and render it in a component wrapped in [```<Suspense>``
     </main>
   )
 }
@@ -147,9 +120,7 @@ export default function AccountPage() {
   return (
     <main>
       <h1>Account</h1>
-      <Suspense fallback={<p>Loading...</p>}>
-        <AccountDetails />
-      </Suspense>
+      ``<Suspense>``
     </main>
   )
 }
@@ -191,7 +162,7 @@ export default function Unauthorized() {
 }
 ```
 
-The trade-off is the HTTP status code. Because the check runs inside the `<Suspense>` boundary, the response has already begun streaming as a `200`, and the status can't change once streaming has started. This is usually fine for a page, where the user sees the `unauthorized` UI regardless. To return a real `401` status, the check has to run before the response streams. With [Cache Components](/docs/app/getting-started/caching), every dynamic route streams a static shell first, so run that check in [`proxy`](/docs/app/api-reference/file-conventions/proxy) instead. See [Status codes](/docs/app/api-reference/file-conventions/loading#status-codes).
+The trade-off is the HTTP status code. Because the check runs inside the ``<Suspense>`` boundary, the response has already begun streaming as a `200`, and the status can't change once streaming has started. This is usually fine for a page, where the user sees the `unauthorized` UI regardless. To return a real `401` status, the check has to run before the response streams. With [Cache Components](/docs/app/getting-started/caching), every dynamic route streams a static shell first, so run that check in [`proxy`](/docs/app/api-reference/file-conventions/proxy) instead. See [Status codes](/docs/app/api-reference/file-conventions/loading#status-codes).
 
 ### Displaying login UI to unauthenticated users
 

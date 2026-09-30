@@ -136,9 +136,7 @@ import VideoComponent from '../ui/VideoComponent.jsx'
 export default function Page() {
   return (
     <section>
-      <Suspense fallback={<p>Loading video...</p>}>
-        <VideoComponent />
-      </Suspense>
+      ``<Suspense>``
       
     </section>
   )
@@ -163,9 +161,9 @@ import VideoSkeleton from '../ui/VideoSkeleton.jsx'
 export default function Page() {
   return (
     <section>
-      <Suspense fallback={<VideoSkeleton />}>
+      ``<Suspense>``}>
         <VideoComponent />
-      </Suspense>
+      `<Suspense>`
       
     </section>
   )
@@ -202,9 +200,7 @@ import { list } from '@vercel/blob'
 
 export default function Page() {
   return (
-    <Suspense fallback={<p>Loading video...</p>}>
-      <VideoComponent fileName="my-video.mp4" />
-    </Suspense>
+    ``<Suspense>``
   )
 }
 
@@ -265,7 +261,7 @@ Explore these video streaming platforms for integrating video into your Next.js 
 
 ### Open source `next-video` component
 
-- Provides a `<Video>` component for Next.js, compatible with various hosting services including [Vercel Blob](https://vercel.com/docs/vercel-blob?utm_source=next-site&utm_medium=docs&utm_campaign=next-website), S3, Backblaze, and Mux.
+- Provides a ``<Video>`` component for Next.js, compatible with various hosting services including [Vercel Blob](https://vercel.com/docs/vercel-blob?utm_source=next-site&utm_medium=docs&utm_campaign=next-website), S3, Backblaze, and Mux.
 - [Detailed documentation](https://next-video.dev/docs) for using `next-video.dev` with different hosting services.
 
 ### Cloudinary Integration

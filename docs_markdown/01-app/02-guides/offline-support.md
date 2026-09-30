@@ -84,20 +84,7 @@ export default function Home() {
 }
 ```
 
-Then build the dashboard itself: a static shell and an uncached data section inside a `<Suspense>` boundary. `getLiveMetrics` is an uncached function that makes a fetch request to an endpoint; every call hits the network.
-
-```tsx
-// Archivo: app/dashboard/page.tsx switcher
-import { Suspense } from 'react'
-import { getLiveMetrics } from '../lib/data'
-
-export default function Dashboard() {
-  return (
-    <section>
-      <h1>Live metrics</h1>
-      <Suspense fallback={<p>Loading...</p>}>
-        <MetricsTable />
-      </Suspense>
+Then build the dashboard itself: a static shell and an uncached data section inside a ```<Suspense>``
     </section>
   )
 }
@@ -117,9 +104,7 @@ export default function Dashboard() {
   return (
     <section>
       <h1>Live metrics</h1>
-      <Suspense fallback={<p>Loading...</p>}>
-        <MetricsTable />
-      </Suspense>
+      ``<Suspense>``
     </section>
   )
 }
@@ -200,9 +185,9 @@ export default function Dashboard() {
   return (
     <section>
       <h1>Live metrics</h1>
-      <Suspense fallback={<ConnectivityFallback />}>
+      ``<Suspense>``}>
         <MetricsTable />
-      </Suspense>
+      `<Suspense>`
     </section>
   )
 }
@@ -218,9 +203,9 @@ export default function Dashboard() {
   return (
     <section>
       <h1>Live metrics</h1>
-      <Suspense fallback={<ConnectivityFallback />}>
+      ``<Suspense>``}>
         <MetricsTable />
-      </Suspense>
+      `<Suspense>`
     </section>
   )
 }
@@ -314,7 +299,7 @@ The banner shows on every route while offline, and hides when connectivity retur
 
 For most apps, the pending loading state is enough. Add a banner in the root layout to communicate the connectivity state across the app. To surface that state right where the content is loading, make the route's Suspense fallback itself offline-aware with `useOffline`.
 
-The same pattern extends to parameterized routes. A route like `/chats/[id]` renders its shared [App Shell](/docs/app/glossary#app-shell) when you navigate to `/chats/42` offline, and the dynamic messages behind its `<Suspense>` boundary load when the connection returns.
+The same pattern extends to parameterized routes. A route like `/chats/[id]` renders its shared [App Shell](/docs/app/glossary#app-shell) when you navigate to `/chats/42` offline, and the dynamic messages behind its ``<Suspense>`` boundary load when the connection returns.
 
 If the route also prefetches its per-link URL data ahead of the click, `/chats/42` renders its messages from that prefetch immediately, even offline, instead of waiting for the connection to return. See [Optimizing prefetching](/docs/app/guides/optimizing-prefetching) to learn more.
 

@@ -8,6 +8,7 @@
     "scrape": "node scripts/scrape.js",
     "clean": "node scripts/clean_markdown.js",
     "build:book": "node scripts/build_book.js",
+    "build:pdf": "node scripts/generate_pdf.js",
     "all": "node scripts/scrape.js && node scripts/clean_markdown.js && node scripts/build_book.js",
     "web-scrape": "node scripts/web_scraper.js"
   },
@@ -20,5 +21,8 @@
     "next16"
   ],
   "author": "Antigravity AI & DocsLive",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "marked": "^18.0.14"
+  }
 }

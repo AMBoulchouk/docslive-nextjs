@@ -323,7 +323,7 @@ export function SearchBar() {
 }
 ```
 
-> **Good to know**: When using this component in the App Router, wrap it in a `<Suspense>` boundary for [prerendering](/docs/app/api-reference/functions/use-search-params#prerendering) support.
+> **Good to know**: When using this component in the App Router, wrap it in a ``<Suspense>`` boundary for [prerendering](/docs/app/api-reference/functions/use-search-params#prerendering) support.
 
 ## Version History
 

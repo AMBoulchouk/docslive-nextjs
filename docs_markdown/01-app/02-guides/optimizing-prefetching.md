@@ -63,9 +63,9 @@ export default function SearchPage({ searchParams }: PageProps<'/search'>) {
   return (
     <>
       <h1>Search</h1>
-      <Suspense fallback={<ResultsSkeleton />}>
+      ``<Suspense>``}>
         <Results searchParams={searchParams} />
-      </Suspense>
+      `<Suspense>`
     </>
   )
 }
@@ -89,32 +89,7 @@ Without `prefetch={true}`, the App Shell renders `<h1>` and shows the `<Results>
 
 With `prefetch={true}` on the link, the router prefetches a prerender that resolves `<Results>` before the click. The `q` value comes from the link's URL, known at prefetch time, and the cached `search(q)` provides the result. On the click, the results render immediately, with no fallback.
 
-The prerender advances through anything static or cached, then stops at uncached reads and falls back to the surrounding `<Suspense>` boundary. That boundary is already in place from [structuring the route for instant navigation](/docs/app/guides/instant-navigation).
-
-Generating the per-link prefetch costs **a server invocation per prefetchable link**, so it is opt-in per link. On pages where all the content is statically renderable, Next.js serves the prefetch from the static cache instead. A page that accesses non-static data is generated per prefetch.
-
-> **Good to know:** A cold cache (first visit, or after expiration) means the server still has to compute the cached result. Users may see a loading spinner on that first navigation. Subsequent navigations are instant as long as the cache is warm.
-
-Like `searchParams`, `params` needs a `<Suspense>` boundary, even when the values are predefined by [`generateStaticParams`](/docs/app/api-reference/functions/generate-static-params). A statically known param still belongs to one URL. A per-link prefetch with `prefetch={true}` resolves the values `generateStaticParams` does not cover.
-
-## Include session data in the shell
-
-`prefetch={true}` resolves URL data. Session data is handled separately. A route that reads `cookies()` or `headers()`, including through `"use cache: private"`, gets an App Shell that includes its session data, cached per session on the client and ready on navigation without a per-link prefetch.
-
-A lookup based on session data needs a cache lifetime, the same way `search(q)` did for the URL. Take a dashboard nav that reads a cookie, then looks up content based on it:
-
-```tsx
-// Archivo: app/dashboard/layout.tsx
-import { Suspense } from 'react'
-
-export default function DashboardLayout({
-  children,
-}: LayoutProps<'/dashboard'>) {
-  return (
-    <div>
-      <Suspense fallback={<nav>Loading...</nav>}>
-        <UserNav />
-      </Suspense>
+The prerender advances through anything static or cached, then stops at uncached reads and falls back to the surrounding ```<Suspense>``
       <main>{children}</main>
     </div>
   )
@@ -193,7 +168,7 @@ Use `prefetch={true}` on routes where:
 Skip it when the prefetch can't produce a better UI than the App Shell. Each visible `<Link prefetch={true}>` can wake a server, and that cost only pays off if more of the page is ready before the click:
 
 - The route has little or no URL-data dependency. The App Shell already makes the navigation instant.
-- The dependent content has to be fresh on every request. The prerender stops at the same `<Suspense>` fallback, so the user sees the same UI either way.
+- The dependent content has to be fresh on every request. The prerender stops at the same ``<Suspense>`` fallback, so the user sees the same UI either way.
 - The route is rarely navigated to. You pay per visible link, regardless of click-through.
 
 A per-link prefetch is best-effort. It only helps the navigations where it completes before the click. On a slow connection, on a feed of many links, or on a direct visit, it may not be ready when the user navigates, and the navigation falls back to the App Shell.

@@ -2,7 +2,7 @@
 
 > 📌 **Capítulo 12** | Libro Guía Next.js v16.3.7  
 > 📝 **Resumen:** *getStaticProps, getServerSideProps, getInitialProps, API Routes y guía paso a paso para migrar hacia App Router.*  
-> 📄 **Temas incluidos:** 164 secciones  
+> 📄 **Temas incluidos en este capítulo:** 164 secciones  
 
 [⬅ Volver al Índice General](./00_INDICE_GENERAL.md)
 
@@ -191,6 +191,7 @@
 
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -205,6 +206,7 @@
 > 📝 **Descripción:** *Learn about the folder and file conventions in a Next.js project, and how to organize your project.*  
 
 ---
+
 
 
 
@@ -227,6 +229,7 @@
 
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -241,6 +244,7 @@
 > 📝 **Descripción:** *Learn how to use fonts in Next.js*  
 
 ---
+
 
 
 
@@ -263,6 +267,7 @@
 
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -277,6 +282,7 @@
 > 📝 **Descripción:** *Learn how to deploy your Next.js application.*  
 
 ---
+
 
 
 
@@ -299,6 +305,7 @@
 
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -317,6 +324,7 @@
 
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -331,6 +339,7 @@
 > 📝 **Descripción:** *Learn how to implement authentication in Next.js, covering best practices, securing routes, authorization techniques, and session management.*  
 
 ---
+
 
 
 
@@ -415,6 +424,7 @@ To learn more about the available options for each config, visit babel's [docume
 > - The `modules` option on `"preset-env"` should be kept to `false`, otherwise webpack code splitting is turned off.
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -429,6 +439,7 @@ To learn more about the available options for each config, visit babel's [docume
 > 📝 **Descripción:** *Learn how to configure CI to cache Next.js builds*  
 
 ---
+
 
 
 
@@ -451,6 +462,7 @@ To learn more about the available options for each config, visit babel's [docume
 
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -465,6 +477,7 @@ To learn more about the available options for each config, visit babel's [docume
 > 📝 **Descripción:** *Use CSS-in-JS libraries with Next.js*  
 
 ---
+
 
 
 
@@ -487,6 +500,7 @@ To learn more about the available options for each config, visit babel's [docume
 
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -501,6 +515,7 @@ To learn more about the available options for each config, visit babel's [docume
 > 📝 **Descripción:** *Learn how to debug your Next.js application with VS Code or Chrome DevTools.*  
 
 ---
+
 
 
 
@@ -702,6 +717,7 @@ This ensures that the bypass cookie can’t be guessed.
 > **Good to know**: To test Draft Mode locally over HTTP, your browser will need to allow third-party cookies and local storage access.
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -716,6 +732,7 @@ This ensures that the bypass cookie can’t be guessed.
 > 📝 **Descripción:** *Learn to add and access environment variables in your Next.js application.*  
 
 ---
+
 
 
 
@@ -1079,6 +1096,7 @@ export default async function handler(req, res) {
 ```
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -1093,6 +1111,7 @@ export default async function handler(req, res) {
 > 📝 **Descripción:** *Learn how to create or update static pages at runtime with Incremental Static Regeneration.*  
 
 ---
+
 
 
 
@@ -1115,6 +1134,7 @@ export default async function handler(req, res) {
 
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -1129,6 +1149,7 @@ export default async function handler(req, res) {
 > 📝 **Descripción:** *Learn how to use instrumentation to run code at server startup in your Next.js app*  
 
 ---
+
 
 
 
@@ -1506,6 +1527,7 @@ export async function getStaticProps({ locale }) {
 > **Good to know**: These limits have been added initially to prevent potential [performance issues at build time](#dynamic-routes-and-getstaticprops-pages). You can workaround these limits with custom routing using [Proxy](/docs/pages/api-reference/file-conventions/proxy) in Next.js 12.
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -1520,6 +1542,7 @@ export async function getStaticProps({ locale }) {
 > 📝 **Descripción:** *Lazy load imported libraries and React Components to improve your application's overall loading performance.*  
 
 ---
+
 
 
 
@@ -1542,6 +1565,7 @@ export async function getStaticProps({ locale }) {
 
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -1556,6 +1580,7 @@ export async function getStaticProps({ locale }) {
 > 📝 **Descripción:** *Learn how to upgrade your existing Next.js application from the Pages Router to the App Router.*  
 
 ---
+
 
 
 
@@ -1578,6 +1603,7 @@ export async function getStaticProps({ locale }) {
 
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -1592,6 +1618,7 @@ export async function getStaticProps({ locale }) {
 > 📝 **Descripción:** *Learn how to migrate your existing React application from Vite to Next.js.*  
 
 ---
+
 
 
 
@@ -1614,6 +1641,7 @@ export async function getStaticProps({ locale }) {
 
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -1628,6 +1656,7 @@ export async function getStaticProps({ locale }) {
 > 📝 **Descripción:** *Learn how to build micro-frontends using Next.js Multi-Zones to deploy multiple Next.js apps under a single domain.*  
 
 ---
+
 
 
 
@@ -1650,6 +1679,7 @@ export async function getStaticProps({ locale }) {
 
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -1664,6 +1694,7 @@ export async function getStaticProps({ locale }) {
 > 📝 **Descripción:** *Learn how to optimize your application's server and client bundles.*  
 
 ---
+
 
 
 
@@ -1844,6 +1875,7 @@ Do **not use `require()`** to import the PostCSS Plugins. Plugins must be provid
 >   },
 > }
 > ```
+
 
 
 [⬆ Subir al inicio del capítulo](#)
@@ -2113,6 +2145,7 @@ This ensures that the bypass cookie can’t be guessed.
 > **Good to know**: To test Preview Mode locally over HTTP your browser will need to allow third-party cookies and local storage access.
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -2127,6 +2160,7 @@ This ensures that the bypass cookie can’t be guessed.
 > 📝 **Descripción:** *Recommendations to ensure the best performance and user experience before taking your Next.js application to production.*  
 
 ---
+
 
 
 
@@ -2149,6 +2183,7 @@ This ensures that the bypass cookie can’t be guessed.
 
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -2163,6 +2198,7 @@ This ensures that the bypass cookie can’t be guessed.
 > 📝 **Descripción:** *Learn how to use Sass in your Next.js application.*  
 
 ---
+
 
 
 
@@ -2185,6 +2221,7 @@ This ensures that the bypass cookie can’t be guessed.
 
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -2199,6 +2236,7 @@ This ensures that the bypass cookie can’t be guessed.
 > 📝 **Descripción:** *Learn how to self-host your Next.js application on a Node.js server, Docker image, or static HTML files (static exports).*  
 
 ---
+
 
 
 
@@ -2221,6 +2259,7 @@ This ensures that the bypass cookie can’t be guessed.
 
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -2235,6 +2274,7 @@ This ensures that the bypass cookie can’t be guessed.
 > 📝 **Descripción:** *Style your Next.js Application using Tailwind CSS.*  
 
 ---
+
 
 
 
@@ -2257,6 +2297,7 @@ This ensures that the bypass cookie can’t be guessed.
 
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -2271,6 +2312,7 @@ This ensures that the bypass cookie can’t be guessed.
 > 📝 **Descripción:** *Learn how to set up Next.js with three commonly used testing tools — Cypress, Playwright, Vitest, and Jest.*  
 
 ---
+
 
 
 
@@ -2293,6 +2335,7 @@ This ensures that the bypass cookie can’t be guessed.
 
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -2307,6 +2350,7 @@ This ensures that the bypass cookie can’t be guessed.
 > 📝 **Descripción:** *Learn how to set up Next.js with Playwright for End-to-End (E2E) and Integration testing.*  
 
 ---
+
 
 
 
@@ -2329,6 +2373,7 @@ This ensures that the bypass cookie can’t be guessed.
 
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -2343,6 +2388,7 @@ This ensures that the bypass cookie can’t be guessed.
 > 📝 **Descripción:** *Optimize the performance of third-party libraries in your application with the `@next/third-parties` package.*  
 
 ---
+
 
 
 
@@ -2365,6 +2411,7 @@ This ensures that the bypass cookie can’t be guessed.
 
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -2381,6 +2428,7 @@ This ensures that the bypass cookie can’t be guessed.
 ---
 
 Learn how to upgrade to the latest versions of Next.js following the versions-specific guides:
+
 
 
 [⬆ Subir al inicio del capítulo](#)
@@ -2423,6 +2471,7 @@ bun add next@10
 ```
 
 > **Good to know:** If you are using TypeScript, ensure you also upgrade `@types/react` and `@types/react-dom` to their corresponding versions.
+
 
 
 [⬆ Subir al inicio del capítulo](#)
@@ -2589,6 +2638,7 @@ Or using `yarn`:
 ```
 yarn add react@latest react-dom@latest
 ```
+
 
 
 [⬆ Subir al inicio del capítulo](#)
@@ -2763,6 +2813,7 @@ During `next build`, Next.js will automatically trace each page and its dependen
 If you are currently using the `target` option set to `serverless`, please read the [documentation on how to leverage the new output](/docs/pages/api-reference/config/next-config-js/output).
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -2874,6 +2925,7 @@ Previously, Next.js helped you optimize fonts by inlining font CSS. Version 13 i
 See [Optimizing Fonts](/docs/pages/api-reference/components/font) to learn how to use `next/font`.
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -2888,6 +2940,7 @@ See [Optimizing Fonts](/docs/pages/api-reference/components/font) to learn how t
 > 📝 **Descripción:** *Upgrade your Next.js Application from Version 13 to 14.*  
 
 ---
+
 
 
 
@@ -3135,6 +3188,7 @@ export default DynamicBundle
 ```
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -3369,6 +3423,7 @@ export default function Layout({ children }) {
 ```
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -3437,6 +3492,7 @@ The difference between **catch-all** and **optional catch-all** segments is that
 | `pages/shop/[[...slug]].js` | `/shop/a`     | `{ slug: ['a'] }`           |
 | `pages/shop/[[...slug]].js` | `/shop/a/b`   | `{ slug: ['a', 'b'] }`      |
 | `pages/shop/[[...slug]].js` | `/shop/a/b/c` | `{ slug: ['a', 'b', 'c'] }` |
+
 
 
 [⬆ Subir al inicio del capítulo](#)
@@ -3635,6 +3691,7 @@ Since that's a new page, it'll unload the current page, load the new one and wai
 When shallow routing is used with proxy it will not ensure the new page matches the current page like previously done without proxy. This is due to proxy being able to rewrite dynamically and can't be verified client-side without a data fetch which is skipped with shallow, so a shallow route change must always be treated as shallow.
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -3738,6 +3795,7 @@ MyApp.getInitialProps = async (context) => {
   return { ...ctx, example: 'data' }
 }
 ```
+
 
 
 [⬆ Subir al inicio del capítulo](#)
@@ -3901,6 +3959,7 @@ export default MyDocument
 >
 > - `getInitialProps` in `_document` is not called during client-side transitions.
 > - The `ctx` object for `_document` is equivalent to the one received in [`getInitialProps`](/docs/pages/api-reference/functions/get-initial-props#context-object), with the addition of `renderPage`.
+
 
 
 [⬆ Subir al inicio del capítulo](#)
@@ -4392,6 +4451,7 @@ export default async function handler(req, res) {
 ```
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -4506,6 +4566,7 @@ If you have a custom `Error` component be sure to import that one instead. `next
 - `_error`, like `_app`, is a reserved pathname. `_error` is used to define the customized layouts and behaviors of the error pages. `/_error` will render 404 when accessed directly via [routing](/docs/pages/building-your-application/routing) or rendering in a [custom server](/docs/pages/guides/custom-server).
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -4522,6 +4583,7 @@ If you have a custom `Error` component be sure to import that one instead. `next
 ---
 
 The Pages Router has a file-system based router built on concepts of pages. When a file is added to the `pages` directory it's automatically available as a route. Learn more about routing in the Pages Router:
+
 
 
 [⬆ Subir al inicio del capítulo](#)
@@ -4566,6 +4628,7 @@ export async function getServerSideProps() {
 As you can see, `getServerSideProps` is similar to `getStaticProps`, but the difference is that `getServerSideProps` is run on every request instead of on build time.
 
 To learn more about how `getServerSideProps` works, check out our [Data Fetching documentation](/docs/pages/building-your-application/data-fetching/get-server-side-props).
+
 
 
 [⬆ Subir al inicio del capítulo](#)
@@ -4763,6 +4826,7 @@ In cases like this, you can do one of the following:
 - Use **Server-Side Rendering:** Next.js prerenders a page on each request. It will be slower because the page cannot be cached by a CDN, but the prerendered page will always be up-to-date. We'll talk about this approach below.
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -4823,6 +4887,7 @@ And if you add `getServerSideProps` to the page, it will then be JavaScript, lik
 - If you have a [custom `App`](/docs/pages/building-your-application/routing/custom-app) with `getInitialProps` then this optimization will be turned off in pages without [Static Generation](/docs/pages/building-your-application/data-fetching/get-static-props).
 - If you have a [custom `Document`](/docs/pages/building-your-application/routing/custom-document) with `getInitialProps` be sure you check if `ctx.req` is defined before assuming the page is server-side rendered. `ctx.req` will be `undefined` for pages that are prerendered.
 - Avoid using the `asPath` value on [`next/router`](/docs/pages/api-reference/functions/use-router#router-object) in the rendering tree until the router's `isReady` field is `true`. Statically optimized pages only know `asPath` on the client and not the server, so using it as a prop may lead to mismatch errors. The [`active-class-name` example](https://github.com/vercel/next.js/tree/canary/examples/active-class-name) demonstrates one way to use `asPath` as a prop.
+
 
 
 [⬆ Subir al inicio del capítulo](#)
@@ -4904,6 +4969,7 @@ export function Page() {
 > Keep in mind that CSR can impact SEO. Some search engine crawlers might not execute JavaScript and therefore only see the initial empty or loading state of your application. It can also lead to performance issues for users with slower internet connections or devices, as they need to wait for all the JavaScript to load and run before they can see the full page. Next.js promotes a hybrid approach that allows you to use a combination of [server-side rendering](/docs/pages/building-your-application/rendering/server-side-rendering), [static site generation](/docs/pages/building-your-application/rendering/static-site-generation), and client-side rendering, **depending on the needs of each page** in your application. In the App Router, you can also use [Loading UI with Suspense](/docs/app/api-reference/file-conventions/loading) to show a loading indicator while the page is being rendered.
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -4935,6 +5001,7 @@ Importantly, Next.js lets you choose which prerendering form you'd like to use f
 We recommend using Static Generation over Server-side Rendering for performance reasons. Statically generated pages can be cached by CDN with no extra configuration to boost performance. However, in some cases, Server-side Rendering might be the only option.
 
 You can also use client-side data fetching along with Static Generation or Server-side Rendering. That means some parts of a page can be rendered entirely by clientside JavaScript. To learn more, take a look at the [Data Fetching](/docs/pages/building-your-application/data-fetching/client-side) documentation.
+
 
 
 [⬆ Subir al inicio del capítulo](#)
@@ -5157,6 +5224,7 @@ In development (`next dev`), `getStaticProps` will be called on every request.
 You can temporarily bypass static generation and render the page at **request time** instead of build time using [**Preview Mode**](/docs/pages/guides/preview-mode). For example, you might be using a headless CMS and want to preview drafts before they're published.
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -5313,6 +5381,7 @@ export async function getStaticPaths() {
 ```
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -5435,6 +5504,7 @@ export async function getServerSideProps({ req, res }) {
 However, before reaching for `cache-control`, we recommend seeing if [`getStaticProps`](/docs/pages/building-your-application/data-fetching/get-static-props) with [ISR](/docs/pages/guides/incremental-static-regeneration) is a better fit for your use case.
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -5517,6 +5587,7 @@ function Profile() {
 ```
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -5564,6 +5635,7 @@ Data fetching in Next.js allows you to render your content in different ways, de
 - [WordPress Example](https://github.com/vercel/next.js/tree/canary/examples/cms-wordpress) ([Demo](https://next-blog-wordpress.vercel.app/))
 - [Blog Starter Example](https://github.com/vercel/next.js/tree/canary/examples/blog-starter) ([Demo](https://next-blog-starter.vercel.app/))
 - [Static Tweet (Demo)](https://react-tweet.vercel.app/)
+
 
 
 [⬆ Subir al inicio del capítulo](#)
@@ -5677,6 +5749,7 @@ You can learn more about [Error Boundaries](https://react.dev/reference/react/Co
 To monitor client errors, use a service like [Sentry](https://github.com/vercel/next.js/tree/canary/examples/with-sentry), Bugsnag or Datadog.
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -5695,6 +5768,7 @@ To monitor client errors, use a service like [Sentry](https://github.com/vercel/
 Next.js allows you to customize your project to meet specific requirements. This includes integrations with TypeScript, ESlint, and more, as well as internal configuration options such as Absolute Imports and Environment Variables.
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -5709,6 +5783,7 @@ Next.js allows you to customize your project to meet specific requirements. This
 > 📝 **Descripción:** *Learn how to use Next.js features to build your application.*  
 
 ---
+
 
 
 
@@ -5731,6 +5806,7 @@ Next.js allows you to customize your project to meet specific requirements. This
 
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -5745,6 +5821,7 @@ Next.js allows you to customize your project to meet specific requirements. This
 > 📝 **Descripción:** *Learn how to use the `<Form>` component to handle form submissions and search params updates with client-side navigation.*  
 
 ---
+
 
 
 
@@ -5826,6 +5903,7 @@ We recommend using [`next/script`](/docs/pages/guides/scripts) in your component
 ## No `html` or `body` tags
 
 You **cannot** use `<Head>` to set attributes on `<html>` or `<body>` tags. This will result in an `next-head-count is missing` error. `next/head` can only handle tags inside the HTML `<head>` tag.
+
 
 
 [⬆ Subir al inicio del capítulo](#)
@@ -6547,6 +6625,7 @@ Auto-detection for animated files is best-effort and supports GIF, APNG, and Web
 | `v13.0.0` | `next/image` renamed to `next/legacy/image`                                                                         |
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -6561,6 +6640,7 @@ Auto-detection for animated files is best-effort and supports GIF, APNG, and Web
 > 📝 **Descripción:** *Optimize Images in your Next.js Application using the built-in `next/image` Component.*  
 
 ---
+
 
 
 
@@ -6583,6 +6663,7 @@ Auto-detection for animated files is best-effort and supports GIF, APNG, and Web
 
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -6597,6 +6678,7 @@ Auto-detection for animated files is best-effort and supports GIF, APNG, and Web
 > 📝 **Descripción:** *API reference for the `<Link>` component.*  
 
 ---
+
 
 
 
@@ -6619,6 +6701,7 @@ Auto-detection for animated files is best-effort and supports GIF, APNG, and Web
 
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -6633,6 +6716,7 @@ Auto-detection for animated files is best-effort and supports GIF, APNG, and Web
 > 📝 **Descripción:** *API Reference for Next.js file-system conventions.*  
 
 ---
+
 
 
 
@@ -6655,6 +6739,7 @@ Auto-detection for animated files is best-effort and supports GIF, APNG, and Web
 
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -6669,6 +6754,7 @@ Auto-detection for animated files is best-effort and supports GIF, APNG, and Web
 > 📝 **Descripción:** *Learn how to use Proxy to run code before a request is completed.*  
 
 ---
+
 
 
 
@@ -6691,6 +6777,7 @@ Auto-detection for animated files is best-effort and supports GIF, APNG, and Web
 
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -6709,6 +6796,7 @@ Auto-detection for animated files is best-effort and supports GIF, APNG, and Web
 
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -6723,6 +6811,7 @@ Auto-detection for animated files is best-effort and supports GIF, APNG, and Web
 > 📝 **Descripción:** *API Reference for the catchError function.*  
 
 ---
+
 
 
 
@@ -6797,6 +6886,7 @@ export default function Page({ stars }) {
 
 - `getInitialProps` can only be used in `pages/` top level files, and not in nested components. To have nested data fetching at the component level, consider exploring the [App Router](/docs/app/getting-started/fetching-data).
 - Regardless of whether your route is static or dynamic, any data returned from `getInitialProps` as `props` will be able to be examined on the client-side in the initial HTML. This is to allow the page to be [hydrated](https://react.dev/reference/react-dom/hydrate) correctly. Make sure that you don't pass any sensitive information that shouldn't be available on the client in `props`.
+
 
 
 [⬆ Subir al inicio del capítulo](#)
@@ -6951,6 +7041,7 @@ export async function getServerSideProps(context) {
 | `v13.4.0` | [App Router](/docs/app/getting-started/fetching-data) is now stable with simplified data fetching |
 | `v10.0.0` | `locale`, `locales`, `defaultLocale`, and `notFound` options added.                               |
 | `v9.3.0`  | `getServerSideProps` introduced.                                                                  |
+
 
 
 [⬆ Subir al inicio del capítulo](#)
@@ -7228,6 +7319,7 @@ export default Post
 | `v9.3.0`  | `getStaticPaths` introduced.                                                                                                                                                                      |
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -7471,6 +7563,7 @@ export default Blog
 | `v9.3.0`  | `getStaticProps` introduced.                                                                                                                             |
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -7485,6 +7578,7 @@ export default Blog
 > 📝 **Descripción:** *API Reference for Functions and Hooks in Pages Router.*  
 
 ---
+
 
 
 
@@ -7507,6 +7601,7 @@ export default Blog
 
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -7521,6 +7616,7 @@ export default Blog
 > 📝 **Descripción:** *API Reference for NextResponse.*  
 
 ---
+
 
 
 
@@ -7789,6 +7885,7 @@ export function Breadcrumb() {
 | `v13.3.0` | `useParams` introduced. |
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -7803,6 +7900,7 @@ export function Breadcrumb() {
 > 📝 **Descripción:** *Use the Next.js `useReportWebVitals` hook to send Core Web Vitals and custom performance metrics to analytics.*  
 
 ---
+
 
 
 
@@ -8415,6 +8513,7 @@ export default withRouter(MyComponent)
 ```
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -8746,13 +8845,14 @@ export function SearchBar() {
 }
 ```
 
-> **Good to know**: When using this component in the App Router, wrap it in a `<Suspense>` boundary for [prerendering](/docs/app/api-reference/functions/use-search-params#prerendering) support.
+> **Good to know**: When using this component in the App Router, wrap it in a ``<Suspense>`` boundary for [prerendering](/docs/app/api-reference/functions/use-search-params#prerendering) support.
 
 ## Version History
 
 | Version   | Changes                       |
 | --------- | ----------------------------- |
 | `v13.0.0` | `useSearchParams` introduced. |
+
 
 
 [⬆ Subir al inicio del capítulo](#)
@@ -8769,6 +8869,7 @@ export function SearchBar() {
 > 📝 **Descripción:** *The userAgent helper extends the Web Request API with additional properties and methods to interact with the user agent object from the request.*  
 
 ---
+
 
 
 
@@ -8791,6 +8892,7 @@ export function SearchBar() {
 
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -8805,6 +8907,7 @@ export function SearchBar() {
 > 📝 **Descripción:** *Use `allowedDevOrigins` to configure additional origins that can request the dev server.*  
 
 ---
+
 
 
 
@@ -8827,6 +8930,7 @@ export function SearchBar() {
 
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -8841,6 +8945,7 @@ export function SearchBar() {
 > 📝 **Descripción:** *Use `basePath` to deploy a Next.js application under a sub-path of a domain.*  
 
 ---
+
 
 
 
@@ -8881,6 +8986,7 @@ Explicitly opt-out certain packages from being bundled using the [`serverExterna
 | `v15.0.0` | Moved from experimental to stable. Renamed from `bundlePagesExternals` to `bundlePagesRouterDependencies` |
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -8895,6 +9001,7 @@ Explicitly opt-out certain packages from being bundled using the [`serverExterna
 > 📝 **Descripción:** *Next.js provides gzip compression to compress rendered content and static files, it only works with the server target. Learn more about it here.*  
 
 ---
+
 
 
 
@@ -8917,6 +9024,7 @@ Explicitly opt-out certain packages from being bundled using the [`serverExterna
 
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -8931,6 +9039,7 @@ Explicitly opt-out certain packages from being bundled using the [`serverExterna
 > 📝 **Descripción:** *Configure a deployment identifier used for version skew protection and cache busting.*  
 
 ---
+
 
 
 
@@ -8953,6 +9062,7 @@ Explicitly opt-out certain packages from being bundled using the [`serverExterna
 
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -8967,6 +9077,7 @@ Explicitly opt-out certain packages from being bundled using the [`serverExterna
 > 📝 **Descripción:** *Set a custom build directory to use instead of the default .next directory.*  
 
 ---
+
 
 
 
@@ -8989,6 +9100,7 @@ Explicitly opt-out certain packages from being bundled using the [`serverExterna
 
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -9003,6 +9115,7 @@ Explicitly opt-out certain packages from being bundled using the [`serverExterna
 > 📝 **Descripción:** *Customize the pages that will be exported as HTML files when using `next export`.*  
 
 ---
+
 
 
 
@@ -9025,6 +9138,7 @@ Explicitly opt-out certain packages from being bundled using the [`serverExterna
 
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -9039,6 +9153,7 @@ Explicitly opt-out certain packages from being bundled using the [`serverExterna
 > 📝 **Descripción:** *Next.js will generate etags for every page by default. Learn more about how to disable etag generation here.*  
 
 ---
+
 
 
 
@@ -9061,6 +9176,7 @@ Explicitly opt-out certain packages from being bundled using the [`serverExterna
 
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -9075,6 +9191,7 @@ Explicitly opt-out certain packages from being bundled using the [`serverExterna
 > 📝 **Descripción:** *Next.js will automatically use HTTP Keep-Alive by default. Learn more about how to disable HTTP Keep-Alive here.*  
 
 ---
+
 
 
 
@@ -9097,6 +9214,7 @@ Explicitly opt-out certain packages from being bundled using the [`serverExterna
 
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -9111,6 +9229,7 @@ Explicitly opt-out certain packages from being bundled using the [`serverExterna
 > 📝 **Descripción:** *Learn about the options available in next.config.js for the Pages Router.*  
 
 ---
+
 
 
 
@@ -9133,6 +9252,7 @@ Explicitly opt-out certain packages from being bundled using the [`serverExterna
 
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -9147,6 +9267,7 @@ Explicitly opt-out certain packages from being bundled using the [`serverExterna
 > 📝 **Descripción:** *Configure how Next.js will dispose and keep in memory pages created in development.*  
 
 ---
+
 
 
 
@@ -9169,6 +9290,7 @@ Explicitly opt-out certain packages from being bundled using the [`serverExterna
 
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -9183,6 +9305,7 @@ Explicitly opt-out certain packages from being bundled using the [`serverExterna
 > 📝 **Descripción:** *Next.js automatically traces which files are needed by each page to allow for easy deployment of your application. Learn how it works here.*  
 
 ---
+
 
 
 
@@ -9205,6 +9328,7 @@ Explicitly opt-out certain packages from being bundled using the [`serverExterna
 
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -9219,6 +9343,7 @@ Explicitly opt-out certain packages from being bundled using the [`serverExterna
 > 📝 **Descripción:** *Next.js will add the `x-powered-by` header by default. Learn to opt-out of it here.*  
 
 ---
+
 
 
 
@@ -9241,6 +9366,7 @@ Explicitly opt-out certain packages from being bundled using the [`serverExterna
 
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -9255,6 +9381,7 @@ Explicitly opt-out certain packages from being bundled using the [`serverExterna
 > 📝 **Descripción:** *Configure the maximum request body size when using proxy.*  
 
 ---
+
 
 
 
@@ -9277,6 +9404,7 @@ Explicitly opt-out certain packages from being bundled using the [`serverExterna
 
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -9295,6 +9423,7 @@ Explicitly opt-out certain packages from being bundled using the [`serverExterna
 
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -9309,6 +9438,7 @@ Explicitly opt-out certain packages from being bundled using the [`serverExterna
 > 📝 **Descripción:** *Add rewrites to your Next.js app.*  
 
 ---
+
 
 
 
@@ -9425,6 +9555,7 @@ Next.js includes a [short list of popular packages](https://github.com/vercel/ne
 - `zeromq`
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -9439,6 +9570,7 @@ Next.js includes a [short list of popular packages](https://github.com/vercel/ne
 > 📝 **Descripción:** *Let Proxy see the original request instead of Next.js's normalized version. Formerly skipMiddlewareUrlNormalize.*  
 
 ---
+
 
 
 
@@ -9461,6 +9593,7 @@ Next.js includes a [short list of popular packages](https://github.com/vercel/ne
 
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -9475,6 +9608,7 @@ Next.js includes a [short list of popular packages](https://github.com/vercel/ne
 > 📝 **Descripción:** *Configure Next.js pages to resolve with or without a trailing slash.*  
 
 ---
+
 
 
 
@@ -9497,6 +9631,7 @@ Next.js includes a [short list of popular packages](https://github.com/vercel/ne
 
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -9511,6 +9646,7 @@ Next.js includes a [short list of popular packages](https://github.com/vercel/ne
 > 📝 **Descripción:** *Configure Next.js with Turbopack-specific options*  
 
 ---
+
 
 
 
@@ -9533,6 +9669,7 @@ Next.js includes a [short list of popular packages](https://github.com/vercel/ne
 
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -9547,6 +9684,7 @@ Next.js includes a [short list of popular packages](https://github.com/vercel/ne
 > 📝 **Descripción:** *Next.js reports TypeScript errors by default. Learn to opt-out of this behavior here.*  
 
 ---
+
 
 
 
@@ -9569,6 +9707,7 @@ Next.js includes a [short list of popular packages](https://github.com/vercel/ne
 
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -9583,6 +9722,7 @@ Next.js includes a [short list of popular packages](https://github.com/vercel/ne
 > 📝 **Descripción:** *Enable experimental support for Lightning CSS.*  
 
 ---
+
 
 
 
@@ -9605,6 +9745,7 @@ Next.js includes a [short list of popular packages](https://github.com/vercel/ne
 
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -9619,6 +9760,7 @@ Next.js includes a [short list of popular packages](https://github.com/vercel/ne
 > 📝 **Descripción:** *Learn how to use the webVitalsAttribution option to pinpoint the source of Web Vitals issues.*  
 
 ---
+
 
 
 
@@ -9641,6 +9783,7 @@ Next.js includes a [short list of popular packages](https://github.com/vercel/ne
 
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -9655,6 +9798,7 @@ Next.js includes a [short list of popular packages](https://github.com/vercel/ne
 > 📝 **Descripción:** *Next.js provides a TypeScript-first development experience for building your React application.*  
 
 ---
+
 
 
 
@@ -9677,6 +9821,7 @@ Next.js includes a [short list of popular packages](https://github.com/vercel/ne
 
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -9691,6 +9836,7 @@ Next.js includes a [short list of popular packages](https://github.com/vercel/ne
 > 📝 **Descripción:** *Learn how to configure your Next.js application.*  
 
 ---
+
 
 
 
@@ -9713,6 +9859,7 @@ Next.js includes a [short list of popular packages](https://github.com/vercel/ne
 
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -9727,6 +9874,7 @@ Next.js includes a [short list of popular packages](https://github.com/vercel/ne
 > 📝 **Descripción:** *API Reference for the Next.js Command Line Interface (CLI) tools.*  
 
 ---
+
 
 
 
@@ -9749,6 +9897,7 @@ Next.js includes a [short list of popular packages](https://github.com/vercel/ne
 
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -9763,6 +9912,7 @@ Next.js includes a [short list of popular packages](https://github.com/vercel/ne
 > 📝 **Descripción:** *Configure `adapterPath` or `NEXT_ADAPTER_PATH` to use a custom deployment adapter.*  
 
 ---
+
 
 
 
@@ -9785,6 +9935,7 @@ Next.js includes a [short list of popular packages](https://github.com/vercel/ne
 
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -9799,6 +9950,7 @@ Next.js includes a [short list of popular packages](https://github.com/vercel/ne
 > 📝 **Descripción:** *Reference for `modifyConfig` and `onBuildComplete` in the `NextAdapter` interface.*  
 
 ---
+
 
 
 
@@ -9821,6 +9973,7 @@ Next.js includes a [short list of popular packages](https://github.com/vercel/ne
 
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -9835,6 +9988,7 @@ Next.js includes a [short list of popular packages](https://github.com/vercel/ne
 > 📝 **Descripción:** *Use `@next/routing` to apply Next.js route matching behavior in adapters.*  
 
 ---
+
 
 
 
@@ -9857,6 +10011,7 @@ Next.js includes a [short list of popular packages](https://github.com/vercel/ne
 
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -9871,6 +10026,7 @@ Next.js includes a [short list of popular packages](https://github.com/vercel/ne
 > 📝 **Descripción:** *Invoke Node.js and Edge build entrypoints with adapter runtime context.*  
 
 ---
+
 
 
 
@@ -9893,6 +10049,7 @@ Next.js includes a [short list of popular packages](https://github.com/vercel/ne
 
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -9907,6 +10064,7 @@ Next.js includes a [short list of popular packages](https://github.com/vercel/ne
 > 📝 **Descripción:** *Reference for routing phases and route fields exposed in `onBuildComplete`.*  
 
 ---
+
 
 
 
@@ -9929,6 +10087,7 @@ Next.js includes a [short list of popular packages](https://github.com/vercel/ne
 
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -9943,6 +10102,7 @@ Next.js includes a [short list of popular packages](https://github.com/vercel/ne
 > 📝 **Descripción:** *Build deployment adapters for Next.js platforms and infrastructure.*  
 
 ---
+
 
 
 
@@ -9965,6 +10125,7 @@ Next.js includes a [short list of popular packages](https://github.com/vercel/ne
 
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -9983,6 +10144,7 @@ Next.js includes a [short list of popular packages](https://github.com/vercel/ne
 
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -9997,6 +10159,7 @@ Next.js includes a [short list of popular packages](https://github.com/vercel/ne
 > 📝 **Descripción:** *Next.js API Reference for the Pages Router.*  
 
 ---
+
 
 
 
@@ -10021,6 +10184,7 @@ Next.js includes a [short list of popular packages](https://github.com/vercel/ne
 The **Pages Router** uses an intuitive file-system router to map each file to a route.
 
 Before Next.js 13, the Pages Router was the main way to create routes in Next.js. It's still supported in newer versions of Next.js, but we recommend migrating to the new [App Router](/docs/app) to leverage React's latest features.
+
 
 
 [⬆ Subir al inicio del capítulo](#)

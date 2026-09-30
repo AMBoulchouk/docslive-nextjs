@@ -343,25 +343,7 @@ Because `loading.js` sits below `layout.js` in the [component hierarchy](/docs/a
 The behavior depends on whether [Cache Components](/docs/app/getting-started/caching) is enabled:
 
 - **Without Cache Components:** The navigation will block until the layout finishes rendering, and the `loading.js` fallback will not be shown.
-- **With Cache Components:** `loading.js` is treated as a regular `<Suspense>` boundary rather than a special prefetch marker. Uncached or runtime data access in the layout must be explicitly wrapped in its own `<Suspense>` boundary, otherwise Next.js guides you with a build-time error. The static shell streams immediately, and the uncached content swaps in as it resolves.
-
-In both cases, to ensure instant navigation, either:
-
-- Wrap runtime data access in your layout in its own `<Suspense>` boundary with a fallback.
-- Move uncached data fetching from `layout.js` into `page.js` where `loading.js` can show a fallback.
-
-```tsx
-// Archivo: app/dashboard/layout.tsx switcher highlight={8-10}
-import { Suspense } from 'react'
-import { NavSkeleton } from './nav-skeleton'
-import { DashboardNav } from './dashboard-nav'
-
-export default function Layout({ children }: { children: React.ReactNode }) {
-  return (
-    <>
-      <Suspense fallback={<NavSkeleton />}>
-        <DashboardNav />
-      </Suspense>
+- **With Cache Components:** `loading.js` is treated as a regular ```<Suspense>``
       <main>{children}</main>
     </>
   )
@@ -377,9 +359,9 @@ import { DashboardNav } from './dashboard-nav'
 export default function Layout({ children }) {
   return (
     <>
-      <Suspense fallback={<NavSkeleton />}>
+      ``<Suspense>``}>
         <DashboardNav />
-      </Suspense>
+      `<Suspense>`
       <main>{children}</main>
     </>
   )

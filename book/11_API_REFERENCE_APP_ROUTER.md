@@ -2,7 +2,7 @@
 
 > 📌 **Capítulo 11** | Libro Guía Next.js v16.3.7  
 > 📝 **Resumen:** *Catálogo exhaustivo de componentes integrados, convenciones de archivos, funciones de servidor, hooks y configuración.*  
-> 📄 **Temas incluidos:** 178 secciones  
+> 📄 **Temas incluidos en este capítulo:** 178 secciones  
 
 [⬅ Volver al Índice General](./00_INDICE_GENERAL.md)
 
@@ -1247,6 +1247,7 @@ When a font function is called on a page of your site, it is not globally availa
 | `v13.0.0` | `@next/font` was added.                                               |
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -1648,6 +1649,7 @@ export default async function PostPage({ params }) {
 ```
 
 See [Mutating data](/docs/app/getting-started/mutating-data) for more examples.
+
 
 
 [⬆ Subir al inicio del capítulo](#)
@@ -3163,6 +3165,7 @@ export default function Home() {
 | `v10.0.0`  | `next/image` introduced.                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -3177,6 +3180,7 @@ export default function Home() {
 > 📝 **Descripción:** *API Reference for Next.js built-in components.*  
 
 ---
+
 
 
 
@@ -4527,6 +4531,7 @@ When a user tries to navigate away using `CustomLink` while the form has unsaved
 | `v1.0.0`  | `next/link` introduced.                                                                                                                                                      |
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -4994,6 +4999,7 @@ export default function Page() {
 | `v11.0.0` | `next/script` introduced.                                                 |
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -5288,6 +5294,7 @@ export default function Icon() {}
 | `v13.3.0` | `favicon` `icon` and `apple-icon` introduced         |
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -5313,6 +5320,7 @@ Once a file is defined, Next.js will automatically serve the file (with hashes i
 >
 > - Special Route Handlers like [`sitemap.ts`](/docs/app/api-reference/file-conventions/metadata/sitemap), [`opengraph-image.tsx`](/docs/app/api-reference/file-conventions/metadata/opengraph-image), and [`icon.tsx`](/docs/app/api-reference/file-conventions/metadata/app-icons), and other [metadata files](/docs/app/api-reference/file-conventions/metadata) are cached by default.
 > - If using along with [`proxy.ts`](/docs/app/api-reference/file-conventions/proxy), [configure the matcher](/docs/app/api-reference/file-conventions/proxy#matcher) to exclude the metadata files.
+
 
 
 [⬆ Subir al inicio del capítulo](#)
@@ -5400,6 +5408,7 @@ export default function manifest() {
 ### Manifest Object
 
 The manifest object contains an extensive list of options that may be updated due to new web standards. For information on all the current options, refer to the `MetadataRoute.Manifest` type in your code editor if using [TypeScript](/docs/app/api-reference/config/typescript#ide-plugin) or see the [MDN](https://developer.mozilla.org/docs/Web/Manifest) docs.
+
 
 
 [⬆ Subir al inicio del capítulo](#)
@@ -5969,6 +5978,7 @@ export default async function Image() {
 | `v13.3.0` | `opengraph-image` and `twitter-image` introduced.    |
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -6190,6 +6200,7 @@ type Robots = {
 | --------- | ---------------------------------------------------------- |
 | `v16.3.0` | Added `other` field for non-standard per-agent directives. |
 | `v13.3.0` | `robots` introduced.                                       |
+
 
 
 [⬆ Subir al inicio del capítulo](#)
@@ -6640,6 +6651,7 @@ type Sitemap = Array<{
 | `v13.3.0`  | `sitemap` introduced.                                        |
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -6676,6 +6688,7 @@ export const dynamicParams = true // true | false
 > - `dynamicParams` is not available when [Cache Components](/docs/app/api-reference/config/next-config-js/cacheComponents) is enabled.
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -6707,6 +6720,7 @@ The Route Segment Config options allow you to configure the behavior of a [Page]
 | `v16.0.0`    | `dynamic`, `dynamicParams`, `revalidate`, and `fetchCache` removed when [Cache Components](/docs/app/api-reference/config/next-config-js/cacheComponents) is enabled. See [Caching and Revalidating (Previous Model)](/docs/app/guides/caching-without-cache-components#route-segment-config). |
 | `v16.0.0`    | `export const experimental_ppr = true` removed. A [codemod](/docs/app/guides/upgrading/codemods#remove-experimental_ppr-route-segment-config-from-app-router-pages-and-layouts) is available.                                                                                                  |
 | `v15.0.0-RC` | `export const runtime = "experimental-edge"` deprecated. A [codemod](/docs/app/guides/upgrading/codemods#transform-app-router-route-segment-config-runtime-value-from-experimental-edge-to-edge) is available.                                                                                 |
+
 
 
 [⬆ Subir al inicio del capítulo](#)
@@ -6809,7 +6823,7 @@ Setting `false` on the root layout disables static shell validation for the enti
 
 `instant` triggers validation at every shared layout boundary in the route. Validation runs during development (on page loads and HMR updates) and surfaces errors in the dev error overlay.
 
-Each error identifies the component that would block navigation. The fix is usually to cache the data with `use cache` or wrap it in a `<Suspense>` boundary.
+Each error identifies the component that would block navigation. The fix is usually to cache the data with `use cache` or wrap it in a ``<Suspense>`` boundary.
 
 ## Configuring validation defaults
 
@@ -6890,6 +6904,7 @@ export const instant: InstantConfig = true
 | `v16.x.x` | `instant` export introduced (Cache Components only) |
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -6926,6 +6941,7 @@ If using [Server Actions](/docs/app/getting-started/mutating-data), set the `max
 | Version    | Changes                   |
 | ---------- | ------------------------- |
 | `v13.4.10` | `maxDuration` introduced. |
+
 
 
 [⬆ Subir al inicio del capítulo](#)
@@ -6975,6 +6991,7 @@ If deploying Next.js on Vercel, regions were previously only supported with `exp
 - **`'home'`**: Prefer deploying the route to the home region.
 
 If an unsupported value is passed, an error will be thrown.
+
 
 
 [⬆ Subir al inicio del capítulo](#)
@@ -7069,6 +7086,7 @@ export const prefetch: Prefetch = 'partial'
 | `v16.x.x` | `prefetch` export introduced (Cache Components only) |
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -7105,6 +7123,7 @@ export const runtime = 'nodejs'
 >
 > - The Edge Runtime is deprecated. Remove the `runtime` export from your route files. See [Edge Runtime Deprecated](/docs/messages/edge-runtime-deprecated).
 > - This option cannot be used in [Proxy](/docs/app/api-reference/file-conventions/proxy).
+
 
 
 [⬆ Subir al inicio del capítulo](#)
@@ -7176,6 +7195,7 @@ export default async function Default({ params }) {
 
 - Since the `params` prop is a promise. You must use `async/await` or React's [`use`](https://react.dev/reference/react/use) function to access the values.
   - In version 14 and earlier, `params` was a synchronous prop. To help with backwards compatibility, you can still access it synchronously in Next.js 15, but this behavior will be deprecated in the future.
+
 
 
 [⬆ Subir al inicio del capítulo](#)
@@ -7341,34 +7361,7 @@ export default async function Page(props: PageProps<'/[locale]'>) {
 
 When using [Cache Components](/docs/app/getting-started/caching) with dynamic route segments, how you handle params depends on whether you use [`generateStaticParams`](/docs/app/api-reference/functions/generate-static-params).
 
-Without `generateStaticParams`, param values are unknown during prerendering, making params runtime data. You must wrap param access in `<Suspense>` boundaries to provide fallback UI.
-
-With `generateStaticParams`, you provide sample param values that can be used at build time. The build process validates that dynamic content and other runtime APIs are correctly handled, then generates static HTML files for the samples. Pages rendered with runtime params are saved to disk after a successful first request.
-
-The sections below demonstrate both patterns.
-
-#### Without `generateStaticParams`
-
-All params are runtime data. Param access must be wrapped by Suspense fallback UI. Next.js generates a static shell at build time, and content loads on each request.
-
-> **Good to know**:
->
-> - You can also use [`loading.tsx`](/docs/app/api-reference/file-conventions/loading) for page-level fallback UI.
-> - In layouts, avoid awaiting `params` at the top level. Doing so prevents the layout from being prerendered. Instead, pass the params promise down to the component that needs it and await there. See [Maximizing the static shell](/docs/app/getting-started/caching#maximizing-the-static-shell) for examples.
-
-```tsx
-// Archivo: app/blog/[slug]/page.tsx
-import { Suspense } from 'react'
-
-export default function Page({ params }: PageProps<'/blog/[slug]'>) {
-  return (
-    <div>
-      <h1>Blog Post</h1>
-      <Suspense fallback={<div>Loading...</div>}>
-        {params.then(({ slug }) => (
-          <Content slug={slug} />
-        ))}
-      </Suspense>
+Without `generateStaticParams`, param values are unknown during prerendering, making params runtime data. You must wrap param access in ```<Suspense>``
     </div>
   )
 }
@@ -7474,9 +7467,7 @@ export default async function Page({ params }: PageProps<'/blog/[slug]'>) {
 
   if (slug.startsWith('private-')) {
     return (
-      <Suspense fallback={<div>Loading...</div>}>
-        <PrivatePost slug={slug} />
-      </Suspense>
+      ``<Suspense>``
     )
   }
 
@@ -7577,6 +7568,7 @@ export async function GET(request, { params }) {
 ```
 
 In this example, route handlers for all blog post IDs returned by `generateStaticParams` will be statically generated at build time. Requests to other IDs will be handled dynamically at request time.
+
 
 
 [⬆ Subir al inicio del capítulo](#)
@@ -7918,6 +7910,7 @@ export default GracefullyDegradingErrorBoundary
 | `v13.0.0` | `error` introduced.                         |
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -7978,6 +7971,7 @@ export default function Forbidden() {
 | `v15.1.0` | `forbidden.js` introduced. |
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -7992,6 +7986,7 @@ export default function Forbidden() {
 > 📝 **Descripción:** *API Reference for Next.js file-system conventions.*  
 
 ---
+
 
 
 
@@ -8296,6 +8291,7 @@ Next.js already injects a baseline of [widely used polyfills](/docs/architecture
 | `v15.3`   | `instrumentation-client` introduced                   |
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -8463,6 +8459,7 @@ export function onRequestError() {
 | `v13.2.0` | `instrumentation` introduced as an experimental feature |
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -8527,6 +8524,7 @@ See the [Parallel Routes](/docs/app/api-reference/file-conventions/parallel-rout
 > **Good to know:**
 >
 > - Other examples could include opening a login modal in a top navbar while also having a dedicated `/login` page, or opening a shopping cart in a side modal.
+
 
 
 [⬆ Subir al inicio del capítulo](#)
@@ -8880,25 +8878,7 @@ Because `loading.js` sits below `layout.js` in the [component hierarchy](/docs/a
 The behavior depends on whether [Cache Components](/docs/app/getting-started/caching) is enabled:
 
 - **Without Cache Components:** The navigation will block until the layout finishes rendering, and the `loading.js` fallback will not be shown.
-- **With Cache Components:** `loading.js` is treated as a regular `<Suspense>` boundary rather than a special prefetch marker. Uncached or runtime data access in the layout must be explicitly wrapped in its own `<Suspense>` boundary, otherwise Next.js guides you with a build-time error. The static shell streams immediately, and the uncached content swaps in as it resolves.
-
-In both cases, to ensure instant navigation, either:
-
-- Wrap runtime data access in your layout in its own `<Suspense>` boundary with a fallback.
-- Move uncached data fetching from `layout.js` into `page.js` where `loading.js` can show a fallback.
-
-```tsx
-// Archivo: app/dashboard/layout.tsx switcher highlight={8-10}
-import { Suspense } from 'react'
-import { NavSkeleton } from './nav-skeleton'
-import { DashboardNav } from './dashboard-nav'
-
-export default function Layout({ children }: { children: React.ReactNode }) {
-  return (
-    <>
-      <Suspense fallback={<NavSkeleton />}>
-        <DashboardNav />
-      </Suspense>
+- **With Cache Components:** `loading.js` is treated as a regular ```<Suspense>``
       <main>{children}</main>
     </>
   )
@@ -8914,9 +8894,9 @@ import { DashboardNav } from './dashboard-nav'
 export default function Layout({ children }) {
   return (
     <>
-      <Suspense fallback={<NavSkeleton />}>
+      ``<Suspense>``}>
         <DashboardNav />
-      </Suspense>
+      `<Suspense>`
       <main>{children}</main>
     </>
   )
@@ -9312,6 +9292,7 @@ export default function Page({ params }) {
 | `v13.0.0`    | `layout` introduced.                                                                          |
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -9389,85 +9370,8 @@ export default function Loading() {
 }
 ```
 
-In the same folder, `loading.js` will be nested inside `layout.js`. It will automatically wrap the `page.js` file and any children below in a `<Suspense>` boundary.
-
-![loading.js overview]()
-
-In the [component hierarchy](/docs/app/getting-started/project-structure#component-hierarchy), `loading.js` wraps `not-found.js`, `page.js`, and nested `layout.js` files in a `<Suspense>` boundary. It does **not** wrap the `layout.js`, `template.js`, or `error.js` in the same segment.
-
-> **Good to know**: If the layout accesses uncached or runtime data (e.g. `cookies()`, `headers()`, or uncached fetches), `loading.js` will not show a fallback for it.
->
-> - **Without [Cache Components](/docs/app/getting-started/caching):** Navigation blocks until the layout finishes rendering.
-> - **With [Cache Components](/docs/app/getting-started/caching):** Uncached or runtime data access in the layout must be explicitly wrapped in `<Suspense>`, otherwise Next.js guides you with a build-time error. The static shell streams first, and the uncached content fills in.
->
-> To ensure instant navigation, move uncached data fetching from `layout.js` into `page.js`, or wrap the runtime data access in your layout in its own `<Suspense>` boundary. See [layout.js Caveats](/docs/app/api-reference/file-conventions/layout#interaction-with-loadingjs) for details and examples.
-
-### SEO
-
-- For bots that only scrape static HTML, and cannot execute JavaScript like a full browser, such as Twitterbot, Next.js resolves [`generateMetadata`](/docs/app/api-reference/functions/generate-metadata) before streaming UI, and metadata is placed in the `<head>` of the initial HTML.
-- Otherwise, [streaming metadata](/docs/app/api-reference/functions/generate-metadata#streaming-metadata) may be used. Next.js automatically detects user agents to choose between blocking and streaming behavior.
-- Since streaming is server-rendered, it does not impact SEO. You can use the [Rich Results Test](https://search.google.com/test/rich-results) tool from Google to see how your page appears to Google's web crawlers and view the serialized HTML ([source](https://web.dev/rendering-on-the-web/#seo-considerations)).
-
-### Status Codes
-
-When streaming, a `200` status code will be returned to signal that the request was successful.
-
-The server can still communicate errors or issues to the client within the streamed content itself, for example, when using [`redirect`](/docs/app/api-reference/functions/redirect) or [`notFound`](/docs/app/api-reference/functions/not-found). Because the response headers have already been sent to the client, the status code of the response cannot be updated.
-
-For example, when a 404 page is streamed to the client, Next.js includes a `<meta name="robots" content="noindex">` tag in the streamed HTML. This prevents search engines from indexing that URL even if the HTTP status is 200. See Google’s guidance on the [`robots` meta tag](https://developers.google.com/search/docs/crawling-indexing/robots-meta-tag).
-
-Some crawlers may label these responses as “soft 404s”. In the streaming case, this does not lead to indexation because the page is explicitly marked `noindex` in the HTML.
-
-If you need a 404 status, for compliance or analytics, ensure the resource exists before the response body is streamed, so that the server can set the HTTP status code.
-
-You can run this check in [`proxy`](/docs/app/api-reference/file-conventions/proxy) to rewrite missing slugs to a not-found route, or [produce a 404 response](/docs/app/api-reference/file-conventions/proxy#producing-a-response). Keep proxy checks fast, and avoid fetching full content there.
-
-<details>
-<summary>When is the response body streamed?</summary>
-
-The response body starts streaming when a Suspense fallback renders (for example, a `loading.tsx`) or when a Server Component suspends under a `Suspense` boundary. Place `notFound()` before those boundaries and before any `await` that may suspend.
-
-To start streaming, the response headers must be set. This is why it is not possible to change the status code after streaming started.
-
-</details>
-
-### Browser limits
-
-[Some browsers](https://bugs.webkit.org/show_bug.cgi?id=252413) buffer a streaming response. You may not see the streamed response until the response exceeds 1024 bytes. This typically only affects “hello world” applications, but not real applications.
-
-## Platform Support
-
-| Deployment Option                                                   | Supported         |
-| ------------------------------------------------------------------- | ----------------- |
-| [Node.js server](/docs/app/getting-started/deploying#nodejs-server) | Yes               |
-| [Docker container](/docs/app/getting-started/deploying#docker)      | Yes               |
-| [Static export](/docs/app/getting-started/deploying#static-export)  | No                |
-| [Adapters](/docs/app/getting-started/deploying#adapters)            | Platform-specific |
-
-Learn how to [configure streaming](/docs/app/guides/self-hosting#streaming-and-suspense) when self-hosting Next.js.
-
-## Examples
-
-### Streaming with Suspense
-
-In addition to `loading.js`, you can also manually create Suspense Boundaries for your own UI components. The App Router supports streaming with [Suspense](https://react.dev/reference/react/Suspense). See the [Streaming guide](/docs/app/guides/streaming) for more on how streaming works, including granular Suspense patterns, Route Handler streaming, and infrastructure considerations.
-
-`<Suspense>` works by wrapping a component that performs an asynchronous action (e.g. fetch data), showing fallback UI (e.g. skeleton, spinner) while it's happening, and then swapping in your component once the action completes.
-
-```tsx
-// Archivo: app/dashboard/page.tsx switcher
-import { Suspense } from 'react'
-import { PostFeed, Weather } from './Components'
-
-export default function Posts() {
-  return (
-    <section>
-      <Suspense fallback={<p>Loading feed...</p>}>
-        <PostFeed />
-      </Suspense>
-      <Suspense fallback={<p>Loading weather...</p>}>
-        <Weather />
-      </Suspense>
+In the same folder, `loading.js` will be nested inside `layout.js`. It will automatically wrap the `page.js` file and any children below in a ```<Suspense>``
+      ``<Suspense>``
     </section>
   )
 }
@@ -9481,12 +9385,8 @@ import { PostFeed, Weather } from './Components'
 export default function Posts() {
   return (
     <section>
-      <Suspense fallback={<p>Loading feed...</p>}>
-        <PostFeed />
-      </Suspense>
-      <Suspense fallback={<p>Loading weather...</p>}>
-        <Weather />
-      </Suspense>
+      ``<Suspense>``
+      ``<Suspense>``
     </section>
   )
 }
@@ -9504,6 +9404,7 @@ For more Suspense examples and use cases, please see the [React Documentation](h
 | Version   | Changes               |
 | --------- | --------------------- |
 | `v13.0.0` | `loading` introduced. |
+
 
 
 [⬆ Subir al inicio del capítulo](#)
@@ -9578,6 +9479,7 @@ export function useMDXComponents() {
 | `v13.1.2` | MDX Components added |
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -9604,6 +9506,7 @@ npx @next/codemod@canary middleware-to-proxy .
 ```
 
 For full documentation, see the [`proxy.js` API reference](/docs/app/api-reference/file-conventions/proxy).
+
 
 
 [⬆ Subir al inicio del capítulo](#)
@@ -9660,7 +9563,7 @@ export default function NotFound() {
 }
 ```
 
-In the [component hierarchy](/docs/app/getting-started/project-structure#component-hierarchy), `not-found.js` renders between `loading.js` and `page.js`. It is wrapped by the `<Suspense>` boundary from `loading.js` and the error boundary from `error.js` in the same segment.
+In the [component hierarchy](/docs/app/getting-started/project-structure#component-hierarchy), `not-found.js` renders between `loading.js` and `page.js`. It is wrapped by the ``<Suspense>`` boundary from `loading.js` and the error boundary from `error.js` in the same segment.
 
 > **Good to know**: The default not found UI follows the operating system's color scheme via `prefers-color-scheme` and does not read an app-level theme (such as a class or `data-theme` attribute on `<html>`). Because it renders inside your root layout, the quickest way to match an explicit theme is to add a higher-specificity rule pair in your global stylesheet, scoped to your theme selector — for example `html[data-theme='light'] body` and `html[data-theme='dark'] body`. For full control over the markup, provide your own `not-found.js`.
 
@@ -9862,6 +9765,7 @@ export default function GlobalNotFound() {
 | `v15.4.0` | `global-not-found.js` introduced (experimental).    |
 | `v13.3.0` | Root `app/not-found` handles global unmatched URLs. |
 | `v13.0.0` | `not-found` introduced.                             |
+
 
 
 [⬆ Subir al inicio del capítulo](#)
@@ -10130,6 +10034,7 @@ export default function Page({ params, searchParams }) {
 | ------------ | ---------------------------------------------------------------------------------------------------------------- |
 | `v15.0.0-RC` | `params` and `searchParams` are now promises. A [codemod](/docs/app/guides/upgrading/codemods#150) is available. |
 | `v13.0.0`    | `page` introduced.                                                                                               |
+
 
 
 [⬆ Subir al inicio del capítulo](#)
@@ -10617,6 +10522,7 @@ Parallel Routes can be streamed independently, allowing you to define independen
 ![Parallel routes enable custom error and loading states]()
 
 See the [Loading UI](/docs/app/api-reference/file-conventions/loading) and [Error Handling](/docs/app/getting-started/error-handling) documentation for more information.
+
 
 
 [⬆ Subir al inicio del capítulo](#)
@@ -11458,6 +11364,7 @@ The codemod will rename the file and the function name from `middleware` to `pro
 | `v12.0.0` | Middleware (Beta) added                                                                       |
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -11510,6 +11417,7 @@ Cache-Control: public, max-age=0
 For static metadata files, such as `robots.txt`, `favicon.ico`, etc, you should use [special metadata files](/docs/app/api-reference/file-conventions/metadata) inside the `app` folder.
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -11546,6 +11454,7 @@ This convention indicates the folder is for organizational purposes and should *
 - **Full page load**: If you navigate between routes that use different root layouts, it'll trigger a full page reload. For example, navigating from `/cart` that uses `app/(shop)/layout.js` to `/blog` that uses `app/(marketing)/layout.js`. This **only** applies to multiple root layouts.
 - **Conflicting paths**: Routes in different groups should not resolve to the same URL path. For example, `(marketing)/about/page.js` and `(shop)/about/page.js` would both resolve to `/about` and cause an error.
 - **Top-level root layout**: If you use multiple root layouts without a top-level `layout.js` file, make sure your home route (/) is defined within one of the route groups, e.g. app/(marketing)/page.js.
+
 
 
 [⬆ Subir al inicio del capítulo](#)
@@ -12275,6 +12184,7 @@ See the [API reference](/docs/app/api-reference/file-conventions/route-segment-c
 | `v13.2.0`    | Route Handlers are introduced.                                                                       |
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -12308,6 +12218,7 @@ To use the `src` folder, move the `app` Router folder or `pages` Router folder t
 > - If you're using Proxy, ensure it is placed inside the `src` folder.
 > - If you're using Tailwind CSS, you'll need to add the `/src` prefix to the `tailwind.config.js` file in the [content section](https://tailwindcss.com/docs/content-configuration).
 > - If you are using TypeScript paths for imports such as `@/*`, you should update the `paths` object in `tsconfig.json` to include `src/`.
+
 
 
 [⬆ Subir al inicio del capítulo](#)
@@ -12487,6 +12398,7 @@ Navigating to `/blog/second-post` (same first segment, different child segment),
 | `v13.0.0` | `template` introduced. |
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -12613,6 +12525,7 @@ export default function UnauthorizedPage() {
 | Version   | Changes                       |
 | --------- | ----------------------------- |
 | `v15.1.0` | `unauthorized.js` introduced. |
+
 
 
 [⬆ Subir al inicio del capítulo](#)
@@ -12800,24 +12713,7 @@ Calling `cookies()` or `headers()` inside the `after` callback in a Server Compo
 
 #### With Cache Components
 
-When using [Cache Components](/docs/app/getting-started/caching), components that access request data like `cookies` or `headers` must be wrapped in [`<Suspense>`](https://react.dev/reference/react/Suspense) so the rest of the page can be prerendered into a static shell.
-
-You can combine this pattern with `after` by reading request data in a dynamic component and passing it into `after`:
-
-```tsx
-// Archivo: app/page.tsx highlight={18-19,22-24} switcher
-import { Suspense } from 'react'
-import { after } from 'next/server'
-import { cookies } from 'next/headers'
-import { logUserAction } from '@/app/utils'
-
-export default function Page() {
-  return (
-    <>
-      <h1>Part of the static shell</h1>
-      <Suspense fallback={<p>Loading...</p>}>
-        <DynamicContent />
-      </Suspense>
+When using [Cache Components](/docs/app/getting-started/caching), components that access request data like `cookies` or `headers` must be wrapped in [```<Suspense>``
     </>
   )
 }
@@ -12846,9 +12742,7 @@ export default function Page() {
   return (
     <>
       <h1>Part of the static shell</h1>
-      <Suspense fallback={<p>Loading...</p>}>
-        <DynamicContent />
-      </Suspense>
+      ``<Suspense>``
     </>
   )
 }
@@ -12866,7 +12760,7 @@ async function DynamicContent() {
 }
 ```
 
-In this example, `<h1>` and the `<Suspense>` fallback are included in the static shell. `DynamicContent` reads the cookie during rendering and passes it into `after` via closure. Since `cookies()` is called _outside_ the `after` callback (during the component's render), this works correctly.
+In this example, `<h1>` and the ``<Suspense>`` fallback are included in the static shell. `DynamicContent` reads the cookie during rendering and passes it into `after` via closure. Since `cookies()` is called _outside_ the `after` callback (during the component's render), this works correctly.
 
 ## Platform Support
 
@@ -12936,6 +12830,7 @@ const handler = (req, res) => {
 | ------------ | ---------------------------- |
 | `v15.1.0`    | `after` became stable.       |
 | `v15.0.0-rc` | `unstable_after` introduced. |
+
 
 
 [⬆ Subir al inicio del capítulo](#)
@@ -13219,279 +13114,7 @@ A short cache lifetime changes where the cached content can be delivered from:
 
 Of the presets, only `seconds` falls under any of these thresholds: its `expire` of 1 minute excludes it from prerenders.
 
-This behavior allows you to mix static and dynamic content within the same page. Static parts are prerendered, while short-lived caches create boundaries where data is fetched at request time rather than build time. Use a `<Suspense>` boundary around dynamic caches to provide a fallback while content loads.
-
-## Examples
-
-### Using preset profiles
-
-The simplest way to configure caching is using preset profiles. Choose one that matches your content's update pattern:
-
-```tsx
-// Archivo: app/blog/[slug]/page.tsx
-import { cacheLife } from 'next/cache'
-
-export default async function BlogPost() {
-  'use cache'
-  cacheLife('days') // Blog posts updated daily
-
-  const post = await fetchBlogPost()
-  return <article>{post.content}</article>
-}
-```
-
-```tsx
-// Archivo: app/products/[id]/page.tsx
-import { cacheLife } from 'next/cache'
-
-export default async function ProductPage() {
-  'use cache'
-  cacheLife('hours') // Product data updated multiple times per day
-
-  const product = await fetchProduct()
-  return <div>{product.name}</div>
-}
-```
-
-### Custom profiles for specific needs
-
-Define custom profiles when preset options don't match your requirements:
-
-```ts
-// Archivo: next.config.ts
-import type { NextConfig } from 'next'
-
-const nextConfig: NextConfig = {
-  cacheComponents: true,
-  cacheLife: {
-    editorial: {
-      stale: 600, // 10 minutes
-      revalidate: 3600, // 1 hour
-      expire: 86400, // 1 day
-    },
-    marketing: {
-      stale: 300, // 5 minutes
-      revalidate: 1800, // 30 minutes
-      expire: 43200, // 12 hours
-    },
-  },
-}
-
-export default nextConfig
-```
-
-Then use these profiles throughout your application:
-
-```tsx
-// Archivo: app/editorial/page.tsx
-import { cacheLife } from 'next/cache'
-
-export default async function EditorialPage() {
-  'use cache'
-  cacheLife('editorial')
-  // ...
-}
-```
-
-### Inline profiles for unique cases
-
-Use inline profiles when a specific function needs one-off caching behavior:
-
-```tsx
-// Archivo: app/api/limited-offer/route.ts
-import { cacheLife } from 'next/cache'
-import { getDb } from '@lib/db'
-
-async function getLimitedOffer() {
-  'use cache'
-
-  cacheLife({
-    stale: 60, // 1 minute
-    revalidate: 300, // 5 minutes
-    expire: 3600, // 1 hour
-  })
-
-  const offer = await getDb().offer.findFirst({
-    where: { type: 'limited' },
-    orderBy: { created_at: 'desc' },
-  })
-
-  return offer
-}
-
-export async function GET() {
-  const offer = await getLimitedOffer()
-
-  return Response.json(offer)
-}
-```
-
-### Caching individual functions
-
-Apply caching to utility functions for granular control:
-
-```tsx
-// Archivo: lib/api.ts
-import { cacheLife } from 'next/cache'
-
-export async function getSettings() {
-  'use cache'
-  cacheLife('max') // Settings rarely change
-
-  return await fetchSettings()
-}
-```
-
-```tsx
-// Archivo: lib/stats.ts
-import { cacheLife } from 'next/cache'
-
-export async function getRealtimeStats() {
-  'use cache'
-  cacheLife('seconds') // Stats update constantly
-
-  return await fetchStats()
-}
-```
-
-### Nested caching behavior
-
-When you nest `use cache` directives (a cached function or component using another cached function or component), the outer cache's behavior depends on whether it has an explicit `cacheLife`.
-
-#### With explicit outer cacheLife
-
-The outer cache uses its own lifetime, regardless of inner cache lifetimes. When the outer cache hits, it returns the complete output including all nested data. An explicit `cacheLife` always takes precedence, whether it's longer or shorter than inner lifetimes.
-
-```tsx
-// Archivo: app/dashboard/page.tsx
-import { cacheLife } from 'next/cache'
-import { Widget } from './widget'
-
-export default async function Dashboard() {
-  'use cache'
-  cacheLife('hours') // Outer scope sets its own lifetime
-
-  return (
-    <div>
-      <h1>Dashboard</h1>
-      <Widget /> 
-    </div>
-  )
-}
-```
-
-#### Without explicit outer cacheLife
-
-If you don't call `cacheLife` in the outer cache, it uses the `default` profile (15 min revalidate). Inner caches with shorter lifetimes can reduce the outer cache's `default` lifetime. Inner caches with longer lifetimes cannot extend it beyond the default.
-
-```tsx
-// Archivo: app/dashboard/page.tsx
-import { Widget } from './widget'
-
-export default async function Dashboard() {
-  'use cache'
-  // No cacheLife call - uses default (15 min)
-  // If Widget has 5 min → Dashboard becomes 5 min
-  // If Widget has 1 hour → Dashboard stays 15 min
-
-  return (
-    <div>
-      <h1>Dashboard</h1>
-      <Widget />
-    </div>
-  )
-}
-```
-
-**It is recommended to specify an explicit `cacheLife`.** With explicit lifetime values, you can inspect a cached function or component and immediately know its behavior without tracing through nested caches. Without explicit lifetime values, the behavior becomes dependent on inner cache lifetimes, making it harder to reason about.
-
-#### Nested short-lived caches
-
-As described in [Prerendering behavior](#prerendering-behavior), short-lived caches (zero `revalidate` or `expire` under 5 minutes) become dynamic holes excluded from prerenders.
-
-When a short-lived cache is nested inside another `use cache` without an explicit `cacheLife`, the outer cache's lifetime would silently become short too via propagation. To prevent this accidental misconfiguration, Next.js throws an error during prerendering.
-
-Note that the nested cache may not be obvious — it could be in an imported module or even a third-party dependency:
-
-```tsx
-// Archivo: components/short-lived-widget.tsx highlight={5}
-import { cacheLife } from 'next/cache'
-
-export async function ShortLivedWidget() {
-  'use cache'
-  cacheLife('seconds')
-  const data = await fetchRealtimeData()
-  return <div>{data}</div>
-}
-```
-
-Using this component from another `use cache` without an explicit `cacheLife` will error during prerendering:
-
-```tsx
-// Archivo: app/page.tsx
-import { ShortLivedWidget } from '@/components/short-lived-widget'
-
-export default async function Page() {
-  'use cache'
-  // Error: no explicit cacheLife on outer cache
-  return (
-    <div>
-      <h1>Dashboard</h1>
-      <p>Last updated: {new Date().toISOString()}</p>
-      <ShortLivedWidget />
-    </div>
-  )
-}
-```
-
-To fix the error, add an explicit `cacheLife()` to the outer `use cache`:
-
-**If you want the outer cache to remain static (prerendered)**, set a longer cache lifetime:
-
-```tsx
-// Archivo: app/page.tsx highlight={6}
-import { cacheLife } from 'next/cache'
-import { ShortLivedWidget } from '@/components/short-lived-widget'
-
-export default async function Page() {
-  'use cache'
-  cacheLife('default') // Explicit cacheLife prevents the error
-  return (
-    <div>
-      <h1>Dashboard</h1>
-      <p>Last updated: {new Date().toISOString()}</p>
-      <ShortLivedWidget />
-    </div>
-  )
-}
-```
-
-**If you want the outer cache to also be short-lived**, explicitly set a short cache lifetime to confirm this is intentional. Wrap the component in a `<Suspense>` boundary to provide a fallback while content loads:
-
-```tsx
-// Archivo: app/page.tsx highlight={7,17-19}
-import { Suspense } from 'react'
-import { cacheLife } from 'next/cache'
-import { ShortLivedWidget } from '@/components/short-lived-widget'
-
-async function Content() {
-  'use cache: remote'
-  cacheLife('seconds') // Explicit cacheLife confirms this is intentionally short-lived
-  return (
-    <>
-      <p>Last updated: {new Date().toISOString()}</p>
-      <ShortLivedWidget />
-    </>
-  )
-}
-
-export default function Page() {
-  return (
-    <div>
-      <h1>Dashboard</h1>
-      <Suspense fallback={<p>Loading...</p>}>
-        <Content />
-      </Suspense>
+This behavior allows you to mix static and dynamic content within the same page. Static parts are prerendered, while short-lived caches create boundaries where data is fetched at request time rather than build time. Use a ```<Suspense>``
     </div>
   )
 }
@@ -13561,6 +13184,7 @@ async function getPostContent(slug: string) {
   return post.data
 }
 ```
+
 
 
 [⬆ Subir al inicio del capítulo](#)
@@ -13795,6 +13419,7 @@ export async function updateBookings() {
   revalidateTag('bookings-data', 'max')
 }
 ```
+
 
 
 [⬆ Subir al inicio del capítulo](#)
@@ -14137,6 +13762,7 @@ export default function Component({ children }) {
 | `v16.2.0` | `unstable_catchError` introduced. |
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -14244,6 +13870,7 @@ function connection(): Promise<void>
 | `v15.0.0-RC` | `connection` introduced. |
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -14325,7 +13952,7 @@ To learn more about these options, see the [MDN docs](https://developer.mozilla.
 - `cookies` is an **asynchronous** function that returns a promise. You must use `async/await` or React's [`use`](https://react.dev/reference/react/use) function to access cookies.
   - In version 14 and earlier, `cookies` was a synchronous function. To help with backwards compatibility, you can still access it synchronously in Next.js 15, but this behavior will be deprecated in the future.
 - `cookies` is a [Request-time API](/docs/app/glossary#request-time-apis) whose returned values cannot be known ahead of time. Using it in a layout or page will opt a route into [dynamic rendering](/docs/app/glossary#dynamic-rendering).
-- With [Cache Components](/docs/app/getting-started/caching), calling `cookies()` outside of a [`<Suspense>`](https://react.dev/reference/react/Suspense) boundary prevents the route from being prerendered. See [Next.js encountered runtime data during prerendering](/docs/messages/blocking-prerender-runtime) for fix options.
+- With [Cache Components](/docs/app/getting-started/caching), calling `cookies()` outside of a [``<Suspense>``](https://react.dev/reference/react/Suspense) boundary prevents the route from being prerendered. See [Next.js encountered runtime data during prerendering](/docs/messages/blocking-prerender-runtime) for fix options.
 - The `.delete` method can only be called:
   - In a [Server Function](/docs/app/getting-started/mutating-data) or [Route Handler](/docs/app/api-reference/file-conventions/route).
   - If it belongs to the same domain from which `.set` is called. For wildcard domains, the specific subdomain must be an exact match. Additionally, the code must be executed on the same protocol (HTTP or HTTPS) as the cookie you want to delete.
@@ -14574,6 +14201,7 @@ export async function deleteCookie(data) {
 | `v13.0.0`    | `cookies` introduced.                                                                                  |
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -14729,6 +14357,7 @@ export default async function Page() {
 | `v13.4.0`    | `draftMode` introduced.                                                                                  |
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -14862,6 +14491,7 @@ Browsers typically include `cache-control: no-cache` when the cache is disabled 
 | `v13.0.0` | `fetch` introduced. |
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -14953,40 +14583,7 @@ export default async function AdminPage() {
 
 ### Calling `forbidden()` after streaming has started
 
-To keep the page's shell and loading UI visible while the session is checked, put the role check in the [Data Access Layer](/docs/app/guides/authentication#creating-a-data-access-layer-dal) function that loads the data, and render it in a component wrapped in [`<Suspense>`](https://react.dev/reference/react/Suspense). The check runs inside the boundary, so the shell streams while the session resolves:
-
-```tsx
-// Archivo: app/projects/page.tsx switcher highlight={8}
-import { Suspense } from 'react'
-import { verifySession } from '@/app/lib/dal'
-import { forbidden } from 'next/navigation'
-
-async function getProjects() {
-  const session = await verifySession()
-  if (session?.role !== 'admin') {
-    forbidden()
-  }
-  return db.projects.findMany()
-}
-
-async function Projects() {
-  const projects = await getProjects()
-  return (
-    <ul>
-      {projects.map((project) => (
-        <li key={project.id}>{project.name}</li>
-      ))}
-    </ul>
-  )
-}
-
-export default function ProjectsPage() {
-  return (
-    <main>
-      <h1>Projects</h1>
-      <Suspense fallback={<p>Loading...</p>}>
-        <Projects />
-      </Suspense>
+To keep the page's shell and loading UI visible while the session is checked, put the role check in the [Data Access Layer](/docs/app/guides/authentication#creating-a-data-access-layer-dal) function that loads the data, and render it in a component wrapped in [```<Suspense>``
     </main>
   )
 }
@@ -15021,9 +14618,7 @@ export default function ProjectsPage() {
   return (
     <main>
       <h1>Projects</h1>
-      <Suspense fallback={<p>Loading...</p>}>
-        <Projects />
-      </Suspense>
+      ``<Suspense>``
     </main>
   )
 }
@@ -15057,7 +14652,7 @@ export default function Forbidden() {
 }
 ```
 
-The trade-off is the HTTP status code. Because the check runs inside the `<Suspense>` boundary, the response has already begun streaming as a `200`, and the status can't change once streaming has started. This is usually fine for a page, where the user sees the `forbidden` UI regardless. To return a real `403` status, the check has to run before the response streams. With [Cache Components](/docs/app/getting-started/caching), every dynamic route streams a static shell first, so run that check in [`proxy`](/docs/app/api-reference/file-conventions/proxy) instead. See [Status codes](/docs/app/api-reference/file-conventions/loading#status-codes).
+The trade-off is the HTTP status code. Because the check runs inside the ``<Suspense>`` boundary, the response has already begun streaming as a `200`, and the status can't change once streaming has started. This is usually fine for a page, where the user sees the `forbidden` UI regardless. To return a real `403` status, the check has to run before the response streams. With [Cache Components](/docs/app/getting-started/caching), every dynamic route streams a static shell first, so run that check in [`proxy`](/docs/app/api-reference/file-conventions/proxy) instead. See [Status codes](/docs/app/api-reference/file-conventions/loading#status-codes).
 
 ### Role-based route protection
 
@@ -15160,6 +14755,7 @@ export async function updateRole(formData) {
 | Version   | Changes                 |
 | --------- | ----------------------- |
 | `v15.1.0` | `forbidden` introduced. |
+
 
 
 [⬆ Subir al inicio del capítulo](#)
@@ -15451,6 +15047,7 @@ export default async function Image({ params, id }) {
 | `v16.0.0` | `id` passed to the Image generation function is now a promise that resolves to `string` or `number` |
 | `v16.0.0` | `params` passed to the Image generation function is now a promise that resolves to an object        |
 | `v13.3.0` | `generateImageMetadata` introduced.                                                                 |
+
 
 
 [⬆ Subir al inicio del capítulo](#)
@@ -16856,9 +16453,7 @@ const Connection = async () => {
 
 async function DynamicMarker() {
   return (
-    <Suspense>
-      <Connection />
-    </Suspense>
+    ``<Suspense>``
   )
 }
 
@@ -16997,6 +16592,7 @@ export const metadata = {
 | `v13.2.0` | `metadata` and `generateMetadata` introduced.                                                                                                           |
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -17084,6 +16680,7 @@ export default async function sitemap(props) {
 | `v16.0.0` | The `id` values returned from `generateSitemaps` are now passed as a promise that resolves to a `string` to the sitemap function.                    |
 | `v15.0.0` | `generateSitemaps` now generates consistent URLs between development and production                                                                  |
 | `v13.3.2` | `generateSitemaps` introduced. In development, you can view the generated sitemap on `/.../sitemap.xml/[id]`. For example, `/product/sitemap.xml/1`. |
+
 
 
 [⬆ Subir al inicio del capítulo](#)
@@ -17665,6 +17262,7 @@ export async function generateStaticParams({
 | `v13.0.0` | `generateStaticParams` introduced. |
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -17879,27 +17477,7 @@ export async function generateViewport() {
 }
 ```
 
-If viewport genuinely requires runtime data, wrap the document `<body>` in a [`<Suspense>`](https://react.dev/reference/react/Suspense) boundary to signal that the entire route should be dynamic. The shell ships immediately and the document streams in once the viewport resolves:
-
-```tsx
-// Archivo: app/layout.tsx highlight={1,13,17}
-import { Suspense } from 'react'
-import { cookies } from 'next/headers'
-
-export async function generateViewport() {
-  const cookieJar = await cookies()
-  return {
-    themeColor: cookieJar.get('theme-color')?.value,
-  }
-}
-
-export default function RootLayout({ children }) {
-  return (
-    <Suspense>
-      <html>
-        <body>{children}</body>
-      </html>
-    </Suspense>
+If viewport genuinely requires runtime data, wrap the document `<body>` in a [```<Suspense>``
   )
 }
 ```
@@ -17993,6 +17571,7 @@ export const viewport = {
 | `v14.0.0` | `viewport` and `generateViewport` introduced. |
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -18053,7 +17632,7 @@ export default async function Page() {
   - In version 14 and earlier, `headers` was a synchronous function. To help with backwards compatibility, you can still access it synchronously in Next.js 15, but this behavior will be deprecated in the future.
 - Since `headers` is read-only, you cannot `set` or `delete` the outgoing request headers.
 - `headers` is a [Request-time API](/docs/app/glossary#request-time-apis) whose returned values cannot be known ahead of time. Using it in will opt a route into **[dynamic rendering](/docs/app/glossary#dynamic-rendering)**.
-- With [Cache Components](/docs/app/getting-started/caching), calling `headers()` outside of a [`<Suspense>`](https://react.dev/reference/react/Suspense) boundary prevents the route from being prerendered. See [Next.js encountered runtime data during prerendering](/docs/messages/blocking-prerender-runtime) for fix options.
+- With [Cache Components](/docs/app/getting-started/caching), calling `headers()` outside of a [``<Suspense>``](https://react.dev/reference/react/Suspense) boundary prevents the route from being prerendered. See [Next.js encountered runtime data during prerendering](/docs/messages/blocking-prerender-runtime) for fix options.
 
 ## Examples
 
@@ -18080,6 +17659,7 @@ export default async function Page() {
 | ------------ | ------------------------------------------------------------------------------------------------------ |
 | `v15.0.0-RC` | `headers` is now an async function. A [codemod](/docs/app/guides/upgrading/codemods#150) is available. |
 | `v13.0.0`    | `headers` introduced.                                                                                  |
+
 
 
 [⬆ Subir al inicio del capítulo](#)
@@ -18308,6 +17888,7 @@ export default async function Image() {
 | `v13.0.0` | `ImageResponse` introduced via `@vercel/og` package.  |
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -18322,6 +17903,7 @@ export default async function Image() {
 > 📝 **Descripción:** *API Reference for Next.js Functions and Hooks.*  
 
 ---
+
 
 
 
@@ -18360,9 +17942,7 @@ import { io } from 'next/cache'
 
 export default function Page() {
   return (
-    <Suspense fallback={<p>Loading...</p>}>
-      <CurrentTime />
-    </Suspense>
+    ``<Suspense>``
   )
 }
 
@@ -18379,9 +17959,7 @@ import { io } from 'next/cache'
 
 export default function Page() {
   return (
-    <Suspense fallback={<p>Loading...</p>}>
-      <CurrentTime />
-    </Suspense>
+    ``<Suspense>``
   )
 }
 
@@ -18391,7 +17969,7 @@ async function CurrentTime() {
 }
 ```
 
-In this route `CurrentTime` is wrapped in a `<Suspense>` boundary, during prerender, the `await io()` suspends and the fallback ships in the static shell. If `CurrentTime` were rendered inside a [`"use cache"`](/docs/app/api-reference/directives/use-cache) scope instead, `io()` would be a no-op, the value is captured into the static shell and no `<Suspense>` boundary is required.
+In this route `CurrentTime` is wrapped in a ``<Suspense>`` boundary, during prerender, the `await io()` suspends and the fallback ships in the static shell. If `CurrentTime` were rendered inside a [`"use cache"`](/docs/app/api-reference/directives/use-cache) scope instead, `io()` would be a no-op, the value is captured into the static shell and no ``<Suspense>`` boundary is required.
 
 In a Client Component, call `io()` with React's [`use`](https://react.dev/reference/react/use) hook before reading a synchronous source like `Date.now()`. Client Components prerender on the server during SSR, where the read would otherwise be included in the static shell:
 
@@ -18422,7 +18000,7 @@ export function CurrentTime() {
 ## When you don't need `io()`
 
 - The component already uses a [Request-time API](/docs/app/glossary#request-time-apis) like `cookies()` or `headers()`. The request-time API is itself the suspension point.
-- The data comes from an awaited `fetch` or async database query wrapped in `<Suspense>`. The `await` is the suspension point.
+- The data comes from an awaited `fetch` or async database query wrapped in ``<Suspense>``. The `await` is the suspension point.
 
 ## How `io()` differs from `connection()`
 
@@ -18449,6 +18027,7 @@ A `Promise<void>`. With Cache Components enabled, awaiting this promise stops pr
 | Version   | Changes     |
 | --------- | ----------- |
 | `v16.3.0` | `io` added. |
+
 
 
 [⬆ Subir al inicio del capítulo](#)
@@ -18575,6 +18154,7 @@ The following options are available:
 | Version   | Changes                 |
 | --------- | ----------------------- |
 | `v15.0.0` | `ip` and `geo` removed. |
+
 
 
 [⬆ Subir al inicio del capítulo](#)
@@ -18790,6 +18370,7 @@ function proxy(request: NextRequest) {
   })
 }
 ```
+
 
 
 [⬆ Subir al inicio del capítulo](#)
@@ -19240,6 +18821,7 @@ The exception is [multiple root layouts](#multiple-root-layouts). When different
 | `v16.3.0` | `next/root-params` introduced. |
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -19331,44 +18913,7 @@ Like any exception, it travels up the call stack until something catches it. A `
 
 ### Calling `notFound()` after streaming has started
 
-To keep a page's shell and loading UI visible while data loads, do the existence check inside a component wrapped in [`<Suspense>`](https://react.dev/reference/react/Suspense) instead of blocking the whole route. The idiomatic place for the check is the data-access function itself, awaited by the component that needs the data:
-
-```tsx
-// Archivo: app/blog/[slug]/page.tsx switcher highlight={8}
-import { Suspense } from 'react'
-import Link from 'next/link'
-import { notFound } from 'next/navigation'
-
-async function getPost(slug: string) {
-  const res = await fetch(`https://api.example.com/posts/${slug}`)
-  if (res.status === 404) {
-    notFound()
-  }
-  if (!res.ok) {
-    throw new Error(`Failed to load post: ${res.status}`)
-  }
-  return res.json()
-}
-
-async function Article({ slug }: { slug: string }) {
-  const post = await getPost(slug)
-  return (
-    <article>
-      <h1>{post.title}</h1>
-      <p>{post.content}</p>
-    </article>
-  )
-}
-
-export default async function PostPage({ params }: PageProps<'/blog/[slug]'>) {
-  const { slug } = await params
-
-  return (
-    <section>
-      [Blog](/blog)
-      <Suspense fallback={<p>Loading...</p>}>
-        <Article slug={slug} />
-      </Suspense>
+To keep a page's shell and loading UI visible while data loads, do the existence check inside a component wrapped in [```<Suspense>``
     </section>
   )
 }
@@ -19407,9 +18952,7 @@ export default async function PostPage({ params }) {
   return (
     <section>
       [Blog](/blog)
-      <Suspense fallback={<p>Loading...</p>}>
-        <Article slug={slug} />
-      </Suspense>
+      ``<Suspense>``
     </section>
   )
 }
@@ -19443,7 +18986,7 @@ export default function NotFound() {
 }
 ```
 
-The trade-off is the HTTP status code. Because the check runs inside the `<Suspense>` boundary, the response has already begun streaming as a `200`, and the status can't change once streaming has started. The `noindex` tag keeps a soft 404 out of search results. To return a real `404` status, the resource has to be checked before the response streams. With [Cache Components](/docs/app/getting-started/caching), every dynamic route streams a static shell first, so run that check in [`proxy`](/docs/app/api-reference/file-conventions/proxy) instead. See [Status codes](/docs/app/api-reference/file-conventions/loading#status-codes).
+The trade-off is the HTTP status code. Because the check runs inside the ``<Suspense>`` boundary, the response has already begun streaming as a `200`, and the status can't change once streaming has started. The `noindex` tag keeps a soft 404 out of search results. To return a real `404` status, the resource has to be checked before the response streams. With [Cache Components](/docs/app/getting-started/caching), every dynamic route streams a static shell first, so run that check in [`proxy`](/docs/app/api-reference/file-conventions/proxy) instead. See [Status codes](/docs/app/api-reference/file-conventions/loading#status-codes).
 
 ### Serving a 404 from a Route Handler
 
@@ -19487,6 +19030,7 @@ export async function GET(request, { params }) {
 | Version   | Changes                |
 | --------- | ---------------------- |
 | `v13.0.0` | `notFound` introduced. |
+
 
 
 [⬆ Subir al inicio del capítulo](#)
@@ -19572,6 +19116,7 @@ export default async function Profile({ params }) {
 ```
 
 > **Good to know**: `permanentRedirect` does not require you to use `return permanentRedirect()` as it uses the TypeScript [`never`](https://www.typescriptlang.org/docs/handbook/2/functions.html#never) type.
+
 
 
 [⬆ Subir al inicio del capítulo](#)
@@ -19813,6 +19358,7 @@ The `redirect()` method uses a `307` by default, instead of a `302` temporary re
 | `v13.0.0` | `redirect` introduced. |
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -19895,6 +19441,7 @@ export async function POST() {
   refresh()
 }
 ```
+
 
 
 [⬆ Subir al inicio del capítulo](#)
@@ -20140,6 +19687,7 @@ export async function GET(request) {
 ```
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -20299,6 +19847,7 @@ revalidateTag(tag, { expire: 0 })
 ```
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -20398,34 +19947,7 @@ export default async function DashboardPage() {
 
 ### Calling `unauthorized()` after streaming has started
 
-To keep the page's shell and loading UI visible while the session is verified, put the auth check in the [Data Access Layer](/docs/app/guides/authentication#creating-a-data-access-layer-dal) function that loads the data, and render it in a component wrapped in [`<Suspense>`](https://react.dev/reference/react/Suspense). The check runs inside the boundary, so the shell streams while the session resolves:
-
-```tsx
-// Archivo: app/account/page.tsx switcher highlight={8}
-import { Suspense } from 'react'
-import { verifySession } from '@/app/lib/dal'
-import { unauthorized } from 'next/navigation'
-
-async function getAccount() {
-  const session = await verifySession()
-  if (!session) {
-    unauthorized()
-  }
-  return db.accounts.findByUserId(session.userId)
-}
-
-async function AccountDetails() {
-  const account = await getAccount()
-  return <p>Signed in as {account.email}</p>
-}
-
-export default function AccountPage() {
-  return (
-    <main>
-      <h1>Account</h1>
-      <Suspense fallback={<p>Loading...</p>}>
-        <AccountDetails />
-      </Suspense>
+To keep the page's shell and loading UI visible while the session is verified, put the auth check in the [Data Access Layer](/docs/app/guides/authentication#creating-a-data-access-layer-dal) function that loads the data, and render it in a component wrapped in [```<Suspense>``
     </main>
   )
 }
@@ -20454,9 +19976,7 @@ export default function AccountPage() {
   return (
     <main>
       <h1>Account</h1>
-      <Suspense fallback={<p>Loading...</p>}>
-        <AccountDetails />
-      </Suspense>
+      ``<Suspense>``
     </main>
   )
 }
@@ -20498,7 +20018,7 @@ export default function Unauthorized() {
 }
 ```
 
-The trade-off is the HTTP status code. Because the check runs inside the `<Suspense>` boundary, the response has already begun streaming as a `200`, and the status can't change once streaming has started. This is usually fine for a page, where the user sees the `unauthorized` UI regardless. To return a real `401` status, the check has to run before the response streams. With [Cache Components](/docs/app/getting-started/caching), every dynamic route streams a static shell first, so run that check in [`proxy`](/docs/app/api-reference/file-conventions/proxy) instead. See [Status codes](/docs/app/api-reference/file-conventions/loading#status-codes).
+The trade-off is the HTTP status code. Because the check runs inside the ``<Suspense>`` boundary, the response has already begun streaming as a `200`, and the status can't change once streaming has started. This is usually fine for a page, where the user sees the `unauthorized` UI regardless. To return a real `401` status, the check has to run before the response streams. With [Cache Components](/docs/app/getting-started/caching), every dynamic route streams a static shell first, so run that check in [`proxy`](/docs/app/api-reference/file-conventions/proxy) instead. See [Status codes](/docs/app/api-reference/file-conventions/loading#status-codes).
 
 ### Displaying login UI to unauthenticated users
 
@@ -20661,6 +20181,7 @@ export async function GET() {
 | `v15.1.0` | `unauthorized` introduced. |
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -20773,6 +20294,7 @@ export default async function Page({ params }) {
 | `v14.0.0` | `unstable_cache` introduced. |
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -20829,6 +20351,7 @@ export default async function ServerComponent() {
 | --------- | ----------------------------------------------- |
 | `v15.0.0` | `unstable_noStore` deprecated for `connection`. |
 | `v14.0.0` | `unstable_noStore` introduced.                  |
+
 
 
 [⬆ Subir al inicio del capítulo](#)
@@ -20907,6 +20430,7 @@ If a route segment is marked to throw an error unless it's static, a Request-tim
 > - You may be able to avoid using `unstable_rethrow` if you encapsulate your API calls that throw and let the **caller** handle the exception.
 > - Only use `unstable_rethrow` if your caught exceptions may include both application errors and framework-controlled exceptions (like `redirect()` or `notFound()`).
 > - Any resource cleanup (like clearing intervals, timers, etc) would have to either happen prior to the call to `unstable_rethrow` or within a `finally` block.
+
 
 
 [⬆ Subir al inicio del capítulo](#)
@@ -21075,6 +20599,7 @@ Use `revalidateTag` instead when:
 
 - [`revalidateTag`](/docs/app/api-reference/functions/revalidateTag) - For invalidating tags in Route Handlers
 - [`revalidatePath`](/docs/app/api-reference/functions/revalidatePath) - For invalidating specific paths
+
 
 
 [⬆ Subir al inicio del capítulo](#)
@@ -21332,6 +20857,7 @@ If the navigation to a new route is fast, users may see an unnecessary flash of 
 | `v15.3.0` | `useLinkStatus` introduced. |
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -21493,7 +21019,7 @@ export default function RootLayout({ children }) {
 
 ### Offline-aware Suspense fallback
 
-When a user navigates to a route while offline, the prefetched static shell renders immediately but the dynamic content behind a `<Suspense>` boundary blocks on the network. For example, use `useOffline` inside a [`loading.tsx`](/docs/app/api-reference/file-conventions/loading) file to explain why the content is taking longer than expected.
+When a user navigates to a route while offline, the prefetched static shell renders immediately but the dynamic content behind a ``<Suspense>`` boundary blocks on the network. For example, use `useOffline` inside a [`loading.tsx`](/docs/app/api-reference/file-conventions/loading) file to explain why the content is taking longer than expected.
 
 ```tsx
 // Archivo: app/destination/loading.tsx switcher
@@ -21536,6 +21062,7 @@ When connectivity is restored, Next.js retries the blocked request and the dynam
 | Version   | Changes                       |
 | --------- | ----------------------------- |
 | `v16.x.0` | `useOffline` hook introduced. |
+
 
 
 [⬆ Subir al inicio del capítulo](#)
@@ -21634,6 +21161,7 @@ See [Next.js encountered URL data in a Client Component outside of Suspense](/do
 | Version   | Changes                 |
 | --------- | ----------------------- |
 | `v13.3.0` | `useParams` introduced. |
+
 
 
 [⬆ Subir al inicio del capítulo](#)
@@ -21819,6 +21347,7 @@ export default function PathnameBadge() {
 | Version   | Changes                   |
 | --------- | ------------------------- |
 | `v13.0.0` | `usePathname` introduced. |
+
 
 
 [⬆ Subir al inicio del capítulo](#)
@@ -22068,6 +21597,7 @@ useReportWebVitals(postWebVitals)
 > Read more about [sending results to Google Analytics](https://github.com/GoogleChrome/web-vitals#send-the-results-to-google-analytics).
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -22188,9 +21718,7 @@ export default function Layout({ children }) {
       <body>
         {children}
 
-        <Suspense fallback={null}>
-          <NavigationEvents />
-        </Suspense>
+        ``<Suspense>``
       </body>
     </html>
   )
@@ -22272,6 +21800,7 @@ When `cacheComponents` is enabled, the App Router preserves Client Component sta
 | --------- | ----------------------------------------------------------------- |
 | `v15.4.0` | Optional `onInvalidate` callback for `router.prefetch` introduced |
 | `v13.0.0` | `useRouter` from `next/navigation` introduced.                    |
+
 
 
 [⬆ Subir al inicio del capítulo](#)
@@ -22371,7 +21900,7 @@ If a route is [prerendered](/docs/app/glossary#prerendering), calling `useSearch
 
 This allows a part of the route to be prerendered while the dynamic part that uses `useSearchParams` is client-side rendered.
 
-We recommend wrapping the Client Component that uses `useSearchParams` in a `<Suspense/>` boundary. This will allow any Client Components above it to be prerendered and sent as part of initial HTML.
+We recommend wrapping the Client Component that uses `useSearchParams` in a ```<Suspense>``` boundary. This will allow any Client Components above it to be prerendered and sent as part of initial HTML.
 
 See [Next.js encountered URL data in a Client Component outside of Suspense](/docs/messages/blocking-prerender-client-hook) for full fix options and trade-offs.
 
@@ -22421,7 +21950,7 @@ import SearchBar from './search-bar'
 // This component passed as a fallback to the Suspense boundary
 // will be rendered in place of the search bar in the initial HTML.
 // When the value is available during React hydration the fallback
-// will be replaced with the `<SearchBar>` component.
+// will be replaced with the ``<SearchBar>`` component.
 function SearchBarFallback() {
   return <>placeholder</>
 }
@@ -22430,9 +21959,9 @@ export default function Page() {
   return (
     <>
       <nav>
-        <Suspense fallback={<SearchBarFallback />}>
-          <SearchBar />
-        </Suspense>
+        ``<Suspense>``}>
+          ``<SearchBar>``
+        `<Suspense>`
       </nav>
       <h1>Dashboard</h1>
     </>
@@ -22448,7 +21977,7 @@ import SearchBar from './search-bar'
 // This component passed as a fallback to the Suspense boundary
 // will be rendered in place of the search bar in the initial HTML.
 // When the value is available during React hydration the fallback
-// will be replaced with the `<SearchBar>` component.
+// will be replaced with the ``<SearchBar>`` component.
 function SearchBarFallback() {
   return <>placeholder</>
 }
@@ -22457,9 +21986,9 @@ export default function Page() {
   return (
     <>
       <nav>
-        <Suspense fallback={<SearchBarFallback />}>
-          <SearchBar />
-        </Suspense>
+        ``<Suspense>``}>
+          ``<SearchBar>``
+        `<Suspense>`
       </nav>
       <h1>Dashboard</h1>
     </>
@@ -22529,7 +22058,7 @@ export default async function Page() {
   return (
     <>
       <nav>
-        <SearchBar />
+        ``<SearchBar>``
       </nav>
       <h1>Dashboard</h1>
     </>
@@ -22547,7 +22076,7 @@ export default async function Page() {
   return (
     <>
       <nav>
-        <SearchBar />
+        ``<SearchBar>``
       </nav>
       <h1>Dashboard</h1>
     </>
@@ -22680,6 +22209,7 @@ export default function ExampleClientComponent() {
 | Version   | Changes                       |
 | --------- | ----------------------------- |
 | `v13.0.0` | `useSearchParams` introduced. |
+
 
 
 [⬆ Subir al inicio del capítulo](#)
@@ -22892,6 +22422,7 @@ export default async function Layout({ children }) {
 | `v13.0.0` | `useSelectedLayoutSegment` introduced. |
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -23004,6 +22535,7 @@ See [Next.js encountered URL data in a Client Component outside of Suspense](/do
 | `v13.0.0` | `useSelectedLayoutSegments` introduced. |
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -23093,6 +22625,7 @@ An object containing information about the operating system.
 An object containing information about the CPU architecture.
 
 - `architecture`: A string representing the architecture of the CPU. Possible values include: `68k`, `amd64`, `arm`, `arm64`, `armhf`, `avr`, `ia32`, `ia64`, `irix`, `irix64`, `mips`, `mips64`, `pa-risc`, `ppc`, `sparc`, `sparc64` or `undefined`
+
 
 
 [⬆ Subir al inicio del capítulo](#)
@@ -23187,6 +22720,7 @@ See [Routing Information](/docs/app/api-reference/adapters/routing-information).
 See [Use Cases](/docs/app/api-reference/adapters/use-cases).
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -23239,6 +22773,7 @@ module.exports = {
 ```
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -23259,6 +22794,7 @@ module.exports = {
 The App Router ([`app` directory](/docs/app)) enables support for [layouts](/docs/app/api-reference/file-conventions/layout), [Server Components](/docs/app/getting-started/server-and-client-components), [streaming](/docs/app/api-reference/file-conventions/loading), and [colocated data fetching](/docs/app/getting-started/fetching-data).
 
 Using the `app` directory will automatically enable [React Strict Mode](https://react.dev/reference/react/StrictMode). Learn how to [incrementally adopt `app`](/docs/app/guides/migrating/app-router-migration#migrating-from-pages-to-app).
+
 
 
 [⬆ Subir al inicio del capítulo](#)
@@ -23334,6 +22870,7 @@ While `assetPrefix` covers requests to `_next/static`, it does not influence the
 > - `/_next/data/` requests for `getStaticProps` pages. These requests will always be made against the main domain to support [Incremental Static Generation](/docs/pages/guides/incremental-static-regeneration), even if you're not using it (for consistency).
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -23372,6 +22909,7 @@ module.exports = {
   },
 }
 ```
+
 
 
 [⬆ Subir al inicio del capítulo](#)
@@ -23456,6 +22994,7 @@ export default Home
 ```
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -23525,6 +23064,7 @@ Some UI patterns behave differently when components stay mounted instead of unmo
 | Version | Change                                                                                                                            |
 | ------- | --------------------------------------------------------------------------------------------------------------------------------- |
 | 16.0.0  | `cacheComponents` introduced. This flag controls the `ppr`, `useCache`, and `dynamicIO` flags as a single, unified configuration. |
+
 
 
 [⬆ Subir al inicio del capítulo](#)
@@ -24045,6 +23585,7 @@ Cache operations should be implemented defensively:
 | `v16.0.0` | `cacheHandlers` introduced. |
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -24139,6 +23680,7 @@ The configuration object has key values with the following format:
 | `expire`     | `number`  | Maximum duration for which a value can remain stale before switching to dynamic.                          | Optional - Must be longer than `revalidate` |
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -24187,6 +23729,7 @@ Setting `cacheMaxMemorySize: 0` disables both in-memory caches. It is also a way
 > **Good to know**: `next dev` keeps its own in-memory cache regardless of this option, so reloads stay fast. Production honors the configured value exactly.
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -24218,6 +23761,7 @@ module.exports = {
 ```
 
 We **do not recommend disabling compression** unless you have compression configured on your server, as compression reduces bandwidth usage and improves the performance of your application. For example, you're using [nginx](https://nginx.org/) and want to switch to `brotli`, set the `compress` option to `false` to allow nginx to handle compression.
+
 
 
 [⬆ Subir al inicio del capítulo](#)
@@ -24253,6 +23797,7 @@ module.exports = {
 
 - `'anonymous'`: Adds [`crossOrigin="anonymous"`](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/crossorigin#anonymous) attribute.
 - `'use-credentials'`: Adds [`crossOrigin="use-credentials"`](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/crossorigin#use-credentials).
+
 
 
 [⬆ Subir al inicio del capítulo](#)
@@ -24440,6 +23985,7 @@ The algorithm chooses where to split chunks to minimize the total download cost 
 </details>
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -24529,6 +24075,7 @@ A per-deployment value only avoids skew if requests are also routed by deploymen
 - [generateBuildId](/docs/app/api-reference/config/next-config-js/generateBuildId)
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -24595,7 +24142,7 @@ There are two reasons a route might opt out of prerendering:
 - The presence of [Request-time APIs](/docs/app/glossary#request-time-apis) which rely on request information.
 - An [uncached data request](/docs/app/getting-started/fetching-data), like a call to an ORM or database driver.
 
-Check your route for any of these conditions, and if you are not able to statically render the route, then consider using [`loading.js`](/docs/app/api-reference/file-conventions/loading) or [`<Suspense />`](https://react.dev/reference/react/Suspense) to leverage [streaming](/docs/app/getting-started/linking-and-navigating#streaming).
+Check your route for any of these conditions, and if you are not able to statically render the route, then consider using [`loading.js`](/docs/app/api-reference/file-conventions/loading) or [```<Suspense>```](https://react.dev/reference/react/Suspense) to leverage [streaming](/docs/app/getting-started/linking-and-navigating#streaming).
 
 > 📘 **Nota para Pages Router:**
 > When exporting [`getServerSideProps`](/docs/pages/building-your-application/data-fetching/get-server-side-props) or [`getInitialProps`](/docs/pages/api-reference/functions/get-initial-props) from a page, it will be marked as dynamic.
@@ -24607,6 +24154,7 @@ Check your route for any of these conditions, and if you are not able to statica
 | `v16.0.0` | `appIsrStatus`, `buildActivity`, and `buildActivityPosition` options have been removed.                                                             |
 | `v15.2.0` | Improved on-screen indicator with new `position` option. `appIsrStatus`, `buildActivity`, and `buildActivityPosition` options have been deprecated. |
 | `v15.0.0` | Static on-screen indicator added with `appIsrStatus` option.                                                                                        |
+
 
 
 [⬆ Subir al inicio del capítulo](#)
@@ -24638,6 +24186,7 @@ module.exports = {
 Now if you run `next build` Next.js will use `build` instead of the default `.next` folder.
 
 > `distDir` **should not** leave your project directory. For example, `../build` is an **invalid** directory.
+
 
 
 [⬆ Subir al inicio del capítulo](#)
@@ -24701,6 +24250,7 @@ return <h1>The value of customKey is: {'my-value'}</h1>
 ```
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -24731,6 +24281,7 @@ module.exports = {
 Now when sending the `Cache-Control` header the expire time will be calculated depending on the specific revalidate period.
 
 For example, if you have a revalidate of 15 minutes on a path and the expire time is one hour the generated `Cache-Control` header will be `s-maxage=900, stale-while-revalidate=2700` so that it can stay stale for 15 minutes less than the configured expire time.
+
 
 
 [⬆ Subir al inicio del capítulo](#)
@@ -24825,6 +24376,7 @@ next export -o outdir
 > **Warning**: Using `exportPathMap` is deprecated and is overridden by `getStaticPaths` inside `pages`. We don't recommend using them together.
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -24857,6 +24409,7 @@ module.exports = {
 > **Good to know:** When [`deploymentId`](/docs/app/api-reference/config/next-config-js/deploymentId) is set, Next.js uses a constant build ID and `generateBuildId` has no effect. [Version skew](/docs/app/guides/self-hosting#version-skew) is detected from the deployment ID instead.
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -24882,6 +24435,7 @@ module.exports = {
   generateEtags: false,
 }
 ```
+
 
 
 [⬆ Subir al inicio del capítulo](#)
@@ -25486,6 +25040,7 @@ Learn more about adding a [Content Security Policy](/docs/app/guides/content-sec
 | `v9.5.0`  | Headers added.   |
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -25579,6 +25134,7 @@ module.exports = {
 | 15.2.0  | `htmlLimitedBots` option introduced. |
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -25606,6 +25162,7 @@ module.exports = {
   },
 }
 ```
+
 
 
 [⬆ Subir al inicio del capítulo](#)
@@ -25884,6 +25441,7 @@ export default function aioLoader({ src, width, quality }) {
 ```
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -25998,6 +25556,7 @@ Learn how to [configure ISR](/docs/app/guides/self-hosting#caching-and-isr) when
 | `v13.4.0` | `incrementalCacheHandlerPath` support for `revalidateTag`.   |
 | `v13.4.0` | `incrementalCacheHandlerPath` support for standalone output. |
 | `v12.2.0` | Experimental `incrementalCacheHandlerPath` added.            |
+
 
 
 [⬆ Subir al inicio del capítulo](#)
@@ -26140,6 +25699,7 @@ expect(getRedirectUrl(response)).toEqual('https://nextjs.org/test2')
 ```
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -26225,6 +25785,7 @@ This trade-off matters most with:
 > - This feature is not available in development mode and only works in production builds
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -26306,6 +25867,7 @@ Modules that do not export `onRouterTransitionStart` are skipped during navigati
 | Version   | Changes                                  |
 | --------- | ---------------------------------------- |
 | `v16.3.0` | `instrumentationClientInject` introduced |
+
 
 
 [⬆ Subir al inicio del capítulo](#)
@@ -26507,6 +26069,7 @@ module.exports = {
 | `v14.0.0` | `logging.fetches` moved to stable for App Router                                 |
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -26540,6 +26103,7 @@ module.exports = withMDX(nextConfig)
 ```
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -26570,6 +26134,7 @@ module.exports = {
   },
 }
 ```
+
 
 
 [⬆ Subir al inicio del capítulo](#)
@@ -26629,6 +26194,7 @@ The following libraries are optimized by default:
 - `react-icons/*`
 - `effect`
 - `@effect/*`
+
 
 
 [⬆ Subir al inicio del capítulo](#)
@@ -26801,6 +26367,7 @@ module.exports = {
 ```
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -26844,6 +26411,7 @@ NEXT_HASH_SALT=my-deployment-salt next build
 | Version  | Changes                     |
 | -------- | --------------------------- |
 | `16.3.0` | `outputHashSalt` was added. |
+
 
 
 [⬆ Subir al inicio del capítulo](#)
@@ -26905,6 +26473,7 @@ module.exports = withMDX(nextConfig)
 > ```
 > 
 > Then, rename your pages to have a file extension that includes `.page` (e.g. rename `MyPage.tsx` to `MyPage.page.tsx`). Ensure you rename _all_ Next.js pages, including the files mentioned above.
+
 
 
 [⬆ Subir al inicio del capítulo](#)
@@ -26980,6 +26549,7 @@ A segment that exports an explicit [`prefetch`](/docs/app/api-reference/file-con
 | 16.3.0  | `partialPrefetching` introduced. Requires `cacheComponents` to be enabled. |
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -27003,6 +26573,7 @@ module.exports = {
   poweredByHeader: false,
 }
 ```
+
 
 
 [⬆ Subir al inicio del capítulo](#)
@@ -27113,6 +26684,7 @@ Lower thresholds keep more per-segment deduplication; higher thresholds inline m
 | 16.2.0  | `experimental.prefetchInlining` added.              |
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -27143,6 +26715,7 @@ When the `productionBrowserSourceMaps` option is enabled, the source maps will b
 
 - Adding source maps can increase `next build` time
 - Increases memory usage during `next build`
+
 
 
 [⬆ Subir al inicio del capítulo](#)
@@ -27280,6 +26853,7 @@ export async function POST(request: NextRequest) {
 - For applications handling large file uploads, consider increasing the limit accordingly
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -27400,6 +26974,7 @@ export default function Page() {
 > **Note:** You can also use the `"use no memo"` directive from React for the opposite effect, to opt-out a component or hook.
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -27427,6 +27002,7 @@ module.exports = {
 > **Good to know**: This option is only available in App Router.
 
 Depending on the type of proxy between the browser and the server, the headers can be truncated. For example, if you are using a reverse proxy that doesn't support long headers, you should set a lower value to ensure that the headers are not truncated.
+
 
 
 [⬆ Subir al inicio del capítulo](#)
@@ -27460,6 +27036,7 @@ module.exports = {
 ```
 
 If you or your team are not ready to use Strict Mode in your entire application, that's OK! You can incrementally migrate on a page-by-page basis using `<React.StrictMode>`.
+
 
 
 [⬆ Subir al inicio del capítulo](#)
@@ -27835,6 +27412,7 @@ In some rare cases, you might need to assign a custom status code for older HTTP
 | `v13.3.0` | `missing` added.   |
 | `v10.2.0` | `has` added.       |
 | `v9.5.0`  | `redirects` added. |
+
 
 
 [⬆ Subir al inicio del capítulo](#)
@@ -28323,6 +27901,7 @@ module.exports = {
 | `v9.5.0`  | Headers added.   |
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -28384,6 +27963,7 @@ module.exports = nextConfig
 >
 > - `sassOptions` are not typed outside of `implementation` because Next.js does not maintain the other possible properties.
 > - The `functions` property for defining custom Sass functions is only supported with webpack. When using Turbopack, custom Sass functions are not available because Turbopack's Rust-based architecture cannot directly execute JavaScript functions passed through this option.
+
 
 
 [⬆ Subir al inicio del capítulo](#)
@@ -28491,6 +28071,7 @@ module.exports = config
 ```
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -28538,6 +28119,7 @@ module.exports = nextConfig
 ```
 
 > **Good to know:** For better observability, we recommend using the [`logging.fetches`](/docs/app/api-reference/config/next-config-js/logging) option which logs fetch cache hits and misses in the console during development.
+
 
 
 [⬆ Subir al inicio del capítulo](#)
@@ -28654,6 +28236,7 @@ Next.js includes a [short list of popular packages](https://github.com/vercel/ne
 | Version   | Changes                                                                                                        |
 | --------- | -------------------------------------------------------------------------------------------------------------- |
 | `v15.0.0` | Moved from experimental to stable. Renamed from `serverComponentsExternalPackages` to `serverExternalPackages` |
+
 
 
 [⬆ Subir al inicio del capítulo](#)
@@ -28800,6 +28383,7 @@ export default function proxy(request) {
 | `v13.1.0` | `skipMiddlewareUrlNormalize` added.                                   |
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -28939,6 +28523,7 @@ export default function proxy(request) {
 | `v13.1.0` | `skipTrailingSlashRedirect` added. |
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -28992,6 +28577,7 @@ The `static` and `dynamic` properties correspond with the time period (in second
 | --------- | ---------------------------------------------------------- |
 | `v15.0.0` | The `dynamic` `staleTimes` default changed from 30s to 0s. |
 | `v14.2.0` | Experimental `staleTimes` introduced.                      |
+
 
 
 [⬆ Subir al inicio del capítulo](#)
@@ -29048,6 +28634,7 @@ The following options are available:
 - `staticGenerationMinPagesPerWorker`: The minimum number of pages to be processed before starting a new worker.
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -29101,6 +28688,7 @@ See [Supporting immutable static assets](/docs/app/api-reference/adapters/immuta
 | Version   | Changes                                    |
 | --------- | ------------------------------------------ |
 | `v16.3.0` | Added support for immutable static assets. |
+
 
 
 [⬆ Subir al inicio del capítulo](#)
@@ -29344,6 +28932,7 @@ export async function Dashboard() {
 A better approach is to remove `SERVICE_API_KEY` from the data returned by `getSystemConfig`.
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -29386,6 +28975,7 @@ When used with [`output: "export"`](/docs/app/guides/static-exports) configurati
 | Version  | Changes                |
 | -------- | ---------------------- |
 | `v9.5.0` | `trailingSlash` added. |
+
 
 
 [⬆ Subir al inicio del capítulo](#)
@@ -29432,6 +29022,7 @@ Turbopack transpiles workspace packages (npm, pnpm, or Yarn workspaces) in your 
 | Version   | Changes                    |
 | --------- | -------------------------- |
 | `v13.0.0` | `transpilePackages` added. |
+
 
 
 [⬆ Subir al inicio del capítulo](#)
@@ -29856,6 +29447,7 @@ The option automatically adds a polyfill for debug IDs to the JavaScript bundle 
 | `13.0.0` | `experimental.turbo` introduced.                     |
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -30013,6 +29605,7 @@ chunks is worth it.
   bias toward fewer, larger chunks and fewer requests overall.
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -30085,6 +29678,7 @@ If your build environment never preserves `.next/cache`, set `turbopackFileSyste
 | `v16.1.0` | FileSystem caching is enabled by default for development       |
 | `v16.0.0` | Beta release with separate flags for build and dev             |
 | `v15.5.0` | Persistent caching released as experimental on canary releases |
+
 
 
 [⬆ Subir al inicio del capítulo](#)
@@ -30274,6 +29868,7 @@ module.exports = {
 | `v16.2.0` | `turbopack.ignoreIssue` introduced. |
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -30351,6 +29946,7 @@ my-app/
 | `v16.3.0` | `turbopackLocalPostcssConfig` introduced. |
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -30408,6 +30004,7 @@ module.exports = nextConfig
 | Version   | Changes                                             |
 | --------- | --------------------------------------------------- |
 | `v16.3.0` | `turbopackMemoryEviction` released as experimental. |
+
 
 
 [⬆ Subir al inicio del capítulo](#)
@@ -30475,6 +30072,7 @@ See the [`reactCompiler` option documentation](/docs/app/api-reference/config/ne
 | `v16.3.0` | Introduced the experimental `turbopackRustReactCompiler` option for the native Rust React Compiler. |
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -30503,6 +30101,7 @@ const nextConfig = {
 
 module.exports = nextConfig
 ```
+
 
 
 [⬆ Subir al inicio del capítulo](#)
@@ -30576,6 +30175,7 @@ module.exports = {
 ```
 
 See the [TypeScript configuration](/docs/app/api-reference/config/typescript#custom-tsconfig-path) page for more details.
+
 
 
 [⬆ Subir al inicio del capítulo](#)
@@ -30682,6 +30282,7 @@ console.log(logo.pathname)
 
 // prints "/_next/static/media/file.a9727b5d.txt"
 ```
+
 
 
 [⬆ Subir al inicio del capítulo](#)
@@ -30825,6 +30426,7 @@ Composite groups (shorthand for enabling multiple features at once):
 | `14.2.0` | Turbopack's default CSS processor was changed from `@swc/css` to Lightning CSS. `useLightningcss` became ignored on Turbopack, and a legacy `experimental.turbo.useSwcCss` option was added. |
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -30933,6 +30535,7 @@ In practice, this feature is unlikely to flood your server. The only extra traff
 | `v16.x.0` | `experimental.useOffline` configuration option introduced. |
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -31012,6 +30615,7 @@ If you opt out while using TypeScript 7, `next build` exits because the TypeScri
 Learn more about [using TypeScript 7 with Next.js](/docs/app/api-reference/config/typescript#using-typescript-7).
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -31047,6 +30651,7 @@ module.exports = {
 ```
 
 Valid attribution values are all `web-vitals` metrics specified in the [`NextWebVitalsMetric`](https://github.com/vercel/next.js/blob/442378d21dd56d6e769863eb8c2cb521a463a2e0/packages/next/shared/lib/utils.ts#L43) type.
+
 
 
 [⬆ Subir al inicio del capítulo](#)
@@ -31138,6 +30743,7 @@ module.exports = {
 #### `nextRuntime`
 
 Notice that `isServer` is `true` when `nextRuntime` is `"edge"` or `"nodejs"`, `nextRuntime` `"edge"` is currently for proxy and Server Components in edge runtime only.
+
 
 
 [⬆ Subir al inicio del capítulo](#)
@@ -31674,6 +31280,7 @@ When you need to declare custom types, you might be tempted to modify `next-env.
 | `v10.2.1` | [Incremental type checking](https://www.typescriptlang.org/tsconfig#incremental) support added when enabled in your `tsconfig.json`. |
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -32084,6 +31691,7 @@ When you spread `...nextConfig`, you're adding multiple config objects that incl
 | `v16.0.0` | `next lint` and the `eslint` next.config.js option were removed in favor of the ESLint CLI. A [codemod](/docs/app/guides/upgrading/codemods#migrate-from-next-lint-to-eslint-cli) is available to help you migrate. |
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -32098,6 +31706,7 @@ When you spread `...nextConfig`, you're adding multiple config objects that incl
 > 📝 **Descripción:** *Learn how to configure Next.js applications.*  
 
 ---
+
 
 
 
@@ -32291,6 +31900,7 @@ bun create next-app --example "https://github.com/.../" [your-project-name]
 ```
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -32310,6 +31920,7 @@ Next.js comes with **two** Command Line Interface (CLI) tools:
 
 - **`create-next-app`**: Quickly create a new Next.js application using the default template or an [example](https://github.com/vercel/next.js/tree/canary/examples) from a public GitHub repository.
 - **`next`**: Run the Next.js development server, build your application, and more.
+
 
 
 [⬆ Subir al inicio del capítulo](#)
@@ -32766,6 +32377,7 @@ The generated `.cpuprofile` files can be opened in Chrome DevTools (Performance 
 | `v15.4.0` | Add `--debug-prerender` option for `next build` to help debug prerender errors. |
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -32794,6 +32406,7 @@ module.exports = nextConfig
 ```
 
 Alternatively `NEXT_ADAPTER_PATH` can be set to enable zero-config usage in deployment platforms.
+
 
 
 [⬆ Subir al inicio del capítulo](#)
@@ -32935,6 +32548,7 @@ module.exports = adapter
 ```
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -32986,6 +32600,7 @@ Called after the build process completes with detailed information about routes 
 - `context.config`: The final Next.js configuration (with `modifyConfig` applied)
 - `context.nextVersion`: Version of Next.js being used
 - `context.buildId`: Unique identifier for the current build
+
 
 
 [⬆ Subir al inicio del capítulo](#)
@@ -33232,6 +32847,7 @@ Additionally it receives `NEXT_TEST_DIR` and `NEXT_TEST_DEPLOY_URL` as environme
 The cleanup script can be used to clean up any resources created by the deploy script. It runs after the tests have completed.
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -33295,6 +32911,7 @@ if (result.resolvedPathname) {
 - `routeMatches`: A record of named matches extracted from dynamic route segments.
 
 For example, if `/blog/post-1?draft=1` matches `/blog/[slug]?slug=post-1`, `resolvedPathname` is `/blog/[slug]` while `invocationTarget.pathname` is `/blog/post-1`.
+
 
 
 [⬆ Subir al inicio del capítulo](#)
@@ -33424,6 +33041,7 @@ requestMeta.onCacheEntryV2 callback
 ```
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -33464,6 +33082,7 @@ When your adapter detects a PPR-enabled route with a cached static shell:
 3. The handler will render only the deferred Suspense boundaries and stream the result.
 
 > **Good to know:** In standard `next start`, the server handles both the shell and dynamic render in a single pass automatically. The resume protocol is useful for adapter-based deployments and CDN-to-origin architectures that want to serve the shell separately. See the [PPR Platform Guide](/docs/app/guides/ppr-platform-guide) for the full implementation context.
+
 
 
 [⬆ Subir al inicio del capítulo](#)
@@ -33571,6 +33190,7 @@ Relevant files in the Next.js core:
 - [`packages/next/src/build/templates/edge-app-route.ts`](https://github.com/vercel/next.js/blob/canary/packages/next/src/build/templates/edge-app-route.ts)
 - [`packages/next/src/build/templates/pages-edge-api.ts`](https://github.com/vercel/next.js/blob/canary/packages/next/src/build/templates/pages-edge-api.ts)
 - and [`packages/next/src/build/templates/middleware.ts`](https://github.com/vercel/next.js/blob/canary/packages/next/src/build/templates/middleware.ts)
+
 
 
 [⬆ Subir al inicio del capítulo](#)
@@ -33829,6 +33449,7 @@ See [Supporting immutable static assets](/docs/app/api-reference/adapters/immuta
 ```
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -33888,6 +33509,7 @@ Each route entry can include:
 - `priority`: Internal route priority flag
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -33911,6 +33533,7 @@ Common use cases for adapters include:
 - **Custom Bundling**: Package outputs in platform-specific formats
 - **Build Validation**: Ensure outputs meet specific requirements
 - **Route Generation**: Use processed route information to generate platform-specific routing configs
+
 
 
 [⬆ Subir al inicio del capítulo](#)
@@ -33986,6 +33609,7 @@ const adapter = {
 ```
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -34002,6 +33626,7 @@ const adapter = {
 ---
 
 Use this section to build and validate deployment adapters that integrate with the Next.js build and runtime model.
+
 
 
 [⬆ Subir al inicio del capítulo](#)
@@ -34190,6 +33815,7 @@ export const config = {
 `unstable_allowDynamic` is a [glob](https://github.com/micromatch/micromatch#matching-features), or an array of globs, ignoring dynamic code evaluation for specific files. The globs are relative to your application root folder.
 
 Be warned that if these statements are executed on the Edge, _they will throw and cause a runtime error_.
+
 
 
 [⬆ Subir al inicio del capítulo](#)
@@ -34670,6 +34296,7 @@ Turbopack is a **Rust-based**, **incremental** bundler designed to make local de
 | `v15.0.0` | Turbopack for `dev` stable                                                                                         |
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -34684,6 +34311,7 @@ Turbopack is a **Rust-based**, **incremental** bundler designed to make local de
 > 📝 **Descripción:** *Next.js API Reference for the App Router.*  
 
 ---
+
 
 
 

@@ -2,7 +2,7 @@
 
 > 📌 **Capítulo 09** | Libro Guía Next.js v16.3.7  
 > 📝 **Resumen:** *Desarrollo de Agentes de IA en Next.js, Backend-for-Frontend (BFF), internacionalización, testing y observabilidad.*  
-> 📄 **Temas incluidos:** 20 secciones  
+> 📄 **Temas incluidos en este capítulo:** 20 secciones  
 
 [⬅ Volver al Índice General](./00_INDICE_GENERAL.md)
 
@@ -176,11 +176,11 @@ The same menu prints in the `next dev` terminal and in `next build` output, so a
 // Archivo: Terminal
 Route "/products/[slug]": Next.js encountered uncached data during prerendering.
 
-`fetch(...)` or `connection()` accessed outside of `<Suspense>` prevents the route
+`fetch(...)` or `connection()` accessed outside of ``<Suspense>`` prevents the route
 from being prerendered, blocking the page load and leading to a slower user experience.
 
 Ways to fix this:
-  - [stream] Provide a placeholder with `<Suspense fallback={...}>` around the data access
+  - [stream] Provide a placeholder with ``<Suspense>`` around the data access
   - [cache] Cache the data access with `"use cache"` (does not apply to `connection()`)
   - [block] Set `export const instant = false` to allow a blocking route
 
@@ -246,7 +246,7 @@ Adopt Cache Components in this project using the next-cache-components-adoption 
 The [`next-cache-components-optimizer`](https://www.skills.sh/vercel/next.js/next-cache-components-optimizer) Skill takes a target route or set of routes and works toward the UI you want on screen at click time:
 
 1. Writes a failing [`instant()`](/docs/app/guides/instant-navigation#prevent-regressions-with-e2e-tests) test for the UI you named.
-2. Refactors the route until it passes, often by moving a data read below a `<Suspense>` boundary.
+2. Refactors the route until it passes, often by moving a data read below a ``<Suspense>`` boundary.
 3. Commits the passing test with the refactoring, so it catches future regressions.
 
 It needs a route that already builds with [Cache Components](/docs/app/getting-started/caching).
@@ -282,6 +282,7 @@ Then give the agent this prompt:
 ```prompt
 Adopt Partial Prefetching in this project using the next-partial-prefetching-adoption Skill.
 ```
+
 
 
 [⬆ Subir al inicio del capítulo](#)
@@ -517,6 +518,7 @@ useReportWebVitals((metric) => {
 > ```
 >
 > Read more about [sending results to Google Analytics](https://github.com/GoogleChrome/web-vitals#send-the-results-to-google-analytics).
+
 
 
 [⬆ Subir al inicio del capítulo](#)
@@ -1484,6 +1486,7 @@ Some hosts deploy Route Handlers as lambda functions. This means:
 - WebSockets won’t work because the connection closes on timeout, or after the response is generated.
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -1676,6 +1679,7 @@ To learn more about how to use a JavaScript debugger, take a look at the followi
 - [Node.js debugging in VS Code: Breakpoints](https://code.visualstudio.com/docs/nodejs/nodejs-debugging#_breakpoints)
 - [Chrome DevTools: Debug JavaScript](https://developers.google.com/web/tools/chrome-devtools/javascript)
 - [Firefox DevTools: Debugger](https://firefox-source-docs.mozilla.org/devtools-user/debugger/)
+
 
 
 [⬆ Subir al inicio del capítulo](#)
@@ -1999,6 +2003,7 @@ export default async function RootLayout({ children, params }) {
 - [`tolgee`](https://tolgee.io/apps-integrations/next)
 - [`next-intlayer`](https://intlayer.org/doc/environment/nextjs)
 - [`gt-next`](https://generaltranslation.com/en/docs/next)
+
 
 
 [⬆ Subir al inicio del capítulo](#)
@@ -2339,6 +2344,7 @@ You can learn more about Cypress and Continuous Integration from these resources
 - [Cypress Discord](https://discord.com/invite/cypress)
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -2371,6 +2377,7 @@ Since `async` Server Components are new to the React ecosystem, some tools do no
 ## Guides
 
 See the guides below to learn how to set up Next.js with these commonly used testing tools:
+
 
 
 [⬆ Subir al inicio del capítulo](#)
@@ -2816,6 +2823,7 @@ For further reading, you may find these resources helpful:
 - [Testing Playground](https://testing-playground.com/) - use good testing practices to match elements.
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -2979,6 +2987,7 @@ You can learn more about Playwright and Continuous Integration from these resour
 - [Next.js with Playwright example](https://github.com/vercel/next.js/tree/canary/examples/with-playwright)
 - [Playwright on your CI provider](https://playwright.dev/docs/ci)
 - [Playwright Discord](https://discord.com/invite/playwright-807756831384403968)
+
 
 
 [⬆ Subir al inicio del capítulo](#)
@@ -3247,6 +3256,7 @@ You may find these resources helpful:
 - [React Testing Library Docs](https://testing-library.com/docs/react-testing-library/intro/)
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -3491,6 +3501,7 @@ Additionally it receives `NEXT_TEST_DIR` and `NEXT_TEST_DEPLOY_URL` as environme
 The cleanup script can be used to clean up any resources created by the deploy script. It runs after the tests have completed.
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -3509,6 +3520,7 @@ The cleanup script can be used to clean up any resources created by the deploy s
 
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -3523,6 +3535,7 @@ The cleanup script can be used to clean up any resources created by the deploy s
 > 📝 **Descripción:** *Learn how to debug your Next.js application with VS Code or Chrome DevTools.*  
 
 ---
+
 
 
 
@@ -3900,6 +3913,7 @@ export async function getStaticProps({ locale }) {
 > **Good to know**: These limits have been added initially to prevent potential [performance issues at build time](#dynamic-routes-and-getstaticprops-pages). You can workaround these limits with custom routing using [Proxy](/docs/pages/api-reference/file-conventions/proxy) in Next.js 12.
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -3914,6 +3928,7 @@ export async function getStaticProps({ locale }) {
 > 📝 **Descripción:** *Learn how to set up Next.js with Cypress for End-to-End (E2E) and Component Testing.*  
 
 ---
+
 
 
 
@@ -3936,6 +3951,7 @@ export async function getStaticProps({ locale }) {
 
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -3950,6 +3966,7 @@ export async function getStaticProps({ locale }) {
 > 📝 **Descripción:** *Learn how to set up Next.js with Jest for Unit Testing.*  
 
 ---
+
 
 
 
@@ -3972,6 +3989,7 @@ export async function getStaticProps({ locale }) {
 
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -3990,6 +4008,7 @@ export async function getStaticProps({ locale }) {
 
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -4004,6 +4023,7 @@ export async function getStaticProps({ locale }) {
 > 📝 **Descripción:** *Validate adapters with the Next.js compatibility test harness and custom lifecycle scripts.*  
 
 ---
+
 
 
 

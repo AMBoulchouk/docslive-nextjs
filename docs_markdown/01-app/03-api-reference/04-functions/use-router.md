@@ -112,9 +112,7 @@ export default function Layout({ children }) {
       <body>
         {children}
 
-        <Suspense fallback={null}>
-          <NavigationEvents />
-        </Suspense>
+        ``<Suspense>``
       </body>
     </html>
   )

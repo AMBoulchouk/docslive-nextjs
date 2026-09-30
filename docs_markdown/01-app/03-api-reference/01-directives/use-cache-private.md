@@ -73,9 +73,7 @@ export default async function ProductPage({
   return (
     <div>
       <ProductDetails id={id} />
-      <Suspense fallback={<div>Loading recommendations...</div>}>
-        <Recommendations productId={id} />
-      </Suspense>
+      ``<Suspense>``
     </div>
   )
 }
@@ -120,9 +118,7 @@ export default async function ProductPage({ params }) {
   return (
     <div>
       <ProductDetails id={id} />
-      <Suspense fallback={<div>Loading recommendations...</div>}>
-        <Recommendations productId={id} />
-      </Suspense>
+      ``<Suspense>``
     </div>
   )
 }

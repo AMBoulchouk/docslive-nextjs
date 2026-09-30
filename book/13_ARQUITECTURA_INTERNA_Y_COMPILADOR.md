@@ -2,7 +2,7 @@
 
 > 📌 **Capítulo 13** | Libro Guía Next.js v16.3.7  
 > 📝 **Resumen:** *Next.js Compiler (SWC / Rust), Fast Refresh, compatibilidad con navegadores, guías de contribución y rspack.*  
-> 📄 **Temas incluidos:** 8 secciones  
+> 📄 **Temas incluidos en este capítulo:** 8 secciones  
 
 [⬅ Volver al Índice General](./00_INDICE_GENERAL.md)
 
@@ -61,6 +61,7 @@ For example, this plugin helps ensure you add alt text to `img` tags, use correc
 - [The A11y Project](https://www.a11yproject.com/)
 - Check [color contrast ratios](https://developer.mozilla.org/docs/Web/Accessibility/Understanding_WCAG/Perceivable/Color_contrast) between foreground and background elements
 - Use [`prefers-reduced-motion`](https://web.dev/prefers-reduced-motion/) when working with animations
+
 
 
 [⬆ Subir al inicio del capítulo](#)
@@ -184,6 +185,7 @@ and it's enforced by [React Strict Mode](/docs/pages/api-reference/config/next-c
 which we highly recommend enabling.
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -200,6 +202,7 @@ which we highly recommend enabling.
 ---
 
 Learn about the Next.js architecture and how it works under the hood.
+
 
 
 [⬆ Subir al inicio del capítulo](#)
@@ -587,6 +590,7 @@ If you're using a custom Babel setup, [please share your configuration](https://
 | `v12.0.0` | Next.js Compiler [introduced](https://nextjs.org/blog/next-12).                                                                                                                                          |
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -728,6 +732,7 @@ Next.js has built-in TypeScript support. [Learn more here](/docs/pages/api-refer
 ### Customizing Babel Config (Advanced)
 
 You can customize babel configuration. [Learn more here](/docs/pages/guides/babel).
+
 
 
 [⬆ Subir al inicio del capítulo](#)
@@ -1194,6 +1199,7 @@ While these guidelines are not exhaustive, they should help you get started. If 
 Thank you for contributing to the docs and being part of the Next.js community!
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -1214,6 +1220,7 @@ The Rspack team has created a community plugin for Next.js, which is part of a [
 This plugin is currently experimental. Please use this [discussion thread](https://github.com/vercel/next.js/discussions/77800) to give feedback on any issues you encounter.
 
 Learn more on the [Rspack docs](https://rspack.rs/guide/tech/next) and try out [this example](https://github.com/vercel/next.js/tree/canary/examples/with-rspack).
+
 
 
 [⬆ Subir al inicio del capítulo](#)
@@ -1256,6 +1263,7 @@ Follow Next.js on [Twitter](https://x.com/nextjs) for the latest updates, and su
 ## Code of Conduct
 
 We believe in creating an inclusive, welcoming community. As such, we ask all members to adhere to our [Code of Conduct](https://github.com/vercel/next.js/blob/canary/CODE_OF_CONDUCT.md). This document outlines our expectations for participant behavior. We invite you to read it and help us maintain a safe and respectful environment.
+
 
 
 [⬆ Subir al inicio del capítulo](#)

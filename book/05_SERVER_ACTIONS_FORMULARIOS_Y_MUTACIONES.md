@@ -2,7 +2,7 @@
 
 > 📌 **Capítulo 05** | Libro Guía Next.js v16.3.7  
 > 📝 **Resumen:** *Manejo de mutaciones con Server Actions, estados pendientes, UI optimista, manejo de errores y validación.*  
-> 📄 **Temas incluidos:** 7 secciones  
+> 📄 **Temas incluidos en este capítulo:** 7 secciones  
 
 [⬅ Volver al Índice General](./00_INDICE_GENERAL.md)
 
@@ -647,6 +647,7 @@ export default function ViewCount({ initialViews }) {
 ```
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -1095,6 +1096,7 @@ export default function GlobalError({ error, retry }) {
 ```
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -1190,6 +1192,7 @@ For verified adapters and platforms working toward verified status through the [
 ## A Note on Infrastructure Requirements
 
 Next.js's [rendering model](/docs/app/guides/rendering-philosophy) places the static/dynamic boundary at the component level rather than the route level. Finer-grained boundaries provide more flexibility for developers at the cost of broader requirements for hosting platforms. This is a deliberate trade-off: the infrastructure requirements on this page exist because of what the rendering model delivers.
+
 
 
 [⬆ Subir al inicio del capítulo](#)
@@ -1735,6 +1738,7 @@ export function Entry() {
 This will trigger the submission of the nearest `<form>` ancestor, which will invoke the Server Function.
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -1915,6 +1919,7 @@ To minimize disruption:
 - Prefer rolling deployments over abrupt cutovers when active users are likely to be mid-mutation.
 - Keep `NEXT_SERVER_ACTIONS_ENCRYPTION_KEY` stable across instances so action references remain decryptable everywhere.
 - Surface the error as a retry path in the UI rather than a hard failure, so a refresh recovers the user.
+
 
 
 [⬆ Subir al inicio del capítulo](#)
@@ -2276,6 +2281,7 @@ export default async function handler(req, res) {
 ```
 
 
+
 [⬆ Subir al inicio del capítulo](#)
 
 ---
@@ -2385,6 +2391,7 @@ You can learn more about [Error Boundaries](https://react.dev/reference/react/Co
 ### Reporting Errors
 
 To monitor client errors, use a service like [Sentry](https://github.com/vercel/next.js/tree/canary/examples/with-sentry), Bugsnag or Datadog.
+
 
 
 [⬆ Subir al inicio del capítulo](#)
