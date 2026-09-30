@@ -1,0 +1,42 @@
+# How to upgrade to version 14
+
+> **Documentación Oficial Next.js v16.3.7**  
+> 🌐 **URL en vivo:** [https://nextjs.org/docs/app/guides/upgrading/version-14](https://nextjs.org/docs/app/guides/upgrading/version-14)  
+> 📂 **Sección:** App > Guides > Upgrading  
+> 📝 **Descripción:** *Upgrade your Next.js Application from Version 13 to 14.*  
+
+---
+
+## Upgrading from 13 to 14
+
+To update to Next.js version 14, run the following command using your preferred package manager:
+
+```bash
+// Archivo: Terminal
+npm i next@next-14 react@18 react-dom@18 && npm i eslint-config-next@next-14 -D
+```
+
+```bash
+// Archivo: Terminal
+yarn add next@next-14 react@18 react-dom@18 && yarn add eslint-config-next@next-14 -D
+```
+
+```bash
+// Archivo: Terminal
+pnpm i next@next-14 react@18 react-dom@18 && pnpm i eslint-config-next@next-14 -D
+```
+
+```bash
+// Archivo: Terminal
+bun add next@next-14 react@18 react-dom@18 && bun add eslint-config-next@next-14 -D
+```
+
+> **Good to know:** If you are using TypeScript, ensure you also upgrade `@types/react` and `@types/react-dom` to their latest versions.
+
+### v14 Summary
+
+- The minimum Node.js version has been bumped from 16.14 to 18.17, since 16.x has reached end-of-life.
+- The `next export` command has been removed in favor of `output: 'export'` config. Please see the [docs](https://nextjs.org/docs/app/guides/static-exports) for more information.
+- The `next/server` import for `ImageResponse` was renamed to `next/og`. A [codemod is available](/docs/app/guides/upgrading/codemods#next-og-import) to safely and automatically rename your imports.
+- The `@next/font` package has been fully removed in favor of the built-in `next/font`. A [codemod is available](/docs/app/guides/upgrading/codemods#built-in-next-font) to safely and automatically rename your imports.
+- The WASM target for `next-swc` has been removed.

@@ -1,0 +1,24 @@
+# generateBuildId
+
+> **Documentación Oficial Next.js v16.3.7**  
+> 🌐 **URL en vivo:** [https://nextjs.org/docs/app/api-reference/config/next-config-js/generateBuildId](https://nextjs.org/docs/app/api-reference/config/next-config-js/generateBuildId)  
+> 📂 **Sección:** App > Api Reference > Config > Next Config Js  
+> 📝 **Descripción:** *Configure the build id, which is used to identify the current build in which your application is being served.*  
+
+---
+
+Next.js generates an ID during `next build` to identify which version of your application is being served. The same build should be used and boot up multiple containers.
+
+If you are rebuilding for each stage of your environment, you will need to generate a consistent build ID to use between containers. Use the `generateBuildId` command in `next.config.js`:
+
+```jsx
+// Archivo: next.config.js
+module.exports = {
+  generateBuildId: async () => {
+    // This could be anything, using the latest git hash
+    return process.env.GIT_HASH
+  },
+}
+```
+
+> **Good to know:** When [`deploymentId`](/docs/app/api-reference/config/next-config-js/deploymentId) is set, Next.js uses a constant build ID and `generateBuildId` has no effect. [Version skew](/docs/app/guides/self-hosting#version-skew) is detected from the deployment ID instead.
