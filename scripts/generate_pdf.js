@@ -18,6 +18,7 @@ const ROOT_DIR = path.resolve(__dirname, '..');
 const BOOK_MD_PATH = path.join(ROOT_DIR, 'book', 'Nextjs_16_Guia_Definitiva.md');
 const HTML_OUTPUT_PATH = path.join(ROOT_DIR, 'book', 'book_printable.html');
 const PDF_OUTPUT_PATH = path.join(ROOT_DIR, 'Nextjs_16_Guia_Definitiva.pdf');
+const COVER_TEMPLATE_PATH = path.join(ROOT_DIR, 'templates', 'cover.html');
 
 // Locate Chrome or Edge executable on Windows
 async function getBrowserExecutable() {
@@ -39,12 +40,14 @@ async function getBrowserExecutable() {
   throw new Error('No se encontró Google Chrome ni Microsoft Edge en las rutas estándar.');
 }
 
-function generateHtmlTemplate(contentHtml) {
+function generateHtmlTemplate(contentHtml, coverHtml = '') {
   const currentDate = new Date().toLocaleDateString('es-ES', {
     year: 'numeric',
     month: 'long',
     day: 'numeric'
   });
+
+  const parsedCover = coverHtml.replace(/\{\{DATE\}\}/g, currentDate);
 
   return `<!DOCTYPE html>
 <html lang="es">
@@ -357,49 +360,7 @@ function generateHtmlTemplate(contentHtml) {
 <body>
 
   <!-- COVER PAGE -->
-  <div class="cover-page">
-    <div class="cover-header">
-      <svg class="cover-logo" viewBox="0 0 180 180" xmlns="http://www.w3.org/2000/svg">
-        <mask height="180" id="mask0" maskUnits="userSpaceOnUse" width="180" x="0" y="0" style="mask-type:alpha">
-          <circle cx="90" cy="90" fill="black" r="90"></circle>
-        </mask>
-        <g mask="url(#mask0)">
-          <circle cx="90" cy="90" data-theme="dark" fill="black" r="90"></circle>
-          <path d="M149.508 157.438L69.1478 54H54V125.97H66.1136V69.3836L139.999 164.845C143.333 162.614 146.509 160.136 149.508 157.438Z" fill="url(#paint0_linear)"></path>
-          <rect fill="url(#paint1_linear)" height="72" width="12" x="115" y="54"></rect>
-        </g>
-        <defs>
-          <linearGradient gradientUnits="userSpaceOnUse" id="paint0_linear" x1="109" x2="144.5" y1="116.5" y2="160.5">
-            <stop stop-color="white"></stop>
-            <stop offset="1" stop-color="white" stop-opacity="0"></stop>
-          </linearGradient>
-          <linearGradient gradientUnits="userSpaceOnUse" id="paint1_linear" x1="121" x2="120.799" y1="54" y2="106.875">
-            <stop stop-color="white"></stop>
-            <stop offset="1" stop-color="white" stop-opacity="0"></stop>
-          </linearGradient>
-        </defs>
-      </svg>
-      <span class="cover-badge">VERSIÓN OFICIAL v16.3.7</span>
-    </div>
-
-    <div class="cover-body">
-      <div class="cover-title">Next.js 16</div>
-      <div class="cover-subtitle">Libro Guía Definitivo — Documentación y Referencia Técnica Completa</div>
-      
-      <div class="cover-pills">
-        <span class="cover-pill">🚀 456 Secciones Técnicas</span>
-        <span class="cover-pill">📂 13 Capítulos Estructurados</span>
-        <span class="cover-pill">⚡ Directivas 'use cache'</span>
-        <span class="cover-pill">🧩 Cache Components & PPR</span>
-        <span class="cover-pill">📦 Turbopack por Defecto</span>
-      </div>
-    </div>
-
-    <div class="cover-footer">
-      <span>Compilación oficial para DocsLive</span>
-      <span>${currentDate}</span>
-    </div>
-  </div>
+  ${parsedCover}
 
   <!-- BOOK CONTENT -->
   <div class="book-content">
@@ -430,9 +391,17 @@ export async function generatePdf() {
   // Custom marked options
   const htmlBody = marked.parse(mdContent);
 
-  // 3. Generate complete styled HTML document
+  // 3. Read cover template
+  let coverHtml = '';
+  try {
+    coverHtml = await fs.readFile(COVER_TEMPLATE_PATH, 'utf-8');
+  } catch {
+    console.warn('  ! Aviso: no se encontró templates/cover.html, usando portada por defecto.');
+  }
+
+  // 4. Generate complete styled HTML document
   console.log('[2/4] Inyectando hoja de estilos para impresión editorial y portada...');
-  const fullHtml = generateHtmlTemplate(htmlBody);
+  const fullHtml = generateHtmlTemplate(htmlBody, coverHtml);
   await fs.writeFile(HTML_OUTPUT_PATH, fullHtml, 'utf-8');
   console.log(`  ✓ HTML intermedio generado (${(fullHtml.length / 1024 / 1024).toFixed(2)} MB): ${HTML_OUTPUT_PATH}`);
 
